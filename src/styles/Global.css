@@ -1,0 +1,211 @@
+/* =========================
+   CONTAINERS
+========================= */
+
+.container {
+  width: min(1400px, 100%);
+  margin-inline: auto;
+
+  padding-inline: clamp(1rem, 4vw, 5rem);
+}
+
+.container-sm {
+  width: min(900px, 100%);
+  margin-inline: auto;
+
+  padding-inline: clamp(1rem, 3vw, 3rem);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+  position: relative;
+
+  width: 100%;
+
+  padding-block:
+    clamp(5rem, 10vw, 10rem);
+
+  isolation: isolate;
+}
+
+/* =========================
+   GRID SYSTEM
+========================= */
+
+.grid {
+  display: grid;
+}
+
+.grid-auto-fit {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(min(280px, 100%), 1fr)
+    );
+
+  gap: clamp(1rem, 2vw, 2rem);
+}
+
+/* =========================
+   FLEX HELPERS
+========================= */
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+.title-xl {
+  font-size:
+    clamp(3rem, 8vw, 7rem);
+
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+
+  font-weight: 800;
+}
+
+.title-lg {
+  font-size:
+    clamp(2.2rem, 6vw, 5rem);
+
+  line-height: 1;
+}
+
+.text-lg {
+  font-size:
+    clamp(1rem, 1.4vw, 1.2rem);
+
+  line-height: 1.7;
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+  position: relative;
+
+  height: 56px;
+
+  padding-inline: 28px;
+
+  border: none;
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  transition:
+    transform .3s ease,
+    opacity .3s ease,
+    background .3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-secondary {
+  background:
+    rgba(255,255,255,0.06);
+
+  border:
+    1px solid var(--border);
+
+  color: var(--text);
+}
+
+/* =========================
+   IMAGES
+========================= */
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* =========================
+   EFFECTS
+========================= */
+
+.glass {
+  background:
+    rgba(255,255,255,0.05);
+
+  backdrop-filter: blur(20px);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+}
+
+.glow {
+  position: absolute;
+
+  border-radius: 999px;
+
+  filter: blur(120px);
+
+  opacity: 0.5;
+
+  pointer-events: none;
+}
+
+/* =========================
+   SPACING HELPERS
+========================= */
+
+.mt-1 { margin-top: .5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+.mb-1 { margin-bottom: .5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .flex-between {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+}

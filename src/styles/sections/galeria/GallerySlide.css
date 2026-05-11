@@ -1,0 +1,64 @@
+/* =========================================================
+   GallerySlide.css
+========================================================= */
+.gallery-slide {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+
+  filter: blur(10px);
+
+  transform: scale(1.12);
+
+  transition:
+    opacity 1.8s cubic-bezier(.22,1,.36,1),
+    filter 1.8s cubic-bezier(.22,1,.36,1),
+    transform 1.8s cubic-bezier(.22,1,.36,1);
+
+  pointer-events: none;
+}
+
+.gallery-slide.active {
+  opacity: 1;
+
+  filter: blur(0px);
+
+  transform: scale(1);
+
+  z-index: 5;
+}
+.gallery-slide.active .gallery-image {
+  animation: floatImage 6s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.gallery-image {
+  width: auto;
+
+  height: 120%;
+
+  max-width: 90vw;
+
+  object-fit: contain;
+
+  user-select: none;
+  pointer-events: none;
+}

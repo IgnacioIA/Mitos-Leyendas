@@ -1,0 +1,77 @@
+/* =========================================================
+   HERO BASE LAYOUT
+========================================================= */
+
+.hero {
+
+  position: relative;
+
+  width: 100%;
+  min-height: 100svh;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  display: flex;
+  align-items: center;
+
+  background: black;
+}
+
+/* =========================================================
+   HERO CONTAINER
+========================================================= */
+
+.hero-container {
+
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+  max-width: 1600px;
+
+  margin-inline: auto;
+
+  padding-inline:
+    clamp(1.5rem, 5vw, 6rem);
+}
+
+/* =========================================================
+   HERO OVERLAY
+========================================================= */
+
+.hero-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -1;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,.15),
+      rgba(0,0,0,.65)
+    );
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+
+@media (max-width: 768px) {
+
+  .hero {
+
+    min-height: 100svh;
+
+    padding: 120px 20px 60px;
+
+    align-items: flex-end;
+  }
+
+}

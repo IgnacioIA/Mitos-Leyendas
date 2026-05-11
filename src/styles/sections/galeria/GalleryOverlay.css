@@ -1,0 +1,36 @@
+/* =========================================================
+   GalleryOverlay.css
+========================================================= */
+
+.gallery-overlay {
+
+  position: absolute;
+
+  left: 80px;
+  bottom: 80px;
+
+  z-index: 8;
+
+  max-width: 500px;
+
+  color: white;
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .gallery-overlay {
+
+    left: 24px;
+    right: 24px;
+    bottom: 32px;
+
+    max-width: 100%;
+  }
+
+}

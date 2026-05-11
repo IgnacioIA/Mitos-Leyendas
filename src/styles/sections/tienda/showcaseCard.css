@@ -1,0 +1,284 @@
+.showcase-card {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  border-radius: 22px;
+
+  cursor: pointer;
+
+  background: #111;
+
+  isolation: isolate;
+
+  transition:
+    transform .8s cubic-bezier(.22,1,.36,1),
+    box-shadow .8s cubic-bezier(.22,1,.36,1);
+
+  box-shadow:
+    0 10px 40px rgba(0,0,0,.45);
+}
+
+/* HOVER */
+.showcase-card:hover {
+  transform:
+    translateY(-10px);
+
+  box-shadow:
+    0 25px 80px rgba(0,0,0,.7);
+
+
+}
+
+/* BACKGROUND */
+.card-background {
+  position: absolute;
+  inset: 0;
+
+  background-size: cover;
+  background-position: center;
+
+  transition:
+    transform 1.4s ease;
+
+  z-index: 0;
+}
+
+.showcase-card:hover .card-background {
+  transform:
+    scale(1.08)
+    translateY(-8px);
+}
+
+.showcase-card::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255,255,255,.08),
+      transparent 60%
+    );
+
+  opacity: 0;
+
+  transition:
+    opacity .8s ease;
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+.showcase-card:hover::after {
+  opacity: 1;
+}
+
+/* OVERLAY */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.96) 5%,
+      rgba(0,0,0,.45) 45%,
+      rgba(0,0,0,.15) 100%
+    );
+
+  transition:
+    background .5s ease;
+
+  z-index: 1;
+}
+
+.showcase-card:hover .card-overlay {
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.98) 10%,
+      rgba(0,0,0,.55) 50%,
+      rgba(0,0,0,.2) 100%
+    );
+}
+
+/* CONTENT */
+
+.card-content {
+  position: relative;
+  z-index: 5;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* BLOQUE TITULO + IMAGEN */
+
+.card-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 40px;
+  margin-bottom: 60px;
+
+  transition:
+    transform 0.6s ease,
+    scale 0.6s ease;
+
+  will-change: transform;
+  transform: translateY(100px);
+}
+
+/* HOVER */
+
+.showcase-card:hover .card-main {
+  transform: translateY(-10px);
+  scale: 0.92;
+}
+
+.card-date {
+  font-size: 12px;
+  letter-spacing: 3px;
+
+  color: rgba(255,255,255,.7);
+
+
+  margin-bottom: 14px;
+}
+
+.card-title {
+  font-size: 48px;
+  line-height: .92;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+/* HIDDEN CONTENT */
+.card-hidden {
+
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  opacity: 0;
+
+  filter: blur(10px);
+
+  transform:
+    translateY(24px);
+
+  transition:
+    opacity .7s cubic-bezier(.22,1,.36,1),
+    transform .7s cubic-bezier(.22,1,.36,1),
+    filter .7s cubic-bezier(.22,1,.36,1);
+}
+
+.showcase-card:hover .card-hidden {
+  opacity: 1;
+
+  filter: blur(0);
+
+  transform:
+    translateY(0);
+}
+
+.card-description {
+  color: rgba(255,255,255,.75);
+
+  font-size: 15px;
+  line-height: 1.5;
+
+  width: 100%;
+  max-width: 280px;
+
+  min-height: 45px;
+  max-height: 45px;
+
+  margin-bottom: 20px;
+
+  overflow: hidden;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  text-align: center;
+}
+
+/* BUTTON */
+.card-button {
+  margin-top: 20px;
+
+  padding: 14px 24px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: white;
+  color: black;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+
+
+  transition:
+    transform .3s ease,
+    background .3s ease;
+}
+
+.card-button:hover {
+  transform: scale(1.05);
+
+  background: #dedede;
+}
+
+/* PRODUCT */
+.card-product {
+  position: absolute;
+
+  left: 50%;
+  bottom: -40px;
+
+  width: 320px;
+
+  transition-delay: .05s;
+
+  transform:
+    translateX(-50%)
+    translateY(-50%);
+
+  z-index: 3;
+
+  object-fit: contain;
+
+  transition:
+  transform 1s cubic-bezier(.22,1,.36,1);
+
+  filter:
+    drop-shadow(0 25px 40px rgba(0,0,0,.8));
+}
+
+.showcase-card:hover .card-product {
+  transform:
+    translateX(-50%)
+    translateY(-100px)
+    scale(0.8);
+}

@@ -1,0 +1,96 @@
+/* =========================================================
+   BUTTON BASE
+========================================================= */
+
+.btn {
+
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 56px;
+
+  padding-inline: 2rem;
+
+  border: none;
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  transition:
+    transform .3s ease,
+    opacity .3s ease,
+    background .3s ease,
+    border-color .3s ease,
+    color .3s ease;
+
+  user-select: none;
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.btn:hover {
+
+  transform:
+    translateY(-4px);
+}
+
+/* =========================================================
+   ACTIVE
+========================================================= */
+
+.btn:active {
+
+  transform:
+    translateY(-1px);
+}
+
+/* =========================================================
+   PRIMARY
+========================================================= */
+
+.btn-primary {
+
+  background:
+    var(--primary);
+
+  color: white;
+}
+
+/* =========================================================
+   SECONDARY
+========================================================= */
+
+.btn-secondary {
+
+  background:
+    rgba(255,255,255,.06);
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  color:
+    var(--text);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .btn {
+
+    width: 100%;
+  }
+
+}

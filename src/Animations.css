@@ -1,0 +1,289 @@
+/* =========================================================
+   MOTION SYSTEM
+   Reutilizable + Escalable + Cinematográfico
+========================================================= */
+
+/* =========================================================
+   KEYFRAMES
+========================================================= */
+
+/* FADE */
+
+@keyframes fade-in {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+/* FADE UP */
+
+@keyframes fade-up {
+
+  from {
+    opacity: 0;
+    transform:
+      translateY(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(0);
+  }
+
+}
+
+/* FADE DOWN */
+
+@keyframes fade-down {
+
+  from {
+    opacity: 0;
+    transform:
+      translateY(-60px);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(0);
+  }
+
+}
+
+/* SCALE */
+
+@keyframes scale-in {
+
+  from {
+    opacity: 0;
+    transform:
+      scale(.85);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      scale(1);
+  }
+
+}
+
+/* FLOATING */
+
+@keyframes floating {
+
+  0%,100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-14px);
+  }
+
+}
+
+/* GLOW PULSE */
+
+@keyframes glow-pulse {
+
+  0%,100% {
+    opacity: .45;
+    transform:
+      scale(1);
+  }
+
+  50% {
+    opacity: .9;
+    transform:
+      scale(1.08);
+  }
+
+}
+
+/* ROTATE */
+
+@keyframes rotate-slow {
+
+  from {
+    transform:
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      rotate(360deg);
+  }
+
+}
+
+/* SHIMMER */
+
+@keyframes shimmer {
+
+  from {
+    background-position:
+      -200% 0;
+  }
+
+  to {
+    background-position:
+      200% 0;
+  }
+
+}
+
+/* =========================================================
+   ANIMATION UTILITIES
+========================================================= */
+
+.fade-in {
+  animation:
+    fade-in 1s ease forwards;
+}
+
+.fade-up {
+  animation:
+    fade-up 1s ease forwards;
+}
+
+.fade-down {
+  animation:
+    fade-down 1s ease forwards;
+}
+
+.scale-in {
+  animation:
+    scale-in .8s ease forwards;
+}
+
+.floating {
+  animation:
+    floating 6s ease-in-out infinite;
+}
+
+.glow-pulse {
+  animation:
+    glow-pulse 4s ease-in-out infinite;
+}
+
+.rotate-slow {
+  animation:
+    rotate-slow 18s linear infinite;
+}
+
+/* =========================================================
+   DELAYS
+========================================================= */
+
+.delay-1 {
+  animation-delay: .2s;
+}
+
+.delay-2 {
+  animation-delay: .4s;
+}
+
+.delay-3 {
+  animation-delay: .6s;
+}
+
+.delay-4 {
+  animation-delay: .8s;
+}
+
+/* =========================================================
+   HOVER EFFECTS
+========================================================= */
+
+.hover-lift {
+  transition:
+    transform .4s ease,
+    box-shadow .4s ease;
+}
+
+.hover-lift:hover {
+
+  transform:
+    translateY(-10px);
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,.35);
+}
+
+.hover-glow {
+  transition:
+    box-shadow .4s ease,
+    border-color .4s ease;
+}
+
+.hover-glow:hover {
+
+  border-color:
+    rgba(180,130,255,.6);
+
+  box-shadow:
+    0 0 40px rgba(180,130,255,.25);
+}
+
+/* =========================================================
+   SHIMMER EFFECT
+========================================================= */
+
+.shimmer {
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.05) 25%,
+      rgba(255,255,255,0.18) 50%,
+      rgba(255,255,255,0.05) 75%
+    );
+
+  background-size:
+    200% 100%;
+
+  animation:
+    shimmer 3s linear infinite;
+}
+
+/* =========================================================
+   PERFORMANCE
+========================================================= */
+
+.gpu {
+  will-change:
+    transform,
+    opacity;
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  * {
+
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    transition-duration:
+      0.01ms !important;
+
+    scroll-behavior:
+      auto !important;
+  }
+
+}
