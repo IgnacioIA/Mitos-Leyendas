@@ -4,7 +4,7 @@
 
 import "../../styles/sections/galeria/GalleryBackground.css";
 
-import fondo from "../../assets/galeria/GALERIAFONDO.jpg";
+import fondo from "../../../../assets/galeria/GALERIAFONDO.jpg";
 
 export default function GalleryBackground({ slide }) {
 

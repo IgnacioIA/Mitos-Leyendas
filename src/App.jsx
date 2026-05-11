@@ -1,22 +1,9 @@
-import Hero from './sections/hero/Hero.jsx'
-import Gallery from './sections/galeria/Gallery.jsx'
-import Tienda from './sections/tienda/Tienda.jsx'
-import Lore from './sections/lore/Lore.jsx'
-import AprendeAJugar from './sections/aprenderAJugar/VideoSection.jsx'
-import Final from './sections/Final/RibbonSection.jsx'
+// src/App.jsx
+
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
-  return (
-    <>
-      <Hero />
-      <Tienda />
-      <Lore />
-      <Gallery />
-      <AprendeAJugar/>
-      <Final/>
-     
-    </>
-  )
-};
+  return <AppRoutes />;
+}
 
-export default App
+export default App;

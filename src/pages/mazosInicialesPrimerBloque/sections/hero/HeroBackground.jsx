@@ -1,7 +1,7 @@
 import "../../styles/sections/hero/HeroBackground.css";
 
-import heroMobile from "../../assets/hero/HERO MOBILE.webp";
-import heroDesktop from "../../assets/hero/HERO PRUEBA.jpg";
+import heroMobile from "../../../../assets/hero/HERO MOBILE.webp";
+import heroDesktop from "../../../../assets/hero/HERO PRUEBA.jpg";
 
 export default function HeroBackground() {
   return (

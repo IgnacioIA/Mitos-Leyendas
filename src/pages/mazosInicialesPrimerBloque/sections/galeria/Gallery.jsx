@@ -14,10 +14,10 @@ import GalleryOverlay from "./GalleryOverlay";
 
 import "../../styles/sections/galeria/Gallery.css";
 
-import Dragon from "../../assets/galeria/GALERIA DRAGON.png";
-import Titan from "../../assets/galeria/GALERIA TITAN.png";
-import Sombra from "../../assets/galeria/GALERIA SOMBRA.png";
-import Sacerdote from "../../assets/galeria/GALERIA SACERDOTE.png";
+import Dragon from "../../../../assets/galeria/GALERIA DRAGON.png";
+import Titan from "../../../../assets/galeria/GALERIA TITAN.png";
+import Sombra from "../../../../assets/galeria/GALERIA SOMBRA.png";
+import Sacerdote from "../../../../assets/galeria/GALERIA SACERDOTE.png";
 
 
 

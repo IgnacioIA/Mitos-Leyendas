@@ -8,7 +8,7 @@ import VideoContainer from "./VideoContainer";
 
 import "../../styles/sections/aprenderAJugar/VideoSection.css";
 
-import fondo from "../../assets/aprenderAJugar/VIDEO  APRENDE A JUGAR.jpg";
+import fondo from "../../../../assets/aprenderAJugar/VIDEO  APRENDE A JUGAR.jpg";
 
 export default function VideoSection() {
 

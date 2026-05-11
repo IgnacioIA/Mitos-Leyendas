@@ -1,15 +1,15 @@
 import ShowcaseCard from "./ShowcaseCard";
 import "../../styles/sections/tienda/Tienda.css";
 
-import MazoTitanPB from "../../assets/tienda/Mazo Titan PB.png";
-import MazoSombraPB from "../../assets/tienda/Mazo Sombra PB.png";
-import MazoSacerdotePB from "../../assets/tienda/Mazo Sacerdote PB.png";
-import MazoDragonPB from "../../assets/tienda/Mazo Dragon PB.png";
+import MazoTitanPB from "../../../../assets/tienda/Mazo Titan PB.png";
+import MazoSombraPB from "../../../../assets/tienda/Mazo Sombra PB.png";
+import MazoSacerdotePB from "../../../../assets/tienda/Mazo Sacerdote PB.png";
+import MazoDragonPB from "../../../../assets/tienda/Mazo Dragon PB.png";
 
-import FondoTitan from "../../assets/tienda/FONDOS TIENDA TITAN.webp";
-import FondoSombra from "../../assets/tienda/FONDOS TIENDA SOMBRA.webp";
-import FondoSacerdote from "../../assets/tienda/FONDOS TIENDA SACERDOTE.webp";
-import FondoDragon from "../../assets/tienda/FONDOS TIENDA DRAGON.webp";
+import FondoTitan from "../../../../assets/tienda/FONDOS TIENDA TITAN.webp";
+import FondoSombra from "../../../../assets/tienda/FONDOS TIENDA SOMBRA.webp";
+import FondoSacerdote from "../../../../assets/tienda/FONDOS TIENDA SACERDOTE.webp";
+import FondoDragon from "../../../../assets/tienda/FONDOS TIENDA DRAGON.webp";
 
 const cards = [
   {
