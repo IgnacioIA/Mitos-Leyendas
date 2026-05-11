@@ -5,17 +5,15 @@ import heroDesktop from "../../assets/hero/HERO PRUEBA.jpg";
 
 export default function HeroBackground() {
   return (
-    <picture className="hero-background">
+    <picture className="hero-picture">
 
       {/* MOBILE */}
-
       <source
         media="(max-width: 768px)"
         srcSet={heroMobile}
       />
 
       {/* DESKTOP */}
-
       <img
         src={heroDesktop}
         alt="Hero Background"

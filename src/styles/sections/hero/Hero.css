@@ -1,5 +1,5 @@
 /* =========================================================
-   HERO BASE LAYOUT
+   HERO
 ========================================================= */
 
 .hero {
@@ -7,16 +7,65 @@
   position: relative;
 
   width: 100%;
-  min-height: 100svh;
+
+  /*
+    Fullscreen controlado.
+    dvh ayuda en mobile moderno.
+  */
+
+  min-height: 100dvh;
+  height: 100svh;
 
   overflow: hidden;
 
   isolation: isolate;
 
+  background: black;
+}
+
+/* =========================================================
+   HERO LAYERS
+========================================================= */
+
+.hero-background-layer,
+.hero-overlay-layer,
+.hero-effects-layer,
+.hero-content-layer {
+
+  position: absolute;
+
+  inset: 0;
+}
+
+/* =========================================================
+   Z-INDEX SYSTEM
+========================================================= */
+
+.hero-background-layer {
+  z-index: 1;
+}
+
+.hero-overlay-layer {
+  z-index: 2;
+}
+
+.hero-effects-layer {
+  z-index: 3;
+}
+
+/* =========================================================
+   HERO CONTENT LAYER
+========================================================= */
+
+.hero-content-layer {
+
+  z-index: 10;
+
   display: flex;
   align-items: center;
 
-  background: black;
+  width: 100%;
+  height: 100%;
 }
 
 /* =========================================================
@@ -26,8 +75,6 @@
 .hero-container {
 
   position: relative;
-
-  z-index: 5;
 
   width: 100%;
   max-width: 1600px;
@@ -39,39 +86,82 @@
 }
 
 /* =========================================================
-   HERO OVERLAY
+   HERO TRANSITION
 ========================================================= */
 
-.hero-overlay {
+.hero::after {
+
+  content: "";
 
   position: absolute;
 
-  inset: 0;
+  left: 0;
+  bottom: 0;
 
-  z-index: -1;
+  width: 100%;
+  height: 220px;
+
+  z-index: 5;
+
+  pointer-events: none;
 
   background:
     linear-gradient(
       to bottom,
-      rgba(0,0,0,.15),
-      rgba(0,0,0,.65)
+      transparent 0%,
+      rgba(0,0,0,0.25) 35%,
+      rgba(0,0,0,0.95) 100%
     );
 }
 
 /* =========================================================
-   RESPONSIVE
+   TABLET
 ========================================================= */
 
+@media (max-width: 1024px) {
+
+  .hero-container {
+
+    padding-inline:
+      clamp(1.25rem, 4vw, 3rem);
+  }
+
+  .hero::after {
+
+    height: 180px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 768px) {
 
   .hero {
 
-    min-height: 100svh;
+    /*
+      Evita problemas de viewport dinámico
+      en algunos browsers mobile.
+    */
 
-    padding: 120px 20px 60px;
+    min-height: 100dvh;
+    height: 100svh;
+  }
+
+  .hero-content-layer {
 
     align-items: flex-end;
   }
 
+  .hero-container {
+
+    padding:
+      0 20px 64px;
+  }
+
+  .hero::after {
+
+    height: 140px;
+  }
 }

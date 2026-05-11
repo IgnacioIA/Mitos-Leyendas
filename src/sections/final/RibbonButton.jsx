@@ -16,7 +16,7 @@ function RibbonButton() {
       viewport={{ once: true }}
       transition={{ duration: 1.2, delay: 0.2 }}
     >
-      COMPRAR
+      QUIERO MI MAZO INICIAL
     </motion.a>
   );
 }
