@@ -1,0 +1,34 @@
+/* =========================================================
+   HERO BACKGROUND
+========================================================= */
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+
+  z-index: -3;
+}
+
+.hero-background-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center top;
+
+  transform: scale(1.0);
+}
+
+/* =========================================================
+   HERO BACKGROUND MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .hero-background-image {
+
+    object-position: 60% top;
+
+    transform: scale(0.5);
+  }

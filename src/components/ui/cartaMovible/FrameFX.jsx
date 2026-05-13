@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import "../../styles/ui/cartaMovible/FrameFX.css";
+import "../../../styles/ui/cartaMovible/FrameFX.css";
 
 export default function FrameFX({ children }) {
   const ref = useRef(null);

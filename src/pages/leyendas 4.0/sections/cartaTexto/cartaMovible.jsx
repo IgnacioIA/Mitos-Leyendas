@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import carta from "../../../assets/mitos4.0/cartas/LPB4-001.png";
-import FrameFX from "../../../components/ui/cartaMovible/FrameFX.jsx";
-import "../styles/cartaTexto/SectionCartaSecretaCss.css";
+import carta from "../../../../assets/mitos4.0/cartas/LPB4-001.png";
+import FrameFX from "../../../../components/ui/cartaMovible/FrameFX.jsx";
+import "../../styles/cartaTexto/SectionCartaSecretaCss.css";
 
 export default function MagicSectionAlt() {
   return (
