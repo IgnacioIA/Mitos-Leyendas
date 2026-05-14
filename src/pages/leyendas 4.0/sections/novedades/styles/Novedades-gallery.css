@@ -1,0 +1,9 @@
+.novedades-gallery {
+  display: flex;
+
+  height: 700px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+}

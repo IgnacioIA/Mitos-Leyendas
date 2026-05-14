@@ -1,0 +1,101 @@
+.novedades-b-card {
+  position: relative;
+
+  flex: 1;
+
+  height: 700px;
+
+  border-radius: 24px;
+
+  scroll-snap-align: start;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* HOVER */
+
+.novedades-b-card:hover {
+  border-color: #d4af37;
+  
+
+  box-shadow:
+    0 0 20px rgba(212, 175, 55, 0.25);
+}
+
+/* IMAGE */
+
+.novedades-b-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* OVERLAY */
+
+.novedades-b-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.85),
+      rgba(0,0,0,0.15)
+    );
+
+  display: flex;
+
+  align-items: flex-end;
+}
+
+/* CONTENT */
+
+.novedades-b-content {
+  width: 100%;
+
+  padding: 40px;
+
+  text-align: center;
+}
+
+.novedades-b-content h3 {
+  color: white;
+
+  font-size: 2rem;
+
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+
+.novedades-b-content button {
+  padding: 14px 28px;
+
+  border: none;
+
+  background: #d4af37;
+
+  color: black;
+
+  font-weight: 700;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: opacity 0.3s ease;
+}
+
+.novedades-b-content button:hover {
+  opacity: 0.8;
+}

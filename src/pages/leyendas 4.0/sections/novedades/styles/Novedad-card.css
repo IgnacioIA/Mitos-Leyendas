@@ -1,0 +1,106 @@
+.novedad-card {
+  position: relative;
+
+  flex: 1;
+
+  background-size: cover;
+  background-position: center;
+
+  transition:
+    flex 0.6s ease,
+    transform 0.6s ease;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+/* EXPANSION */
+
+.novedades-gallery:hover .novedad-card {
+  flex: 0.8;
+}
+
+.novedades-gallery .novedad-card:hover {
+  flex: 2;
+}
+
+/* OVERLAY */
+
+.novedad-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.9),
+      rgba(0,0,0,0.1)
+    );
+
+  display: flex;
+
+  align-items: flex-end;
+
+  padding: 40px;
+
+  transition: background 0.4s ease;
+}
+
+/* CONTENT */
+
+.novedad-content {
+  width: 100%;
+
+  transform: translateY(40px);
+
+  transition:
+    transform 0.4s ease;
+}
+
+.novedad-card:hover .novedad-content {
+  transform: translateY(0);
+}
+
+.novedad-content h3 {
+  color: white;
+
+  font-size: 2rem;
+
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+
+.novedad-content button {
+  opacity: 0;
+
+  transform: translateY(20px);
+
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+
+  padding: 14px 28px;
+
+  border: none;
+
+  background: #d4af37;
+
+  color: black;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  border-radius: 8px;
+}
+
+.novedad-card:hover button {
+  opacity: 1;
+
+  transform: translateY(0);
+}

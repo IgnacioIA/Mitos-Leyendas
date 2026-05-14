@@ -1,0 +1,19 @@
+.novedades-b-grid {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 30px;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+
+  padding-inline: 20px;
+
+  scroll-snap-type: x mandatory;
+}
+
+.novedades-b-grid::-webkit-scrollbar {
+  display: none;
+}

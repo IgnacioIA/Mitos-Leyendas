@@ -1,0 +1,25 @@
+.novedades-header {
+  text-align: center;
+
+  margin-bottom: 80px;
+}
+
+.novedades-title {
+  font-size: clamp(2.5rem, 5vw, 5rem);
+
+  color: white;
+
+  margin-bottom: 16px;
+
+  font-weight: 700;
+}
+
+.novedades-subtitle {
+  font-size: 1.2rem;
+
+  color: #d4af37;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}

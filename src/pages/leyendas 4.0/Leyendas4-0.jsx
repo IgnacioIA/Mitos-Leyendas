@@ -3,6 +3,8 @@
 import cartaMovible from './sections/cartaTexto/cartaMovible.jsx'
 import HeroSection from './sections/hero/HeroSection.jsx'
 import Lore from './sections/lore/ProductShowcaseSection.jsx'
+import Novedades from './sections/novedades/Novedades.jsx'
+import NovedadesB from './sections/novedadesB/NovedadesB.jsx'
 
 export default function MazosInicialesPB() {
 
@@ -11,6 +13,9 @@ export default function MazosInicialesPB() {
 
     <HeroSection/>
     <Lore/>
+    <Novedades/>
+    <NovedadesB/>
+
 
     </div>
   );
