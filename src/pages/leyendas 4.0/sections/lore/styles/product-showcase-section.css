@@ -1,0 +1,75 @@
+/* =========================================================
+   PRODUCT SHOWCASE SECTION
+========================================================= */
+
+.product-showcase {
+  position: relative;
+
+  background: #000;
+
+  overflow: hidden;
+
+  isolation: isolate;
+}
+
+/* =========================================================
+   SHOWCASE LAYOUT
+========================================================= */
+
+.showcase-layout {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 4rem;
+
+  min-height: 100vh;
+}
+
+/* =========================================================
+   INFO BLOCK
+========================================================= */
+
+.showcase-info {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: flex-start;
+
+  gap: 2rem;
+}
+
+/* =========================================================
+   IMAGE BLOCK
+========================================================= */
+
+.showcase-media {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .showcase-layout {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .showcase-info {
+    align-items: center;
+  }
+
+}
