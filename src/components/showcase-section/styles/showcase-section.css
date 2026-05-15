@@ -1,0 +1,82 @@
+/* =========================================================
+   SHOWCASE SECTION
+========================================================= */
+
+.showcase-section {
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: clamp(40px, 6vw, 120px);
+
+  width: 100%;
+  min-height: 100vh;
+
+  padding:
+    clamp(80px, 10vw, 140px)
+    clamp(24px, 6vw, 100px);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   LAYOUT VARIANTS
+========================================================= */
+
+.showcase-section-reverse {
+  flex-direction: row-reverse;
+}
+
+/* =========================================================
+   BACKGROUNDS
+========================================================= */
+
+.bg-dark {
+
+  background:
+    radial-gradient(
+      circle at 70% 50%,
+      rgba(255,215,0,0.06),
+      transparent 40%
+    ),
+    #050505;
+}
+
+.bg-gold {
+
+  background:
+    linear-gradient(
+      135deg,
+      #120b00,
+      #2d1800
+    );
+}
+
+.bg-blue {
+
+  background:
+    linear-gradient(
+      135deg,
+      #050816,
+      #0b1430
+    );
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 968px) {
+
+  .showcase-section,
+  .showcase-section-reverse {
+
+    flex-direction: column;
+
+    text-align: center;
+  }
+}

@@ -1,0 +1,109 @@
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.showcase-content {
+
+  flex: 1;
+
+  max-width: 700px;
+
+  z-index: 2;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.showcase-title {
+
+  font-size:
+    clamp(2.5rem, 5vw, 5.5rem);
+
+  line-height: 1.05;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 32px;
+
+  color: white;
+
+  text-shadow:
+    0 4px 20px rgba(0,0,0,0.6);
+}
+
+/* =========================================================
+   TEXT GROUP
+========================================================= */
+
+.showcase-text-group {
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+/* =========================================================
+   PARAGRAPHS
+========================================================= */
+
+.showcase-text-group p {
+
+  font-size:
+    clamp(1rem, 1.2vw, 1.15rem);
+
+  line-height: 1.8;
+
+  color:
+    rgba(255,255,255,0.78);
+
+  max-width: 65ch;
+}
+
+/* =========================================================
+   GOLD TEXT
+========================================================= */
+
+.gold-text {
+
+  background:
+    linear-gradient(
+      120deg,
+      #f5d76e,
+      #ffd700,
+      #ffb700,
+      #f5d76e
+    );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    0 0 10px rgba(255,215,0,0.4),
+    0 0 20px rgba(255,215,0,0.2);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 968px) {
+
+  .showcase-content {
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .showcase-text-group p {
+
+    max-width: 100%;
+  }
+}

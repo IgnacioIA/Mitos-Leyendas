@@ -1,0 +1,21 @@
+/* IMAGEN (izquierda) */
+.magic-right-alt {
+  flex: 1;
+  display: flex;
+  ustify-content: flex-start; /* 👈 clave */
+}
+
+/* CARTA */
+.magic-card-alt {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.magic-card-alt img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
