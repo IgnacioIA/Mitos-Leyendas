@@ -7,6 +7,8 @@ import Novedades from './sections/novedades/Novedades.jsx'
 import NovedadesB from './sections/novedadesB/NovedadesB.jsx'
 import CartaTexto from './sections/textoYCarta/TextoYCarta.jsx'
 
+import BuyABox from './sections/buyABox/BuyABox.jsx'
+
 export default function Leyendas() {
 
   return (
@@ -18,6 +20,7 @@ export default function Leyendas() {
     <NovedadesB/>
 
     <CartaTexto/>
+    <BuyABox/>
 
 
     </div>

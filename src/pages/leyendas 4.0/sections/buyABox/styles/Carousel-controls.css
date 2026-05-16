@@ -1,0 +1,32 @@
+.carousel-control {
+
+  width: clamp(48px, 5vw, 64px);
+  height: clamp(48px, 5vw, 64px);
+
+  border: none;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  font-size: 2rem;
+
+  color: white;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.carousel-control:hover {
+
+  transform: scale(1.08);
+
+  background:
+    rgba(255,255,255,0.15);
+}

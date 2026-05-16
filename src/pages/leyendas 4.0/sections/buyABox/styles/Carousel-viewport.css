@@ -1,0 +1,59 @@
+.embla {
+
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.embla__container {
+
+  display: flex;
+}
+
+.embla__slide {
+
+  flex: 0 0 100%;
+
+  min-width: 0;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+/* =========================================================
+   AISLA VISUALMENTE CADA GRUPO
+========================================================= */
+
+.embla__slide__inner {
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.carousel-wrapper {
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: clamp(10px, 2vw, 24px);
+
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+
+  .carousel-control {
+
+    display: none;
+  }
+}
