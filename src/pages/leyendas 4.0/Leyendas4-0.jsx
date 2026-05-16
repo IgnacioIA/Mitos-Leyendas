@@ -6,6 +6,7 @@ import Lore from './sections/lore/ProductShowcaseSection.jsx'
 import Novedades from './sections/novedades/Novedades.jsx'
 import NovedadesB from './sections/novedadesB/NovedadesB.jsx'
 import CartaTexto from './sections/textoYCarta/TextoYCarta.jsx'
+import Productos from './sections/productos/Productos.jsx'
 
 import BuyABox from './sections/buyABox/BuyABox.jsx'
 
@@ -21,6 +22,7 @@ export default function Leyendas() {
 
     <CartaTexto/>
     <BuyABox/>
+    <Productos/>
 
 
     </div>
