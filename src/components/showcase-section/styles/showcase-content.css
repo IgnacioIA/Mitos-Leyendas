@@ -4,9 +4,12 @@
 
 .showcase-content {
 
-  flex: 1;
+  flex: 0 1 650px;
 
-  max-width: 700px;
+  min-width: 0;
+
+  width: auto;
+  max-width: 650px;
 
   z-index: 2;
 }
@@ -17,14 +20,18 @@
 
 .showcase-title {
 
+  font-family: 'Bebas Neue', sans-serif;
+
   font-size:
-    clamp(2.5rem, 5vw, 5.5rem);
+    clamp(2.5rem, 5vw, 5.3rem);
 
   line-height: 1.05;
 
-  font-weight: 800;
+  font-weight: 100;
 
-  letter-spacing: 2px;
+  width: 100%;
+
+  letter-spacing: 0.9px;
 
   text-transform: uppercase;
 
@@ -44,7 +51,7 @@
 
   display: flex;
   flex-direction: column;
-
+  width: 100%;
   gap: 24px;
 }
 
@@ -54,15 +61,16 @@
 
 .showcase-text-group p {
 
+  width: 100%;
+
   font-size:
-    clamp(1rem, 1.2vw, 1.15rem);
+    clamp(1.6rem, 3.5vw, 1.5rem);
 
   line-height: 1.8;
 
   color:
     rgba(255,255,255,0.78);
 
-  max-width: 65ch;
 }
 
 /* =========================================================

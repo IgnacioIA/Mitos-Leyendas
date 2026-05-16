@@ -11,8 +11,7 @@
   align-items: center;
   justify-content: center;
 
-  gap: clamp(40px, 6vw, 120px);
-
+  gap: clamp(16px, 3vw, 32px);
   width: 100%;
   min-height: 100vh;
 
@@ -21,6 +20,8 @@
     clamp(24px, 6vw, 100px);
 
   overflow: hidden;
+
+  background: transparent;
 }
 
 /* =========================================================
@@ -31,40 +32,6 @@
   flex-direction: row-reverse;
 }
 
-/* =========================================================
-   BACKGROUNDS
-========================================================= */
-
-.bg-dark {
-
-  background:
-    radial-gradient(
-      circle at 70% 50%,
-      rgba(255,215,0,0.06),
-      transparent 40%
-    ),
-    #050505;
-}
-
-.bg-gold {
-
-  background:
-    linear-gradient(
-      135deg,
-      #120b00,
-      #2d1800
-    );
-}
-
-.bg-blue {
-
-  background:
-    linear-gradient(
-      135deg,
-      #050816,
-      #0b1430
-    );
-}
 
 /* =========================================================
    RESPONSIVE

@@ -33,9 +33,7 @@ export default function ShowcaseContent({
         viewport={{ once: true }}
       >
 
-        <span className="gold-text">
-          {highlight}
-        </span>
+        
 
         {remainingTitle}
 

@@ -1,21 +1,33 @@
 /* IMAGEN (izquierda) */
 .magic-right-alt {
-  flex: 1;
+  flex: 0 1 320px;
+
+  min-width: 0;
+
   display: flex;
-  ustify-content: flex-start; /* 👈 clave */
+
+  justify-content: center;
 }
 
 /* CARTA */
 .magic-card-alt {
-  width: 100%;
-  height: 100%;
+  width: min(100%, 420px);
+
+  aspect-ratio: 2 / 3;
+
   border-radius: inherit;
+
   overflow: hidden;
+
+  flex-shrink: 0;
 }
 
 .magic-card-alt img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
+
+  display: block;
 }
 
