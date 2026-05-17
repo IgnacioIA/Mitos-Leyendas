@@ -3,10 +3,10 @@ import "../style/Novedades-b-grid.css";
 import NovedadesBCard from "./NovedadesBCard";
 
 import img1 from "../../../../../assets/mitos4.0/novedades/Crom Tigernmas ilus.png";
-import img2 from "../../../../../assets/mitos4.0/novedades/2-PREMIUM.jpg";
-import img3 from "../../../../../assets/mitos4.0/novedades/3-REWORK.jpg";
-import img4 from "../../../../../assets/mitos4.0/novedades/DragonHR.png";
-import img5 from "../../../../../assets/mitos4.0/novedades/5-EXCLUSIVAS.jpg";
+import img2 from "../../../../../assets/mitos4.0/novedades/Imagen2.png";
+import img3 from "../../../../../assets/mitos4.0/novedades/Imagen3.png";
+import img4 from "../../../../../assets/mitos4.0/novedades/Imagen4.png";
+import img5 from "../../../../../assets/mitos4.0/novedades/Crom Tigernmas ilus.png";
 
 function NovedadesBGrid() {
 

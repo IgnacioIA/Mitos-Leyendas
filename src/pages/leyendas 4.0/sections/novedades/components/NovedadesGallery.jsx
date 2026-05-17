@@ -2,11 +2,11 @@ import "../styles/Novedades-gallery.css";
 
 import NovedadCard from "./NovedadCard";
 
-import img1 from "../../../../../assets/mitos4.0/novedades/1-NUEVAS.jpg";
-import img2 from "../../../../../assets/mitos4.0/novedades/2-PREMIUM.jpg";
-import img3 from "../../../../../assets/mitos4.0/novedades/3-REWORK.jpg";
-import img4 from "../../../../../assets/mitos4.0/novedades/4-FOIL ESPECIAL.jpg";
-import img5 from "../../../../../assets/mitos4.0/novedades/5-EXCLUSIVAS.jpg";
+import img1 from "../../../../../assets/mitos4.0/novedades/Crom Tigernmas ilus.png";
+import img2 from "../../../../../assets/mitos4.0/novedades/Crom Tigernmas ilus.png";
+import img3 from "../../../../../assets/mitos4.0/novedades/Crom Tigernmas ilus.png";
+import img4 from "../../../../../assets/mitos4.0/novedades/Crom Tigernmas ilus.png";
+import img5 from "../../../../../assets/mitos4.0/novedades/Crom Tigernmas ilus.png";
 
 function NovedadesGallery() {
 

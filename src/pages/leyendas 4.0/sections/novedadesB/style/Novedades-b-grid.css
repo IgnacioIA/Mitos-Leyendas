@@ -17,3 +17,15 @@
 .novedades-b-grid::-webkit-scrollbar {
   display: none;
 }
+
+@media (max-width: 768px) {
+  .novedades-b-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .novedades-b .container {
+    padding: 0 16px;
+  }
+}
