@@ -10,6 +10,8 @@
   overflow: hidden;
 
   isolation: isolate;
+  padding-top: clamp(3rem, 6vw, 6rem);
+  padding-bottom: clamp(4rem, 7vw, 7rem);
 }
 
 /* =========================================================
@@ -21,11 +23,10 @@
 
   grid-template-columns: 1fr 1fr;
 
-  align-items: center;
+  align-items: start;
 
-  gap: 4rem;
+  gap: clamp(1rem, 3vw, 2rem);
 
-  min-height: 80vh;
 }
 
 /* =========================================================
@@ -37,11 +38,9 @@
 
   flex-direction: column;
 
-  justify-content: center;
-
   align-items: flex-start;
 
-  gap: 2rem;
+  gap: 1rem;
 }
 
 /* =========================================================

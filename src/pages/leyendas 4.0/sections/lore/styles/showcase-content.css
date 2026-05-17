@@ -7,7 +7,6 @@
   flex-direction: column;
   justify-content: center;
 
-  height: 100%;
 }
 
 /* =========================================================
@@ -18,17 +17,17 @@
   display: flex;
   flex-direction: column;
 
+  margin: 0;
+
   font-family: "Bebas Neue", sans-serif;
 
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(2rem, 4vw, 3.2rem);
 
   font-weight: 900;
 
-  line-height: 1;
+  line-height: 0.95;
 
-  letter-spacing: 0.04em;
-
-  white-space: nowrap;
+  letter-spacing: 0.03em;
 }
 
 /* =========================================================
@@ -38,13 +37,9 @@
 .showcase-title span {
   color: #1ecc0a;
 
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
 
-  font-weight: 900;
-
-  line-height: 1;
-
-  margin-top: -0.2rem;
+  margin-top: 0;
 }
 
 /* =========================================================
@@ -52,15 +47,17 @@
 ========================================================= */
 
 .showcase-description {
-  width: min(650px, 100%);
+  margin: 0;
+
+  width: min(540px, 100%);
 
   font-family: "Bebas Neue", sans-serif;
 
-  font-size: clamp(1.4rem, 1.8vw, 2rem);
+  font-size: clamp(1.7rem, 1.4vw, 1.35rem);
 
-  line-height: 1.4;
+  line-height: 1.5;
 
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
 
   color: rgba(255,255,255,0.82);
 }

@@ -4,17 +4,16 @@
 
 .showcase-image-wrapper {
   display: flex;
-
   justify-content: center;
 }
 
 .showcase-image {
-  width: 100%;
-  max-width: 700px;
+  width: min(700px, 100%);
 
   height: auto;
-}
 
+  display: block;
+}
 /* =========================================================
    IMAGE REVEAL
 ========================================================= */
