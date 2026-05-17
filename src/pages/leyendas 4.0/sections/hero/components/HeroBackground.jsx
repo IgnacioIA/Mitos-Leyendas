@@ -9,7 +9,6 @@ function HeroBackground() {
 
       <img
         src={dragonBg}
-        alt="Dragon background"
         className="hero-background-image"
       />
 

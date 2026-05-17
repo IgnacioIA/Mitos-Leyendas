@@ -7,6 +7,8 @@
   inset: 0;
 
   z-index: -3;
+
+  overflow: hidden;
 }
 
 .hero-background-image {
@@ -17,7 +19,7 @@
 
   object-position: center top;
 
-  transform: scale(1.0);
+  display: block;
 }
 
 /* =========================================================
@@ -29,6 +31,5 @@
   .hero-background-image {
 
     object-position: 60% top;
-
-    transform: scale(0.5);
   }
+}

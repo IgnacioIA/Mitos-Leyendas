@@ -5,23 +5,24 @@
 .hero {
   position: relative;
 
-  min-height: 100svh;
-
-  overflow: hidden;
+  min-height: 100dvh;
 
   isolation: isolate;
 }
+
 
 .hero-layout {
   position: relative;
   z-index: 5;
 
-  min-height: 100svh;
-
   display: flex;
   flex-direction: column;
 
   justify-content: flex-end;
+
+  min-height: 75dvh;
+
+  padding-bottom: clamp(3rem, 5vw, 6rem);
 }
 
 /* =========================================================
@@ -34,8 +35,5 @@
 
   align-items: center;
 
-  gap: clamp(2rem, 4vw, 3rem);
-
-  padding-bottom:
-    clamp(10rem, 6vw, 5rem);
+  gap: clamp(2.5rem, 3vw, 3rem);
 }
