@@ -3,21 +3,17 @@ import "../styles/hero-content.css";
 function HeroContent() {
 
   return (
-    <div className="hero-content">
+    <div className="shogun-hero-content">
 
-      <h1 className="hero-title">
-        LEYENDAS 4.0
+      <h1 className="shogun-hero-title">
+        SHOGUN 5: ONNA-MUSHA
       </h1>
 
-      <span className="hero-subtitle">
-        PRIMER BLOQUE EXTENDIDO
+      <span className="shogun-hero-subtitle">
+        VOL. 1 - VOL. 2
       </span>
 
-      <p className="hero-description">
-        NUEVOS DIOSES Y CRIATURAS MITOLÓGICAS
-        LLEGAN A MITOS Y LEYENDAS
-        PARA REVOLUCIONAR EL JUEGO
-      </p>
+      
 
     </div>
   );

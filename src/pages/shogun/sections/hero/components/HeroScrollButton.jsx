@@ -3,15 +3,15 @@ import "../styles/hero-scroll-button.css";
 function HeroScrollButton() {
 
   return (
-    <div className="hero-scroll-wrapper">
+    <div className="shogun-hero-scroll-wrapper">
 
       <a
         href="#next-section"
-        className="btn btn-primary hero-scroll-button"
+        className="btn btn-primary shogun-hero-scroll-button"
       >
-        VER CONTENIDO
+        DESCUBRÍ TODO EL CONTENIDO
       </a>
-        
+
     </div>
   );
 
