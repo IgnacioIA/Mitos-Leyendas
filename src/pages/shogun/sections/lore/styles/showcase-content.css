@@ -1,63 +1,71 @@
 /* =========================================================
-   SHOWCASE CONTENT
+   LORE SHOWCASE CONTENT
 ========================================================= */
 
-.showcase-content {
+.lore-showcase-content {
   display: flex;
+
   flex-direction: column;
+
   justify-content: center;
 
+  width: 100%;
 }
 
 /* =========================================================
    TITLE
 ========================================================= */
 
-.showcase-title {
-  display: flex;
-  flex-direction: column;
+.lore-showcase-title {
+  display: block;
 
   margin: 0;
 
+  color: #2C2621;
+
   font-family: "Bebas Neue", sans-serif;
 
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size: clamp(4rem, 4vw, 5rem);
 
   font-weight: 900;
 
-  line-height: 0.95;
+  line-height: 2;
 
   letter-spacing: 0.03em;
+
+  white-space: nowrap;
 }
 
 /* =========================================================
-   SPAN
+   TITLE SPAN
 ========================================================= */
 
-.showcase-title span {
-  color: #1ecc0a;
+.lore-showcase-title span {
+  display: inline;
 
-  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  color: rgb(30, 24, 19);
 
-  margin-top: 0;
+  font-size: inherit;
 }
 
 /* =========================================================
    DESCRIPTION
 ========================================================= */
 
-.showcase-description {
+.lore-showcase-description {
   margin: 0;
 
-  width: min(540px, 100%);
+  width: 100%;
+
+  max-width: 540px;
+
+  color: #2C2621;
 
   font-family: "Bebas Neue", sans-serif;
 
-  font-size: clamp(1.7rem, 1.4vw, 1.35rem);
+  font-size: clamp(1.7rem, 1.2vw, 2rem);
 
   line-height: 1.5;
 
   letter-spacing: 0.04em;
-
-  color: rgba(255,255,255,0.82);
 }

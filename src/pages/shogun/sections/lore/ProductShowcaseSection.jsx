@@ -8,21 +8,22 @@ function ProductShowcaseSection() {
 
   return (
     <section
-      className="product-showcase section"
+      className="lore-showcase section"
     >
-
 
       <div className="container">
 
-        <div className="showcase-layout">
+        <div className="lore-showcase-layout">
 
-          <div className="showcase-info"
-          id="next-section">
+          <div
+            className="lore-showcase-info"
+            id="next-section"
+          >
             <ShowcaseContent />
             <ShowcaseButton />
           </div>
 
-          <div className="showcase-media">
+          <div className="lore-showcase-media">
             <ShowcaseImage />
           </div>
 

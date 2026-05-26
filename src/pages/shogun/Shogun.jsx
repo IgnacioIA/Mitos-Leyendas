@@ -13,7 +13,7 @@ export default function Shogun() {
     <div className="shogun-container">
 
 
-    	<Hero/>
+    	{/*<Hero/>*/}
     	<Lore/>
     	{/*<Novedades/>*/}
     	<BuyABox/>

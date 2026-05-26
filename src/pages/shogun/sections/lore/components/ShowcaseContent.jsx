@@ -7,7 +7,7 @@ function ShowcaseContent() {
   return (
 
     <motion.div
-      className="showcase-content"
+      className="lore-showcase-content"
 
       initial={{
         opacity: 0,
@@ -32,20 +32,29 @@ function ShowcaseContent() {
       }}
     >
 
-      <h2 className="showcase-title">
-        UNA NUEVA ERA LLEGA
-        <span>PARA CAMBIAR EL JUEGO</span>
+      <h2 className="lore-showcase-title">
+        ACERCA DEL <span>PRODUCTO</span>
       </h2>
 
-      <p className="showcase-description">
-        Leyendas Primer Bloque 4.0 llega a dar inicio a una nueva temporada de juego del formato, 
-        trayendo un contenido “fresco” al formato que abrirá muchas estrategias para todo 2026 y 2027.
+      <p className="lore-showcase-description">
+        Shogun 5: Onna-musha nos sumerge en un nuevo
+        imaginario fantástico, donde personajes femeninos
+        toman el rol principal de cartas de primer bloque,
+        reimaginando algunos como hermosas y valientes
+        doncellas.
       </p>
-      <p className="showcase-description">
-        Dentro de las novedades que encontraremos en Leyendas PB 4.0 tendremos una configuración especial de sobre, 
-        una nueva selección de cartas, nuevos tratamientos estéticos, nuevas cartas Rework y nuevas cartas para el formato.
+
+      <p className="lore-showcase-description">
+        En este contexto, tendremos dos productos
+        especiales, el Volumen 1 y el Volumen 2, donde
+        podrás encontrar a personajes que ya conocemos
+        de Primer Bloque como Lady Calvaur, Sir Agravain,
+        Melisende, Nefertiti, Gea, Mago Merlin, Ramsés IX
+        o Ceilican Seelie entre otros, los que fueron
+        reinterpretados completamente en un estilo
+        de arte que hace homenaje a la cultura japonesa
+        con referencias al anime y el manga.
       </p>
-      
 
     </motion.div>
 

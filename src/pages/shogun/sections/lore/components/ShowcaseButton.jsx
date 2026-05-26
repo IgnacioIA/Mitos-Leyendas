@@ -1,13 +1,15 @@
 import "../styles/showcase-button.css";
+
 import { motion } from "framer-motion";
 
 function ShowcaseButton() {
 
   return (
-    <div className="showcase-button-wrapper">
+
+    <div className="lore-showcase-button-wrapper">
 
       <motion.button
-        className="showcase-button"
+        className="lore-showcase-button"
 
         initial={{
           opacity: 0,
@@ -29,10 +31,11 @@ function ShowcaseButton() {
           amount: 0.3,
         }}
       >
-        Conseguir Display
+        CONSEGUIR SHOGUN 5
       </motion.button>
 
     </div>
+
   );
 
 }
