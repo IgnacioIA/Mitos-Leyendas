@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import MazosInicialesPB from "../pages/mazosInicialesPrimerBloque/MazosInicialesPB.jsx";
 import Leyendas4y0 from "../pages/leyendas 4.0/Leyendas4-0.jsx";
+import Shogun from "../pages/shogun/Shogun.jsx";
 
 function AppRoutes() {
   return (
@@ -22,11 +23,11 @@ function AppRoutes() {
           element={<Leyendas4y0 />}
         />
 
-        {/* Shogun 
+        {/* Shogun */}
         <Route
           path="/Shogun"
-          element={<Leyendas4y0 />}
-        />*/}
+          element={<Shogun />}
+        />
 
       </Routes>
     </BrowserRouter>

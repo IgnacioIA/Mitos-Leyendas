@@ -1,0 +1,71 @@
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+  width: min(700px, 100%);
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  gap: 1.2rem;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.hero-title {
+  font-family: "Boucherie Block", serif;
+
+  font-size: clamp(3.5rem, 9vw, 7rem);
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   SUBTITLE
+========================================================= */
+
+.hero-subtitle {
+  font-family: "Boucherie Block", serif;
+
+  font-size:
+    clamp(3.0rem, 2vw, 4.0rem)
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  color: #d4af37;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.hero-description {
+  width: min(650px, 100%);
+
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: clamp(1rem, 2vw, 1.5rem);
+
+  font-weight: 700;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.08em;
+
+  color: var(--muted);
+}

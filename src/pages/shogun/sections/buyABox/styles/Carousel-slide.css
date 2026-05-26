@@ -1,0 +1,133 @@
+.carousel-slide {
+
+  position: absolute;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease,
+    filter 0.5s ease;
+
+  will-change:
+    transform;
+}
+
+/* =========================================================
+   CENTER CARD
+========================================================= */
+
+.carousel-slide.center {
+
+  z-index: 3;
+
+  transform:
+    translateX(0)
+    scale(1);
+
+  opacity: 1;
+}
+
+/* =========================================================
+   LEFT CARD
+========================================================= */
+
+.carousel-slide.left {
+
+  z-index: 1;
+
+  transform:
+    translateX(-180px)
+    scale(0.82);
+
+  opacity: 0.6;
+
+  filter: brightness(0.7);
+}
+
+/* =========================================================
+   RIGHT CARD
+========================================================= */
+
+.carousel-slide.right {
+
+  z-index: 1;
+
+  transform:
+    translateX(180px)
+    scale(0.82);
+
+  opacity: 0.6;
+
+  filter: brightness(0.7);
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.carousel-slide-image-wrapper {
+
+  width: min(42vw, 360px);
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.5);
+}
+
+.carousel-slide-image {
+
+  width: 100%;
+
+  display: block;
+}
+
+.carousel-slide-title {
+
+  margin-top: 18px;
+
+  font-size:
+    clamp(1.2rem, 2vw, 2rem);
+
+  color: white;
+
+  text-align: center;
+}
+
+/*****************************************************
+Responsive
+******************************************************/
+
+@media (max-width: 768px) {
+
+  .carousel-track {
+
+    min-height: 500px;
+  }
+
+  .carousel-slide.left {
+
+    transform:
+      translateX(-90px)
+      scale(0.72);
+  }
+
+  .carousel-slide.right {
+
+    transform:
+      translateX(90px)
+      scale(0.72);
+  }
+
+  .carousel-slide-image-wrapper {
+
+    width: min(65vw, 260px);
+  }
+}

@@ -1,0 +1,57 @@
+/* =========================================================
+   HERO SCROLL BUTTON
+========================================================= */
+
+.hero-scroll-wrapper {
+  display: flex;
+
+  justify-content: center;
+
+  width: 100%;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.hero-scroll-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 240px;
+  height: 58px;
+
+  padding-inline: 2rem;
+
+  border-radius: 999px;
+
+  background: #3fa34d;
+
+  color: white;
+
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: 1.2rem;
+
+  letter-spacing: 0.08em;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.hero-scroll-button:hover {
+  background: #4db85c;
+
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 12px 30px rgba(63, 163, 77, 0.35);
+}
