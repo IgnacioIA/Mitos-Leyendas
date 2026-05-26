@@ -1,8 +1,8 @@
 /* =========================================================
-   HERO SCROLL BUTTON
+   SHOGUN HERO SCROLL BUTTON
 ========================================================= */
 
-.hero-scroll-wrapper {
+.shogun-hero-scroll-wrapper {
   display: flex;
 
   justify-content: center;
@@ -14,44 +14,47 @@
    BUTTON
 ========================================================= */
 
-.hero-scroll-button {
+.shogun-hero-scroll-button {
   display: inline-flex;
 
   align-items: center;
   justify-content: center;
 
-  min-width: 240px;
-  height: 58px;
+  padding: 1rem 2rem;
 
-  padding-inline: 2rem;
+  background: transparent;
 
-  border-radius: 999px;
+  border: none;
 
-  background: #3fa34d;
-
-  color: white;
+  color: rgba(255,255,255,0.82);
 
   font-family: "Bebas Neue", sans-serif;
 
   font-size: 1.2rem;
 
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  text-decoration: none;
 
   transition:
-    transform 0.3s ease,
-    background 0.3s ease,
-    box-shadow 0.3s ease;
+    color 0.3s ease,
+    text-shadow 0.3s ease,
+    transform 0.3s ease;
 }
 
 /* =========================================================
    HOVER
 ========================================================= */
 
-.hero-scroll-button:hover {
-  background: #4db85c;
+.shogun-hero-scroll-button:hover {
+  color: #ffffff;
 
-  transform: translateY(-4px);
+  text-shadow:
+    0 0 8px rgba(255,255,255,0.7),
+    0 0 18px rgba(255,255,255,0.45),
+    0 0 36px rgba(255,255,255,0.25);
 
-  box-shadow:
-    0 12px 30px rgba(63, 163, 77, 0.35);
+  transform: translateY(-2px);
 }

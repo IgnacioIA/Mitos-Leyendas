@@ -1,8 +1,8 @@
 /* =========================================================
-   HERO SECTION
+   SHOGUN HERO SECTION
 ========================================================= */
 
-.hero {
+.shogun-hero {
   position: relative;
 
   min-height: 100dvh;
@@ -13,7 +13,7 @@
 }
 
 
-.hero-layout {
+.shogun-hero-layout {
   position: relative;
   z-index: 5;
 
@@ -24,14 +24,14 @@
 
   min-height: 75dvh;
 
-  padding-bottom: clamp(3rem, 5vw, 6rem);
+  padding-bottom: clamp(1rem, 3vw, 3rem);
 }
 
 /* =========================================================
-   HERO BOTTOM
+   SHOGUN HERO BOTTOM
 ========================================================= */
 
-.hero-bottom {
+.shogun-hero-bottom {
   display: flex;
   flex-direction: column;
 

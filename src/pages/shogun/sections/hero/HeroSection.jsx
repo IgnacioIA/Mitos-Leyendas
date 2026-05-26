@@ -8,15 +8,15 @@ import HeroScrollButton from "./components/HeroScrollButton";
 function HeroSection() {
 
   return (
-    <section className="hero section">
+    <section className="shogun-hero section">
 
       <HeroBackground />
 
       <HeroOverlay />
 
-      <div className="container hero-layout">
+      <div className="container shogun-hero-layout">
 
-        <div className="hero-bottom">
+        <div className="shogun-hero-bottom">
 
           <HeroContent />
 

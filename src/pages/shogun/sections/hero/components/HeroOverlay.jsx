@@ -3,7 +3,7 @@ import "../styles/hero-overlay.css";
 function HeroOverlay() {
 
   return (
-    <div className="hero-overlay" />
+    <div className="shogun-hero-overlay" />
   );
 
 }
