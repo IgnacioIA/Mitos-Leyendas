@@ -1,6 +1,6 @@
 import img1 from "../../../../../assets/mitos4.0/productos/Display-1.png";
-import img2 from "../../../../../assets/mitos4.0/productos/Kit Draco.png";
-import img3 from "../../../../../assets/mitos4.0/productos/Kit Sidhe.png";
+import img2 from "../../../../../assets/mitos4.0/productos/KITS DE BATALLA.webp";
+import img3 from "../../../../../assets/mitos4.0/productos/SHOGUN 5.webp";
 
 export const cards = [
 

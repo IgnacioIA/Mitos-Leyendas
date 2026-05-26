@@ -2,11 +2,11 @@ import "../style/Novedades-b-grid.css";
 
 import NovedadesBCard from "./NovedadesBCard";
 
-import img1 from "../../../../../assets/mitos4.0/novedades/Crom Tigernmas ilus.png";
-import img2 from "../../../../../assets/mitos4.0/novedades/Imagen2.png";
-import img3 from "../../../../../assets/mitos4.0/novedades/Imagen3.png";
-import img4 from "../../../../../assets/mitos4.0/novedades/Imagen4.png";
-import img5 from "../../../../../assets/mitos4.0/novedades/Crom Tigernmas ilus.png";
+import img1 from "../../../../../assets/mitos4.0/novedades/PERSONAJES 1.webp";
+import img2 from "../../../../../assets/mitos4.0/novedades/PERSONAJES 2.webp";
+import img3 from "../../../../../assets/mitos4.0/novedades/PERSONAJES 3.webp";
+import img4 from "../../../../../assets/mitos4.0/novedades/PERSONAJES 4.webp";
+import img5 from "../../../../../assets/mitos4.0/novedades/PERSONAJES 5.webp";
 
 function NovedadesBGrid() {
 

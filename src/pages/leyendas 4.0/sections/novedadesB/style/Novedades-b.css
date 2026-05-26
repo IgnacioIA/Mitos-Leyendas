@@ -3,5 +3,8 @@
 
   padding: 120px 0;
 
-  background: #090909;
+  background-image: url("../../../../../assets/mitos4.0/novedades/FONDO NOVEDADES.WEBP");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

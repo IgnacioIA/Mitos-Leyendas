@@ -22,6 +22,12 @@ function AppRoutes() {
           element={<Leyendas4y0 />}
         />
 
+        {/* Shogun 
+        <Route
+          path="/Shogun"
+          element={<Leyendas4y0 />}
+        />*/}
+
       </Routes>
     </BrowserRouter>
   );

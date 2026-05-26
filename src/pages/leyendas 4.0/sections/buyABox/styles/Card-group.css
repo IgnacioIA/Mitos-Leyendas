@@ -77,7 +77,7 @@
   z-index: 1;
 
   transform:
-    translateX(-90%)
+    translateX(-80%)
     scale(0.80);
 
   filter:
@@ -93,7 +93,7 @@
   z-index: 2;
 
   transform:
-    translateX(90%)
+    translateX(80%)
     scale(0.80);
 
   filter:
