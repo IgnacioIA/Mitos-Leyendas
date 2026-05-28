@@ -4,7 +4,7 @@ import ShowcaseSection from
 import "./style/TextoyCartasSectionShogun.css";
 
 import Shogun1 from
-"../../../../assets/shogun/textoYCarta/Shogun-2026-1.png";
+"../../../../assets/shogun/textoYCarta/CartaGif.gif";
 
 import Shogun2 from
 "../../../../assets/shogun/textoYCarta/APB5-05.png";
