@@ -1,84 +1,69 @@
 import ShowcaseSection from
 "../../../../components/showcase-section/ShowcaseSection.jsx";
 
-import "./style/Carta-texto.css";
+import "./style/TextoyCartasSectionShogun.css";
 
-import carta1 from
-"../../../../assets/mitos4.0/cartaYTexto/CARTAS NUEVAS.png";
+import Shogun1 from
+"../../../../assets/shogun/textoYCarta/Shogun-2026-1.png";
 
-import carta2 from
-"../../../../assets/mitos4.0/cartaYTexto/CARTAS PREMIUM.png";
+import Shogun2 from
+"../../../../assets/shogun/textoYCarta/APB5-05.png";
 
-import carta3 from
-"../../../../assets/mitos4.0/cartaYTexto/CARTAS REWORK.png";
+import backgroundImg from
+"../../../../assets/shogun/textoYCarta/FONDO BUY A BOX.webp";
 
-import carta4 from
-"../../../../assets/mitos4.0/cartaYTexto/CARTAS FOIL ESPECIAL.png";
-
-import carta5 from
-"../../../../assets/mitos4.0/cartaYTexto/CARTAS EXCLUSIVAS.png";
-
-import fondo from
-"../../../../assets/mitos4.0/cartaYTexto/fondo.webp";
-
-export default function CartaTexto() {
+export default function MitosCardsSection() {
 
   return (
 
-    <section className="carta-texto-theme">
+    <section className="mitos-cards-section">
 
-      {/* =====================================================
-          BACKGROUND LAYER
-      ===================================================== */}
+      {/* =========================================
+          BACKGROUND
+      ========================================= */}
 
       <div
-        className="carta-texto-background"
+        className="mitos-cards-section__background"
         style={{
           backgroundImage: `
             linear-gradient(
               rgba(0,0,0,0.10),
               rgba(0,0,100,0.10)
             ),
-            url(${fondo})
+            url(${backgroundImg})
           `
         }}
       />
 
-      <div className="carta-texto-content">
+      {/* =========================================
+          CONTENT
+      ========================================= */}
 
-        {/* =====================================================
-            SECTION 1
-        ===================================================== */}
+      <div className="mitos-cards-section__content">
 
         <ShowcaseSection
-          image={carta1}
-          title="Cartas Nuevas"
+          image={Shogun1}
+          title="cartas BUY A BOX"
           reverse
         >
 
           <p>
-            Una de las principales novedades de esta nueva versión
-            de Leyendas PB 4.0, son las cartas completamente nuevas
-            que se agregan al formato de Primer Bloque Extendido.
+            Todas las unidades de Shogun 5: Onna-musha vol 1 y vol 2,
+            vendrán con una exclusiva carta adicional como Buy a Box.
           </p>
 
           <p>
-            Dentro de esta edición, tendremos 60 cartas nuevas
-            que formarán parte de las ediciones Espada Sagrada,
-            Helénica, Hijos de Daana o de Dominios de Ra, las que
-            se podrán encontrar entre las frecuencias Mega Real,
-            Real, Cortesano y Vasallo.
+            Dentro del producto Shogun 5: Onna-musha vol 1
+            encontraremos la carta Lady Calvaur, en cambio
+            en el vol 2 encontraremos la carta Gea, ambas con
+            un arte alternativo en estilo especial de anime.
           </p>
 
         </ShowcaseSection>
 
-        {/* =====================================================
-            SECTION 2
-        ===================================================== */}
-
         <ShowcaseSection
-          image={carta2}
-          title="Cartas Premium"
+          image={Shogun2}
+          title="cartas SECRETAS"
         >
 
           <p>
@@ -99,84 +84,6 @@ export default function CartaTexto() {
 
         </ShowcaseSection>
 
-        {/* =====================================================
-            SECTION 3
-        ===================================================== */}
-
-        <ShowcaseSection
-          image={carta3}
-          title="Cartas Rework"
-          reverse
-        >
-
-          <p>
-            Siguiendo con las novedades, los nuevos sobres
-            de Leyendas Primer Bloque 4.0 agregan nuevas cartas
-            clásicas con habilidades Rework, las que se incorporan
-            al formato de Primer Bloque Extendido.
-          </p>
-
-          <p>
-          Dentro de esta edición tendremos más de 40 nuevas
-          cartas Rework, divididas entre las frecuencias Real,
-          Cortesano y Vasallo, y que pertenecen a las ediciones
-          de Espada Sagrada, Helénica, Hijos de Daana
-          o Dominios de Ra.
-          </p>
-
-        </ShowcaseSection>
-
-        {/* =====================================================
-            SECTION 4
-        ===================================================== */}
-
-        <ShowcaseSection
-          image={carta4}
-          title="Cartas Foil Especial"
-        >
-
-          <p>
-            En esta nueva versión de Leyendas Primer Bloque 4.0
-            agregaremos nuevas cartas de frecuencia Legendaria,
-            conservando un estilo de aplicación de colores continuando
-            este tipo de tratamiento de las cartas de esta frecuencia
-            de las ediciones de Aniversario.
-          </p>
-
-          <p>
-            Dentro de la edición existe un total de 09 nuevas cartas
-            Legendarias, las que tienen una frecuencia de aparición
-            de 1 de cada 72 sobres.
-          </p>
-
-        </ShowcaseSection>
-
-        {/* =====================================================
-            SECTION 5
-        ===================================================== */}
-
-        <ShowcaseSection
-          image={carta5}
-          title="Cartas Exclusivas"
-          reverse
-        >
-
-          <p>
-            Finalmente, queremos mostrarles la última novedad
-            de esta edición con las nuevas cartas Secretas.
-          </p>
-
-          <p>
-            Existirán un total de 5 cartas del tipo Secreta dentro
-            de Leyendas PB 4.0, las que tendrán una frecuencia
-            de 1 de cada 3.000 sobres aproximadamente, siendo
-            estas cartas un verdadero tesoro y una de las más
-            raras de todo Mitos y Leyendas.
-          </p>
-
-        </ShowcaseSection>
-
-      
       </div>
 
     </section>

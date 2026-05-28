@@ -1,0 +1,58 @@
+.mitos-cards-section {
+
+  position: relative;
+
+  isolation: isolate;
+}
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.mitos-cards-section__background {
+
+  position: sticky;
+
+  top: 0;
+
+  width: 100%;
+
+  min-height: 110svh;
+
+  z-index: -1;
+
+  pointer-events: none;
+
+  background-repeat: no-repeat;
+
+  background-position: center top;
+
+  background-size: 100% auto;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.mitos-cards-section__content {
+
+  position: relative;
+
+  z-index: 1;
+
+  margin-top: -100vh;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .mitos-cards-section__background {
+
+    background-size: cover;
+
+    background-position: 65% center;
+  }
+}
