@@ -8,7 +8,7 @@ export default function CarouselControls({
   return (
 
     <button
-      className="carousel-control"
+      className="shogun-control-carousel-control"
       onClick={onClick}
     >
 

@@ -1,9 +1,17 @@
-.section-header {
+.shogun-buyabox-section-header {
+
+   display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
 
   text-align: center;
+
+  gap: 1.5rem;
 }
 
-.section-title {
+.shogun-buyabox-section-title {
 
   font-family: "Bebas Neue", sans-serif;
 
@@ -15,4 +23,20 @@
   text-transform: uppercase;
 
   letter-spacing: 2px;
+}
+
+.shogun-buyabox-section-paragraph{
+
+ font-family: Arial;
+
+  font-size:
+    clamp(0.5rem, 3vw, 1rem);
+
+  color: white;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+
 }

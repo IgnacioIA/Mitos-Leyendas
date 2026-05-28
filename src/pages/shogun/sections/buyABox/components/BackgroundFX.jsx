@@ -1,14 +1,14 @@
 import "../styles/Background-fx.css";
 
 import backgroundImage from
-"../../../../../assets/mitos4.0/buyABox/FONDO.webp";
+"../../../../../assets/shogun/buyABox/FONDO COLECCIONABILIDAD.webp";
 
 export default function BackgroundFX() {
 
   return (
 
     <div
-      className="background-fx"
+      className="Shogun-BuyABox-background-fx"
       style={{
         backgroundImage: `url("${backgroundImage}")`
       }}

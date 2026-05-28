@@ -1,25 +1,15 @@
-import img1 from "../../../../../assets/mitos4.0/buyABox/1A.png";
-import img2 from "../../../../../assets/mitos4.0/buyABox/1B.png";
-import img3 from "../../../../../assets/mitos4.0/buyABox/1C.png";
+import img1 from "../../../../../assets/shogun/buyABox/APB5-25-A.png";
+import img2 from "../../../../../assets/shogun/buyABox/APB5-25-B.png";
+import img3 from "../../../../../assets/shogun/buyABox/APB5-25-C.png";
 
-import img4 from "../../../../../assets/mitos4.0/buyABox/2A.png";
-import img5 from "../../../../../assets/mitos4.0/buyABox/2B.png";
-import img6 from "../../../../../assets/mitos4.0/buyABox/2C.png";
-
-import img7 from "../../../../../assets/mitos4.0/buyABox/3A.png";
-import img8 from "../../../../../assets/mitos4.0/buyABox/3B.png";
-import img9 from "../../../../../assets/mitos4.0/buyABox/3C.png";
-
-import img10 from "../../../../../assets/mitos4.0/buyABox/4A.png";
-import img11 from "../../../../../assets/mitos4.0/buyABox/4B.png";
-import img12 from "../../../../../assets/mitos4.0/buyABox/4C.png";
+import img4 from "../../../../../assets/shogun/buyABox/Shogun-2026-29.png";
+import img5 from "../../../../../assets/shogun/buyABox/Shogun-2026-30.png";
+import img6 from "../../../../../assets/shogun/buyABox/Shogun-2026-31.png";
 
 const dataSection = [
 
     {
     id: 1,
-
-    title: "CORRESPONDEN A LA EDICIÓN ESPADA SAGRADA",
 
     cards: [
       img1,
@@ -31,34 +21,10 @@ const dataSection = [
   {
     id: 2,
 
-    title: "Cartas Exclusivas",
-
     cards: [
       img4,
       img5,
       img6,
-    ],
-  },
-  {
-    id: 3,
-
-    title: "Cartas Exclusivas",
-
-    cards: [
-      img7,
-      img8,
-      img9,
-    ],
-  },
-  {
-    id: 4,
-
-    title: "Cartas Exclusivas",
-
-    cards: [
-      img10,
-      img11,
-      img12,
     ],
   },
 ];

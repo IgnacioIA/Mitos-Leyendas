@@ -12,14 +12,14 @@ export default function BuyABox() {
 
   return (
 
-    <section className="feature-carousel-section">
+    <section className="shogun-buyabox-section">
 
       <BackgroundFX />
 
-      <div className="feature-carousel-container">
+      <div className="shogun-buyabox-container">
 
         <SectionHeader
-          title="cartas buy a box de la colección"
+          title="arte coleccionable"
         />
 
         <CarouselViewport

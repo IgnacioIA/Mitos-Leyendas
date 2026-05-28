@@ -1,10 +1,10 @@
-.feature-carousel-section {
+.shogun-buyabox-section {
 
   position: relative;
 
   width: 100%;
 
-  min-height: 100dvh;
+  min-height: 100svh;
 
   overflow: hidden;
 
@@ -17,7 +17,7 @@
    CONTENT LAYER
 ========================================================= */
 
-.feature-carousel-container {
+.shogun-buyabox-container {
 
   position: relative;
 
@@ -33,4 +33,3 @@
 
   width: 100%;
 }
-

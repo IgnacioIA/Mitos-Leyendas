@@ -6,31 +6,31 @@ export default function CardGroup({
 
   return (
 
-    <div className="card-group">
+    <div className="shogun-buyabox-group">
 
-      <div className="card-stack">
+      <div className="shogun-buyabox-card-stack">
 
         <img
           src={group.cards[0]}
           alt=""
-          className="group-card left"
+          className="shogun-buyabox-card shogun-buyabox-card-left"
         />
 
         <img
           src={group.cards[1]}
           alt=""
-          className="group-card center"
+          className="shogun-buyabox-card shogun-buyabox-card-center"
         />
 
         <img
           src={group.cards[2]}
           alt=""
-          className="group-card right"
+          className="shogun-buyabox-card shogun-buyabox-card-right"
         />
 
       </div>
 
-      <h3 className="group-title">
+      <h3 className="shogun-buyabox-group-title">
         {group.title}
       </h3>
 

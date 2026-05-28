@@ -7,19 +7,24 @@ export default function CarouselSlide({
 
   return (
 
-    <div className={`carousel-slide ${position}`}>
+    <div
+      className={`
+        shogun-buyabox-slide
+        shogun-buyabox-slide-${position}
+      `}
+    >
 
-      <div className="carousel-slide-image-wrapper">
+      <div className="shogun-buyabox-slide-image-wrapper">
 
         <img
           src={slide.image}
           alt={slide.title}
-          className="carousel-slide-image"
+          className="shogun-buyabox-slide-image"
         />
 
       </div>
 
-      <h3 className="carousel-slide-title">
+      <h3 className="shogun-buyabox-slide-title">
         {slide.title}
       </h3>
 

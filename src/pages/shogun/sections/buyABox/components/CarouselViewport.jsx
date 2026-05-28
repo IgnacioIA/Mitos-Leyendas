@@ -31,7 +31,7 @@ export default function CarouselViewport({
 
   return (
 
-    <div className="carousel-wrapper">
+    <div className="shogun-buyabox-carousel-wrapper">
 
       <CarouselControls
         direction="left"
@@ -39,20 +39,20 @@ export default function CarouselViewport({
       />
 
       <div
-        className="embla"
+        className="shogun-buyabox-carousel"
         ref={emblaRef}
       >
 
-        <div className="embla__container">
+        <div className="shogun-buyabox-carousel-track">
 
           {groups.map((group, index) => (
 
             <div
-              className="embla__slide"
+              className="shogun-buyabox-carousel-slide"
               key={index}
             >
 
-              <div className="embla__slide__inner">
+              <div className="shogun-buyabox-carousel-slide-inner">
 
                 <CardGroup group={group} />
 

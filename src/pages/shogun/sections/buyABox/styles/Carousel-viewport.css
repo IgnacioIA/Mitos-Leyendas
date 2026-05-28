@@ -1,16 +1,18 @@
-.embla {
+.shogun-buyabox-carousel {
 
   width: 100%;
+
+  min-width: 0;
 
   overflow: hidden;
 }
 
-.embla__container {
+.shogun-buyabox-carousel-track {
 
   display: flex;
 }
 
-.embla__slide {
+.shogun-buyabox-carousel-slide {
 
   flex: 0 0 100%;
 
@@ -25,7 +27,7 @@
    AISLA VISUALMENTE CADA GRUPO
 ========================================================= */
 
-.embla__slide__inner {
+.shogun-buyabox-carousel-slide-inner {
 
   width: 100%;
 
@@ -38,11 +40,12 @@
   position: relative;
 }
 
-.carousel-wrapper {
+.shogun-buyabox-carousel-wrapper {
 
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   gap: clamp(10px, 2vw, 24px);
@@ -55,5 +58,12 @@
   .carousel-control {
 
     display: none;
+  }
+
+  .shogun-buyabox-carousel-wrapper {
+
+    display: block;
+
+    width: 100%;
   }
 }

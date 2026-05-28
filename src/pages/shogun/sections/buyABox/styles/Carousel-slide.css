@@ -1,4 +1,4 @@
-.carousel-slide {
+.shogun-buyabox-slide {
 
   position: absolute;
 
@@ -21,7 +21,7 @@
    CENTER CARD
 ========================================================= */
 
-.carousel-slide.center {
+.shogun-buyabox-slide-center {
 
   z-index: 3;
 
@@ -36,7 +36,7 @@
    LEFT CARD
 ========================================================= */
 
-.carousel-slide.left {
+.shogun-buyabox-slide-left {
 
   z-index: 1;
 
@@ -53,7 +53,7 @@
    RIGHT CARD
 ========================================================= */
 
-.carousel-slide.right {
+.shogun-buyabox-slide-right {
 
   z-index: 1;
 
@@ -70,7 +70,7 @@
    IMAGE
 ========================================================= */
 
-.carousel-slide-image-wrapper {
+.shogun-buyabox-slide-image-wrapper {
 
   width: min(42vw, 360px);
 
@@ -82,14 +82,14 @@
     0 20px 60px rgba(0,0,0,0.5);
 }
 
-.carousel-slide-image {
+.shogun-buyabox-slide-image {
 
   width: 100%;
 
   display: block;
 }
 
-.carousel-slide-title {
+.shogun-buyabox-slide-title {
 
   margin-top: 18px;
 
@@ -107,26 +107,22 @@ Responsive
 
 @media (max-width: 768px) {
 
-  .carousel-track {
 
-    min-height: 500px;
-  }
-
-  .carousel-slide.left {
+  .shogun-buyabox-slide-left {
 
     transform:
       translateX(-90px)
       scale(0.72);
   }
 
-  .carousel-slide.right {
+  .shogun-buyabox-slide-right {
 
     transform:
       translateX(90px)
       scale(0.72);
   }
 
-  .carousel-slide-image-wrapper {
+  .shogun-buyabox-slide-image-wrapper {
 
     width: min(65vw, 260px);
   }

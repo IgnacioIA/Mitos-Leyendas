@@ -1,4 +1,4 @@
-.card-group {
+.shogun-buyabox-group {
 
   display: flex;
 
@@ -15,27 +15,30 @@
    STACK
 ========================================================= */
 
-.card-stack {
+.shogun-buyabox-card-stack {
 
   position: relative;
 
-  width: min(90vw, 900px);
+  width: 100%;
+  max-width: 900px;
 
-  height: clamp(220px, 32vw, 480px);
+  height: clamp(320px, 32vw, 480px);
 
   display: flex;
 
-   overflow: visible;
-
   align-items: center;
   justify-content: center;
+
+  overflow: hidden;
+
+  isolation: isolate;
 }
 
 /* =========================================================
    BASE CARD
 ========================================================= */
 
-.group-card {
+.shogun-buyabox-card {
 
   position: absolute;
 
@@ -58,7 +61,7 @@
    CENTER CARD
 ========================================================= */
 
-.group-card.center {
+.shogun-buyabox-card-center {
 
   z-index: 3;
 
@@ -67,12 +70,11 @@
     scale(1);
 }
 
-
 /* =========================================================
    LEFT CARD
 ========================================================= */
 
-.group-card.left {
+.shogun-buyabox-card-left {
 
   z-index: 1;
 
@@ -88,7 +90,7 @@
    RIGHT CARD
 ========================================================= */
 
-.group-card.right {
+.shogun-buyabox-card-right {
 
   z-index: 2;
 
@@ -100,26 +102,11 @@
     brightness(0.7);
 }
 
-/* =========================================================
-   TITLE
-========================================================= */
-
-.group-title {
-
-  font-size:
-    clamp(1.5rem, 3vw, 3rem);
-
-  color: gold;
-
-  text-align: center;
-
-
-}
 
 
 @media (max-width: 768px) {
 
-  .card-stack {
+  .shogun-buyabox-card-stack {
 
     width: 100%;
 
@@ -128,21 +115,21 @@
     overflow: hidden;
   }
 
-  .group-card {
+  .shogun-buyabox-card {
 
     width: 150px;
   }
 
-  .group-card.left {
+  .shogun-buyabox-card-left {
 
     transform:
-      translateX(-85%)
+      translateX(-65%)
       scale(0.78);
 
     z-index: 1;
   }
 
-  .group-card.center {
+  .shogun-buyabox-card-center {
 
     transform:
       translateX(0)
@@ -151,10 +138,10 @@
     z-index: 3;
   }
 
-  .group-card.right {
+  .shogun-buyabox-card-right {
 
     transform:
-      translateX(85%)
+      translateX(65%)
       scale(0.78);
 
     z-index: 2;
