@@ -1,0 +1,31 @@
+.novedades-background {
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+
+}
+
+.novedades-background-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.30),
+      rgba(0,0,0,0.45)
+    );
+}

@@ -1,0 +1,24 @@
+.novedades-gallery {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 24px;
+
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+
+  .novedades-gallery {
+
+    grid-template-columns: 1fr;
+  }
+
+  .novedades-header__title {
+
+    white-space: normal;
+  }
+}
