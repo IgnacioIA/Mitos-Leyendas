@@ -1,0 +1,180 @@
+/* ========================================
+   SECTION
+======================================== */
+
+.instagram-banner-section {
+
+  width: 100%;
+
+  padding:
+    4rem
+    0rem;
+
+  background: white;
+}
+
+/* ========================================
+   LINK
+======================================== */
+
+.instagram-banner-link {
+
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  transition:
+    transform 300ms ease,
+    box-shadow 300ms ease;
+}
+
+/* ========================================
+   HOVER
+======================================== */
+
+.instagram-banner-link:hover {
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 20px 40px
+    rgba(0,0,0,.20);
+}
+
+/* ========================================
+   IMAGE
+======================================== */
+
+.instagram-banner-image {
+
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+}
+/* ========================================
+   OVERLAY
+======================================== */
+.instagram-banner-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 2rem;
+
+  background:
+    rgba(0, 0, 0, 0.35);
+
+  color: white;
+}
+/* ========================================
+   TITULO
+======================================== */
+
+.instagram-banner-title {
+
+  
+
+  font-size:
+    clamp(2rem, 4vw, 4rem);
+
+  margin-bottom: 1rem;
+
+  text-shadow:
+    0 3px 12px rgba(0,0,0,.6);
+}
+
+/* ========================================
+   DESCRIPCION
+======================================== */
+
+.instagram-banner-description {
+
+  max-width: 700px;
+
+  margin-top: 1rem;
+
+  line-height: 1.6;
+}
+
+/* ========================================
+   BOTON
+======================================== 
+
+.instagram-banner-button {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    .9rem 1.8rem;
+
+  border:
+    2px solid white;
+
+  font-weight: 600;
+
+  transition: .3s;
+}*/
+
+/* ========================================
+   HOVER
+======================================== */
+.instagram-banner-link:hover
+.instagram-banner-button {
+
+  background: white;
+
+  color: black;
+}
+
+@media (max-width: 768px) {
+
+  .instagram-banner-section {
+
+    padding:
+      3rem
+      1rem;
+  }
+
+  .instagram-banner-link:hover {
+
+    transform:
+      translateY(-5px);
+  }
+
+    .instagram-banner-overlay {
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 2rem;
+  }
+
+  .instagram-banner-description {
+
+    max-width: 100%;
+  }
+
+}
