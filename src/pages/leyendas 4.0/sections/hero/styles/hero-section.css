@@ -35,5 +35,5 @@
 
   align-items: center;
 
-  gap: clamp(5rem, 3vw, 3rem);
+  gap: clamp(2.5rem, 3vw, 3rem);
 }
