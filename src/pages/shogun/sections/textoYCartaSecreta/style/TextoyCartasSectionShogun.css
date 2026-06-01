@@ -1,0 +1,61 @@
+.mitos-cards-section-CartaSecreta {
+
+  position: relative;
+
+  isolation: isolate;
+}
+
+/* =========================================
+   STICKY LAYER
+========================================= */
+
+.mitos-cards-section__background-CartaSecreta {
+
+   position: sticky;
+
+  top: 0;
+
+  width: 100%;
+
+  min-height: 110svh;
+
+  z-index: -1;
+
+  pointer-events: none;
+
+  background-repeat: no-repeat;
+
+  background-position: center top;
+
+  background-size: 100% auto;
+}
+
+/* Fondo real sticky */
+
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.mitos-cards-section__content-CartaSecreta {
+
+  position: relative;
+
+  z-index: 1;
+
+  margin-top: -100vh;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .mitos-cards-section__background-CartaSecreta {
+
+    background-size: cover;
+    background-position: 65% center;
+  }
+}

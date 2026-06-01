@@ -5,6 +5,7 @@ import Lore from "./sections/lore/ProductShowcaseSection.jsx";
 import Novedades from "./sections/novedadesShogun/NovedadesShogun.jsx";
 import BuyABox from "./sections/buyABox/BuyABox.jsx";
 import TextoYCarta from "./sections/textoYCarta/TextoYCarta.jsx";
+import TextoYCartaSecreta from "./sections/textoYCartaSecreta/TextoYCartaSecreta.jsx";
 import Productos from "./sections/productos/Productos.jsx";
 
 export default function Shogun() {
@@ -18,6 +19,7 @@ export default function Shogun() {
     	<Novedades/>
     	<BuyABox/>
     	<TextoYCarta/>
+      <TextoYCartaSecreta/>
     	<Productos/>
 
 
