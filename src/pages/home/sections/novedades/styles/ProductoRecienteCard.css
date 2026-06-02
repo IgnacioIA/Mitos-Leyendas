@@ -1,0 +1,55 @@
+.producto-reciente-card {
+  position: relative;
+
+  flex: 1;
+
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition: flex 0.5s ease;
+
+
+}
+
+.producto-reciente-card__overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  padding: 32px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.8),
+      rgba(0,0,0,.1)
+    );
+}
+
+/* Cuando entro a la galería */
+
+.productos-recientes-gallery {
+  display: flex;
+  height: 700px;
+}
+
+.producto-reciente-card {
+  flex: 1;
+
+  transition: all 0.5s ease;
+
+  background-size: cover;
+  background-position: center;
+}
+
+.producto-reciente-card:hover {
+  flex: 2.7182;
+}
