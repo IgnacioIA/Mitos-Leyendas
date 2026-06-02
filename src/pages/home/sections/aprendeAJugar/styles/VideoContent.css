@@ -1,0 +1,60 @@
+.video-content {
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 2rem;
+}
+
+.video-subtitle {
+
+  font-size: 1rem;
+
+  margin-bottom: 1rem;
+
+  color: black;
+}
+
+.video-title {
+
+  font-size:
+    clamp(
+      2rem,
+      4vw,
+      4rem
+    );
+
+  margin-bottom: 2rem;
+
+  color: black;
+}
+
+.video-button {
+
+  padding:
+    1rem
+    2rem;
+
+  border:
+    2px solid white;
+
+  color: black;
+
+  text-decoration: none;
+
+  transition:
+    300ms ease;
+}
+
+.video-button:hover {
+
+  background: #DEDED9;
+
+  color: black;
+}

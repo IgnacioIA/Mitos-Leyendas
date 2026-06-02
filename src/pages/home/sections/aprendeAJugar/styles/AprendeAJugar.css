@@ -1,0 +1,73 @@
+/* ========================================
+   SECTION
+======================================== */
+
+.video-section {
+
+  width: 100%;
+
+  padding:
+    6rem
+    0;
+
+  background:
+    white;
+}
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.video-section-container {
+
+  max-width: 1600px;
+
+  margin: 0 auto;
+
+  padding: 3rem;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1.2fr;
+
+  gap: 2rem;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  background:
+    url("../../assets/video-bg.webp");
+
+  background-size: cover;
+  background-position: center;
+
+  box-shadow:
+    0 25px 50px
+    rgba(0,0,0,.15);
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 900px) {
+
+  .video-section {
+
+    padding:
+      3rem
+      1rem;
+  }
+
+  .video-section-container {
+
+    grid-template-columns:
+      1fr;
+
+    padding: 2rem;
+  }
+
+}
