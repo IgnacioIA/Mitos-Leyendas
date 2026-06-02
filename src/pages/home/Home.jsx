@@ -1,6 +1,6 @@
 import Hero from "./sections/hero/HeroHome";
 import Baner from "./sections/baner/InstagramBanner";
-
+import Interes from "./sections/interes/Interes";
 
 
 export default function Home() {
@@ -10,6 +10,7 @@ export default function Home() {
 
     	< Hero />
       < Baner />
+      < Interes />
 
 
 

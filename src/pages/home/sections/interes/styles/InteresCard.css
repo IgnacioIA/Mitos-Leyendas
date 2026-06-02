@@ -1,0 +1,34 @@
+.interes-card {
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  transition:
+    transform 300ms ease,
+    box-shadow 300ms ease;
+
+  cursor: pointer;
+}
+
+.interes-card:hover {
+
+  transform:
+    translateY(-10px);
+
+  box-shadow:
+    0 20px 40px
+    rgba(0,0,0,.25);
+}
+
+.interes-image {
+
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio:
+    574 / 650;
+
+  object-fit: cover;
+}
