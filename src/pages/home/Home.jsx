@@ -5,6 +5,8 @@ import AprenderAJugar from "./sections/aprendeAJugar/AprenderAJugar";
 import ProductosRecientes from "./sections/novedades/ProductosRecientes";
 import AcercaDe from "./sections/acercaDe/AcercaDe";
 
+import "./style/HomeStyle.css";
+
 
 export default function Home() {
 
