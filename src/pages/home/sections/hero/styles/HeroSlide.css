@@ -1,4 +1,4 @@
-.hero-slide {
+.hero-slide-Home {
 
   position: relative;
 
@@ -11,9 +11,10 @@
   background-position: center;
 }
 
-.hero-overlay {
+.hero-overlay-Home {
 
   position: absolute;
+
   inset: 0;
 
   background:

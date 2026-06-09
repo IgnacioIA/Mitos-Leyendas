@@ -7,17 +7,17 @@ export default function HeroNavigation({
 
   return (
 
-    <div className="hero-navigation">
+    <div className="hero-navigation-Home">
 
       <button
-        className="hero-arrow"
+        className="hero-arrow-Home"
         onClick={onPrev}
       >
         ←
       </button>
 
       <button
-        className="hero-arrow"
+        className="hero-arrow-Home"
         onClick={onNext}
       >
         →

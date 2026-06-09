@@ -6,29 +6,36 @@ export default function HeroContent({
 
   return (
 
-    <div className="hero-content">
+    <div className="hero-content-Home">
 
-      <p className="hero-subtitle">
-        {slide.subtitle}
-      </p>
-
-      <h1 className="hero-title">
+      <h1 className="hero-title-Home">
         {slide.title}
       </h1>
 
-      <p className="hero-description">
+      <p className="hero-subtitle-Home">
+        {slide.subtitle}
+      </p>
+
+      <p className="hero-description-Home">
         {slide.description}
       </p>
 
-      <div className="hero-buttons">
+      <div className="hero-buttons-Home">
 
         {
-          slide.buttons?.map((button) => (
+          slide.buttons?.map((button, index) => (
 
             <a
               key={button.text}
               href={button.url}
-              className="hero-button"
+              className={`
+                hero-button-Home
+                ${
+                  index === 0
+                    ? "hero-button-primary-Home"
+                    : "hero-button-secondary-Home"
+                }
+              `}
             >
               {button.text}
             </a>

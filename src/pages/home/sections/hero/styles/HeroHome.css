@@ -1,4 +1,4 @@
-.hero {
+.hero-Home {
   position: relative;
 
   width: 100%;
@@ -7,7 +7,7 @@
   overflow: hidden;
 }
 
-.hero-track {
+.hero-track-Home {
 
   display: flex;
 

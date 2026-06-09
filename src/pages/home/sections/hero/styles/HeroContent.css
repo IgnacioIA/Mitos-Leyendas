@@ -1,4 +1,4 @@
-.hero-content {
+.hero-content-Home {
 
   position: relative;
 
@@ -13,69 +13,219 @@
   padding-left: 8%;
   padding-right: 8%;
 
-  max-width: 700px;
+  max-width: 1100px;
 
   color: white;
 }
 
-.hero-subtitle {
+/* -------------------- */
+/* SUBTITULO */
+/* -------------------- */
 
-  font-size: 1rem;
+.hero-subtitle-Home {
 
-  margin-bottom: 1rem;
+  font-family: "Boucherie Block", serif;
+
+  font-size: clamp(
+    1.2rem,
+    2vw,
+    2.5rem
+  );
+
+  color: #ffd815;
 
   text-transform: uppercase;
 
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+
+  text-align: center;
+
+  margin-bottom: 0.5rem;
 }
 
-.hero-title {
+/* -------------------- */
+/* TITULO */
+/* -------------------- */
+
+.hero-title-Home {
+
+  font-family: "Boucherie Block", serif;
 
   font-size: clamp(
-    2.5rem,
-    6vw,
-    5rem
+    4rem,
+    10vw,
+    9rem
   );
 
+  line-height: 0.95;
+
+  text-align: center;
+
   margin-bottom: 1rem;
+
+  white-space: nowrap;
 }
 
-.hero-description {
+/* -------------------- */
+/* DESCRIPCION */
+/* -------------------- */
 
-  font-size: 1.1rem;
+.hero-description-Home {
 
-  line-height: 1.6;
+  font-family: "Bebas Neue", sans-serif;
 
-  margin-bottom: 2rem;
+  color: white;
+
+  font-size: clamp(
+    1rem,
+    1.8vw,
+    1.7rem
+  );
+
+  line-height: 1.4;
+
+  text-align: center;
+
+  max-width: 900px;
+
+  margin:
+    0 auto 2rem auto;
 }
 
-.hero-buttons {
+/* -------------------- */
+/* BOTONES */
+/* -------------------- */
+
+.hero-buttons-Home {
 
   display: flex;
+
+  justify-content: center;
 
   gap: 1rem;
 
   flex-wrap: wrap;
 }
 
-.hero-button {
+/* -------------------- */
+/* ESTILO BASE */
+/* -------------------- */
+
+.hero-button-Home {
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 180px;
 
   padding:
-    0.9rem 1.8rem;
+    1rem 2rem;
+
+  border-radius: 999px;
 
   text-decoration: none;
 
-  color: white;
+  font-family:
+    "Bebas Neue",
+    sans-serif;
 
-  border:
-    2px solid white;
+  font-size: 1.25rem;
+
+  letter-spacing: 1px;
 
   transition:
-    0.3s ease;
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
-.hero-button:hover {
+/* -------------------- */
+/* BOTON PRIMARIO */
+/* -------------------- */
 
-  background: white;
+.hero-button-primary-Home {
+
+  background-color: #1ecc0a;
+
+  color: white;
+}
+
+.hero-button-primary-Home:hover {
+
+  background-color: #17b107;
+}
+
+/* -------------------- */
+/* BOTON SECUNDARIO */
+/* -------------------- */
+
+.hero-button-secondary-Home {
+
+  background-color: white;
+
   color: black;
+}
+
+.hero-button-secondary-Home:hover {
+
+  background-color: #e6e6e6;
+}
+
+/* -------------------- */
+/* TABLET */
+/* -------------------- */
+
+@media (max-width: 1024px) {
+
+  .hero-content-Home {
+
+    max-width: 100%;
+  }
+
+  .hero-description-Home {
+
+    max-width: 750px;
+  }
+}
+
+/* -------------------- */
+/* MOBILE */
+/* -------------------- */
+
+@media (max-width: 768px) {
+
+  .hero-content-Home {
+
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .hero-title-Home {
+
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .hero-description-Home {
+
+    max-width: 100%;
+
+    font-size: 1.2rem;
+  }
+
+  .hero-buttons-Home {
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .hero-button-Home {
+
+    width: 100%;
+    max-width: 300px;
+
+    text-align: center;
+  }
 }

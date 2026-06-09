@@ -9,14 +9,14 @@ export default function HeroSlide({
   return (
 
     <div
-      className="hero-slide"
+      className="hero-slide-Home"
       style={{
         backgroundImage:
           `url(${slide.image})`
       }}
     >
 
-      <div className="hero-overlay" />
+      <div className="hero-overlay-Home" />
 
       <HeroContent
         slide={slide}

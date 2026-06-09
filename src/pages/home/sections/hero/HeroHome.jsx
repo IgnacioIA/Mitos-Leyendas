@@ -32,10 +32,10 @@ export default function HeroHome() {
 
   return (
 
-    <section className="hero">
+    <section className="hero-Home">
 
       <div
-        className="hero-track"
+        className="hero-track-Home"
         style={{
           transform:
             `translateX(-${currentSlide * 100}%)`
