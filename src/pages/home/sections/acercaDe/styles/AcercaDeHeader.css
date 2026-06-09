@@ -1,0 +1,27 @@
+.acerca-de-header {
+  text-align: center;
+
+  margin-bottom: 60px;
+}
+
+.acerca-de-header__title {
+  margin: 0 0 16px;
+
+  font-size: clamp(2.5rem, 5vw, 5rem);
+
+  font-weight: 700;
+
+  color: #111111;
+
+  line-height: 1.1;
+}
+
+.acerca-de-header__subtitle {
+  margin: 0;
+
+  font-size: 1.1rem;
+
+  color: #666666;
+
+  letter-spacing: 1px;
+}

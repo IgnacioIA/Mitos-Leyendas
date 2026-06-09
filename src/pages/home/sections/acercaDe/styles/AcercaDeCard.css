@@ -1,0 +1,55 @@
+.acerca-de-card {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 20px;
+
+  width: 100%;
+
+  min-height: 260px;
+
+  padding: 32px;
+
+  border: none;
+
+  border-radius: 24px;
+
+  background: white;
+
+  cursor: pointer;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+
+  box-shadow:
+    0 8px 24px rgba(0,0,0,.08);
+}
+
+.acerca-de-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,.15);
+}
+
+.acerca-de-card__image {
+  width: 120px;
+
+  height: 120px;
+
+  object-fit: contain;
+}
+
+.acerca-de-card__title {
+  font-size: 1.1rem;
+
+  font-weight: 600;
+
+  text-align: center;
+}
