@@ -16,10 +16,6 @@ export default function Interes() {
 
       <div className="interes-content">
 
-        <h2 className="interes-title">
-          ESTO TE PUEDE INTERESAR
-        </h2>
-
         <InteresGrid
           items={INTERES_ITEMS}
         />

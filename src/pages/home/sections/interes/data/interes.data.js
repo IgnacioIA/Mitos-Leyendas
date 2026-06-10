@@ -1,6 +1,6 @@
-import Imagen1 from "../../../../../assets/home/interes/LPB4-001.png";
-import Imagen2 from "../../../../../assets/home/interes/LPB4-001.png";
-import Imagen3 from "../../../../../assets/home/interes/LPB4-001.png";
+import Imagen1 from "../../../../../assets/home/interes/TPI 1.webp";
+import Imagen2 from "../../../../../assets/home/interes/TPI 2.webp";
+import Imagen3 from "../../../../../assets/home/interes/TPI 3.webp";
 import Imagen4 from "../../../../../assets/home/interes/LPB4-001.png";
 import Imagen5 from "../../../../../assets/home/interes/LPB4-001.png";
 import Imagen6 from "../../../../../assets/home/interes/LPB4-001.png";

@@ -7,12 +7,8 @@
   padding:
     6rem
     2rem;
-
-  overflow: hidden;
-
-  background-size: cover;
-  background-position: center;
 }
+
 
 .interes-overlay {
 
@@ -20,8 +16,6 @@
 
   inset: 0;
 
-  background:
-    rgba(0,0,0,.35);
 }
 
 .interes-content {
@@ -33,16 +27,4 @@
   max-width: 1800px;
 
   margin: 0 auto;
-}
-
-.interes-title {
-
-  text-align: center;
-
-  color: white;
-
-  margin-bottom: 4rem;
-
-  font-size:
-    clamp(2rem, 4vw, 4rem);
 }
