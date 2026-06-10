@@ -14,6 +14,7 @@ export default function AcercaDeGrid() {
           key={item.id}
           title={item.title}
           image={item.image}
+          url={item.url}
         />
       ))}
 

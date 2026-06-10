@@ -7,7 +7,7 @@ export default function AcercaDe() {
   return (
     <section className="acerca-de">
 
-      <div className="container">
+      <div className="container-acerca-de">
 
         <AcercaDeHeader />
 

@@ -5,12 +5,10 @@ export default function AcercaDeHeader() {
     <header className="acerca-de-header">
 
       <h2 className="acerca-de-header__title">
-        Acerca de
+        ACERCA DE MITOS Y LEYENDAS
       </h2>
 
-      <p className="acerca-de-header__subtitle">
-        Conocé más sobre nuestra colección
-      </p>
+
 
     </header>
   );

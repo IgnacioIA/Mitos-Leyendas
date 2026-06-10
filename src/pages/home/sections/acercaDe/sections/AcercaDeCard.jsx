@@ -1,15 +1,15 @@
-import "../styles/AcercaDeCard.css";
+import { Link } from "react-router-dom";
 
 export default function AcercaDeCard({
   title,
   image,
+  url,
 }) {
   return (
-    <button
+    <Link
+      to={url}
       className="acerca-de-card"
-      type="button"
     >
-
       <img
         src={image}
         alt={title}
@@ -19,7 +19,6 @@ export default function AcercaDeCard({
       <span className="acerca-de-card__title">
         {title}
       </span>
-
-    </button>
+    </Link>
   );
 }

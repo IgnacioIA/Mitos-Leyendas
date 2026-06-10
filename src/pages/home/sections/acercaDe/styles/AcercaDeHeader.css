@@ -11,17 +11,8 @@
 
   font-weight: 700;
 
-  color: #111111;
+  color: white;
 
   line-height: 1.1;
 }
 
-.acerca-de-header__subtitle {
-  margin: 0;
-
-  font-size: 1.1rem;
-
-  color: #666666;
-
-  letter-spacing: 1px;
-}

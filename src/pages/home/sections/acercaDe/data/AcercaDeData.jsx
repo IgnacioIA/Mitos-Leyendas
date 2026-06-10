@@ -1,39 +1,45 @@
-import img1 from "../../../../../assets/home/acercaDe/PERSONAJES 1.webp";
-import img2 from "../../../../../assets/home/acercaDe/PERSONAJES 2.webp";
-import img3 from "../../../../../assets/home/acercaDe/PERSONAJES 3.webp";
-import img4 from "../../../../../assets/home/acercaDe/PERSONAJES 4.webp";
-import img5 from "../../../../../assets/home/acercaDe/PERSONAJES 5.webp";
-import img6 from "../../../../../assets/home/acercaDe/PERSONAJES 5.webp";
+import img1 from "../../../../../assets/home/acercaDe/ACERCA MYL 1.webp";
+import img2 from "../../../../../assets/home/acercaDe/ACERCA MYL 2.webp";
+import img3 from "../../../../../assets/home/acercaDe/ACERCA MYL 3.webp";
+import img4 from "../../../../../assets/home/acercaDe/ACERCA MYL 4.webp";
+import img5 from "../../../../../assets/home/acercaDe/ACERCA MYL 5.webp";
+import img6 from "../../../../../assets/home/acercaDe/ACERCA MYL 6.webp";
 
 export const ACERCA_DE_ITEMS = [
   {
     id: 1,
-    title: "Personajes",
+    title: "Lore",
     image: img1,
+    url: "/personajes",
   },
   {
     id: 2,
-    title: "Cartas Especiales",
+    title: "Formatos",
     image: img2,
+    url: "/personajes",
   },
   {
     id: 3,
-    title: "Colecciones",
+    title: "Ediciones PBX",
     image: img3,
+    url: "/personajes",
   },
   {
     id: 4,
-    title: "Ediciones Limitadas",
+    title: "Tiendas Amigas",
     image: img4,
+    url: "/personajes",
   },
   {
     id: 5,
-    title: "Eventos",
+    title: "Teams Oficiales",
     image: img5,
+    url: "/personajes",
   },
   {
     id: 6,
-    title: "Comunidad",
+    title: "Historia MYL",
     image: img6,
+    url: "/personajes",
   },
 ];
