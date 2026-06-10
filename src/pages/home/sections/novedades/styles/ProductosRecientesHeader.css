@@ -1,23 +1,13 @@
-.productos-recientes-header {
+.home-productos-recientes-header {
   text-align: center;
 
   margin-bottom: 80px;
 }
 
-.productos-recientes-header__title {
+.home-productos-recientes-header__title {
+  margin: 0;
+
   font-size: clamp(2.5rem, 5vw, 5rem);
 
   color: white;
-
-  margin-bottom: 16px;
-}
-
-.productos-recientes-header__subtitle {
-  font-size: 1.2rem;
-
-  color: #d4af37;
-
-  text-transform: uppercase;
-
-  letter-spacing: 2px;
 }

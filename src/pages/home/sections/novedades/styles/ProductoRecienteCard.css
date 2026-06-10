@@ -1,55 +1,123 @@
-.producto-reciente-card {
+.home-productos-recientes-card {
   position: relative;
 
   flex: 1;
 
+  overflow: hidden;
+
   background-size: cover;
   background-position: center;
-
-  overflow: hidden;
+  background-repeat: no-repeat;
 
   cursor: pointer;
 
-  transition: flex 0.5s ease;
-
-
+  transition:
+    flex 0.5s ease,
+    transform 0.5s ease;
 }
 
-.producto-reciente-card__overlay {
+.home-productos-recientes-card__content {
   position: absolute;
 
   inset: 0;
+}
 
-  display: flex;
+.home-productos-recientes-card__product {
+  position: absolute;
 
-  align-items: flex-end;
+  top: 100px;
+  left: 50%;
 
-  padding: 32px;
+  width: 100%;
 
-  background:
-    linear-gradient(
-      to top,
-      rgba(0,0,0,.8),
-      rgba(0,0,0,.1)
+  object-fit: contain;
+
+  transform: translateX(-50%);
+
+  transition:
+    transform 0.5s ease;
+
+  filter:
+    drop-shadow(
+      0 12px 24px rgba(0, 0, 0, 0.4)
     );
 }
 
-/* Cuando entro a la galería */
+.home-productos-recientes-card__title-container {
+  position: absolute;
 
-.productos-recientes-gallery {
-  display: flex;
-  height: 700px;
+  bottom: 80px;
+  left: 0;
+
+  width: 100%;
+
+  padding: 24px;
+
+  text-align: center;
+
+  transition: transform 0.5s ease;
 }
 
-.producto-reciente-card {
-  flex: 1;
+.home-productos-recientes-card__title {
+  margin: 0;
 
-  transition: all 0.5s ease;
+  color: white;
 
-  background-size: cover;
-  background-position: center;
+  font-size: 1.4rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
 }
 
-.producto-reciente-card:hover {
-  flex: 2.7182;
+.home-productos-recientes-card__button {
+  display: inline-block;
+
+  margin-top: 20px;
+
+  padding: 12px 24px;
+
+  border: 2px solid #ffd815;
+  border-radius: 6px;
+
+  color: #ffd815;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  opacity: 0;
+
+  transform: translateY(15px);
+
+  transition:
+    opacity 0.4s ease 0.15s,
+    transform 0.4s ease 0.15s,
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.home-productos-recientes-card:hover
+.home-productos-recientes-card__product {
+  transform:
+    translateX(-50%)
+    translateY(-10px)
+    scale(1.05);
+}
+.home-productos-recientes-card:hover
+.home-productos-recientes-card__button {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+.home-productos-recientes-card__button:hover {
+  background-color: #ffd815;
+
+  color: #000;
+}
+.home-productos-recientes-card:hover
+.home-productos-recientes-card__title-container {
+  transform: translateY(-35px);
 }

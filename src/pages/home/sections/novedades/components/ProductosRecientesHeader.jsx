@@ -2,10 +2,10 @@ import "../styles/ProductosRecientesHeader.css";
 
 export default function ProductosRecientesHeader() {
   return (
-    <div className="productos-recientes-header">
+    <div className="home-productos-recientes-header">
 
-      <h2 className="productos-recientes-header__title">
-        PRODUCTOS RECIENTES
+      <h2 className="home-productos-recientes-header__title">
+        ÚLTIMOS PRODUCTOS
       </h2>
 
     </div>

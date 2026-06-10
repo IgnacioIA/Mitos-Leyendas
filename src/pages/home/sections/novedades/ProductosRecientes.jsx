@@ -5,9 +5,9 @@ import ProductosRecientesGallery from "./components/ProductosRecientesGallery";
 
 export default function ProductosRecientes() {
   return (
-    <section className="productos-recientes">
+    <section className="home-productos-recientes">
 
-      <div className="container">
+      <div className="container-home-productos-recientes">
 
         <ProductosRecientesHeader />
 

@@ -2,21 +2,41 @@ import "../styles/ProductoRecienteCard.css";
 
 export default function ProductoRecienteCard({
   title,
-  image,
+  background,
+  product,
+  url,
 }) {
   return (
     <article
-      className="producto-reciente-card"
+      className="home-productos-recientes-card"
       style={{
-        backgroundImage: `url(${image})`,
+        backgroundImage: `url(${background})`,
       }}
     >
-      <div className="producto-reciente-card__overlay">
+      <div className="home-productos-recientes-card__content">
 
-        <h3>{title}</h3>
+        <img
+          src={product}
+          alt={title}
+          className="home-productos-recientes-card__product"
+        />
+
+        <div className="home-productos-recientes-card__title-container">
+
+          <h3 className="home-productos-recientes-card__title">
+            {title}
+          </h3>
+
+          <a
+            href={url}
+            className="home-productos-recientes-card__button"
+          >
+            VER PRODUCTO
+          </a>
+
+        </div>
 
       </div>
-
     </article>
   );
 }
