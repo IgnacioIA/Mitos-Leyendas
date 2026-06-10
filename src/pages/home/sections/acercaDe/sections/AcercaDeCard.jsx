@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../styles/AcercaDeCard.css";
 
 export default function AcercaDeCard({
   title,
