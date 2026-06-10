@@ -13,6 +13,10 @@ export default function InstagramBanner() {
       className="instagram-banner-section"
     >
 
+      <h2 className="instagram-banner-section-title">
+        tu viaje empieza acá, gladiador
+      </h2>
+
       <a
         href={INSTAGRAM_BANNER.url}
         target="_blank"
