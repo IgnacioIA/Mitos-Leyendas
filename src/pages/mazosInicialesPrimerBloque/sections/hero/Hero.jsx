@@ -1,34 +1,23 @@
-import "../../styles/sections/hero/Hero.css";
+import "./styles/Hero.css";
 
-import HeroBackground from "./HeroBackground";
-import HeroOverlay from "./HeroOverlay";
-import HeroEffects from "./HeroEffects";
-import HeroContent from "./HeroContent";
+import heroData from "./datos/HeroDataMazosInicialesPB";
+
+import HeroBackground from "./sections/HeroBackground";
+import HeroContent from "./sections/HeroContent";
 
 export default function Hero() {
   return (
-    <section className="hero">
+    <section className="hero-MazosInicialesPB">
 
-      {/* BACKGROUND */}
-      <div className="hero-background-layer">
-        <HeroBackground />
-      </div>
+      <HeroBackground images={heroData.images} />
 
-      {/* OVERLAY */}
-      <div className="hero-overlay-layer">
-        <HeroOverlay />
-      </div>
-
-      {/* FX */}
-      <div className="hero-effects-layer">
-        <HeroEffects />
-      </div>
-
-      {/* CONTENT */}
-      <div className="hero-content-layer">
-        <div className="hero-container">
-          <HeroContent />
-        </div>
+      <div className="hero-container-MazosInicialesPB">
+        <HeroContent
+          title={heroData.title}
+          subtitle={heroData.subtitle}
+          description={heroData.description}
+          button={heroData.button}
+        />
       </div>
 
     </section>

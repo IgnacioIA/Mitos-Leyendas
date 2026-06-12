@@ -1,0 +1,140 @@
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content-MazosInicialesPB {
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  max-width: 720px;
+  width: 100%;
+}
+
+.hero-title-MazosInicialesPB,
+.hero-subtitle-MazosInicialesPB,
+.hero-description-MazosInicialesPB {
+
+  text-align: center;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.hero-title-MazosInicialesPB {
+
+  margin: 0;
+
+  color: white;
+
+  font-size: clamp(3rem, 6vw, 4rem);
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   SUBTITLE
+========================================================= */
+
+.hero-subtitle-MazosInicialesPB {
+
+  margin-top: 0.25rem;
+
+  color: #ffd815;
+
+  font-size: clamp(1.2rem, 2vw, 2rem);
+
+  font-weight: 700;
+
+  line-height: 1.1;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.hero-description-MazosInicialesPB {
+
+  margin-top: 2rem;
+
+  width: 100%;
+  max-width: 35rem;
+
+  color: #4da6ff;
+
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.hero-actions-MazosInicialesPB {
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 2rem;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.hero-button-MazosInicialesPB {
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.9rem 2.5rem;
+
+  border: 2px solid white;
+  border-radius: 12px;
+
+  background: transparent;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition: all .3s ease;
+}
+
+.hero-button-MazosInicialesPB:hover {
+
+  background: rgba(255,255,255,.1);
+
+  transform: translateY(-2px);
+}
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .hero-content-MazosInicialesPB {
+
+    max-width: 100%;
+  }
+
+  .hero-actions-MazosInicialesPB {
+
+    flex-direction: column;
+  }
+
+}
