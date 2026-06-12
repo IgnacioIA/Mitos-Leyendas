@@ -1,16 +1,26 @@
 // src/routes/AppRoutes.jsx
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollTop from "./ScrollTop";
 
 import Home from "../pages/home/Home.jsx";
 import MazosInicialesPB from "../pages/mazosInicialesPrimerBloque/MazosInicialesPB.jsx";
 import Leyendas4y0 from "../pages/leyendas 4.0/Leyendas4-0.jsx";
 import Shogun from "../pages/shogun/Shogun.jsx";
+import Apj from "../pages/APJ/Apj.jsx";
+import BanList from "../pages/banList/BanList.jsx";
+import LorePage from "../pages/lorePage/LorePage.jsx";
+import Formatos from "../pages/formatos/Formatos.jsx";
+import EdicionPBX from "../pages/edicionPBX/EdicionPBX.jsx";
+import TiendasAmigas from "../pages/tiendaAmigas/TiendaAmigas.jsx";
+import TeamsOficiales from "../pages/teamsOficiales/TeamsOficiales.jsx";
+import HistoriaMYL from "../pages/historiaMYL/HistoriaMYL.jsx";
 
 
 function AppRoutes() {
   return (
     <BrowserRouter>
+      <ScrollTop />
       <Routes>
 
         {/* Home */}
@@ -35,6 +45,54 @@ function AppRoutes() {
         <Route
           path="/Shogun"
           element={<Shogun />}
+        />
+
+        {/* Aprende a jugar */}
+        <Route
+          path="/Apj"
+          element={<Apj />}
+        />
+
+        {/* BanList */}
+        <Route
+          path="/Apj"
+          element={<BanList />}
+        />
+
+         {/* LorePage */}
+        <Route
+          path="/LorePage"
+          element={<LorePage />}
+        />
+
+         {/* Formatos */}
+        <Route
+          path="/Formatos"
+          element={<Formatos />}
+        />
+
+        {/* Edicion PBX */}
+        <Route
+          path="/EdicionPBX"
+          element={<EdicionPBX />}
+        />
+
+        {/* Tiendas Amigas */}
+        <Route
+          path="/TiendasAmigas"
+          element={<TiendasAmigas />}
+        />
+
+        {/* Teams Oficiales */}
+        <Route
+          path="/TeamsOficiales"
+          element={<TeamsOficiales />}
+        />
+
+        {/* Historia MYL */}
+        <Route
+          path="/HistoriaMYL"
+          element={<HistoriaMYL />}
         />
 
       </Routes>

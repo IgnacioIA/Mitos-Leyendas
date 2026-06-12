@@ -7,5 +7,5 @@ export const INSTAGRAM_BANNER = {
 
   /*buttonText: "Ver Instagram",*/
 
-  url: "https://www.instagram.com/shoguntcg"
+  url: "/Apj"
 };

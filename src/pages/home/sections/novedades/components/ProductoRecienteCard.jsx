@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import "../styles/ProductoRecienteCard.css";
 
 export default function ProductoRecienteCard({
@@ -6,6 +8,11 @@ export default function ProductoRecienteCard({
   product,
   url,
 }) {
+
+  const isExternal =
+    url.startsWith("http://") ||
+    url.startsWith("https://");
+
   return (
     <article
       className="home-productos-recientes-card"
@@ -27,12 +34,23 @@ export default function ProductoRecienteCard({
             {title}
           </h3>
 
-          <a
-            href={url}
-            className="home-productos-recientes-card__button"
-          >
-            VER PRODUCTO
-          </a>
+          {isExternal ? (
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="home-productos-recientes-card__button"
+            >
+              VER PRODUCTO
+            </a>
+          ) : (
+            <Link
+              to={url}
+              className="home-productos-recientes-card__button"
+            >
+              VER PRODUCTO
+            </Link>
+          )}
 
         </div>
 

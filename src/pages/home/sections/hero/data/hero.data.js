@@ -21,11 +21,11 @@ export const HERO_SLIDES = [
     buttons: [
       {
         text: "Comprar",
-        url: "#"
+        url: "https://mylargentina.com/formato-competitivo-pbx/ultimos-lanzamientos/leyendas-4-0"
       },
       {
         text: "Ver colección",
-        url: "#"
+        url: "/mitos4.0"
       }
     ]
   },
@@ -44,12 +44,12 @@ export const HERO_SLIDES = [
 
     buttons: [
       {
-        text: "Explorar",
-        url: "#"
+        text: "Comprar",
+        url: "https://mylargentina.com/formato-competitivo-pbx/ultimos-lanzamientos/leyendas-4-0"
       },
       {
         text: "Más información",
-        url: "#"
+        url: "/Shogun"
       }
     ]
   }
