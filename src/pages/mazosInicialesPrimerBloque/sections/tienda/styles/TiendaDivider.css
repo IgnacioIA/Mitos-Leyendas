@@ -1,0 +1,25 @@
+.tienda-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+
+  margin: 4rem 0;
+}
+
+.tienda-divider-line {
+  width: 180px;
+  height: 2px;
+
+  background: rgba(255,255,255,.4);
+}
+
+.tienda-divider-diamond {
+  width: 20px;
+  height: 20px;
+
+  border: 1px solid white;
+
+  transform: rotate(45deg);
+}
