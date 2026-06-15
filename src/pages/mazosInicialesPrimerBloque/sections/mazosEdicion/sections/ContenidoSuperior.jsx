@@ -5,6 +5,7 @@ import "../styles/ContenidoSuperior.css";
 import FrameFX from "../../../../../components/ui/cartaMovible/FrameFX.jsx";
 
 export default function ContenidoSuperior({
+  layout = "right",
   title,
   subtitle,
   imagenSubtitulo,
@@ -16,12 +17,27 @@ export default function ContenidoSuperior({
   const [primeraPalabra, ...restoTitulo] = title.split(" ");
 
   return (
-    <section className="ContenidoSuperior">
+    <section
+      className={`
+        ContenidoSuperior
+        ${layout === "left"
+          ? "ContenidoSuperior-Reverse"
+          : ""}
+      `}
+    >
 
       <motion.div
         className="ContenidoSuperior-Left"
-        initial={{ opacity: 0, x: -50, filter: "blur(10px)" }}
-        whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+        initial={{
+          opacity: 0,
+          x: layout === "left" ? 50 : -50,
+          filter: "blur(10px)",
+        }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+          filter: "blur(0px)",
+        }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
@@ -29,6 +45,7 @@ export default function ContenidoSuperior({
         <div className="ContenidoSuperior-TitleBlock">
 
           <h2>
+
             <span className="ContenidoSuperior-TitleWhite">
               {primeraPalabra}
             </span>
@@ -38,6 +55,7 @@ export default function ContenidoSuperior({
             <span className="ContenidoSuperior-TitleYellow">
               {restoTitulo.join(" ")}
             </span>
+
           </h2>
 
         </div>
@@ -75,41 +93,45 @@ export default function ContenidoSuperior({
           }}
           viewport={{ once: true }}
         >
+
           <p>{description}</p>
 
           <p>{description2}</p>
+
         </motion.div>
 
       </motion.div>
 
+      <motion.div
+        className="ContenidoSuperior-Right"
+        initial={{
+          opacity: 0,
+          x: layout === "left" ? -50 : 50,
+        }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+        }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
 
-      
-        <motion.div
-          className="ContenidoSuperior-Right"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
         <FrameFX>
+
           <div className="magic-card-alt">
+
             <img
               src={mazoPrincipal}
               alt={title}
               className="ContenidoSuperior-MazoPrincipal"
             />
-          </div>
-        </FrameFX>
-        </motion.div>
 
-        {/*
-        <FrameFX>
-          <div className="magic-card-alt">
-            <img src={carta} alt="Carta" />
           </div>
+
         </FrameFX>
-        */}
-      
+
+      </motion.div>
+
     </section>
   );
 }

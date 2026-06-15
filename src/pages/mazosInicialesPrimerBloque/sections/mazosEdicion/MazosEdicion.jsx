@@ -10,7 +10,7 @@ export default function MazosEdicion() {
     <section className="Page-MazosEdicion-Section">
 
       {mazosEdicionData.map((mazo) => (
-        //Dragon
+
         <article
           key={mazo.id}
           className="Page-MazosEdicion-Item"
@@ -22,6 +22,7 @@ export default function MazosEdicion() {
           <div className="Page-MazosEdicion-Overlay">
 
             <ContenidoSuperior
+              layout={mazo.layout}
               {...mazo.contenidoSuperior}
             />
 
@@ -32,6 +33,7 @@ export default function MazosEdicion() {
           </div>
 
         </article>
+
       ))}
 
     </section>
