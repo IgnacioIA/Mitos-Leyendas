@@ -51,6 +51,8 @@ const mazosEdicionData = [
 
     background: BackgroundDragon,
 
+    position: "top center",
+
     contenidoSuperior: {
       title: "MAZO DRÁGON ",
 
@@ -82,6 +84,8 @@ const mazosEdicionData = [
     id: 2,
 
     background: BackgroundTitan,
+
+    position: "top center",
 
     layout: "left",
 
@@ -119,6 +123,8 @@ const mazosEdicionData = [
 
     background: BackgroundSombra,
 
+    position: "top center",
+
     contenidoSuperior: {
       title: "MAZO SOMBRA ",
 
@@ -152,6 +158,8 @@ const mazosEdicionData = [
     layout: "left",
 
     background: BackgroundSacerdote,
+
+    position: "top center",
 
     contenidoSuperior: {
       title: "MAZO SACERDOTE ",

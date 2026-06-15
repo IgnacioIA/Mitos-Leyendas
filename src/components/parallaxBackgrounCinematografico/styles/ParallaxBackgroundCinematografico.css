@@ -1,0 +1,47 @@
+.ParallaxBackgroundCinematografico {
+  position: relative;
+}
+
+/* Fondo cinematográfico */
+.ParallaxBackgroundCinematografico-Sticky {
+  position: sticky;
+
+  top: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+
+  /* La clave */
+  margin-bottom: -100vh;
+
+  z-index: 0;
+}
+
+.ParallaxBackgroundCinematografico-Image {
+  position: absolute;
+
+  inset: 0;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  z-index: 0;
+}
+
+.ParallaxBackgroundCinematografico-Overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+.ParallaxBackgroundCinematografico-Content {
+  position: relative;
+
+  z-index: 2;
+}

@@ -5,21 +5,23 @@ import mazosEdicionData from "./data/MazosEdicionData";
 import ContenidoSuperior from "./sections/ContenidoSuperior";
 import ContenidoInferior from "./sections/ContenidoInferior";
 
+import ParallaxBackgroundCinematografico
+from "../../../../components/parallaxBackgrounCinematografico/ParallaxBackgroundCinematografico.jsx";
+
 export default function MazosEdicion() {
   return (
     <section className="Page-MazosEdicion-Section">
 
       {mazosEdicionData.map((mazo) => (
 
-        <article
+        <ParallaxBackgroundCinematografico
           key={mazo.id}
-          className="Page-MazosEdicion-Item"
-          style={{
-            backgroundImage: `url(${mazo.background})`,
-          }}
+          image={mazo.background}
+          position={mazo.position}
+          overlay={0.15}
         >
 
-          <div className="Page-MazosEdicion-Overlay">
+          <article className="Page-MazosEdicion-Item">
 
             <ContenidoSuperior
               layout={mazo.layout}
@@ -30,9 +32,9 @@ export default function MazosEdicion() {
               {...mazo.contenidoInferior}
             />
 
-          </div>
+          </article>
 
-        </article>
+        </ParallaxBackgroundCinematografico>
 
       ))}
 

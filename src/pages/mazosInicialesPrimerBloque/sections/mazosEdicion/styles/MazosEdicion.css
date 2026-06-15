@@ -3,27 +3,17 @@
 }
 
 .Page-MazosEdicion-Item {
-
-  position: relative;
-
-  width: 100%;
-  min-height: 100vh;
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  background-attachment: fixed;
-
-  overflow: hidden;
-}
-
-.Page-MazosEdicion-Overlay {
-
-  width: 100%;
-  min-height: 100vh;
+  min-height: 140vh;
 
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+
+  .Page-MazosEdicion-Item {
+    min-height: auto;
+  }
 
 }

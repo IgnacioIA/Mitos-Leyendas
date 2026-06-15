@@ -1,0 +1,44 @@
+.ParallaxBackground {
+  position: relative;
+
+  overflow: hidden;
+
+  width: 100%;
+}
+
+.ParallaxBackground-Image {
+  position: absolute;
+
+  top: -15%;
+  left: 0;
+
+  width: 100%;
+  height: 130%;
+
+  z-index: 0;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  will-change: transform;
+
+  transform: translate3d(0, 0, 0);
+
+  backface-visibility: hidden;
+}
+
+.ParallaxBackground-Overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+.ParallaxBackground-Content {
+  position: relative;
+
+  z-index: 2;
+}
