@@ -1,9 +1,3 @@
 .CarrouselElastico {
-  position: relative;
-
   width: 100%;
-
-  overflow: hidden;
-
-  padding: 3rem 0;
 }

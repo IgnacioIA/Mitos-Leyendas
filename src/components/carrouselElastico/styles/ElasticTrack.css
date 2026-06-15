@@ -1,0 +1,23 @@
+.ElasticTrackWrapper {
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 2rem 0;
+}
+
+.ElasticTrack {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 1.5rem;
+
+  cursor: grab;
+}
+
+.ElasticTrack:active {
+  cursor: grabbing;
+}

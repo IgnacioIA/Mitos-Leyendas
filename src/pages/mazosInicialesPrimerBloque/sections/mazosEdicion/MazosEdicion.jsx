@@ -10,6 +10,7 @@ export default function MazosEdicion() {
     <section className="Page-MazosEdicion-Section">
 
       {mazosEdicionData.map((mazo) => (
+        //Dragon
         <article
           key={mazo.id}
           className="Page-MazosEdicion-Item"

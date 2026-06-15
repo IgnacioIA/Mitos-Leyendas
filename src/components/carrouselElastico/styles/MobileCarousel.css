@@ -1,0 +1,20 @@
+.MobileCarousel {
+
+  display: flex;
+
+  gap: 1rem;
+
+  overflow-x: auto;
+
+  scroll-snap-type: x mandatory;
+
+  scroll-behavior: smooth;
+
+  padding: 1rem;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.MobileCarousel::-webkit-scrollbar {
+  display: none;
+}
