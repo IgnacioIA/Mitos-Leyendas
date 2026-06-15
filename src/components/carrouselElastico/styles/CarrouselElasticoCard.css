@@ -1,0 +1,25 @@
+.CarrouselElasticoCard {
+  flex-shrink: 0;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,.35);
+
+  transition:
+    box-shadow .3s ease;
+}
+
+.CarrouselElasticoCard img {
+  width: 100%;
+
+  display: block;
+
+  pointer-events: none;
+
+  user-select: none;
+
+  -webkit-user-drag: none;
+}

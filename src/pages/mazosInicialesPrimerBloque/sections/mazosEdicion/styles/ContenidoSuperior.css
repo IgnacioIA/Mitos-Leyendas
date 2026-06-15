@@ -1,0 +1,143 @@
+.ContenidoSuperior {
+  width: 100%;
+  max-width: 1600px;
+
+  margin: 0 auto;
+  padding: 4rem 5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+}
+
+.ContenidoSuperior-Left {
+  flex: 1;
+
+  max-width: 700px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ContenidoSuperior-TitleBlock h2 {
+  margin: 0;
+
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.ContenidoSuperior-TitleWhite {
+  color: white;
+}
+
+.ContenidoSuperior-TitleYellow {
+  color: #ffd815;
+}
+
+.ContenidoSuperior-SubtitleBlock {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  width: fit-content;
+}
+
+.ContenidoSuperior-SubtitleText h3 {
+  margin: 0;
+
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.ContenidoSuperior-SubtitleImage {
+  display: flex;
+  align-items: center;
+}
+
+.ContenidoSuperior-SubtitleImage img {
+  height: clamp(40px, 4vw, 70px);
+  width: auto;
+  display: block;
+}
+
+.ContenidoSuperior-DescriptionBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ContenidoSuperior-DescriptionBlock p {
+  margin: 0;
+
+  font-size: 1.5rem;
+  line-height: 1.8;
+}
+
+.ContenidoSuperior-Right {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.ContenidoSuperior-MazoPrincipal {
+  width: 100%;
+  max-width: 600px;
+
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 1200px) {
+
+  .ContenidoSuperior {
+    gap: 3rem;
+    padding: 3rem;
+  }
+
+}
+
+@media (max-width: 992px) {
+
+  .ContenidoSuperior {
+    flex-direction: column;
+    text-align: center;
+
+    padding: 2rem;
+  }
+
+  .ContenidoSuperior-Left {
+    align-items: center;
+  }
+
+  .ContenidoSuperior-SubtitleBlock {
+    justify-content: center;
+  }
+
+  .ContenidoSuperior-MazoPrincipal {
+    max-width: 450px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .ContenidoSuperior {
+    padding: 1.5rem;
+  }
+
+  .ContenidoSuperior-DescriptionBlock p {
+    font-size: 1rem;
+  }
+
+  .ContenidoSuperior-MazoPrincipal {
+    max-width: 320px;
+  }
+
+}
