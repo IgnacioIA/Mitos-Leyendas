@@ -22,7 +22,7 @@ export const ACERCA_DE_ITEMS = [
     id: 3,
     title: "Ediciones PBX",
     image: img3,
-    url: "/EdicionesPBX",
+    url: "/EdicionPBX",
   },
   {
     id: 4,

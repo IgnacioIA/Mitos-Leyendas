@@ -3,12 +3,17 @@
 
 import "./styles/EdicionPBX.css";
 
+import Hero from "./sections/heroEdicionPBX/heroEdicionPBX";
 
-export default function BanList() {
+
+
+
+export default function EdicionPBX() {
 
   return (
-    <div className="BanList-container">
+    <div className="EdicionPBX-container">
 
+      <Hero/>
 
 
       
