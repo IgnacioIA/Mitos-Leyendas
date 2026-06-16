@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 
 import "../styles/ContenidoSuperior.css";
 
-import FrameFX from "../../../../../components/ui/cartaMovible/FrameFX.jsx";
 
 export default function ContenidoSuperior({
   layout = "right",
@@ -116,7 +115,7 @@ export default function ContenidoSuperior({
         viewport={{ once: true }}
       >
 
-        <FrameFX>
+  
 
           <div className="magic-card-alt">
 
@@ -128,7 +127,7 @@ export default function ContenidoSuperior({
 
           </div>
 
-        </FrameFX>
+        
 
       </motion.div>
 

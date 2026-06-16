@@ -1,7 +1,7 @@
 .ParallaxBackgroundCinematografico {
   position: relative;
+  z-index: 1;
 }
-
 /* Fondo cinematográfico */
 .ParallaxBackgroundCinematografico-Sticky {
   position: sticky;

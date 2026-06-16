@@ -1,0 +1,22 @@
+.AprendeAJugar-MazosInicialPB {
+  width: 100%;
+  padding: 120px 20px;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  position: relative;
+  z-index: 2;
+}
+
+.AprendeAJugar-Content-MazosInicialPB {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

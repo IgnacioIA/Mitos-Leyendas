@@ -30,12 +30,6 @@
 
 .tienda-header-title-highlight {
   color: #ffd815;
-
-  text-shadow:
-    0 0 10px rgba(255,216,21,.9),
-    0 0 20px rgba(255,216,21,.7),
-    0 0 40px rgba(255,216,21,.5),
-    0 0 80px rgba(255,216,21,.3);
 }
 
 /* =========================

@@ -61,9 +61,9 @@ const mazosEdicionData = [
       imagenSubtitulo: LogoEspada,
 
       description:
-        "Una de las principales novedades de esta nueva versión de Leyendas PB 4.0, son las cartas completamente nuevas que se agregan al formato de Primer Bloque Extendido.",
+        "Dragón es la raza de la velocidad y la presión. Es un mazo de tempo agresivo que baja criaturas que pegan apenas entran en juego y que, además, traen su propio efecto al entrar: destruyen, limpian, roban o buscan exactamente lo que necesitás.",
       description2:
-        "Dentro de esta edición, tendremos 60 cartas nuevas que formarán parte de las ediciones Espada Sagrada, Helénica, Hijos de Daana o de Dominios de Ra, las que se podrán encontrar entre las frecuencias Mega Real, Real, Cortesano y Vasallo.",
+        "La idea es simple y contundente: tomar la iniciativa temprano, no soltarla nunca y cerrar la partida antes de que el rival arme su plan.",
 
       mazoPrincipal: MazoEspada,
     },

@@ -4,7 +4,7 @@ import Tienda from './sections/tienda/Tienda.jsx'
 import MazosEdicion from './sections/mazosEdicion/MazosEdicion.jsx'
 
 import Lore from './sections/lore/Lore.jsx'
-import AprendeAJugar from './sections/aprenderAJugar/VideoSection.jsx'
+import AprendeAJugar from './sections/aprenderAJugar/AprenderAJugar.jsx'
 import Final from './sections/Final/RibbonSection.jsx'
 
 export default function MazosInicialesPB() {
