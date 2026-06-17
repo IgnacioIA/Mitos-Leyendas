@@ -1,0 +1,124 @@
+.CajaEdicionLootboxPBX2025 {
+  width: 100%;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 4rem;
+}
+
+.CajaEdicionLootboxPBX2025-Content {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 4rem;
+}
+
+.CajaEdicionLootboxPBX2025-Left {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 2rem;
+
+  text-align: center;
+}
+
+.CajaEdicionLootboxPBX2025-Text {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+}
+
+.CajaEdicionLootboxPBX2025-Title {
+  color: white;
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 700;
+
+  margin: 0;
+}
+
+.CajaEdicionLootboxPBX2025-Subtitle {
+  
+  color: #FFD700;
+
+  font-size: clamp(2rem, 3vw, 4rem);
+
+  max-width: 600px;
+
+  margin: 0;
+
+  text-align: center;
+}
+
+.CajaEdicionLootboxPBX2025-Actions {
+  display: flex;
+  justify-content: center;
+}
+
+.CajaEdicionLootboxPBX2025-Button {
+  background: #25c25a;
+
+  color: white;
+
+  text-decoration: none;
+
+  padding: 1rem 2.5rem;
+
+  border-radius: 8px;
+
+  font-weight: 700;
+
+  transition: 0.3s;
+}
+
+.CajaEdicionLootboxPBX2025-Button:hover {
+  transform: translateY(-3px);
+}
+
+.CajaEdicionLootboxPBX2025-Right {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CajaEdicionLootboxPBX2025-Image {
+  width: 100%;
+  max-width: 450px;
+
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+
+  .CajaEdicionLootboxPBX2025 {
+    padding: 3rem 1.5rem;
+  }
+
+  .CajaEdicionLootboxPBX2025-Content {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+
+  .CajaEdicionLootboxPBX2025-Image {
+    max-width: 280px;
+  }
+
+}

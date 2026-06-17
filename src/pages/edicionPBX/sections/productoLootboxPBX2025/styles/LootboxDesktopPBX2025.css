@@ -1,0 +1,113 @@
+.LootboxDesktopPBX2025 {
+  position: relative;
+
+  width: 100%;
+  height: 120vh;
+
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.LootboxDesktopPBX2025-Box {
+  position: absolute;
+
+  left: 50%;
+  bottom: 5%;
+
+  width: 450px;
+
+  transform: translateX(-50%);
+}
+
+.LootboxDesktopPBX2025-Product {
+  position: absolute;
+
+  animation: LootboxFloatPBX2025 3s ease-in-out infinite;
+}
+
+.LootboxDesktopPBX2025-Product img {
+  width: 240px;
+}
+
+.LootboxDesktopPBX2025-Info {
+  text-align: center;
+}
+
+.LootboxDesktopPBX2025-Info h3 {
+  color: #ffd700;
+}
+/* IZQUIERDA ABAJO */
+
+.LootboxDesktopPBX2025-left {
+  left: 14%;
+  bottom: 18%;
+
+  transform: rotate(-12deg);
+  transform: translateX(-30%);
+}
+
+/* ARRIBA IZQUIERDA */
+
+.LootboxDesktopPBX2025-topLeft {
+  left: 24%;
+  top: 12%;
+
+  transform: rotate(-8deg);
+  transform: translateX(-30%);
+}
+
+/* CENTRO SUPERIOR */
+
+.LootboxDesktopPBX2025-topCenter {
+  left: 50%;
+  top: 3%;
+
+  transform: translateX(-50%);
+}
+
+.LootboxDesktopPBX2025-topCenter img {
+  width: 360px;
+}
+
+/* ARRIBA DERECHA */
+
+.LootboxDesktopPBX2025-topRight {
+  right: 24%;
+  top: 12%;
+
+  transform: rotate(8deg);
+  transform: translateX(10%);
+}
+
+/* DERECHA ABAJO */
+
+.LootboxDesktopPBX2025-right {
+  right: 14%;
+  bottom: 18%;
+
+  transform: rotate(12deg);
+  transform: translateX(30%);
+}
+.LootboxDesktopPBX2025-right img{
+  width: 270px;
+}
+
+@keyframes LootboxFloatPBX2025 {
+
+  0% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -15px;
+  }
+
+  100% {
+    translate: 0 0;
+  }
+
+}

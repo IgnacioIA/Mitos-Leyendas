@@ -1,0 +1,19 @@
+.ProductoLootboxPBX2025 {
+  width: 100%;
+}
+
+.ProductoLootboxPBX2025-Mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .ProductoLootboxPBX2025-Desktop {
+    display: none;
+  }
+
+  .ProductoLootboxPBX2025-Mobile {
+    display: block;
+  }
+
+}

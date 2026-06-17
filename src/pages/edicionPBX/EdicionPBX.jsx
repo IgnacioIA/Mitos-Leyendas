@@ -4,8 +4,8 @@
 import "./styles/EdicionPBX.css";
 
 import Hero from "./sections/heroEdicionPBX/heroEdicionPBX";
-
-
+import ProductoLootboxPBX2025 from "./sections/productoLootboxPBX2025/ProductoLootboxPBX2025";
+import CajaEdicionLootboxPBX2025 from "./sections/cajaEdicionLootboxPBX2025/CajaEdicionLootboxPBX2025";
 
 
 export default function EdicionPBX() {
@@ -14,8 +14,8 @@ export default function EdicionPBX() {
     <div className="EdicionPBX-container">
 
       <Hero/>
-
-
+      <ProductoLootboxPBX2025/>
+      <CajaEdicionLootboxPBX2025/>
       
     </div>
   );
