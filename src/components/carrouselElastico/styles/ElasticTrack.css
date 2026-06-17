@@ -1,19 +1,17 @@
 .ElasticTrackWrapper {
-
-  position: relative;
-
   overflow: hidden;
+
+  display: flex;
+  justify-content: center;
 
   padding: 2rem 0;
 }
 
 .ElasticTrack {
-
   display: flex;
-
-  justify-content: center;
-
   gap: 1.5rem;
+
+  width: max-content;
 
   cursor: grab;
 }

@@ -1,0 +1,39 @@
+.CartasSecretasLootBoxPBX2025-HeaderContent {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  gap: 1.5rem;
+}
+
+.CartasSecretasLootBoxPBX2025-Subtitle {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.CartasSecretasLootBoxPBX2025-Subtitle span {
+  color: #53ff5d;
+}
+
+.CartasSecretasLootBoxPBX2025-Title {
+  font-size: clamp(2rem, 4vw, 4.5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.CartasSecretasLootBoxPBX2025-Title span {
+  color: #ffd64a;
+}
+
+.CartasSecretasLootBoxPBX2025-Description {
+  max-width: 900px;
+
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
