@@ -1,0 +1,246 @@
+.ComponenteFondoParticulasMyL {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  isolation: isolate;
+
+  z-index: 10;
+}
+.ComponenteFondoParticulasMyL-Background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.ComponenteFondoParticulasMyL-Background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  display: block;
+}
+
+.ComponenteFondoParticulasMyL-Overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.4)
+    );
+
+  z-index: 1;
+}
+
+.ComponenteFondoParticulasMyL-Particulas {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+.ComponenteFondoParticulasMyL-Particula {
+  position: absolute;
+
+  bottom: -20px;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  animation: ComponenteFondoParticulasMyL-Flotar linear infinite;
+}
+
+/* Distribución aleatoria */
+
+.ComponenteFondoParticulasMyL-Particula:nth-child(1) {
+  left: 5%;
+  animation-duration: 12s;
+  animation-delay: 0s;
+}
+
+.ComponenteFondoParticulasMyL-Particula:nth-child(2) {
+  left: 10%;
+  animation-duration: 14s;
+  animation-delay: -2s;
+}
+
+.ComponenteFondoParticulasMyL-Particula:nth-child(3) {
+  left: 15%;
+  animation-duration: 18s;
+  animation-delay: -4s;
+}
+
+.ComponenteFondoParticulasMyL-Particula:nth-child(4) {
+  left: 20%;
+  animation-duration: 16s;
+  animation-delay: -1s;
+}
+
+.ComponenteFondoParticulasMyL-Particula:nth-child(5) {
+  left: 25%;
+  animation-duration: 20s;
+  animation-delay: -3s;
+}
+
+.ComponenteFondoParticulasMyL-Particula:nth-child(6) {
+  left: 30%;
+  animation-duration: 15s;
+  animation-delay: -5s;
+}
+
+.ComponenteFondoParticulasMyL-Particula:nth-child(7) {
+  left: 35%;
+  animation-duration: 19s;
+  animation-delay: -2s;
+}
+
+.ComponenteFondoParticulasMyL-Particula:nth-child(8) {
+  left: 40%;
+  animation-duration: 17s;
+  animation-delay: -6s;
+}
+
+.ComponenteFondoParticulasMyL-Particula:nth-child(9) {
+  left: 45%;
+  animation-duration: 13s;
+  animation-delay: -1s;
+}
+
+.ComponenteFondoParticulasMyL-Particula:nth-child(10) {
+  left: 50%;
+  animation-duration: 22s;
+  animation-delay: -4s;
+}
+
+.ComponenteFondoParticulasMyL-Particula:nth-child(11) {
+  left: 55%;
+  animation-duration: 16s;
+  animation-delay: -7s;
+}
+
+.ComponenteFondoParticulasMyL-Particula:nth-child(12) {
+  left: 60%;
+  animation-duration: 21s;
+  animation-delay: -3s;
+}
+
+.ComponenteFondoParticulasMyL-Particula:nth-child(13) {
+  left: 65%;
+  animation-duration: 18s;
+  animation-delay: -5s;
+}
+
+.ComponenteFondoParticulasMyL-Particula:nth-child(14) {
+  left: 70%;
+  animation-duration: 14s;
+  animation-delay: -2s;
+}
+
+.ComponenteFondoParticulasMyL-Particula:nth-child(15) {
+  left: 75%;
+  animation-duration: 20s;
+  animation-delay: -6s;
+}
+
+.ComponenteFondoParticulasMyL-Particula:nth-child(16) {
+  left: 80%;
+  animation-duration: 17s;
+  animation-delay: -1s;
+}
+
+.ComponenteFondoParticulasMyL-Particula:nth-child(17) {
+  left: 85%;
+  animation-duration: 23s;
+  animation-delay: -4s;
+}
+
+.ComponenteFondoParticulasMyL-Particula:nth-child(18) {
+  left: 90%;
+  animation-duration: 15s;
+  animation-delay: -8s;
+}
+
+.ComponenteFondoParticulasMyL-Particula:nth-child(19) {
+  left: 95%;
+  animation-duration: 19s;
+  animation-delay: -3s;
+}
+
+.ComponenteFondoParticulasMyL-Particula:nth-child(20) {
+  left: 12%;
+  animation-duration: 22s;
+  animation-delay: -7s;
+}
+
+.ComponenteFondoParticulasMyL-Particula:nth-child(21) {
+  left: 28%;
+  animation-duration: 16s;
+  animation-delay: -5s;
+}
+
+.ComponenteFondoParticulasMyL-Particula:nth-child(22) {
+  left: 47%;
+  animation-duration: 20s;
+  animation-delay: -2s;
+}
+
+.ComponenteFondoParticulasMyL-Particula:nth-child(23) {
+  left: 68%;
+  animation-duration: 18s;
+  animation-delay: -4s;
+}
+
+.ComponenteFondoParticulasMyL-Particula:nth-child(24) {
+  left: 82%;
+  animation-duration: 24s;
+  animation-delay: -6s;
+}
+
+.ComponenteFondoParticulasMyL-Particula:nth-child(25) {
+  left: 92%;
+  animation-duration: 15s;
+  animation-delay: -1s;
+}
+
+@keyframes ComponenteFondoParticulasMyL-Flotar {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(calc(-100vh - 200px));
+    opacity: 0;
+  }
+}
+.ComponenteFondoParticulasMyL-Content {
+  position: relative;
+  z-index: 3;
+}
+
+@media (max-width: 768px) {
+  .ComponenteFondoParticulasMyL-Particula {
+    width: 3px;
+    height: 3px;
+  }
+}

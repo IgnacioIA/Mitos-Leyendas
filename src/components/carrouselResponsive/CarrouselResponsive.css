@@ -1,0 +1,123 @@
+.CarrouselResponsive {
+  position: relative;
+
+  width: 100%;
+
+  padding: 2rem 0;
+}
+
+.CarrouselResponsive-Viewport {
+  overflow: hidden;
+
+  width: 100%;
+
+  padding: 1rem 0;
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 6%,
+    black 94%,
+    transparent
+  );
+}
+
+.CarrouselResponsive-Container {
+  display: flex;
+
+  align-items: center;
+}
+
+.CarrouselResponsive-Slide {
+  flex: 0 0 25%;
+
+  min-width: 0;
+
+  padding: 0 0.75rem;
+}
+
+.CarrouselResponsive-Card {
+  width: 85%;
+
+  margin: 0 auto;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.CarrouselResponsive-Card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.CarrouselResponsive-Button {
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 56px;
+  height: 56px;
+
+  border: none;
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  z-index: 20;
+
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  color: white;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  backdrop-filter: blur(12px);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.CarrouselResponsive-Button:hover {
+  background: rgba(0, 0, 0, 0.6);
+
+  transform:
+    translateY(-50%)
+    scale(1.08);
+}
+
+.CarrouselResponsive-ButtonPrev {
+  left: -28px;
+}
+
+.CarrouselResponsive-ButtonNext {
+  right: -28px;
+}
+
+@media (max-width: 768px) {
+
+  .CarrouselResponsive-Slide {
+    flex: 0 0 100%;
+
+    padding: 0 0.5rem;
+  }
+
+  .CarrouselResponsive-Card {
+    width: 70%;
+  }
+
+  .CarrouselResponsive-Viewport {
+    mask-image: none;
+  }
+
+  .CarrouselResponsive-Button {
+    display: none;
+  }
+
+}

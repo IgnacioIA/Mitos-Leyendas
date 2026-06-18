@@ -1,0 +1,23 @@
+.CartasNuevasEdicionLootbox-Carrousel {
+  width: 100%;
+}
+
+.CartasNuevasEdicionLootbox-Carta {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  user-select: none;
+  -webkit-user-drag: none;
+
+  transition:
+    transform .35s ease,
+    filter .35s ease;
+}
+
+.CartasNuevasEdicionLootbox-Carta:hover {
+  transform: scale(1.02);
+
+  filter: brightness(1.05);
+}

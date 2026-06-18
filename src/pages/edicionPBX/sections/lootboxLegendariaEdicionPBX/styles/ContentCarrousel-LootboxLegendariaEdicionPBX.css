@@ -1,0 +1,23 @@
+.LootboxLegendariaEdicionPBX-Carrousel {
+  width: 100%;
+}
+
+.LootboxLegendariaEdicionPBX-Carta {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  user-select: none;
+  -webkit-user-drag: none;
+
+  transition:
+    transform .35s ease,
+    filter .35s ease;
+}
+
+.LootboxLegendariaEdicionPBX-Carta:hover {
+  transform: scale(1.02);
+
+  filter: brightness(1.05);
+}

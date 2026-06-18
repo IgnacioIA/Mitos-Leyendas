@@ -1,0 +1,91 @@
+.CartaMvConTexto {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8rem;
+
+  padding: 5rem 2rem;
+}
+
+.CartaMvConTexto-ContenidoTexto,
+.CartaMvConTexto-ContenidoImg {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CartaMvConTexto-ContenidoTexto {
+  flex-direction: column;
+  align-items: flex-start;
+
+  max-width: 700px;
+}
+
+.CartaMvConTexto-Titulo {
+  margin: 0;
+
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.CartaMvConTexto-Subtitulo {
+  margin: 0.75rem 0 2rem;
+
+  color: #ffd700;
+
+  font-size: clamp(1.6rem, 2.8vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.CartaMvConTexto-Parrafo {
+  margin: 0 0 1.5rem;
+
+  text-align: left;
+  line-height: 1.8;
+
+  font-size: clamp(1.1rem, 1.4vw, 1.35rem);
+  font-weight: 400;
+}
+
+.CartaMvConTexto-Imagen {
+  width: 100%;
+  max-width: 420px;
+
+  display: block;
+}
+
+.CartaMvConTexto-Invertido {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .CartaMvConTexto {
+    flex-direction: column;
+
+    gap: 3rem;
+
+    text-align: center;
+
+    padding: 3rem 1.5rem;
+  }
+
+  .CartaMvConTexto-ContenidoTexto {
+    align-items: center;
+
+    max-width: 100%;
+  }
+
+  .CartaMvConTexto-Parrafo {
+    text-align: center;
+  }
+
+  .CartaMvConTexto-Imagen {
+    max-width: 320px;
+  }
+}

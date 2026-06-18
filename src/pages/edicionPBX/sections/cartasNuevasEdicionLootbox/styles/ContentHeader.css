@@ -1,0 +1,41 @@
+.CartasNuevasEdicionLootbox-Header {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 2rem;
+
+  text-align: center;
+}
+
+.CartasNuevasEdicionLootbox-Titulo {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  color: white;
+}
+
+.CartasNuevasEdicionLootbox-Titulo span {
+  color: #ffd54a;
+}
+
+.CartasNuevasEdicionLootbox-Descripcion {
+  width: 100%;
+  max-width: 1000px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.CartasNuevasEdicionLootbox-Descripcion p {
+  color: white;
+
+  font-size: clamp(1rem, 2vw, 1.2rem);
+
+  line-height: 1.8;
+}
