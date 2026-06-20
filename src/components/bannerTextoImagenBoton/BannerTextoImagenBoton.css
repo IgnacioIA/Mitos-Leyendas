@@ -1,0 +1,136 @@
+.BannerTextoImagenBoton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-inline: 0.75rem; /* separación mínima de los márgenes izq/der */
+  box-sizing: border-box;
+}
+
+.BannerTextoImagenBoton-contenedor {
+  width: 100%;
+  max-width: 1200px;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* ===== Contenido superior: imagen + texto ===== */
+
+.BannerTextoImagenBoton-contenidoSuperior {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: stretch;
+}
+
+.BannerTextoImagenBoton-contenidoSuperior--invertido {
+  flex-direction: row-reverse;
+}
+
+.BannerTextoImagenBoton-contenidoImagen {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.BannerTextoImagenBoton-imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.BannerTextoImagenBoton-contenidoTexto {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.BannerTextoImagenBoton-titulo {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.BannerTextoImagenBoton-tituloLinea {
+  font-size: clamp(2.8rem, 3.0vw, 4.0rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.BannerTextoImagenBoton-tituloDestacado {
+  color: #ffd60a;
+}
+
+/* ===== Contenido inferior: botón ===== */
+
+.BannerTextoImagenBoton-contenidoInferior {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 1.25rem;
+}
+
+.BannerTextoImagenBoton-boton {
+  background-color: #1faa59;
+  color: #ffffff;
+  border: none;
+  border-radius: 2px;
+  padding: 0.9rem 2.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.BannerTextoImagenBoton-boton:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 768px) {
+  .BannerTextoImagenBoton-contenedor {
+    /* En mobile el contenido se apila, así que liberamos el límite
+       de 500px (pensado para el layout horizontal de desktop) */
+    max-height: none;
+  }
+
+  .BannerTextoImagenBoton-contenidoSuperior,
+  .BannerTextoImagenBoton-contenidoSuperior--invertido {
+    flex-direction: column;
+  }
+
+  .BannerTextoImagenBoton-contenidoImagen {
+    height: 220px;
+  }
+
+  .BannerTextoImagenBoton-tituloLinea {
+    font-size: clamp(1.1rem, 5vw, 1.5rem);
+  }
+
+  .BannerTextoImagenBoton-boton {
+    width: 100%;
+    text-align: center;
+  }
+}

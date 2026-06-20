@@ -7,7 +7,7 @@ const BuyABoxEdicionLootBoxPBX2025Data = {
   titulo: "CARTAS BUY A BOX",
 
   descripcion:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra lacus at nunc ultricies, a pellentesque lectus volutpat.",
+    "Estas cartas serán completamente nuevas en el formato, entregando soporte a las nuevas mecánicas de Primer Bloque Extendido para “Minotauro” y “Guerrero”, además de mostrarnos un adelanto de las mecánicas para los arquetipos “Sidhe” y “Draco” que veremos durante el año 2026.",
 
   cartas: [
     {

@@ -1,0 +1,135 @@
+.TextoArribaContenidoAbajo {
+  width: 100%;
+
+  max-width: 1600px;
+
+  margin: 0 auto;
+
+  padding: 8rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5rem;
+}
+
+/* Header */
+
+.TextoArribaContenidoAbajo-Header {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 2rem;
+
+  text-align: center;
+}
+
+.TextoArribaContenidoAbajo-Titulo {
+  font-size: clamp(2rem, 5vw, 4rem);
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  color: white;
+}
+
+.TextoArribaContenidoAbajo-Titulo span {
+  color: #ffd54a;
+}
+
+.TextoArribaContenidoAbajo-Descripcion {
+  width: 100%;
+  max-width: 1000px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+}
+
+.TextoArribaContenidoAbajo-Descripcion p {
+  color: white;
+
+  font-size: clamp(1rem, 2vw, 1.2rem);
+
+  line-height: 1.8;
+}
+
+/* Carrousel */
+
+.TextoArribaContenidoAbajo-Contenido {
+  width: 100%;
+}
+
+.TextoArribaContenidoAbajo-Contenido {
+  width: 100%;
+}
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media (max-width: 1024px) {
+  .TextoArribaContenidoAbajo {
+    padding: 6rem 1.5rem;
+    gap: 4rem;
+  }
+
+  .TextoArribaContenidoAbajo-Header {
+    gap: 1.5rem;
+  }
+
+  .TextoArribaContenidoAbajo-Descripcion {
+    max-width: 800px;
+  }
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .TextoArribaContenidoAbajo {
+    padding: 4rem 1rem;
+    gap: 3rem;
+  }
+
+  .TextoArribaContenidoAbajo-Header {
+    gap: 1.25rem;
+  }
+
+  .TextoArribaContenidoAbajo-Titulo {
+    line-height: 1.1;
+  }
+
+  .TextoArribaContenidoAbajo-Descripcion {
+    max-width: 100%;
+  }
+
+  .TextoArribaContenidoAbajo-Descripcion p {
+    line-height: 1.6;
+  }
+}
+
+/* ========================= */
+/* MOBILE PEQUEÑO */
+/* ========================= */
+
+@media (max-width: 480px) {
+  .TextoArribaContenidoAbajo {
+    padding: 3rem 0.75rem;
+    gap: 2.5rem;
+  }
+
+  .TextoArribaContenidoAbajo-Titulo {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+  }
+
+  .TextoArribaContenidoAbajo-Descripcion p {
+    font-size: 1rem;
+  }
+}

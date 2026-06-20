@@ -1,13 +1,53 @@
-.LootboxLegendariaEdicionPBX {
+.LootboxLegendariaEdicionPBX-Carta {
   width: 100%;
+  height: auto;
 
-  max-width: 1600px;
+  display: block;
 
+  user-select: none;
+  -webkit-user-drag: none;
+
+  transition:
+    transform .35s ease,
+    filter .35s ease;
+}
+
+.LootboxLegendariaEdicionPBX-Carta:hover {
+  transform: scale(1.02);
+
+  filter: brightness(1.05);
+}
+
+.LootboxLegendariaEdicionPBX-DosImagenes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 700px;
   margin: 0 auto;
+}
 
-  padding: 8rem 2rem;
+.LootboxLegendariaEdicionPBX-DosImagenes img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
 
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
+.LootboxLegendariaEdicionPBX-DosImagenes img:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+@media (max-width: 640px) {
+  .LootboxLegendariaEdicionPBX-DosImagenes {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    gap: 1rem;
+  }
 }
