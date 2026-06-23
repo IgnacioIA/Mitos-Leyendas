@@ -10,7 +10,7 @@ export const ACERCA_DE_ITEMS = [
     id: 1,
     title: "Lore",
     image: img1,
-    url: "/Lore",
+    url: "/LorePage",
   },
   {
     id: 2,
@@ -38,7 +38,7 @@ export const ACERCA_DE_ITEMS = [
   },
   {
     id: 6,
-    title: "Historia MYL",
+    title: "Linea Del Tiempo",
     image: img6,
     url: "/HistoriaMYL",
   },

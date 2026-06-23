@@ -2,14 +2,16 @@
 
 
 import "./style/Formatos.css";
+import PaginaEnConstruccion from "../../components/PaginaEnConstruccion/PaginaEnConstruccion";
 
-
-export default function BanList() {
+export default function Formatos() {
 
   return (
-    <div className="BanList-container">
+    <div className="Formatos-container">
 
-
+      <PaginaEnConstruccion
+        mensaje="Formatos en construcción"
+      />
 
       
     </div>
