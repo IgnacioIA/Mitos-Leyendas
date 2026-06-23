@@ -8,7 +8,9 @@
 
   text-align: center;
 
-  gap: 1.5rem;
+  gap: 2rem;
+
+  padding-bottom: 130px;
 }
 
 .shogun-buyabox-section-title {
@@ -33,8 +35,6 @@
     clamp(0.5rem, 3vw, 1rem);
 
   color: white;
-
-  text-transform: uppercase;
 
   letter-spacing: 2px;
 

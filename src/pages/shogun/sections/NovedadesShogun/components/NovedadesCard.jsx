@@ -15,6 +15,10 @@ export default function NovedadesCard({
         className="novedades-card__image"
       />
 
+      <div className="novedades-card__caption">
+        {title}
+      </div>
+
     </article>
   );
 }

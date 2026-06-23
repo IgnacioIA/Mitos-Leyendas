@@ -7,9 +7,7 @@ import ShowcaseButton from "./components/ShowcaseButton";
 function ProductShowcaseSection() {
 
   return (
-    <section
-      className="lore-showcase section"
-    >
+    <section className="lore-showcase section">
 
       <div className="container">
 
@@ -20,13 +18,16 @@ function ProductShowcaseSection() {
             id="next-section"
           >
             <ShowcaseContent />
-            <ShowcaseButton />
           </div>
 
           <div className="lore-showcase-media">
             <ShowcaseImage />
           </div>
 
+        </div>
+
+        <div className="lore-showcase-button-container">
+          <ShowcaseButton />
         </div>
 
       </div>

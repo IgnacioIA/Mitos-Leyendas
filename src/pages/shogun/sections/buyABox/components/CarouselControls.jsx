@@ -1,3 +1,6 @@
+import { FaChevronLeft, FaChevronRight }
+from "react-icons/fa";
+
 import "../styles/Carousel-controls.css";
 
 export default function CarouselControls({
@@ -8,11 +11,22 @@ export default function CarouselControls({
   return (
 
     <button
-      className="shogun-control-carousel-control"
+      className={
+        `shogun-control-carousel-control
+        shogun-control-carousel-control--${direction}`
+      }
       onClick={onClick}
+      aria-label={
+        direction === "left"
+          ? "Anterior"
+          : "Siguiente"
+      }
     >
 
-      {direction === "left" ? "←" : "→"}
+      {direction === "left"
+        ? <FaChevronLeft />
+        : <FaChevronRight />
+      }
 
     </button>
   );

@@ -20,7 +20,7 @@
 ========================================================= */
 
 .shogun-hero-title {
-  font-family: "Boucherie Block", serif;
+  font-family: var(--font-anton);
 
   font-size: clamp(3.5rem, 9vw, 7rem);
 

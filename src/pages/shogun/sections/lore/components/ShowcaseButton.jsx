@@ -1,15 +1,21 @@
 import "../styles/showcase-button.css";
-
 import { motion } from "framer-motion";
 
 function ShowcaseButton() {
 
-  return (
+  const handleClick = () => {
+    window.open(
+      "https://www.mylargentina.com/formato-competitivo-pbx/ultimos-lanzamientos/leyendas-4-0/",
+      "_blank"
+    );
+  };
 
+  return (
     <div className="lore-showcase-button-wrapper">
 
       <motion.button
         className="lore-showcase-button"
+        onClick={handleClick}
 
         initial={{
           opacity: 0,
@@ -35,9 +41,7 @@ function ShowcaseButton() {
       </motion.button>
 
     </div>
-
   );
-
 }
 
 export default ShowcaseButton;

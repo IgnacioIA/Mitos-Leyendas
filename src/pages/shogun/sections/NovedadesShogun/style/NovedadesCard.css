@@ -90,6 +90,66 @@
 }
 
 /* =========================================
+   CAPTION
+========================================= */
+
+.novedades-card__caption {
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 1rem 1.25rem;
+
+  color: white;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.85),
+      rgba(0,0,0,0.55),
+      transparent
+    );
+
+  transform: translateY(100%);
+
+  opacity: 0;
+
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
+
+  pointer-events: none;
+}
+
+.novedades-card:hover
+.novedades-card__caption {
+
+  transform: translateY(0);
+
+  opacity: 1;
+}
+
+.novedades-card__caption::before {
+
+  content: "";
+
+  display: block;
+
+  width: 40px;
+  height: 2px;
+
+  margin-bottom: 0.6rem;
+
+  background: rgba(255,255,255,0.8);
+}
+/* =========================================
    MOBILE
 ========================================= */
 

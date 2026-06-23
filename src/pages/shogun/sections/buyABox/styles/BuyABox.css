@@ -9,7 +9,7 @@
   overflow: hidden;
 
   padding:
-    clamp(80px, 10vw, 140px)
+    clamp(10px, 10vw, 10px)
     clamp(20px, 6vw, 100px);
 }
 

@@ -14,25 +14,25 @@ const novedades = [
 
   {
     id: 1,
-    title: "Carta 1",
+    title: "Cerveza Verde por Sehiro",
     image: image1
   },
 
   {
     id: 2,
-    title: "Carta 2",
+    title: "Nefertiti por Saikomic",
     image: image2
   },
 
   {
     id: 3,
-    title: "Carta 3",
+    title: "Sir Agravain por Genzo",
     image: image3
   },
 
   {
     id: 4,
-    title: "Carta 4",
+    title: "Cleopatra VII por Genzo",
     image: image4
   }
 ];

@@ -16,7 +16,7 @@ export const cards = [
     image:
       img1,
 
-    button: "Ver más",
+    button: "Explorar",
   },
 
   {
@@ -46,6 +46,6 @@ export const cards = [
     image:
       img3,
 
-    button: "Descubrir",
+    button: "Explorar",
   },
 ];
