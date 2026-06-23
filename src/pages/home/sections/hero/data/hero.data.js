@@ -13,7 +13,7 @@ export const HERO_SLIDES = [
 
     subtitle: "primer bloque extendido",
 
-    title: "leyendas 4.0",
+    title: "LEYENDAS 4.0",
 
     description:
       "nuevos DIOSES y criaturas mitológicas llegan a mitos y leyendas para revolucionar el juego.",
@@ -37,7 +37,7 @@ export const HERO_SLIDES = [
 
     subtitle: "Edición especial",
 
-    title: "Cartas Secretas",
+    title: "CARTAS SECRETAS",
 
     description:
       "Consigue las versiones más exclusivas.",

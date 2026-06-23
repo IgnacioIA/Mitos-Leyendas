@@ -49,7 +49,7 @@
 
 .hero-title-Home {
 
-  font-family: "Boucherie Block", serif;
+  font-family: var(--font-anton);
 
   font-size: clamp(
     4rem,
