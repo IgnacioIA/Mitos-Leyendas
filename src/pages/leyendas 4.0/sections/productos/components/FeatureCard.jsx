@@ -75,6 +75,12 @@ export default function FeatureCard({ card }) {
         <motion.button
           className="feature-button"
           variants={itemVariants}
+          onClick={() =>
+            window.open(
+              "https://www.mylargentina.com/formato-competitivo-pbx/ultimos-lanzamientos/leyendas-4-0/",
+              "_blank"
+            )
+          }
         >
           {card.button}
         </motion.button>

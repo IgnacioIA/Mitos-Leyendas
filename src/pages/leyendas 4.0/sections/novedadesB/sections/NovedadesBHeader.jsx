@@ -1,18 +1,15 @@
-import "../style/Novedades-b-header.css";
+import "../styles/Novedades-b-header.css";
 
 function NovedadesBHeader() {
-
   return (
     <div className="novedades-b-header">
-
       <h2 className="novedades-b-title">
-        Novedades Premium
+        DESATÁ EL PODER DE LAS LEYENDAS
       </h2>
 
       <p className="novedades-b-subtitle">
-        Descubrí contenido exclusivo
+        COLECCION DE 320 CARTAS DE PRIMER BLOQUE EXTENDIDO
       </p>
-
     </div>
   );
 }

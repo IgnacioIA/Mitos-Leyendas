@@ -41,13 +41,53 @@
 .carousel-wrapper {
 
   display: flex;
-
+  position: relative;
   align-items: center;
   justify-content: center;
 
   gap: clamp(10px, 2vw, 24px);
 
   width: 100%;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 10px;
+
+  align-items: center;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  border: none;
+
+  background: rgba(255, 255, 255, 0.35);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    width 0.25s ease;
+}
+
+.carousel-dot.active {
+  background: #d4af37;
+
+  width: 24px;
+
+  border-radius: 999px;
+
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {

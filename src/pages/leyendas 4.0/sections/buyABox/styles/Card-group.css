@@ -107,7 +107,7 @@
 .group-title {
 
   font-size:
-    clamp(1.5rem, 3vw, 3rem);
+    clamp(1.5rem, 2.1vw, 3rem);
 
   color: gold;
 

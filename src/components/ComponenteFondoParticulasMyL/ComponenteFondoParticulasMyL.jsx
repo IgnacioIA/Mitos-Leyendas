@@ -3,25 +3,35 @@ import "./ComponenteFondoParticulasMyL.css";
 export default function ComponenteFondoParticulasMyL({
   backgroundDesktop,
   backgroundMobile,
+  backgroundColor,
   children,
 }) {
+  const usarColor = Boolean(backgroundColor);
+
   return (
-    <section className="ComponenteFondoParticulasMyL">
+    <section
+      className="ComponenteFondoParticulasMyL"
+      style={usarColor ? { backgroundColor } : undefined}
+    >
+      {/* Renderizar imagen SOLO si no hay color */}
+      {!usarColor && backgroundDesktop && (
+        <picture className="ComponenteFondoParticulasMyL-Background">
+          {backgroundMobile && (
+            <source media="(max-width: 768px)" srcSet={backgroundMobile} />
+          )}
 
-      <picture className="ComponenteFondoParticulasMyL-Background">
-        <source
-          media="(max-width: 768px)"
-          srcSet={backgroundMobile}
-        />
+          <img
+            src={backgroundDesktop}
+            alt=""
+            aria-hidden="true"
+          />
+        </picture>
+      )}
 
-        <img
-          src={backgroundDesktop}
-          alt=""
-          aria-hidden="true"
-        />
-      </picture>
-
-      <div className="ComponenteFondoParticulasMyL-Overlay" />
+      {/* overlay solo si hay imagen */}
+      {!usarColor && (
+        <div className="ComponenteFondoParticulasMyL-Overlay" />
+      )}
 
       <div className="ComponenteFondoParticulasMyL-Particulas">
         {[...Array(25)].map((_, index) => (
@@ -35,7 +45,6 @@ export default function ComponenteFondoParticulasMyL({
       <div className="ComponenteFondoParticulasMyL-Content">
         {children}
       </div>
-
     </section>
   );
 }

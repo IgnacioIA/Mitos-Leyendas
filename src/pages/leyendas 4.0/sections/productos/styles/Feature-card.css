@@ -196,7 +196,7 @@
     background 0.3s ease,
     color 0.3s ease;
 
-  background: white;
+  background: #ffd815;
 
   color: black;
 }
@@ -205,7 +205,7 @@
 
   transform: translateY(-3px);
 
-  background: #d4af37;
+  background: #ffd815;
 
   color: black;
 }

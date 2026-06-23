@@ -1,22 +1,24 @@
-import "./style/Novedades-b.css";
+import "./styles/Novedades-b.css";
 
-import NovedadesBHeader from "./components/NovedadesBHeader";
-import NovedadesBGrid from "./components/NovedadesBGrid";
+import NovedadesBHeader from "./sections/NovedadesBHeader";
+import NovedadesBGrid from "./sections/NovedadesBGrid";
+
+import ComponenteFondoParticulasMyL from "../../../../components/ComponenteFondoParticulasMyL/ComponenteFondoParticulasMyL";
+import fondoDesktop from "../../../../assets/mitos4.0/novedades/FONDO NOVEDADES.WEBP";
 
 function NovedadesB() {
-
   return (
-    <section className="novedades-b section">
-
-      <div className="container">
-
-        <NovedadesBHeader />
-
-        <NovedadesBGrid />
-
-      </div>
-
-    </section>
+    <ComponenteFondoParticulasMyL
+      backgroundDesktop={fondoDesktop}
+      backgroundMobile={fondoDesktop}
+    >
+      <section className="novedades-b section">
+        <div className="container">
+          <NovedadesBHeader />
+          <NovedadesBGrid />
+        </div>
+      </section>
+    </ComponenteFondoParticulasMyL>
   );
 }
 

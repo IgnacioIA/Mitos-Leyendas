@@ -31,7 +31,7 @@ const dataSection = [
   {
     id: 2,
 
-    title: "Cartas Exclusivas",
+    title: "CORRESPONDEN A LA EDICIÓN HELÉNICA",
 
     cards: [
       img4,
@@ -42,7 +42,7 @@ const dataSection = [
   {
     id: 3,
 
-    title: "Cartas Exclusivas",
+    title: "CORRESPONDEN A LA EDICIÓN HIJOS DE DAANA",
 
     cards: [
       img7,
@@ -53,7 +53,7 @@ const dataSection = [
   {
     id: 4,
 
-    title: "Cartas Exclusivas",
+    title: "CORRESPONDEN A LA EDICIÓN DOMINIOS DE RA",
 
     cards: [
       img10,

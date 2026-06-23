@@ -22,7 +22,7 @@ export default function Productos() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          Linea de Productos
+          LINEA DE PRODUCTOS
         </motion.h2>
 
         <div className="features-grid">

@@ -49,13 +49,13 @@ export default function CartaTexto() {
         {/* =====================================================
             SECTION 1
         ===================================================== */}
-
+        <section id="cartas-nuevas-section"></section>
         <ShowcaseSection
           image={carta1}
           title="Cartas Nuevas"
           reverse
         >
-
+          
           <p>
             Una de las principales novedades de esta nueva versión
             de Leyendas PB 4.0, son las cartas completamente nuevas
@@ -75,7 +75,7 @@ export default function CartaTexto() {
         {/* =====================================================
             SECTION 2
         ===================================================== */}
-
+        <section id="cartas-premium-section"></section>
         <ShowcaseSection
           image={carta2}
           title="Cartas Premium"
@@ -102,7 +102,7 @@ export default function CartaTexto() {
         {/* =====================================================
             SECTION 3
         ===================================================== */}
-
+        <section id="cartas-rework-section"></section>
         <ShowcaseSection
           image={carta3}
           title="Cartas Rework"
@@ -129,7 +129,7 @@ export default function CartaTexto() {
         {/* =====================================================
             SECTION 4
         ===================================================== */}
-
+        <section id="cartas-foil-especial-section"></section>
         <ShowcaseSection
           image={carta4}
           title="Cartas Foil Especial"
@@ -154,7 +154,7 @@ export default function CartaTexto() {
         {/* =====================================================
             SECTION 5
         ===================================================== */}
-
+        <section id="cartas-exclusivas-section"></section>
         <ShowcaseSection
           image={carta5}
           title="Cartas Exclusivas"

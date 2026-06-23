@@ -24,12 +24,7 @@
   border: none;
   border-radius: 15px;
 
-  background:
-    linear-gradient(
-      135deg,
-      #4caf50,
-      #2e7d32
-    );
+  background: #1ecc0a;
 
   color: white;
 
