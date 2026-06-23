@@ -55,7 +55,7 @@ function AppRoutes() {
 
         {/* BanList */}
         <Route
-          path="/Apj"
+          path="/BanList"
           element={<BanList />}
         />
 

@@ -1,0 +1,35 @@
+.PaginaEnConstruccion {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem;
+}
+
+.PaginaEnConstruccion-Contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  text-align: center;
+}
+
+.PaginaEnConstruccion-Imagen {
+  width: min(400px, 80vw);
+}
+
+.PaginaEnConstruccion-Titulo {
+  font-family: var(--font-anton);
+
+  font-size: clamp(
+    2rem,
+    5vw,
+    4rem
+  );
+
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
