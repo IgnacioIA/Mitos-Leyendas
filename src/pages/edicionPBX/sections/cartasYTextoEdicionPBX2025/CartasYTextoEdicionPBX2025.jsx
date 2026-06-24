@@ -11,11 +11,6 @@ export default function CartasYTextoEdicionPBX2025() {
   return (
     <section className="CartasYTextoEdicionPBX2025">
 
-      <BackGround
-        image={background}
-        overlay={0.2}
-        position="center top"
-      >
         <div className="CartasYTextoEdicionPBX2025-Container">
 
           {CartaYTextoData.map((carta, index) => (
@@ -32,7 +27,6 @@ export default function CartasYTextoEdicionPBX2025() {
           ))}
 
         </div>
-      </BackGround>
 
     </section>
   );

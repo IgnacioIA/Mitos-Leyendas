@@ -8,6 +8,7 @@ import fondoDesktop from "../../../../assets/EdicionPBX2025/cartasSecretasLootBo
 
 export default function CartasSecretasLootBoxPBX2025() {
   return (
+    
     <section className="CartasSecretasLootBoxPBX2025">
 
         <ComponenteFondoParticulasMyL
@@ -24,5 +25,6 @@ export default function CartasSecretasLootBoxPBX2025() {
         </div>
       </ComponenteFondoParticulasMyL>
     </section>
+
   );
 }

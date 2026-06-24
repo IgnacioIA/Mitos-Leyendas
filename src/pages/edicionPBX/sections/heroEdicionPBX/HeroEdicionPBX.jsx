@@ -11,6 +11,7 @@ export default function HeroEdicionPBX() {
       backgroundDesktop={heroEdicionPBXData.backgroundMobile}
       backgroundMobile= {heroEdicionPBXData.backgroundDesktop}
       buttonText="VER CONTENIDO"
+      scrollToId="ProductoLootboxPBX2025-section"
     />
   );
 }

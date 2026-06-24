@@ -8,8 +8,60 @@ export default function Hero({
   backgroundMobile,
   buttonText = "Ver Contenido",
   onButtonClick,
+  scrollToId,   
 }) {
+      const smoothScrollTo = (targetY, duration = 800) => {
+
+      const startY = window.scrollY;
+      const diff = targetY - startY;
+
+      let start;
+
+      const step = (timestamp) => {
+
+        if (!start) start = timestamp;
+
+        const time = timestamp - start;
+        const percent = Math.min(time / duration, 1);
+
+        // easing suave (easeInOutCubic)
+        const easing =
+          percent < 0.5
+            ? 4 * percent * percent * percent
+            : 1 - Math.pow(-2 * percent + 2, 3) / 2;
+
+        window.scrollTo(0, startY + diff * easing);
+
+        if (time < duration) {
+          requestAnimationFrame(step);
+        }
+      };
+
+      requestAnimationFrame(step);
+    };
+  
+  const handleClick = () => {
+
+    if (onButtonClick) {
+      onButtonClick();
+      return;
+    }
+
+    if (scrollToId) {
+
+      const el = document.getElementById(scrollToId);
+
+      if (!el) return;
+
+      const top =
+        el.getBoundingClientRect().top +
+        window.scrollY;
+
+      smoothScrollTo(top, 2000); // 👈 duración (más alto = más lento)
+    }
+  };
   return (
+
     <section className="Hero">
 
       <picture className="Hero-Background">
@@ -50,7 +102,7 @@ export default function Hero({
         {buttonText && (
           <button
             className="Hero-Button"
-            onClick={onButtonClick}
+            onClick={handleClick}
           >
             {buttonText}
           </button>

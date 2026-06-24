@@ -42,7 +42,7 @@ function renderContenido(seccion) {
 
 export default function LootboxLegendariaEdicionPBX() {
   return (
-    <BackGround image={fondoDesktop} overlay={0.2} position="center top">
+    <BackGround image={fondoDesktop} overlay={0.2} position="center center">
       {secciones.map((seccion) => (
         <TextoArribaContenidoAbajo
           key={seccion.id}
@@ -57,7 +57,12 @@ export default function LootboxLegendariaEdicionPBX() {
       <BannerTextoImagenBoton
         imagen={imagenBanner}
         imagenAlt="Gladiador Primer Bloque"
-        onBotonClick={() => console.log("ir a comprar")}
+        onBotonClick={() => {
+          window.open(
+            "https://www.mylargentina.com/productos/lootbox-primer-bloque-2025-buy-a-box-al-azar/",
+            "_blank"
+          );
+        }}
       />
     </BackGround>
   );

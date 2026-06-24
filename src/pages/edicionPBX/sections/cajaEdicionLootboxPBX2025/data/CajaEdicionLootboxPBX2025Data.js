@@ -14,7 +14,7 @@ const cajaEdicionLootboxPBX2025Data = {
 
   buttonText: "IR A LA TIENDA",
 
-  buttonUrl: "/tienda",
+  buttonUrl: "https://www.mylargentina.com/productos/lootbox-primer-bloque-2025-buy-a-box-al-azar/",
 
   image: ProductoBannerPBX2025,
 };

@@ -1,19 +1,21 @@
 .BuyABoxEdicionLootBoxPBX2025 {
   position: relative;
-
   width: 100%;
-
   overflow: hidden;
 }
 
+/* ESTA es la capa que mueve SOLO el contenido */
+.BuyABoxEdicionLootBoxPBX2025-Inner {
+  padding-top: 6rem;
+}
+
+/* layout interno real */
 .BuyABoxEdicionLootBoxPBX2025-Container {
   width: 100%;
   max-width: 1600px;
-
   margin: 0 auto;
 
   display: flex;
   flex-direction: column;
-
-  gap: 5rem;
+  gap: 2.0rem;
 }

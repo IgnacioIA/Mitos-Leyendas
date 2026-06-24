@@ -48,18 +48,18 @@
 .CajaEdicionLootboxPBX2025-Title {
   color: white;
   font-size: clamp(2rem, 4vw, 4rem);
-  font-weight: 700;
+  font-weight: 400;
 
   margin: 0;
 }
 
 .CajaEdicionLootboxPBX2025-Subtitle {
   
-  color: #FFD700;
+  color: #ffd815;
 
   font-size: clamp(2rem, 3vw, 4rem);
 
-  max-width: 600px;
+  max-width: 900px;
 
   margin: 0;
 
@@ -72,7 +72,7 @@
 }
 
 .CajaEdicionLootboxPBX2025-Button {
-  background: #25c25a;
+  background: #1ecc0a;
 
   color: white;
 

@@ -9,17 +9,14 @@ import fondoBackground from "../../../../assets/EdicionPBX2025/buyABoxEdicionLoo
 export default function BuyABoxEdicionLootBoxPBX2025() {
   return (
     <section className="BuyABoxEdicionLootBoxPBX2025">
+   
+        <div className="BuyABoxEdicionLootBoxPBX2025-Inner">
+          <div className="BuyABoxEdicionLootBoxPBX2025-Container">
+            <SectionHeader />
+            <SectionCarrousel />
+          </div>
+        </div>
 
-      <BackGround image={fondoBackground} overlay={0.2} position="center center">
-
-      <div className="BuyABoxEdicionLootBoxPBX2025-Container">
-
-        <SectionHeader />
-
-        <SectionCarrousel />
-
-      </div>
-    </BackGround>
     </section>
   );
 }

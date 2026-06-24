@@ -5,7 +5,7 @@ import LootboxMobilePBX2025 from "./sections/LootboxMobilePBX2025";
 
 export default function ProductoLootboxPBX2025() {
   return (
-    <section className="ProductoLootboxPBX2025">
+    <section className="ProductoLootboxPBX2025" id="ProductoLootboxPBX2025-section">
 
       <div className="ProductoLootboxPBX2025-Desktop">
         <LootboxDesktopPBX2025 />

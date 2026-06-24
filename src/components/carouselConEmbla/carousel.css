@@ -1,0 +1,117 @@
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* viewport embla */
+.carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* track */
+.carousel-track {
+  display: flex;
+}
+
+/* 🔥 CLAVE: 4 cards visibles */
+.carousel-slide {
+  flex: 0 0 25%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+/* contenido interno */
+.carousel-slide-inner {
+  height: 100%;
+}
+
+/* BOTONES */
+.carousel-button {
+  width: 72px;
+  height: 72px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(15, 15, 15, 0.55);
+
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  position: relative;
+
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+
+.carousel-button:hover {
+  transform: scale(1.08);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+}
+
+/* active click */
+.carousel-button:active {
+  transform: scale(0.95);
+}
+
+/* ICONO */
+.carousel-arrow-icon {
+  width: 34px;
+  height: 34px;
+
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+/* micro interacción */
+.carousel-button:hover .carousel-arrow-icon {
+  transform: translateX(-2px);
+}
+
+.carousel-button.carousel-button-right:hover .carousel-arrow-icon {
+  transform: translateX(2px);
+}
+
+/* POSICIÓN */
+.carousel-button-left {
+  left: 0;
+}
+
+.carousel-button-right {
+  right: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .carousel-slide {
+    flex: 0 0 33.333%;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-slide {
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-slide {
+    flex: 0 0 100%;
+  }
+}

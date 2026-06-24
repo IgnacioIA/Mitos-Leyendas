@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 
 import "./styles/CartaMvConTexto.css";
 
+import FrameFx from "../ui/cartaMovible/FrameFX";
+
 export default function CartaMvConTexto({
   titulo,
   subtitulo,
@@ -48,16 +50,18 @@ export default function CartaMvConTexto({
         </motion.p>
 
       </div>
-
+<FrameFx>
       <div className="CartaMvConTexto-ContenidoImg">
 
-        <img
-          src={imagen}
-          alt={alt}
-          className="CartaMvConTexto-Imagen"
-        />
-
+        
+          <img
+            src={imagen}
+            alt={alt}
+            className="CartaMvConTexto-Imagen"
+          />
+        
       </div>
+      </FrameFx>
     </section>
   );
 }

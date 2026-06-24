@@ -16,8 +16,7 @@ import {
 export default function CartasNuevasEdicionLootbox() {
   return (
     <ComponenteFondoParticulasMyL
-      backgroundDesktop={fondoDesktop}
-      backgroundMobile={fondoMobile}
+      backgroundColor="#33010E"
     >
       <section className="CartasNuevasEdicionLootbox">
 

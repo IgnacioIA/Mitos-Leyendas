@@ -14,7 +14,6 @@ export default function CajaEdicionLootboxPBX2025() {
     : {
         backgroundImage: `url(${data.background})`,
       };
-
       
   return (
     <section
@@ -42,6 +41,8 @@ export default function CajaEdicionLootboxPBX2025() {
             <a
               href={data.buttonUrl}
               className="CajaEdicionLootboxPBX2025-Button"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {data.buttonText}
             </a>

@@ -1,5 +1,7 @@
 .ProductoLootboxPBX2025 {
   width: 100%;
+
+  margin-top: clamp(4rem, 10vw, 8rem);
 }
 
 .ProductoLootboxPBX2025-Mobile {

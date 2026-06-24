@@ -1,3 +1,10 @@
 .CartasSecretasLootBoxPBX2025-CarrouselContent {
   width: 100%;
 }
+
+.carrousel-card {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
