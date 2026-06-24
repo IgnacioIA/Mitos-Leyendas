@@ -6,13 +6,14 @@ import AprendeAJugarHeader from "./sections/AprendeAJugarHeader";
 import AprendeAJugarVideoContainer from "./sections/AprendeAJugarVideoContainer";
 import AprendeAJugarButton from "./sections/AprendeAJugarButton";
 
+import BackGround from "../../../../components/parallaxBackgrounCinematografico/ParallaxBackgroundCinematografico";
+
 export default function AprendeAJugar() {
   return (
+
     <section
       className="AprendeAJugar-MazosInicialPB"
-      style={{
-        backgroundImage: `url(${AprendeAJugarData.background})`,
-      }}
+      style={{ backgroundColor: "#260009" }}
     >
       <div className="AprendeAJugar-Content-MazosInicialPB">
 

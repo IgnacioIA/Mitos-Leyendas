@@ -13,7 +13,7 @@ const heroData = {
 
   button: {
     text: "ELEGÍ TU RAZA Y COMENZÁ LA GUERRA",
-    url: "/productos",
+    url: "#tiendaSection",
   },
 };
 

@@ -5,8 +5,7 @@ import mazosEdicionData from "./data/MazosEdicionData";
 import ContenidoSuperior from "./sections/ContenidoSuperior";
 import ContenidoInferior from "./sections/ContenidoInferior";
 
-import ParallaxBackgroundCinematografico
-from "../../../../components/parallaxBackgrounCinematografico/ParallaxBackgroundCinematografico.jsx";
+import ParallaxBackgroundCinematografico from "../../../../components/parallaxBackgrounCinematografico/ParallaxBackgroundCinematografico.jsx";
 
 export default function MazosEdicion() {
   return (
@@ -21,7 +20,10 @@ export default function MazosEdicion() {
           overlay={0.15}
         >
 
-          <article className="Page-MazosEdicion-Item">
+          <article
+            id={mazo.anchorId}
+            className="Page-MazosEdicion-Item"
+          >
 
             <ContenidoSuperior
               layout={mazo.layout}

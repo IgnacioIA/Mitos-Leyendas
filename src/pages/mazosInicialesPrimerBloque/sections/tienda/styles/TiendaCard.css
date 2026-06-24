@@ -6,6 +6,12 @@
   overflow: visible;
 }
 
+.tienda-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .tienda-card-image {
   width: 100%;
   display: block;
@@ -16,59 +22,16 @@
 }
 
 /* =========================
-   Hover General
+   Hover
 ========================= */
 
 .tienda-card:hover .tienda-card-image {
   transform: scale(1.04);
-}
 
-/* =========================
-   Glow Orange
-========================= */
-
-.tienda-card:hover
-.tienda-card-image--orange {
   filter:
-    drop-shadow(0 0 8px rgba(255, 140, 0, 0.9))
-    drop-shadow(0 0 16px rgba(255, 140, 0, 0.7))
-    drop-shadow(0 0 32px rgba(255, 140, 0, 0.5));
-}
-
-/* =========================
-   Glow Blue
-========================= */
-
-.tienda-card:hover
-.tienda-card-image--blue {
-  filter:
-    drop-shadow(0 0 8px rgba(0, 162, 255, 0.9))
-    drop-shadow(0 0 16px rgba(0, 162, 255, 0.7))
-    drop-shadow(0 0 32px rgba(0, 162, 255, 0.5));
-}
-
-/* =========================
-   Glow Green
-========================= */
-
-.tienda-card:hover
-.tienda-card-image--green {
-  filter:
-    drop-shadow(0 0 8px rgba(0, 255, 127, 0.9))
-    drop-shadow(0 0 16px rgba(0, 255, 127, 0.7))
-    drop-shadow(0 0 32px rgba(0, 255, 127, 0.5));
-}
-
-/* =========================
-   Glow Yellow
-========================= */
-
-.tienda-card:hover
-.tienda-card-image--yellow {
-  filter:
-    drop-shadow(0 0 8px rgba(255, 215, 0, 0.9))
-    drop-shadow(0 0 16px rgba(255, 215, 0, 0.7))
-    drop-shadow(0 0 32px rgba(255, 215, 0, 0.5));
+    drop-shadow(0 0 8px var(--glow-color))
+    drop-shadow(0 0 16px var(--glow-color))
+    drop-shadow(0 0 32px var(--glow-color));
 }
 
 /* =========================
@@ -78,7 +41,7 @@
 .tienda-card-title {
   margin-top: 1rem;
   font-size: 1.2rem;
-  color: #ffd815 ;
+  color: #ffd815;
 }
 
 .tienda-card-subtitle {

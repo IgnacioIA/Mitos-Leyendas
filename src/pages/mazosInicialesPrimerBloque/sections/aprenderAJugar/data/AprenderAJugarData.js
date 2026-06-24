@@ -9,9 +9,9 @@ const AprendeAJugarData = {
   videoUrl:
     "https://www.youtube.com/embed/zaDo_ffZYqI?start=1",
 
-  buttonText: "VER MÁS TUTORIALES",
+  buttonText: "QUIERO SABER MAS",
 
-  buttonUrl: "/tutoriales",
+  buttonUrl: "/Apj",
 
   background:
     BackgroundDragon,
