@@ -107,11 +107,13 @@
 .group-title {
 
   font-size:
-    clamp(1.5rem, 2.1vw, 3rem);
+    clamp(1.3rem, 1vw, 3rem);
 
   color: gold;
 
   text-align: center;
+
+  margin-top: 1rem;
 
 
 }

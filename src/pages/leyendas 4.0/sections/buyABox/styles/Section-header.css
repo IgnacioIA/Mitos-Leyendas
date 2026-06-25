@@ -1,6 +1,7 @@
 .section-header {
 
   text-align: center;
+
 }
 
 .section-title {
@@ -15,4 +16,6 @@
   text-transform: uppercase;
 
   letter-spacing: 2px;
+
+  margin-bottom: 4rem;
 }

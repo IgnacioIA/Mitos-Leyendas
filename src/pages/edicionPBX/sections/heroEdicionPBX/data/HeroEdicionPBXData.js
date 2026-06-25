@@ -7,7 +7,7 @@ const heroEdicionPBXData = {
   subtitulo: "PRIMER BLOQUE 2025",
 
   descripcion:
-    "El producto ideal para que te sumes al mundo épico de mitos y leyendas",
+    "El producto ideal para que te sumes al mundo épico de Mitos y Leyendas",
 
   backgroundDesktop,
 

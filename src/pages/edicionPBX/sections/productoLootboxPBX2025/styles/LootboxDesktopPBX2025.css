@@ -48,6 +48,7 @@
 
   transform: rotate(-12deg);
   transform: translateX(-30%);
+  z-index: 1;
 }
 
 /* ARRIBA IZQUIERDA */
@@ -80,7 +81,7 @@
   top: 12%;
 
   transform: rotate(8deg);
-  transform: translateX(10%);
+  transform: translateX(20%);
 }
 
 /* DERECHA ABAJO */

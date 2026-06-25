@@ -1,8 +1,8 @@
 import FondoDesktop from "../../../../../assets/EdicionPBX2025/productoEdicionPBX2025/FONDO PRODUCTO.webp";
 import FondoMobile from "../../../../../assets/EdicionPBX2025/productoEdicionPBX2025/FONDO PRODUCTO.webp";
 
-import Producto1 from "../../../../../assets/EdicionPBX2025/productoEdicionPBX2025/1- CAJA NEGRA.webp";
-import Producto2 from "../../../../../assets/EdicionPBX2025/productoEdicionPBX2025/2- PAQUETES.webp";
+import Producto1 from "../../../../../assets/EdicionPBX2025/productoEdicionPBX2025/2- PAQUETES.webp";
+import Producto2 from "../../../../../assets/EdicionPBX2025/productoEdicionPBX2025/1- CAJA NEGRA.webp";
 import Producto3 from "../../../../../assets/EdicionPBX2025/productoEdicionPBX2025/3- CARTAS.webp";
 import Producto4 from "../../../../../assets/EdicionPBX2025/productoEdicionPBX2025/4- MINOTAURO.webp";
 import Producto5 from "../../../../../assets/EdicionPBX2025/productoEdicionPBX2025/5- MAZO INICIAL.webp";
@@ -15,9 +15,10 @@ const productoLootboxPBX2025Data = {
 
 
   products: [
-    {
+
+     {
       id: 1,
-      image: Producto1,
+      image: Producto2,
       title: "PRODUCTO AL AZAR",
       subtitle: "LANZADO EN 2025",
       position: "left",
@@ -25,10 +26,11 @@ const productoLootboxPBX2025Data = {
 
     {
       id: 2,
-      image: Producto2,
+      image: Producto1,
       title: "8 BOOSTESR",
       subtitle: "EDICIÓN DOMINIOS DE RA ANIV.",
       position: "topLeft",
+
     },
 
     {

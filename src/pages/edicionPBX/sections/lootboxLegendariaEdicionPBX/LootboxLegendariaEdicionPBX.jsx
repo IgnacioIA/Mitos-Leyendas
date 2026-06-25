@@ -11,6 +11,8 @@ import {
 import BannerTextoImagenBoton from "../../../../components/bannerTextoImagenBoton";
 import imagenBanner from "../../../../assets/EdicionPBX2025/lootboxLegendariaEdicionPBX2025/LootboxUltraSecreta/Lootbox 2025 Render.png";
 
+import FrameFX from "../../../../components/ui/cartaMovible/FrameFX";
+
 // Definido fuera del componente: no se recrea en cada render
 // y queda fácil de extender con nuevos tipos de sección sin tocar el switch.
 const RENDERERS = {
@@ -29,7 +31,9 @@ const RENDERERS = {
   [TIPOS_SECCION.DOS_IMAGENES]: (seccion) => (
     <div className="LootboxLegendariaEdicionPBX-DosImagenes">
       {seccion.imagenes.map(({ src, alt }, index) => (
+      <FrameFX>
         <img key={index} src={src} alt={alt} />
+      </FrameFX>
       ))}
     </div>
   ),

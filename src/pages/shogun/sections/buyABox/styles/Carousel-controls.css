@@ -84,12 +84,12 @@
 
 .shogun-control-carousel-control--left {
 
-  left: 10rem;
+  left: 5rem;
 }
 
 .shogun-control-carousel-control--right {
 
-  right: 10rem;
+  right: 5rem;
 }
 
 @media (max-width: 768px) {

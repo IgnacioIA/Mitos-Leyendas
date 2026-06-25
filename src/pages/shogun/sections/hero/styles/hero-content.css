@@ -36,7 +36,7 @@
 ========================================================= */
 
 .shogun-hero-subtitle {
-  font-family: "Boucherie Block", serif;
+  font-family: var(--font-anton);
 
   font-size: clamp(3rem, 2vw, 4rem);
 

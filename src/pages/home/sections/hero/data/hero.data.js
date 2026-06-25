@@ -35,12 +35,12 @@ export const HERO_SLIDES = [
 
     image: HeroImage2,
 
-    subtitle: "Edición especial",
+    subtitle: "VOL.1 - VOL.2",
 
-    title: "CARTAS SECRETAS",
+    title: "SHOGUN 5",
 
     description:
-      "Consigue las versiones más exclusivas.",
+      "EL MANGA Y EL ANIME LLEGAN A MITOS Y LEYENDAS.",
 
     buttons: [
       {
