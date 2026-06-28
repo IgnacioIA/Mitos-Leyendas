@@ -1,6 +1,7 @@
 // src/routes/AppRoutes.jsx
+import MainLayout from "../layout/MainLayout/MainLayout";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollTop from "./ScrollTop";
 
 import Home from "../pages/home/Home.jsx";
@@ -21,81 +22,87 @@ function AppRoutes() {
   return (
     <BrowserRouter>
       <ScrollTop />
-      <Routes>
+        <Routes>
 
-        {/* Home */}
-        <Route
-          path="/Home"
-          element={<Home />}
-        />
+          <Route element={<MainLayout />}>
+          
+            <Route
+              path="/"
+              element={<Navigate to="/Home" replace />}
+            />
+            {/* Home */}
+            <Route
+              path="/Home"
+              element={<Home />}
+            />
 
-        {/* Mazos Inicial */}
-        <Route
-          path="/mazoInicialPB"
-          element={<MazosInicialesPB />}
-        />
+            {/* Mazos Inicial */}
+            <Route
+              path="/mazoInicialPB"
+              element={<MazosInicialesPB />}
+            />
 
-        {/* Mitos 4.0 */}
-        <Route
-          path="/mitos4.0"
-          element={<Leyendas4y0 />}
-        />
+            {/* Mitos 4.0 */}
+            <Route
+              path="/mitos4.0"
+              element={<Leyendas4y0 />}
+            />
 
-        {/* Shogun */}
-        <Route
-          path="/Shogun"
-          element={<Shogun />}
-        />
+            {/* Shogun */}
+            <Route
+              path="/Shogun"
+              element={<Shogun />}
+            />
 
-        {/* Aprende a jugar */}
-        <Route
-          path="/Apj"
-          element={<Apj />}
-        />
+            {/* Aprende a jugar */}
+            <Route
+              path="/Apj"
+              element={<Apj />}
+            />
 
-        {/* BanList */}
-        <Route
-          path="/BanList"
-          element={<BanList />}
-        />
+            {/* BanList */}
+            <Route
+              path="/BanList"
+              element={<BanList />}
+            />
 
-         {/* LorePage */}
-        <Route
-          path="/LorePage"
-          element={<LorePage />}
-        />
+             {/* LorePage */}
+            <Route
+              path="/LorePage"
+              element={<LorePage />}
+            />
 
-         {/* Formatos */}
-        <Route
-          path="/Formatos"
-          element={<Formatos />}
-        />
+             {/* Formatos */}
+            <Route
+              path="/Formatos"
+              element={<Formatos />}
+            />
 
-        {/* Edicion PBX */}
-        <Route
-          path="/EdicionPBX"
-          element={<EdicionPBX />}
-        />
+            {/* Edicion PBX */}
+            <Route
+              path="/EdicionPBX"
+              element={<EdicionPBX />}
+            />
 
-        {/* Tiendas Amigas */}
-        <Route
-          path="/TiendasAmigas"
-          element={<TiendasAmigas />}
-        />
+            {/* Tiendas Amigas */}
+            <Route
+              path="/TiendasAmigas"
+              element={<TiendasAmigas />}
+            />
 
-        {/* Teams Oficiales */}
-        <Route
-          path="/TeamsOficiales"
-          element={<TeamsOficiales />}
-        />
+            {/* Teams Oficiales */}
+            <Route
+              path="/TeamsOficiales"
+              element={<TeamsOficiales />}
+            />
 
-        {/* Historia MYL */}
-        <Route
-          path="/HistoriaMYL"
-          element={<HistoriaMYL />}
-        />
-
-      </Routes>
+            {/* Historia MYL */}
+            <Route
+              path="/HistoriaMYL"
+              element={<HistoriaMYL />}
+            />
+          </Route>
+        </Routes>
     </BrowserRouter>
   );
 }
