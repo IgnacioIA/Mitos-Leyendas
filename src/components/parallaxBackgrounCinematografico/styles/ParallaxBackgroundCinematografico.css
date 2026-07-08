@@ -45,3 +45,24 @@
 
   z-index: 2;
 }
+
+/* =========================================================
+   MOBILE — degradación del efecto
+   El truco de position:sticky + margin-bottom:-100vh es
+   inestable en mobile por los cambios dinámicos de altura de
+   viewport (barra de URL). Por debajo de 768px se desactiva el
+   scrub y el fondo pasa a cubrir la sección en flujo normal,
+   sin perder imagen, overlay ni contenido.
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .ParallaxBackgroundCinematografico-Sticky {
+    position: absolute;
+
+    inset: 0;
+    height: auto;
+
+    margin-bottom: 0;
+  }
+}

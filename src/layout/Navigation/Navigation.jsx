@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import { NavLink } from "react-router-dom";
 
 import "./Navigation.css";
@@ -193,26 +194,31 @@ export default function Navigation() {
         <span className="hamburger__bar" />
       </button>
 
-      {/* OVERLAY */}
-      <div
-        className={`nav__overlay${drawerOpen ? " nav__overlay--visible" : ""}`}
-        onClick={closeDrawer}
-        aria-hidden="true"
-      />
+      {/* OVERLAY + DRAWER — portados a document.body para no depender del
+          containing block que crea el backdrop-filter del Header */}
+      {createPortal(
+        <>
+          <div
+            className={`nav__overlay${drawerOpen ? " nav__overlay--visible" : ""}`}
+            onClick={closeDrawer}
+            aria-hidden="true"
+          />
 
-      {/* DRAWER */}
-      <nav
-        id="mobile-drawer"
-        className={`nav__drawer${drawerOpen ? " nav__drawer--open" : ""}`}
-        aria-label="Menú móvil"
-        aria-hidden={!drawerOpen}
-      >
-        <ul className="mob-nav__list" role="list">
-          {NAV_ITEMS.map((item) => (
-            <MobileItem key={item.id} item={item} onClose={closeDrawer} />
-          ))}
-        </ul>
-      </nav>
+          <nav
+            id="mobile-drawer"
+            className={`nav__drawer${drawerOpen ? " nav__drawer--open" : ""}`}
+            aria-label="Menú móvil"
+            aria-hidden={!drawerOpen}
+          >
+            <ul className="mob-nav__list" role="list">
+              {NAV_ITEMS.map((item) => (
+                <MobileItem key={item.id} item={item} onClose={closeDrawer} />
+              ))}
+            </ul>
+          </nav>
+        </>,
+        document.body
+      )}
     </>
   );
 }

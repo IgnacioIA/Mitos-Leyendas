@@ -46,16 +46,16 @@ export default function FrameFX({ children }) {
 
   const ref = useRef(null);
 
-  const handleMouseMove = (e) => {
+  const updateTilt = (clientX, clientY) => {
 
     const rect =
       ref.current.getBoundingClientRect();
 
     const x =
-      e.clientX - rect.left;
+      clientX - rect.left;
 
     const y =
-      e.clientY - rect.top;
+      clientY - rect.top;
 
     const centerX =
       rect.width / 2;
@@ -103,12 +103,43 @@ export default function FrameFX({ children }) {
     );
   };
 
+  // Pointer Events unifica mouse/touch/pen en un solo flujo.
+  // El scroll se bloquea solo mientras el gesto ocurre sobre la carta
+  // (touch-action: none en el CSS) y se recupera de inmediato al soltar,
+  // ya que touch-action solo afecta gestos que empiezan en este elemento.
+
+  const handlePointerMove = (e) => {
+    updateTilt(e.clientX, e.clientY);
+  };
+
+  const handlePointerDown = (e) => {
+    ref.current.setPointerCapture(e.pointerId);
+    updateTilt(e.clientX, e.clientY);
+  };
+
+  const handlePointerUp = (e) => {
+
+    if (ref.current.hasPointerCapture(e.pointerId)) {
+      ref.current.releasePointerCapture(e.pointerId);
+    }
+
+    // El mouse solo resetea al salir del área (onPointerLeave),
+    // igual que el comportamiento original con onMouseLeave.
+    if (e.pointerType !== "mouse") {
+      reset();
+    }
+  };
+
   return (
     <div
       ref={ref}
       className="frame-fx"
-      onMouseMove={handleMouseMove}
-      onMouseLeave={reset}
+      onPointerMove={handlePointerMove}
+      onPointerDown={handlePointerDown}
+      onPointerUp={handlePointerUp}
+      onPointerCancel={handlePointerUp}
+      onPointerLeave={reset}
+      onContextMenu={(e) => e.preventDefault()}
     >
 
       {children}

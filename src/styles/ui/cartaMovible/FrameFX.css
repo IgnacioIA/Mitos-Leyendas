@@ -20,6 +20,21 @@
     0 20px 60px rgba(0, 0, 0, 0.7);
 
   will-change: transform;
+
+  /* La carta captura completamente el gesto: el navegador no debe
+     interpretarlo como scroll/zoom, ni ofrecer selección, callout
+     (menú "guardar imagen" de iOS) o arrastre nativo de imagen. */
+  touch-action: none;
+
+  -webkit-touch-callout: none;
+
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.frame-fx img {
+  -webkit-user-drag: none;
+  user-drag: none;
 }
 
 

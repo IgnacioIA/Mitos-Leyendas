@@ -40,10 +40,27 @@
 
 @media (max-width: 768px) {
 
+  /* El sticky-scrub (background sticky + content con margin-top
+     negativo) usa unidades desincronizadas: el fondo mide su
+     altura en 100dvh (se recalcula al ocultarse/aparecer la
+     barra de direcciones durante el scroll en mobile) mientras
+     el contenido se corre hacia arriba con -100vh (fijo, no
+     recalcula). El desfase entre ambos hace que el contenido
+     invada la sección anterior y salte durante el scroll. Se
+     desactiva el truco en mobile igual que en
+     ParallaxBackgroundCinematografico, sin tocar Desktop. */
+
   .carta-texto-background {
+    position: absolute;
+    inset: 0;
+    height: auto;
 
     background-size: cover;
 
     background-position: 65% center;
+  }
+
+  .carta-texto-content {
+    margin-top: 0;
   }
 }

@@ -30,3 +30,23 @@
   width: 100%;
 }
 
+/* =========================================================
+   MOBILE
+   min-height:100dvh fuerza a la sección a ocupar siempre el
+   viewport completo. En mobile, "dvh" se recalcula mientras la
+   barra de direcciones se oculta/aparece durante el scroll, lo
+   que hace que .background-fx (absolute + inset:0, ligado a la
+   altura del padre) cambie de tamaño de forma visible. Además,
+   con el carrusel mucho más chico que ese alto forzado, la
+   sección queda con demasiado espacio vacío alrededor. Se
+   reemplaza por una altura basada en contenido, sin tocar el
+   carrusel ni el layout de Desktop.
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .feature-carousel-section {
+    min-height: auto;
+  }
+}
+

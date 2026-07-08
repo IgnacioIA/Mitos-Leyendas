@@ -82,3 +82,26 @@
 
   margin-top: 2.5rem;
 }
+
+/* =========================================================
+   MOBILE
+   .hero-title usa clamp(9rem, 9vw, 7rem): el mínimo (9rem) es
+   mayor que el máximo (7rem), un clamp() inválido que la spec
+   resuelve devolviendo siempre 9rem fijo, sin importar el
+   viewport. En desktop 9rem no desborda y no se toca para no
+   alterar ese comportamiento; en mobile, junto con white-space:
+   nowrap, provoca overflow horizontal de toda la página.
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .hero-title {
+    font-size: clamp(2.5rem, 13vw, 4rem);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1.1rem, 5.5vw, 1.8rem);
+
+    white-space: normal;
+  }
+}
