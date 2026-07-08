@@ -58,7 +58,7 @@ export default function SecretCardSection() {
 
           transition={{
             duration: 0.8,
-            ease: "easeOut"
+            ease: [0.4, 0, 0.2, 1]
           }}
 
           viewport={{ once: true }}
@@ -90,7 +90,7 @@ export default function SecretCardSection() {
           transition={{
             duration: 1,
             delay: 0.2,
-            ease: "easeOut"
+            ease: [0.4, 0, 0.2, 1]
           }}
 
           viewport={{ once: true }}
@@ -120,7 +120,7 @@ export default function SecretCardSection() {
           transition={{
             duration: 1.2,
             delay: 0.3,
-            ease: "easeOut"
+            ease: [0.4, 0, 0.2, 1]
           }}
 
           viewport={{ once: true }}

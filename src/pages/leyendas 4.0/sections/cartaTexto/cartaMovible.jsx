@@ -9,11 +9,13 @@ export default function MagicSectionAlt() {
 
       {/* LADO IZQUIERDO (IMAGEN) */}
       <div className="magic-right-alt">
-        <FrameFX>
+        
           <div className="magic-card-alt">
-            <img src={carta} alt="Carta" />
+            <FrameFX>
+              <img src={carta} alt="Carta" />
+            </FrameFX>
           </div>
-        </FrameFX>
+        
       </div>
 
       {/* LADO DERECHO (TEXTO) */}

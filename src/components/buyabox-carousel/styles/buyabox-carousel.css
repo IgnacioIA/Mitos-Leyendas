@@ -1,0 +1,107 @@
+/* =========================================================
+   BUYABOX CAROUSEL  (prefijo bac__)
+   Carousel Embla con CardGroup, controles prev/next y dots.
+   Usado en la sección BuyABox de cada expansión.
+========================================================= */
+
+/* =========================================================
+   WRAPPER — flex contenedor con controles laterales
+========================================================= */
+
+.bac__wrapper {
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(8px, 1.5vw, 20px);
+
+  padding-bottom: 3rem;   /* espacio para los dots */
+}
+
+/* =========================================================
+   EMBLA — viewport de scroll del carrusel
+========================================================= */
+
+.bac__embla {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* =========================================================
+   TRACK — contenedor flex de todos los slides
+========================================================= */
+
+.bac__track {
+  display: flex;
+}
+
+/* =========================================================
+   SLIDE — un fotograma del carrusel
+========================================================= */
+
+.bac__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================================================
+   DOTS — indicadores de posición
+========================================================= */
+
+.bac__dots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bac__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+
+  transition:
+    width      0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    transform  0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bac__dot--active {
+  width: 26px;
+  border-radius: 999px;
+  background: #d4af37;
+  transform: scale(1.1);
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /* En mobile los controles se ocultan — swipe nativo */
+  .bac__wrapper {
+    display: block;
+    padding-bottom: 2.5rem;
+  }
+
+  .bac__embla {
+    width: 100%;
+  }
+
+  .bac__dots {
+    display: flex;
+  }
+}

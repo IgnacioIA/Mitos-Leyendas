@@ -1,23 +1,23 @@
 .frame-fx {
   position: relative;
-  width: 240;
-  height: 380px;
+
+  /* Sin width/height fijos: el hijo (carta, imagen) define el tamaño.
+     FrameFX solo aplica el efecto 3D y recorta las esquinas. */
 
   border-radius: 18px;
   overflow: hidden;
 
   background: radial-gradient(circle at 50% 20%, #1a1a1a, #050505);
 
-  transform: perspective(450px)
+  transform: perspective(800px)
     rotateX(var(--rotateX, 0deg))
     rotateY(var(--rotateY, 0deg));
 
   transition: transform 0.2s ease;
 
-  /* profundidad */
   box-shadow:
-    inset 0 0 40px rgba(0,0,0,0.9),
-    0 20px 50px rgba(0,0,0,0.8);
+    inset 0 0 40px rgba(0, 0, 0, 0.9),
+    0 20px 60px rgba(0, 0, 0, 0.7);
 
   will-change: transform;
 }

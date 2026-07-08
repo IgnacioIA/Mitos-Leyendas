@@ -11,7 +11,7 @@ import Productos from "./sections/productos/Productos.jsx";
 export default function Shogun() {
 
   return (
-    <div className="shogun-container">
+    <div className="page-shogun">
 
 
     	<Hero/>

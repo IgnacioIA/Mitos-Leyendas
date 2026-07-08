@@ -1,40 +1,68 @@
+/* =========================================================
+   HEADER — sticky con glassmorphism
+========================================================= */
+
 .site-header {
   position: sticky;
   top: 0;
-
   z-index: 1000;
-
   width: 100%;
 
-  backdrop-filter: blur(12px);
+  background: rgba(8, 10, 16, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(240, 214, 138, 0.12);
 
-  background:
-    rgba(12, 12, 12, 0.92);
-
-  border-bottom:
-    1px solid rgba(255, 215, 0, 0.15);
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    padding 0.3s ease;
 }
+
+/* Estado post-scroll: más denso y compacto */
+.site-header--scrolled {
+  background: rgba(6, 8, 14, 0.97);
+  border-bottom-color: rgba(240, 214, 138, 0.08);
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
 
 .site-header-container {
   max-width: 1600px;
-
   margin: 0 auto;
-
-  padding:
-    1rem 2rem;
+  padding: 1.1rem 2rem;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  transition: padding 0.3s ease;
 }
 
-.site-logo h1 {
+.site-header--scrolled .site-header-container {
+  padding-block: 0.7rem;
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.site-logo {
   color: #f0d68a;
-
-  font-size: 1.4rem;
+  text-decoration: none;
+  font-size: 1.15rem;
   font-weight: 700;
-
-  letter-spacing: 2px;
-
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+
+  transition: opacity 0.2s ease;
+}
+
+.site-logo:hover {
+  opacity: 0.8;
 }

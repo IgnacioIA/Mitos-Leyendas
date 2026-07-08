@@ -1,16 +1,15 @@
 import "../styles/hero-scroll-button.css";
 
+import Button from "../../../../../components/ui/button/Button";
+
 function HeroScrollButton() {
 
   return (
-    <div className="shogun-hero-scroll-wrapper">
+    <div className="hero-scroll-wrapper">
 
-      <a
-        href="#next-section"
-        className="btn btn-primary shogun-hero-scroll-button"
-      >
+      <Button href="#next-section" variant="primary">
         DESCUBRÍ TODO EL CONTENIDO
-      </a>
+      </Button>
 
     </div>
   );

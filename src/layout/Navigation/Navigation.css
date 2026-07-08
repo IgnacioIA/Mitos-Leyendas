@@ -1,60 +1,407 @@
-.navigation {
+/* =========================================================
+   NAVIGATION — DESKTOP
+   Visible en pantallas > 768px
+========================================================= */
+
+.nav {
   display: flex;
   align-items: center;
 }
 
-.navigation-list {
+.nav__list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 
   display: flex;
   align-items: center;
-
-  gap: 2rem;
+  gap: 0.15rem;
 }
 
-.navigation-link {
+/* =========================================================
+   ITEM
+========================================================= */
+
+.nav__item {
   position: relative;
-
-  color: white;
-
-  text-decoration: none;
-
-  font-size: 0.95rem;
-  font-weight: 500;
-
-  transition:
-    color .3s ease,
-    transform .3s ease;
 }
 
-.navigation-link:hover {
+/* =========================================================
+   LINK — compartido por <NavLink> y <button>
+========================================================= */
+
+.nav__link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+
+  padding: 0.45rem 0.85rem;
+
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  white-space: nowrap;
+
+  border-radius: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+/* Underline animado */
+.nav__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0.85rem;
+  right: 0.85rem;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, #f0d68a, transparent);
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+  transform-origin: center;
+}
+
+.nav__link:hover,
+.nav__trigger--open {
   color: #f0d68a;
 }
 
-.navigation-link::after {
-  content: "";
-
-  position: absolute;
-
-  left: 50%;
-  bottom: -6px;
-
-  width: 0;
-  height: 2px;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      #f0d68a,
-      transparent
-    );
-
-  transition: .3s ease;
+.nav__link:hover::after,
+.nav__link--active::after {
+  transform: scaleX(1);
 }
 
-.navigation-link:hover::after {
+.nav__link--active {
+  color: #f0d68a;
+}
+
+/* =========================================================
+   TRIGGER — botón que abre el dropdown
+========================================================= */
+
+.nav__trigger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.65;
+  margin-left: 0.1rem;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.nav__trigger--open .nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* =========================================================
+   DROPDOWN — panel flotante
+========================================================= */
+
+.nav__dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+
+  min-width: 200px;
+
+  background: rgba(8, 10, 18, 0.97);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(240, 214, 138, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+
+  box-shadow:
+    0 0 0 0.5px rgba(240, 214, 138, 0.06),
+    0 24px 48px rgba(0, 0, 0, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(-6px);
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease,
+    transform 0.2s ease;
+
+  z-index: 100;
+}
+
+/* Flechita decorativa */
+.nav__dropdown::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+
+  width: 10px;
+  height: 10px;
+
+  background: rgba(8, 10, 18, 0.97);
+  border-left: 1px solid rgba(240, 214, 138, 0.1);
+  border-top: 1px solid rgba(240, 214, 138, 0.1);
+  border-radius: 2px 0 0 0;
+}
+
+.nav__dropdown--visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.nav__dropdown-link {
+  display: block;
+  padding: 0.8rem 1.25rem;
+
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 400;
+  white-space: nowrap;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  transition:
+    color 0.15s ease,
+    background 0.15s ease,
+    padding-left 0.15s ease;
+}
+
+.nav__dropdown-link:last-child {
+  border-bottom: none;
+}
+
+.nav__dropdown-link:hover {
+  color: #f0d68a;
+  background: rgba(240, 214, 138, 0.06);
+  padding-left: 1.6rem;
+}
+
+.nav__dropdown-link--active {
+  color: #f0d68a;
+  background: rgba(240, 214, 138, 0.08);
+}
+
+/* =========================================================
+   HAMBURGER — solo mobile
+========================================================= */
+
+.hamburger {
+  display: none;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+  flex-shrink: 0;
+}
+
+.hamburger__bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+
+  background: white;
+  border-radius: 2px;
+
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s ease;
+
+  transform-origin: center;
+}
+
+.hamburger--open .hamburger__bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger--open .hamburger__bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger--open .hamburger__bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =========================================================
+   OVERLAY — fondo oscuro al abrir el drawer
+========================================================= */
+
+.nav__overlay {
+  display: none;
+
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  z-index: 900;
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.3s ease;
+}
+
+.nav__overlay--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* =========================================================
+   DRAWER — panel que desliza desde la derecha
+========================================================= */
+
+.nav__drawer {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: min(300px, 82vw);
+  height: 100svh;
+  height: 100vh;
+
+  background: rgba(6, 8, 14, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-left: 1px solid rgba(240, 214, 138, 0.08);
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  z-index: 1000;
+
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav__drawer--open {
+  transform: translateX(0);
+}
+
+/* =========================================================
+   MOBILE NAV — items dentro del drawer
+========================================================= */
+
+.mob-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 4.5rem 0 2rem;
+}
+
+.mob-nav__item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mob-nav__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
 
-  left: 0;
+  padding: 1rem 1.5rem;
+
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.mob-nav__link:hover {
+  color: #f0d68a;
+  background: rgba(240, 214, 138, 0.04);
+}
+
+.mob-nav__link--active {
+  color: #f0d68a;
+}
+
+.mob-nav__chevron {
+  font-size: 0.75rem;
+  opacity: 0.55;
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.mob-nav__chevron--open {
+  transform: rotate(180deg);
+}
+
+.mob-nav__sub {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.mob-nav__sub-link {
+  display: block;
+  padding: 0.7rem 1.5rem 0.7rem 2.25rem;
+
+  color: rgba(255, 255, 255, 0.58);
+  text-decoration: none;
+  font-size: 0.875rem;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.mob-nav__sub-link:hover {
+  color: #f0d68a;
+  background: rgba(240, 214, 138, 0.05);
+}
+
+.mob-nav__sub-link--active {
+  color: #f0d68a;
+}
+
+/* =========================================================
+   RESPONSIVE — activar mobile en ≤ 768px
+========================================================= */
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav__overlay {
+    display: block;
+  }
+
+  .nav__drawer {
+    display: block;
+  }
 }

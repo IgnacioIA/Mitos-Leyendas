@@ -1,43 +1,17 @@
-import "./styles/Productos.css";
+import ProductLineup from "../../../../components/product-lineup/ProductLineup";
 
-import { motion } from "framer-motion";
-
-import FeatureCard from "./components/FeatureCard";
-
-import { cards } from "./data/featuresData";
+import backgroundImage from "../../../../assets/mitos4.0/productos/FONDO PRODUCTOS.webp";
+import { cards } from "./data/FeaturesData";
 
 export default function Productos() {
-
   return (
-    <section className="features-section">
-
-      <div className="features-overlay" />
-
-      <div className="features-content">
-
-        <motion.h2
-          className="features-title"
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-        >
-          LINEA DE PRODUCTOS
-        </motion.h2>
-
-        <div className="features-grid">
-
-          {cards.map((card, index) => (
-            <FeatureCard
-              key={index}
-              card={card}
-            />
-          ))}
-
-        </div>
-
-      </div>
-
-    </section>
+    <ProductLineup
+      title="Línea de productos"
+      cards={cards}
+      linkUrl="https://www.mylargentina.com/formato-competitivo-pbx/ultimos-lanzamientos/leyendas-4-0/"
+      backgroundImage={backgroundImage}
+      accentBase="#ffd815"
+      accentHover="#ffd815"
+    />
   );
 }

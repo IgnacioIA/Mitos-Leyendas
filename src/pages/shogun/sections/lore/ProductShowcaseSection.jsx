@@ -1,40 +1,25 @@
-import "./styles/product-showcase-section.css";
+import LoreShowcase from "../../../../components/lore-showcase/LoreShowcase.jsx";
 
-import ShowcaseContent from "./components/ShowcaseContent";
-import ShowcaseImage from "./components/ShowcaseImage";
-import ShowcaseButton from "./components/ShowcaseButton";
+import fondoShogun from "../../../../assets/shogun/lore/FondoShogun.webp";
+import productImage from "../../../../assets/shogun/lore/SHOGUN 5.webp";
 
-function ProductShowcaseSection() {
-
+export default function ProductShowcaseSection() {
   return (
-    <section className="lore-showcase section">
-
-      <div className="container">
-
-        <div className="lore-showcase-layout">
-
-          <div
-            className="lore-showcase-info"
-            id="next-section"
-          >
-            <ShowcaseContent />
-          </div>
-
-          <div className="lore-showcase-media">
-            <ShowcaseImage />
-          </div>
-
-        </div>
-
-        <div className="lore-showcase-button-container">
-          <ShowcaseButton />
-        </div>
-
-      </div>
-
-    </section>
+    <LoreShowcase
+      theme="dark"
+      background={fondoShogun}
+      title="ACERCA DEL"
+      titleHighlight="PRODUCTO"
+      paragraphs={[
+        "Shogun 5: Onna-musha nos sumerge en un nuevo imaginario fantástico, donde personajes femeninos toman el rol principal de cartas de primer bloque, reimaginando algunos como hermosas y valientes doncellas.",
+        "En este contexto, tendremos dos productos especiales, el Volumen 1 y el Volumen 2, donde podrás encontrar a personajes que ya conocemos de Primer Bloque como Lady Calvaur, Sir Agravain, Melisende, Nefertiti, Gea, Mago Merlin, Ramsés IX o Ceilican Seelie entre otros, los que fueron reinterpretados completamente en un estilo de arte que hace homenaje a la cultura japonesa con referencias al anime y el manga.",
+      ]}
+      image={productImage}
+      imageAlt="Producto Shogun 5: Onna-musha"
+      button={{
+        label: "CONSEGUIR SHOGUN 5",
+        url: "https://www.mylargentina.com/formato-competitivo-pbx/ultimos-lanzamientos/leyendas-4-0/",
+      }}
+    />
   );
-
 }
-
-export default ProductShowcaseSection;

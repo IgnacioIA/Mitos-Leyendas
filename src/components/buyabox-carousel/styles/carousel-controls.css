@@ -1,0 +1,84 @@
+/* =========================================================
+   CAROUSEL CONTROLS  (prefijo carousel-ctrl__)
+   Botones prev / next con efecto glassmorphism.
+   Ocultos en mobile — el usuario usa swipe nativo.
+========================================================= */
+
+/* =========================================================
+   BOTÓN BASE
+========================================================= */
+
+.carousel-ctrl {
+  flex-shrink: 0;
+
+  width:  clamp(48px, 4vw, 64px);
+  height: clamp(48px, 4vw, 64px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border:        1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+
+  background:         rgba(10, 12, 18, 0.6);
+  backdrop-filter:    blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  color: #e8ecf1;
+  cursor: pointer;
+
+  transition:
+    transform     0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    background    0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color  0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =========================================================
+   ÍCONO
+========================================================= */
+
+.carousel-ctrl__icon {
+  font-size: 1.8rem;
+  line-height: 1;
+  transform: translateY(-1px);
+  user-select: none;
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.carousel-ctrl:hover {
+  transform:    scale(1.1);
+  background:   rgba(212, 175, 55, 0.12);
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+/* =========================================================
+   ACTIVE
+========================================================= */
+
+.carousel-ctrl:active {
+  transform: scale(0.96);
+}
+
+/* =========================================================
+   DISABLED
+========================================================= */
+
+.carousel-ctrl:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================================================
+   RESPONSIVE — ocultar en mobile
+========================================================= */
+
+@media (max-width: 768px) {
+  .carousel-ctrl {
+    display: none;
+  }
+}

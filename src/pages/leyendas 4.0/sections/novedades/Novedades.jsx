@@ -1,9 +1,11 @@
 import "./styles/Novedades.css";
 
+import { novedadesData } from "./data/novedades.data.js";
+
 import NovedadesHeader from "./components/NovedadesHeader";
 import NovedadesGallery from "./components/NovedadesGallery";
 
-function Novedades() {
+export default function Novedades() {
   return (
     <section className="novedades section">
 
@@ -11,12 +13,10 @@ function Novedades() {
 
         <NovedadesHeader />
 
-        <NovedadesGallery />
+        <NovedadesGallery items={novedadesData} />
 
       </div>
 
     </section>
   );
 }
-
-export default Novedades;

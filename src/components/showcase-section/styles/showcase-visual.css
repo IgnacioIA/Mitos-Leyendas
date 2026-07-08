@@ -1,33 +1,41 @@
-/* IMAGEN (izquierda) */
-.magic-right-alt {
-  flex: 0 1 320px;
+/* =========================================================
+   SHOWCASE VISUAL
+   Contenedor de la carta con efecto 3D (FrameFX).
+   El ancho se define aquí; la altura la determina la imagen.
+========================================================= */
 
+/* =========================================================
+   WRAPPER EXTERIOR
+========================================================= */
+
+.magic-right-alt {
+  flex: 0 1 auto;
   min-width: 0;
 
   display: flex;
-
   justify-content: center;
+  align-items: center;
 }
 
-/* CARTA */
+/* =========================================================
+   CARTA — define el ancho; la imagen define la altura
+========================================================= */
+
 .magic-card-alt {
-  width: min(100%, 420px);
+  width: clamp(200px, 22vw, 280px);
 
-  aspect-ratio: 2 / 3;
-
-  border-radius: inherit;
-
-  overflow: hidden;
-
-  flex-shrink: 0;
-}
-
-.magic-card-alt img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
+  /* Sin overflow: hidden — FrameFX ya lo maneja con border-radius */
+  /* Sin aspect-ratio — la proporción natural de la imagen determina la altura */
 
   display: block;
 }
 
+/* =========================================================
+   IMAGEN — ocupa el ancho completo, sin recorte
+========================================================= */
+
+.magic-card-alt img {
+  width: 100%;
+  height: auto;       /* altura natural: sin distorsión ni recorte */
+  display: block;
+}

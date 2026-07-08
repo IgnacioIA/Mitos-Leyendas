@@ -4,13 +4,24 @@ export default function Button({
   children,
   variant = "primary",
   type = "button",
+  href,
   onClick,
 }) {
+  const className = `btn btn-${variant}`;
+
+  if (href) {
+    return (
+      <a href={href} className={className} onClick={onClick}>
+        {children}
+      </a>
+    );
+  }
+
   return (
     <button
       type={type}
       onClick={onClick}
-      className={`btn btn-${variant}`}
+      className={className}
     >
       {children}
     </button>

@@ -23,7 +23,7 @@ export default function MagicSectionAlt() {
           className="magic-title-alt"
           initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
           viewport={{ once: true }}
         >
         <span className="gold-text">Cartas Secretas</span> Del producto
@@ -33,7 +33,7 @@ export default function MagicSectionAlt() {
           className="magic-text-alt"
           initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+          transition={{ duration: 1, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
           viewport={{ once: true }}
         >
           Como sorpresa adicional, dentro de las Toolkit PB 2026 podrán aparecer cartas
@@ -44,7 +44,7 @@ export default function MagicSectionAlt() {
           className="magic-text-alt"
           initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 2, delay: 0.2, ease: "easeOut" }}
+          transition={{ duration: 2, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
           viewport={{ once: true }}
         >
           Aproximadamente en el 50% de la producción total de estas nuevas
