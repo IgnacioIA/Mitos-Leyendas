@@ -1,0 +1,125 @@
+/* =========================================================
+   DESKTOP NAV — visible en >= 1024px
+========================================================= */
+
+.DesktopNav {
+  display: flex;
+  align-items: center;
+
+  /* Se estira a la altura completa de .site-header-container para
+     que el "pico" de abajo pueda anclarse al borde del header sin
+     importar cuánto mida el logo. */
+  align-self: stretch;
+}
+
+.DesktopNav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: stretch;
+  gap: 0.15rem;
+}
+
+/* .DesktopNav__item NO debe ser position:relative: el panel
+   del mega menú necesita que .site-header (sticky) sea el
+   containing block para poder ocupar el ancho completo. */
+.DesktopNav__item {
+  position: static;
+  display: flex;
+}
+
+/* =========================================================
+   LINK — compartido por <NavLink>/<a>/<button>
+========================================================= */
+
+.DesktopNav__link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  height: 100%;
+
+  padding: 0.45rem 0.85rem;
+
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
+  border-radius: 6px;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+/* Pico integrado a la línea del borde inferior del header — NO es
+   un elemento flotando: su base nace exactamente sobre esa línea
+   (offset = padding vertical del header) y sube como un pequeño
+   pico "╱╲", continuidad de la misma línea naranja. */
+.DesktopNav__link::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -13.6px; /* = padding-block del header (0.85rem) en desktop */
+
+  width: 22px;
+  height: 9px;
+  clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+  background: linear-gradient(180deg, #ff8c1a 0%, rgba(255, 140, 26, 0.5) 100%);
+  filter: drop-shadow(0 0 6px rgba(255, 140, 26, 0.75));
+
+  opacity: 0;
+  transform: translateX(-50%) scaleY(0);
+  transform-origin: bottom center;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.DesktopNav__link:hover,
+.DesktopNav__trigger--open {
+  color: #ff8c1a;
+  text-shadow:
+    0 0 8px rgba(255, 140, 26, 0.55),
+    0 0 18px rgba(255, 122, 0, 0.25);
+}
+
+.DesktopNav__link:hover::before,
+.DesktopNav__trigger--open::before {
+  opacity: 1;
+  transform: translateX(-50%) scaleY(1);
+}
+
+/* El padding vertical del header se achica al scrollear — el pico
+   ajusta su offset para seguir tocando esa misma línea. */
+.site-header--scrolled .DesktopNav__link::before {
+  bottom: -8.8px; /* = padding-block del header scrolleado (0.55rem) */
+}
+
+.DesktopNav__chevron {
+  font-size: 0.6rem;
+  opacity: 0.65;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.DesktopNav__trigger--open .DesktopNav__chevron {
+  transform: rotate(180deg);
+}
+
+/* =========================================================
+   RESPONSIVE — desactivar en < 1024px (pasa a MobileMenu)
+========================================================= */
+
+@media (max-width: 1023px) {
+  .DesktopNav {
+    display: none;
+  }
+}

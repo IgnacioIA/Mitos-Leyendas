@@ -1,0 +1,29 @@
+.BanListCarrouselIndicators {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.BanListCarrouselIndicators__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+
+  border: none;
+  background: rgba(17, 24, 39, 0.2);
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.BanListCarrouselIndicators__dot:hover {
+  background: rgba(17, 24, 39, 0.4);
+}
+
+.BanListCarrouselIndicators__dot--active {
+  background: #111827;
+  transform: scale(1.2);
+}

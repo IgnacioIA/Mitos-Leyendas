@@ -1,0 +1,35 @@
+.BanListAlbum__subtitulo{
+    display:block;
+    text-align:left;
+    font-size:1.3rem;
+    font-weight:700;
+    margin-bottom:1rem;
+    color: black;
+}
+
+
+.BanListAlbum__cambios{
+    text-align:left;
+    gap:.1rem;
+    color: black;
+}
+
+
+.BanListAlbum__cambio{
+    text-align:left;
+    margin:0;
+    color: black;
+}
+
+.BanListAlbum__cambio strong{
+    color: black;
+    font-weight:700;
+}
+
+@media(max-width:768px){
+
+    .BanListAlbum__cambios{
+        grid-template-columns:1fr;
+    }
+
+}

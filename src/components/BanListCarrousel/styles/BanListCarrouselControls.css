@@ -1,0 +1,49 @@
+/* =========================================================
+   CONTROLS — flechas prev/next, glassmorphism
+   Ocultas en mobile: la interacción principal es el swipe.
+========================================================= */
+
+.BanListCarrouselControls {
+  flex-shrink: 0;
+
+  width: clamp(36px, 4vw, 48px);
+  height: clamp(36px, 4vw, 48px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+
+  background: linear-gradient(160deg, rgba(31, 41, 55, 0.75), rgba(15, 18, 25, 0.6));
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+
+  color: #ffffff;
+  font-size: clamp(1.1rem, 1.4vw, 1.35rem);
+  line-height: 1;
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.BanListCarrouselControls:hover {
+  transform: translateY(-2px) scale(1.06);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+}
+
+.BanListCarrouselControls:active {
+  transform: scale(0.96);
+}
+
+@media (max-width: 768px) {
+  .BanListCarrouselControls {
+    display: none;
+  }
+}

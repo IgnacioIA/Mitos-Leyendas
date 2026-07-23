@@ -1,0 +1,41 @@
+.BanlistLibro{
+    width:100%;
+    background:white;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:3rem;
+    padding:6rem 0;
+}
+
+
+.BanlistLibro__contenidoSuperior{
+    width:min(900px,90%);
+}
+
+
+.BanlistLibro__contenidoInferior{
+    width:min(1400px,95%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.BanlistLibro__actualizacion {
+    text-align: center;
+    margin: 0.75rem 0 1rem; /* más pegado arriba y abajo */
+}
+
+.BanlistLibro__actualizacion span {
+    color: #111;
+    font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.BanlistLibro--compacto{
+    gap:1.5rem;          /* antes 3rem */
+    padding-top:3rem;    /* antes 6rem */
+    padding-bottom:4rem;
+}

@@ -1,0 +1,232 @@
+/* =========================================================
+   HAMBURGER — visible en < 1024px
+========================================================= */
+
+.MobileMenu__hamburger {
+  display: none;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+  flex-shrink: 0;
+}
+
+.MobileMenu__bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+
+  background: white;
+  border-radius: 2px;
+
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s ease;
+
+  transform-origin: center;
+}
+
+.MobileMenu__hamburger--open .MobileMenu__bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.MobileMenu__hamburger--open .MobileMenu__bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.MobileMenu__hamburger--open .MobileMenu__bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.MobileMenu__overlay {
+  display: none;
+
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  z-index: 900;
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.3s ease;
+}
+
+.MobileMenu__overlay--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* =========================================================
+   DRAWER
+========================================================= */
+
+.MobileMenu__drawer {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: min(300px, 82vw);
+  height: 100svh;
+  height: 100vh;
+
+  background: rgba(6, 8, 14, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-left: 1px solid rgba(240, 214, 138, 0.08);
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  z-index: 1000;
+
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.MobileMenu__drawer--open {
+  transform: translateX(0);
+}
+
+/* =========================================================
+   LISTA / ITEMS
+========================================================= */
+
+.MobileMenu__list {
+  list-style: none;
+  margin: 0;
+  padding: 4.5rem 0 2rem;
+}
+
+.MobileMenu__item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.MobileMenu__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  padding: 1rem 1.5rem;
+
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.MobileMenu__link:hover {
+  color: #f0d68a;
+  background: rgba(240, 214, 138, 0.04);
+}
+
+.MobileMenu__chevron {
+  font-size: 0.75rem;
+  opacity: 0.55;
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.MobileMenu__chevron--open {
+  transform: rotate(180deg);
+}
+
+/* =========================================================
+   SUBMENÚ — columnas colapsadas en un solo acordeón
+========================================================= */
+
+.MobileMenu__sub {
+  background: rgba(0, 0, 0, 0.25);
+  padding: 0.25rem 0 0.5rem;
+}
+
+.MobileMenu__subGroup + .MobileMenu__subGroup {
+  margin-top: 0.5rem;
+}
+
+.MobileMenu__subTitle {
+  margin: 0;
+  padding: 0.6rem 1.5rem 0.4rem 2.25rem;
+
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.MobileMenu__subList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.MobileMenu__subLink {
+  display: block;
+  padding: 0.7rem 1.5rem 0.7rem 2.25rem;
+
+  color: rgba(255, 255, 255, 0.58);
+  text-decoration: none;
+  font-size: 0.875rem;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.MobileMenu__subLink:hover {
+  color: #f0d68a;
+  background: rgba(240, 214, 138, 0.05);
+}
+
+.MobileMenu__subLink--active {
+  color: #f0d68a;
+}
+
+/* =========================================================
+   RESPONSIVE — activar en < 1024px
+========================================================= */
+
+@media (max-width: 1023px) {
+  .MobileMenu__hamburger {
+    display: flex;
+  }
+
+  .MobileMenu__overlay {
+    display: block;
+  }
+
+  .MobileMenu__drawer {
+    display: block;
+  }
+}

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import Navigation from "../Navigation/Navigation";
+import logo from "../../assets/Header/LOGO MYL ARGENTINA.png";
 import "./Header.css";
 
 export default function Header() {
@@ -9,7 +10,16 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
+    const ENTER_THRESHOLD = 80;
+    const EXIT_THRESHOLD = 40;
+
+    const onScroll = () => {
+      setScrolled((prev) => {
+        if (prev) return window.scrollY > EXIT_THRESHOLD;
+        return window.scrollY > ENTER_THRESHOLD;
+      });
+    };
+
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -20,7 +30,7 @@ export default function Header() {
       <div className="site-header-container">
 
         <Link to="/Home" className="site-logo">
-          Mitos y Leyendas
+          <img src={logo} alt="Mitos y Leyendas Argentina" className="site-logo__image" />
         </Link>
 
         <Navigation />

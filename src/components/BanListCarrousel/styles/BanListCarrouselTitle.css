@@ -1,0 +1,7 @@
+.BanListCarrouselTitle {
+  color: #111827;
+  font-size: clamp(1.1rem, 2.4vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: center;
+}

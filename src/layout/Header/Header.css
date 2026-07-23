@@ -11,7 +11,10 @@
   background: rgba(8, 10, 16, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(240, 214, 138, 0.12);
+
+  /* Línea naranja continua que recorre el header de punta a punta */
+  border-bottom: 1px solid rgba(255, 140, 26, 0.4);
+  box-shadow: 0 1px 12px rgba(255, 122, 0, 0.15);
 
   transition:
     background 0.3s ease,
@@ -22,7 +25,7 @@
 /* Estado post-scroll: más denso y compacto */
 .site-header--scrolled {
   background: rgba(6, 8, 14, 0.97);
-  border-bottom-color: rgba(240, 214, 138, 0.08);
+  border-bottom-color: rgba(255, 140, 26, 0.3);
 }
 
 /* =========================================================
@@ -51,18 +54,55 @@
 ========================================================= */
 
 .site-logo {
-  color: #f0d68a;
-  text-decoration: none;
-  font-size: 1.15rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  white-space: nowrap;
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
-
-  transition: opacity 0.2s ease;
+  cursor: pointer;
 }
 
+/* Hover neutro: el mix-blend-mode del logo se rompe (aparece un
+   recuadro negro) si el link padre cambia opacity/filter/transform,
+   porque eso fuerza a aislar la composición del blend. No tocar
+   ninguna de estas propiedades en hover. */
 .site-logo:hover {
-  opacity: 0.8;
+  background: transparent;
+  box-shadow: none;
+  filter: none;
+  transform: none;
+  opacity: 1;
+}
+
+/* El PNG original tiene fondo negro sólido (sin alfa). En vez de
+   pedir un nuevo export, "screen" hace que el negro se vuelva
+   invisible sobre el header oscuro y solo se vea el arte/logo. */
+.site-logo__image {
+  height: clamp(28px, 4vw, 40px);
+  width: auto;
+  display: block;
+
+  mix-blend-mode: screen;
+  transition: height 0.3s ease;
+}
+
+/* Desktop: header delgado (~76-83px de alto total, ~58-66px scrolleado).
+   El logo gana presencia achicando el padding vertical del header,
+   no agrandando su propia altura por encima de esa franja.
+   Asset real 1900x828 (ratio ~2.3:1): a esta altura el ancho ronda
+   ~130-155px de forma fluida. */
+@media (min-width: 1024px) {
+  .site-header-container {
+    padding-block: 0.85rem;
+  }
+
+  .site-header--scrolled .site-header-container {
+    padding-block: 0.55rem;
+  }
+
+  .site-logo__image {
+    height: clamp(48px, 3.5vw, 56px);
+  }
+
+  .site-header--scrolled .site-logo__image {
+    height: clamp(40px, 3vw, 48px);
+  }
 }

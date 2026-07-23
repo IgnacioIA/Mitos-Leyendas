@@ -1,0 +1,40 @@
+.ContenidoSuperiorLibro{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:1.25rem;
+}
+
+
+.ContenidoSuperiorLibro__titulo{
+    text-align:center;
+    font-size:clamp(1.1rem, 1rem + 1.4vw, 1.9rem);
+    font-weight:700;
+    letter-spacing:.03em;
+    text-transform:uppercase;
+    color: black;
+    margin: 0;
+}
+
+
+.ContenidoSuperiorLibro__tituloDestacado{
+    color:#4ade80;
+}
+
+
+.ContenidoSuperiorLibro__descripcion{
+    width:100%;
+    font-size:1.1rem;
+    line-height:1.8;
+    margin: 0;
+}
+
+/* Cuando NO hay título */
+.ContenidoSuperiorLibro--sinTitulo {
+    gap: 0;
+    padding-top: 0;
+}
+
+.ContenidoSuperiorLibro--sinTitulo .ContenidoSuperiorLibro__descripcion {
+    margin-top: 0;
+}
