@@ -35,6 +35,10 @@ export default function Header() {
 
         <Navigation />
 
+        {/* Placeholder estructural: reserva espacio para buscador/login futuros.
+            Vacío a propósito — ver .site-header__actions en Header.css */}
+        <div className="site-header__actions" aria-hidden="true" />
+
       </div>
 
     </header>

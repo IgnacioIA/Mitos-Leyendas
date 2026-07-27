@@ -8,7 +8,7 @@
   z-index: 1000;
   width: 100%;
 
-  background: rgba(8, 10, 16, 0.88);
+  background: #000000;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 
@@ -84,6 +84,16 @@
   transition: height 0.3s ease;
 }
 
+/* =========================================================
+   ACCIONES (placeholder) — reserva de espacio para
+   buscador/login futuros. Oculto en mobile: en esa franja el
+   layout sigue siendo el flex de 2 bloques (logo + hamburguesa)
+   sin cambios. Se activa como 3ra columna solo en desktop.
+========================================================= */
+.site-header__actions {
+  display: none;
+}
+
 /* Desktop: header delgado (~76-83px de alto total, ~58-66px scrolleado).
    El logo gana presencia achicando el padding vertical del header,
    no agrandando su propia altura por encima de esa franja.
@@ -99,10 +109,26 @@
   }
 
   .site-logo__image {
-    height: clamp(48px, 3.5vw, 56px);
+    height: clamp(48px, 3.5vw, 64px);
   }
 
   .site-header--scrolled .site-logo__image {
-    height: clamp(40px, 3vw, 48px);
+    height: clamp(40px, 3vw, 56px);
+  }
+
+  /* Zona B: el nav ocupa todo el espacio libre entre el logo (auto)
+     y las acciones (reservado abajo), alineado a su propio inicio
+     por el justify-content:flex-start que .DesktopNav ya trae por
+     defecto — no se agrega ninguna regla nueva para ese alineado. */
+  .DesktopNav {
+    flex: 1;
+  }
+
+  /* Zona C: ancho reservado y estable, no crece ni se achica aunque
+     sobre o falte espacio, para que el día que tenga contenido real
+     no mueva ni el logo ni el nav. */
+  .site-header__actions {
+    display: block;
+    flex: 0 0 200px;
   }
 }

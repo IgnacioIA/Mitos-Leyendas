@@ -83,8 +83,13 @@
   pointer-events: none;
 }
 
+/* El color/pico responden al :hover real (item o panel, ya que el
+   panel es descendiente del <li>) y NO al estado "open" retrasado
+   de React — así el trigger no queda "pegado" encendido durante el
+   delay de cierre del panel; ese delay solo debe afectar si el
+   panel sigue montado, no el brillo del link. */
 .DesktopNav__link:hover,
-.DesktopNav__trigger--open {
+.DesktopNav__item:hover .DesktopNav__link {
   color: #ff8c1a;
   text-shadow:
     0 0 8px rgba(255, 140, 26, 0.55),
@@ -92,7 +97,7 @@
 }
 
 .DesktopNav__link:hover::before,
-.DesktopNav__trigger--open::before {
+.DesktopNav__item:hover .DesktopNav__link::before {
   opacity: 1;
   transform: translateX(-50%) scaleY(1);
 }
