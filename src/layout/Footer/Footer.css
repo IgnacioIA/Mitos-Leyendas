@@ -1,22 +1,114 @@
-.site-footer {
-  border-top:
-    1px solid rgba(255,255,255,.08);
+/* =========================================================
+   FOOTER — minimalista: marca + redes + legal
+========================================================= */
 
-  background:
-    #080808;
+.site-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: #000000;
 }
 
 .site-footer-container {
   max-width: 1600px;
-
   margin: 0 auto;
-
-  padding:
-    2rem;
+  padding: 3rem 2rem 2rem;
 }
 
-.site-footer p {
-  text-align: center;
+/* =========================================================
+   SECCIÓN SUPERIOR — logo + redes
+========================================================= */
 
-  color: #888;
+.site-footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.site-footer-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Mismo truco que el logo del header: el PNG tiene fondo negro
+   sólido y "screen" lo vuelve invisible sobre un fondo oscuro. */
+.site-footer-logo__image {
+  height: clamp(32px, 4vw, 48px);
+  width: auto;
+  display: block;
+
+  mix-blend-mode: screen;
+}
+
+.site-footer-social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.site-footer-social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.25rem;
+  line-height: 1;
+
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.site-footer-social__link:hover {
+  color: #ff8c1a;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   SEPARADOR — solo divide visualmente, sin otro rol
+========================================================= */
+
+.site-footer-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 2rem 0;
+}
+
+/* =========================================================
+   SECCIÓN INFERIOR — legales
+========================================================= */
+
+.site-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-footer-bottom p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+}
+
+/* =========================================================
+   RESPONSIVE — mobile: todo apilado y centrado
+========================================================= */
+
+@media (max-width: 1023px) {
+  .site-footer-top {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .site-footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
 }
