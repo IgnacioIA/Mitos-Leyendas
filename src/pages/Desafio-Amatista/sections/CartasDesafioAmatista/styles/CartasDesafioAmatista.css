@@ -1,0 +1,153 @@
+.CartasDesafioAmatista {
+  position: relative;
+
+  width: 100%;
+  min-height: 1100px;
+
+  padding: 140px 40px;
+
+  overflow: visible;
+  isolation: isolate;
+
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+/* OVERLAY */
+
+.CartasDesafioAmatista-overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+}
+
+/* CONTENIDO */
+
+.CartasDesafioAmatista-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1600px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 90px;
+}
+
+/* HEADER */
+
+.CartasDesafioAmatista-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 24px;
+
+  max-width: 1000px;
+
+  text-align: center;
+}
+
+/* SUBTÍTULO */
+
+.CartasDesafioAmatista-subtitle {
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* TÍTULO */
+
+.CartasDesafioAmatista-title {
+  margin: 0;
+
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 900;
+  line-height: 1;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: white;
+
+  text-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+.CartasDesafioAmatista-titleLine {
+  display: block;
+
+  white-space: nowrap;
+}
+
+.CartasDesafioAmatista-titleAccent {
+  display: block;
+
+  margin-top: 12px;
+
+  color: #d8b4fe;
+
+  text-shadow:
+    0 0 25px rgba(192, 132, 252, 0.45);
+}
+
+/* DESCRIPCIÓN */
+
+.CartasDesafioAmatista-description {
+  max-width: 700px;
+
+  font-size: 18px;
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* WRAPPER */
+
+.CartasDesafioAmatista-wrapper {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  flex-wrap: wrap;
+
+  gap: 90px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+  .CartasDesafioAmatista-wrapper {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .CartasDesafioAmatista {
+    padding: 100px 20px;
+  }
+
+  .CartasDesafioAmatista-content {
+    gap: 70px;
+  }
+
+  .CartasDesafioAmatista-description {
+    font-size: 16px;
+  }
+
+  .CartasDesafioAmatista-wrapper {
+    gap: 80px;
+  }
+}

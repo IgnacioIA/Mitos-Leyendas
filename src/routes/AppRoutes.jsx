@@ -16,7 +16,8 @@ import EdicionPBX from "../pages/edicionPBX/EdicionPBX.jsx";
 import TiendasAmigas from "../pages/tiendaAmigas/TiendaAmigas.jsx";
 import TeamsOficiales from "../pages/teamsOficiales/TeamsOficiales.jsx";
 import HistoriaMYL from "../pages/historiaMYL/HistoriaMYL.jsx";
-
+import BannerPremier from "../pages/premierBsAs2026/Premier.jsx";
+import DesafioAmatista from "../pages/Desafio-Amatista/Desafio-Amatista.jsx";
 
 function AppRoutes() {
   return (
@@ -101,6 +102,20 @@ function AppRoutes() {
               path="/HistoriaMYL"
               element={<HistoriaMYL />}
             />
+
+            {/* Premier Bs As */}
+            <Route
+              path="/PremierBsAs2026"
+              element={<BannerPremier />}
+            />
+
+            {/* DesafioAmatista */}
+            <Route
+              path="/DesafioAmatista"
+              element={<DesafioAmatista />}
+            />
+
+
           </Route>
         </Routes>
     </BrowserRouter>

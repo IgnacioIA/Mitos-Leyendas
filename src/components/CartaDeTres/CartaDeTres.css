@@ -1,0 +1,61 @@
+.CartaDeTres {
+  position: relative;
+
+  width: 480px;
+  min-height: 520px;
+
+  padding-inline: 120px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 28px;
+
+  overflow: hidden;
+
+  transition:
+    transform .4s ease,
+    filter .4s ease;
+}
+
+.CartaDeTres:hover {
+  transform: translateY(-6px);
+}
+
+.CartaDeTres-title {
+  position: relative;
+
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: rgba(255,255,255,.92);
+
+  text-shadow:
+    0 2px 10px rgba(0,0,0,.7);
+}
+
+.CartaDeTres-title::after {
+  content: "";
+
+  display: block;
+
+  width: 60%;
+  height: 1px;
+
+  margin: 10px auto 0;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      rgba(255,255,255,.5),
+      transparent
+    );
+}

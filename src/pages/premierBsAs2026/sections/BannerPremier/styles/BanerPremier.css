@@ -1,0 +1,28 @@
+.BanerPremier{
+    width:100%;
+    height:clamp(220px,28vw,320px);
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .BanerPremier {
+        height: 120px;
+        background-position: center;
+    }
+
+
+}
