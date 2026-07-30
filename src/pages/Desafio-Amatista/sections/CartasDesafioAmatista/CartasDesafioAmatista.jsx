@@ -1,62 +1,109 @@
 import "./styles/CartasDesafioAmatista.css";
 
-import CartaDeTres from "../../../../components/CartaDeTres/CartaDeTres";
+import TextoArribaContenidoAbajo from "../../../../components/textoArribaContenidoAbajo/TextoArribaContenidoAbajo";
+import CarrouselResponsive from "../../../../components/CarrouselResponsive/CarrouselResponsive";
+import FrameFX from "../../../../components/ui/cartaMovible/FrameFX";
 
-import dataCartasDesafioAmatista from "./data/dataCartasDesafioAmatista";
+import dataCartasDesafioAmatista, {
+    TIPOS_SECCION,
+} from "./data/dataCartasDesafioAmatista";
+
+import Paralax from "../../../../components/parallaxBackgrounCinematografico/ParallaxBackgroundCinematografico.jsx";
+// Definido fuera del componente: no se recrea en cada render
+// y queda fácil de extender con nuevos tipos de sección sin tocar el switch.
+
+const RENDERERS = {
+    [TIPOS_SECCION.CARROUSEL]: (seccion) => (
+        <CarrouselResponsive
+            items={seccion.cartas}
+            renderItem={(carta) => (
+                <img
+                    className="CartasDesafioAmatista-Carta"
+                    src={carta.imagen}
+                    alt={carta.nombre}
+                />
+            )}
+        />
+    ),
+    [TIPOS_SECCION.DOS_IMAGENES]: (seccion) => (
+        <div className="CartasDesafioAmatista-DosImagenes">
+            {seccion.imagenes.map(({ src, alt }, index) => (
+                <FrameFX key={index}>
+                    <img src={src} alt={alt} />
+                </FrameFX>
+            ))}
+        </div>
+    ),
+};
+
+function renderContenido(seccion) {
+    const render = RENDERERS[seccion.tipo];
+    return render ? render(seccion) : null;
+}
 
 export default function CartasDesafioAmatista() {
-  const {
-    fondo,
-    encabezado,
-    bloques,
-  } = dataCartasDesafioAmatista;
+    const {
+        fondo,
+        encabezado,
+        secciones,
+    } = dataCartasDesafioAmatista;
 
-  const {
-    subtitulo,
-    titulo,
-    descripcion,
-  } = encabezado;
+    const {
+        subtitulo,
+        titulo,
+        descripcion,
+    } = encabezado;
 
-  return (
-    <section
-      className="CartasDesafioAmatista"
-      style={{
-        backgroundImage: `url(${fondo})`,
-      }}
-    >
-      <div className="CartasDesafioAmatista-overlay" />
+    return (
+        <section
+            className="CartasDesafioAmatista"
+            
+        >
 
-      <div className="CartasDesafioAmatista-content">
+            <div className="CartasDesafioAmatista-overlay" />
 
-        <header className="CartasDesafioAmatista-header">
+            <div className="CartasDesafioAmatista-content">
 
-          <span className="CartasDesafioAmatista-subtitle">
-            {subtitulo}
-          </span>
+                <header className="CartasDesafioAmatista-header">
 
-          <h2 className="CartasDesafioAmatista-title">
+                    <span className="CartasDesafioAmatista-subtitle">
+                        {subtitulo}
+                    </span>
 
-            <span className="CartasDesafioAmatista-titleLine">
-              {titulo.linea}
-            </span>
+                    <h2 className="CartasDesafioAmatista-title">
 
-            <span className="CartasDesafioAmatista-titleAccent">
-              {titulo.destacado}
-            </span>
+                        <span className="CartasDesafioAmatista-titleLine">
+                            {titulo.linea}
+                        </span>
 
-          </h2>
+                        <span className="CartasDesafioAmatista-titleAccent">
+                            {titulo.destacado}
+                        </span>
 
-          <p className="CartasDesafioAmatista-description">
-            {descripcion}
-          </p>
+                    </h2>
 
-        </header>
+                    <p className="CartasDesafioAmatista-description">
+                        {descripcion}
+                    </p>
 
-    
-    
+                </header>
 
-      </div>
+                {secciones.map((seccion) => (
+                    <Paralax image={seccion.fondo} overlay={0.2} position="center center">
+                    <TextoArribaContenidoAbajo
+                        key={seccion.id}
+                        tituloPrimeraPalabra={seccion.tituloPrimeraPalabra}
+                        tituloSegundaPalabra={seccion.tituloSegundaPalabra}
+                        descripcion={seccion.descripcion}
+                    >
+                        {renderContenido(seccion)}
+                    </TextoArribaContenidoAbajo>
+                   </Paralax> 
+                ))}
 
-    </section>
-  );
+            </div>
+
+            
+        </section>
+    );
 }

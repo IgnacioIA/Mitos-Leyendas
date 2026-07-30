@@ -1,16 +1,22 @@
-import fondo from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/fondoSectionCR-B.jpg";
+import fondo from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/FONDO.webp";
 
-import c1 from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/card1.webp";
-import c2 from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/card2.jpg";
-import c3 from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/card3.jpg";
+import card1 from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/ALTER 1.webp";
+import card2 from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/ALTER 2.webp";
 
-import c4 from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/Ilustración Anillos de Badbury.png";
-import c5 from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/Ilustración Magia Amatista.png";
-import c6 from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/Ilustración Nudo de Isis.png";
+import NUEVA1 from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/NUEVA 1.webp";
+import NUEVA2 from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/NUEVA 2.webp";
 
-import c7 from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/Ilustración Anillos de Badbury.png";
-import c8 from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/Ilustración Magia Amatista.png";
-import c9 from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/Ilustración Nudo de Isis.png";
+import Lobo from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/BUY A BOX 1.webp";
+import medalla from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/BUY A BOX 2.webp";
+
+import REWORK1 from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/REWORK 1.webp";
+import REWORK2 from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/REWORK 2.webp";
+// Tipo de contenido de cada sección: define qué renderer usa el JSX.
+// Agregar una sección nueva = agregar un objeto acá, no tocar el componente.
+export const TIPOS_SECCION = {
+  CARROUSEL: "carrousel",
+  DOS_IMAGENES: "dos-imagenes",
+};
 
 const dataCartasDesafioAmatista = {
   fondo,
@@ -27,22 +33,56 @@ const dataCartasDesafioAmatista = {
       "Descubre nuevas cartas, ilustraciones alternativas y rediseños únicos preparados para transformar tu estrategia.",
   },
 
-  bloques: [
+  secciones: [
     {
-      id: 1,
-      titulo: "Cartas Nuevas",
-      cartas: [c1, c2, c3],
+      id: "CARTAS-BUY-A-BOX-DEL-PRODUCTO",
+      tipo: TIPOS_SECCION.DOS_IMAGENES,
+      tituloPrimeraPalabra: "CARTAS BUY A BOX DEL PRODUCTO",
+      descripcion: [
+        "Al igual que en productos anteriores, todas las unidades de Toolkit PB 2026 tendrán dos cartas exclusivas como Buy a Box con Artes Alternativos.",
+         "En las Toolkit Desafío tendremos las cartas Vínculo del Aullido e Soteira. Cada una de ellas tendrá un diseño sin bordes, con un nuevo Arte y con aplicaciones de barnices especiales.",
+      ],
+      imagenes: [
+        { src: Lobo, alt: "Lobo" },
+        { src: medalla, alt: "medalla" },
+      ],
     },
     {
-      id: 2,
-      titulo: "Arte Alternativo",
-      cartas: [c4, c5, c6],
+      id: "CARTAS-REPRINT",
+      tipo: TIPOS_SECCION.CARROUSEL,
+      tituloPrimeraPalabra: "8 CARTAS REPRINT PARA PRIMER BLOQUE EXTENDIDO",
+      descripcion: [
+        "Cada Toolkit tendrá un total de 8 cartas reprint (4 por edición), las que vendrán con un nuevo arte alternativo, con su frame clásico de edición y con un acabado de foil premium especial.",
+      ],
+      cartas: [
+        { id: 1, nombre: "Carta Nueva 1", imagen: card1 },
+        { id: 2, nombre: "Carta Nueva 2", imagen: card2 },
+      ],
     },
     {
-      id: 3,
-      titulo: "Reworks",
-      cartas: [c7, c8, c9],
+      id: "6-CARTAS-NUEVAS",
+      tipo: TIPOS_SECCION.CARROUSEL,
+      tituloPrimeraPalabra: "6 CARTAS NUEVAS PARA PRIMER BLOQUE EXTENDIDO",
+      descripcion: [
+        "Finalmente, y la principal novedad de estas nuevas Toolkit PB 2026, es la incorporación de nuevas cartas para Primer Bloque Extendido, las que añaden nuevas alternativas para todo tipo de estrategias para las ediciones de Espada Sagrada, Helénica, Hijos de Daana y Dominios de Ra.",
+      ],
+      imagenes: [
+        { src: NUEVA1, alt: "Rework de Anillos de Badbury" },
+        { src: NUEVA2, alt: "Rework de Magia Amatista" },
+      ],
     },
+    {
+      id: "CARTAS-BUY-A-BOX-DEL-PRODUCTO",
+      tipo: TIPOS_SECCION.DOS_IMAGENES,
+      tituloPrimeraPalabra: "2 CARTAS REWORK PARA PRIMER BLOQUE EXTENDIDO",
+      descripcion: [
+        "Cada Toolkit tendrá dos nuevas cartas Rework 1 para cada edición), donde tendremos versiones para las cartas Tótem del Errante, Atenas, Crear Talismán y Carro Real, siendo estas las versiones oficiales para el formato de Primer Bloque Extendido.",
+      ],
+      imagenes: [
+        { src: REWORK1, alt: "Lobo" },
+        { src: REWORK2, alt: "medalla" },
+      ],
+    }
   ],
 };
 

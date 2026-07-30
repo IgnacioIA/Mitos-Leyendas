@@ -126,6 +126,56 @@
   gap: 90px;
 }
 
+/* CARTA (carrousel) */
+
+.CartasDesafioAmatista-Carta {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  user-select: none;
+  -webkit-user-drag: none;
+
+  transition:
+    transform .35s ease,
+    filter .35s ease;
+}
+
+.CartasDesafioAmatista-Carta:hover {
+  transform: scale(1.02);
+
+  filter: brightness(1.05);
+}
+
+/* DOS IMÁGENES */
+
+.CartasDesafioAmatista-DosImagenes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10rem;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.CartasDesafioAmatista-DosImagenes img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+@media (max-width: 640px) {
+  .CartasDesafioAmatista-DosImagenes {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    gap: 1rem;
+  }
+}
+
 /* RESPONSIVE */
 
 @media (max-width: 1200px) {
