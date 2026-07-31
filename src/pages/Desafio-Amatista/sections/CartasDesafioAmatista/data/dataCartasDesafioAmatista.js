@@ -54,9 +54,9 @@ const dataCartasDesafioAmatista = {
       descripcion: [
         "Cada Toolkit tendrá un total de 8 cartas reprint (4 por edición), las que vendrán con un nuevo arte alternativo, con su frame clásico de edición y con un acabado de foil premium especial.",
       ],
-      cartas: [
-        { id: 1, nombre: "Carta Nueva 1", imagen: card1 },
-        { id: 2, nombre: "Carta Nueva 2", imagen: card2 },
+      imagenes: [
+        { src: card1, alt: "Carta Nueva 1" },
+        { src: card2, alt: "Carta Nueva 2" },
       ],
     },
     {
@@ -72,7 +72,7 @@ const dataCartasDesafioAmatista = {
       ],
     },
     {
-      id: "CARTAS-BUY-A-BOX-DEL-PRODUCTO",
+      id: "CARTAS-REWORK-PRIMER-BLOQUE-EXTENDIDO",
       tipo: TIPOS_SECCION.DOS_IMAGENES,
       tituloPrimeraPalabra: "2 CARTAS REWORK PARA PRIMER BLOQUE EXTENDIDO",
       descripcion: [

@@ -15,12 +15,12 @@ import Paralax from "../../../../components/parallaxBackgrounCinematografico/Par
 const RENDERERS = {
     [TIPOS_SECCION.CARROUSEL]: (seccion) => (
         <CarrouselResponsive
-            items={seccion.cartas}
-            renderItem={(carta) => (
+            items={seccion.imagenes}
+            renderItem={({ src, alt }) => (
                 <img
                     className="CartasDesafioAmatista-Carta"
-                    src={carta.imagen}
-                    alt={carta.nombre}
+                    src={src}
+                    alt={alt}
                 />
             )}
         />
@@ -55,55 +55,69 @@ export default function CartasDesafioAmatista() {
     } = encabezado;
 
     return (
-        <section
-            className="CartasDesafioAmatista"
-            
-        >
+        <section className="CartasDesafioAmatista">
 
-            <div className="CartasDesafioAmatista-overlay" />
+            <Paralax image={fondo} overlay={0.0} position="center center">
 
-            <div className="CartasDesafioAmatista-content">
+                <div className="CartasDesafioAmatista-content">
 
-                <header className="CartasDesafioAmatista-header">
+                    <header className="CartasDesafioAmatista-header">
 
-                    <span className="CartasDesafioAmatista-subtitle">
-                        {subtitulo}
-                    </span>
-
-                    <h2 className="CartasDesafioAmatista-title">
-
-                        <span className="CartasDesafioAmatista-titleLine">
-                            {titulo.linea}
+                        <span className="CartasDesafioAmatista-subtitle">
+                            {subtitulo}
                         </span>
 
-                        <span className="CartasDesafioAmatista-titleAccent">
-                            {titulo.destacado}
-                        </span>
+                        <h2 className="CartasDesafioAmatista-title">
 
-                    </h2>
+                            <span className="CartasDesafioAmatista-titleLine">
+                                {titulo.linea}
+                            </span>
 
-                    <p className="CartasDesafioAmatista-description">
-                        {descripcion}
-                    </p>
+                            <span className="CartasDesafioAmatista-titleAccent">
+                                {titulo.destacado}
+                            </span>
 
-                </header>
+                        </h2>
 
-                {secciones.map((seccion) => (
-                    <Paralax image={seccion.fondo} overlay={0.2} position="center center">
-                    <TextoArribaContenidoAbajo
-                        key={seccion.id}
-                        tituloPrimeraPalabra={seccion.tituloPrimeraPalabra}
-                        tituloSegundaPalabra={seccion.tituloSegundaPalabra}
-                        descripcion={seccion.descripcion}
-                    >
-                        {renderContenido(seccion)}
-                    </TextoArribaContenidoAbajo>
-                   </Paralax> 
-                ))}
+                        <p className="CartasDesafioAmatista-description">
+                            {descripcion}
+                        </p>
 
-            </div>
+                    </header>
 
-            
+                    {secciones.map((seccion) => (
+                        <TextoArribaContenidoAbajo
+                            key={seccion.id}
+                            tituloPrimeraPalabra={seccion.tituloPrimeraPalabra}
+                            tituloSegundaPalabra={seccion.tituloSegundaPalabra}
+                            descripcion={seccion.descripcion}
+                        >
+                            {renderContenido(seccion)}
+                        </TextoArribaContenidoAbajo>
+                    ))}
+
+                </div>
+
+            </Paralax>
+
+            <Paralax image={fondo} overlay={0.0} position="center center">
+
+                <div className="CartasDesafioAmatista-content">
+                    {secciones.map((seccion) => (
+                        <TextoArribaContenidoAbajo
+                            key={seccion.id}
+                            tituloPrimeraPalabra={seccion.tituloPrimeraPalabra}
+                            tituloSegundaPalabra={seccion.tituloSegundaPalabra}
+                            descripcion={seccion.descripcion}
+                        >
+                            {renderContenido(seccion)}
+                        </TextoArribaContenidoAbajo>
+                    ))}
+
+                </div>
+
+            </Paralax>
+
         </section>
     );
 }
