@@ -44,6 +44,7 @@ function renderContenido(seccion) {
 export default function CartasDesafioAmatista() {
     const {
         fondo,
+        fondo2,
         encabezado,
         secciones,
     } = dataCartasDesafioAmatista;
@@ -100,7 +101,7 @@ export default function CartasDesafioAmatista() {
 
             </Paralax>
 
-            <Paralax image={fondo} overlay={0.0} position="center center">
+            <Paralax image={fondo2} overlay={0.0} position="center center">
 
                 <div className="CartasDesafioAmatista-content">
                     {secciones.map((seccion) => (

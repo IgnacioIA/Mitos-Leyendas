@@ -1,4 +1,5 @@
 import fondo from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/FONDO.webp";
+import fondo2 from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/FONDO2.webp";
 
 import card1 from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/ALTER 1.webp";
 import card2 from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/ALTER 2.webp";
@@ -20,6 +21,7 @@ export const TIPOS_SECCION = {
 
 const dataCartasDesafioAmatista = {
   fondo,
+  fondo2,
 
   encabezado: {
     subtitulo: "EXPANDE TU MAZO",
