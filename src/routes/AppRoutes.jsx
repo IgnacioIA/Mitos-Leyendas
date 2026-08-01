@@ -19,6 +19,8 @@ import HistoriaMYL from "../pages/historiaMYL/HistoriaMYL.jsx";
 import BannerPremier from "../pages/premierBsAs2026/Premier.jsx";
 import DesafioAmatista from "../pages/Desafio-Amatista/Desafio-Amatista.jsx";
 import RazasPage from "../pages/razas/Razas.jsx";
+import DracoSidhe from "../pages/DracoSidhe/DracoSidhe.jsx";
+
 
 function AppRoutes() {
   return (
@@ -120,6 +122,12 @@ function AppRoutes() {
             <Route
               path="/RazasPage"
               element={<RazasPage />}
+            />
+
+            {/* Razas */}
+            <Route
+              path="/DracoSidhe"
+              element={<DracoSidhe />}
             />
 
 
