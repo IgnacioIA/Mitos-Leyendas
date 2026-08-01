@@ -1,0 +1,54 @@
+.PhotoCardRazasExplicaciones {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  cursor: pointer;
+
+  transition:
+    filter .35s ease,
+    box-shadow .35s ease;
+}
+
+.PhotoCardRazasExplicaciones:hover {
+  filter: brightness(1.08);
+
+  box-shadow: 0 16px 40px rgba(0, 0, 0, .28);
+}
+
+.PhotoCardRazasExplicaciones-ImageWrapper {
+  width: 100%;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+}
+
+.PhotoCardRazasExplicaciones-Image {
+  width: 100%;
+
+  display: block;
+}
+
+.PhotoCardRazasExplicaciones-Title {
+  margin: 0;
+
+  color: white;
+
+  text-align: center;
+
+  font-family: var(--font-anton);
+
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
+
+  line-height: 1.1;
+}
+
+.PhotoCardRazasExplicaciones-Title span {
+  color: #ffd815;
+}

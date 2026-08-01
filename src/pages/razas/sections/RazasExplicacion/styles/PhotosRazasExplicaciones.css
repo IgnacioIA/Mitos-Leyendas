@@ -1,0 +1,23 @@
+.PhotosRazasExplicaciones {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 200px));
+
+  gap: 2rem;
+
+  justify-content: center;
+  justify-items: center;
+  align-items: stretch;
+}
+
+@media (max-width: 768px) {
+  .PhotosRazasExplicaciones {
+    grid-template-columns: 1fr;
+
+    max-width: 220px;
+    margin-inline: auto;
+
+    gap: 2.5rem;
+  }
+}

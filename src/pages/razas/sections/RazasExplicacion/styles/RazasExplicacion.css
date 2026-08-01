@@ -1,0 +1,17 @@
+.RazasExplicacion {
+  position: relative;
+
+  width: 100%;
+
+  padding: 7rem 0;
+
+  overflow: hidden;
+}
+
+.RazasExplicacion-Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 5rem;
+}

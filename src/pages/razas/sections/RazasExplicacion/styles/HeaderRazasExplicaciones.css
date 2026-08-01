@@ -1,0 +1,29 @@
+.HeaderRazasExplicaciones {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.HeaderRazasExplicaciones-Title {
+  font-family: var(--font-anton);
+
+  color: #ffffff;
+
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-weight: 400;
+
+  line-height: 1;
+  letter-spacing: 0.03em;
+
+  text-transform: uppercase;
+
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.HeaderRazasExplicaciones-Title span {
+  color: #ffd815;
+}

@@ -61,9 +61,9 @@
 .btn-primary {
 
   background:
-    var(--primary);
+    #ffd815;
 
-  color: white;
+  color: #1c1c1c;
 }
 
 /* =========================================================

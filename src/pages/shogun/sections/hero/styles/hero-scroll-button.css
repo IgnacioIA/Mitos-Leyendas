@@ -6,6 +6,10 @@
   display: flex;
 
   justify-content: center;
-
   width: 100%;
+}
+
+.hero-buton {
+  background-color: #d4af37;
+  color: #d4af37;
 }

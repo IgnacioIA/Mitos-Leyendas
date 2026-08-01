@@ -18,6 +18,7 @@ import TeamsOficiales from "../pages/teamsOficiales/TeamsOficiales.jsx";
 import HistoriaMYL from "../pages/historiaMYL/HistoriaMYL.jsx";
 import BannerPremier from "../pages/premierBsAs2026/Premier.jsx";
 import DesafioAmatista from "../pages/Desafio-Amatista/Desafio-Amatista.jsx";
+import RazasPage from "../pages/razas/Razas.jsx";
 
 function AppRoutes() {
   return (
@@ -113,6 +114,12 @@ function AppRoutes() {
             <Route
               path="/DesafioAmatista"
               element={<DesafioAmatista />}
+            />
+
+            {/* Razas */}
+            <Route
+              path="/RazasPage"
+              element={<RazasPage />}
             />
 
 
