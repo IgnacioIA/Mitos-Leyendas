@@ -39,6 +39,10 @@ const navItems = [
           { title: "MAZOS INICIALES", path: "/mazoInicialPB" },
           { title: "LOOTBOX", path: "/EdicionPBX" },
           { title: "TOOLKIT PBX", path: "#" }, // TODO: crear página/ruta de Toolkit PBX
+          { title: "DRACO Y SIDHE", path: "/DracoSidhe" },
+          { title: "RAZAS", path: "/RazasPage" },
+          { title: "DESAFÍO AMATISTA", path: "/DesafioAmatista" },
+          { title: "PREMIER BS AS 2026", path: "/PremierBsAs2026" },
         ],
       },
       { title: "FORMATOS ALTERNATIVOS", items: [] },
