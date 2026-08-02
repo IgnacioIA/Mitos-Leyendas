@@ -17,7 +17,7 @@ const dataDracoSidheHero = {
     boton: {
       texto: "DESCUBRÍ ESTOS 2 PRODUCTOS",
       accion: "scroll",
-      destino: "draco-sidhe-info",
+      destino: "Seccion-DracoSidheProductosDobles",
     },
   },
 };

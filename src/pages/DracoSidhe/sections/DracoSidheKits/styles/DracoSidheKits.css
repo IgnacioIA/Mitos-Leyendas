@@ -1,0 +1,55 @@
+.DracoSidheKits {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 4vw, 2rem);
+
+}
+
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media (max-width: 1024px) {
+
+    .DracoSidheKits {
+
+        padding: 4rem 2rem;
+
+    }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .DracoSidheKits {
+
+        padding: 3rem 1.5rem;
+
+    }
+
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+
+    .DracoSidheKits {
+
+        padding: 2.5rem 1rem;
+
+    }
+
+}

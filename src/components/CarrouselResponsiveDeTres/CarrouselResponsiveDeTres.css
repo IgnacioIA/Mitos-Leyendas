@@ -1,0 +1,143 @@
+.CarrouselResponsiveDeTres {
+  position: relative;
+
+  width: 100%;
+
+  padding: 2rem 0;
+}
+
+.CarrouselResponsiveDeTres-Viewport {
+  overflow: hidden;
+
+  width: 100%;
+
+  padding: 1rem 0;
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 6%,
+    black 94%,
+    transparent
+  );
+}
+
+.CarrouselResponsiveDeTres-Container {
+  display: flex;
+
+  align-items: center;
+}
+
+.CarrouselResponsiveDeTres-Slide {
+  flex: 0 0 33.3333%;
+
+  min-width: 0;
+
+  padding: 0; /* clave */
+}
+
+.CarrouselResponsiveDeTres-Card {
+  width: 85%;
+
+  margin: 0 auto;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.CarrouselResponsiveDeTres-Card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.CarrouselResponsiveDeTres-Button {
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 56px;
+  height: 56px;
+
+  border: none;
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  z-index: 20;
+
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  color: white;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  backdrop-filter: blur(12px);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.CarrouselResponsiveDeTres-Button:hover {
+  background: rgba(0, 0, 0, 0.6);
+
+  transform:
+    translateY(-50%)
+    scale(1.08);
+}
+
+.CarrouselResponsiveDeTres-ButtonPrev {
+  left: -28px;
+}
+
+.CarrouselResponsiveDeTres-ButtonNext {
+  right: -28px;
+}
+
+/* Tablet: 2 imágenes visibles */
+@media (max-width: 1024px) {
+
+  .CarrouselResponsiveDeTres-Slide {
+    flex: 0 0 50%;
+
+    padding: 0 0.4rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .CarrouselResponsiveDeTres-Card {
+    width: 70%;
+  }
+
+  .CarrouselResponsiveDeTres-Viewport {
+    mask-image: none;
+  }
+
+  .CarrouselResponsiveDeTres-Button {
+    display: none;
+  }
+
+}
+
+/* Mobile chico: 1 imagen visible para no achicarla de más */
+@media (max-width: 480px) {
+
+  .CarrouselResponsiveDeTres-Slide {
+    flex: 0 0 100%;
+
+    padding: 0 0.3rem;
+  }
+
+  .CarrouselResponsiveDeTres-Card {
+    width: 82%;
+  }
+
+}

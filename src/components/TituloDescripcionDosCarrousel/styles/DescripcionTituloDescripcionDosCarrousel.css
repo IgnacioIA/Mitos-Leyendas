@@ -1,0 +1,26 @@
+.DescripcionTituloDescripcionDosCarrousel {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.DescripcionTituloDescripcionDosCarrousel-Texto {
+  margin: 0;
+
+  width: 100%;
+  max-width: 700px;
+
+  padding-inline: clamp(1rem, 4vw, 2rem);
+
+  font-family: var(--font-main);
+
+  color: #ffffff;
+
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-weight: 400;
+
+  line-height: 1.7;
+
+  text-align: center;
+}

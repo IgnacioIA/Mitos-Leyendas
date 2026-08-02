@@ -1,0 +1,325 @@
+.DracoSidheProductosDobles {
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: clamp(5rem, 8vw, 8rem) 1.5rem;
+
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.HeaderDracoSidheProductosDobles {
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: clamp(3rem, 6vw, 5rem);
+
+}
+
+.HeaderDracoSidheProductosDobles-title {
+
+    max-width: 1200px;
+
+    margin: 0;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    font-size: clamp(2rem, 4vw, 4rem);
+
+    font-weight: 700;
+
+    line-height: 1.15;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 12px rgba(0, 0, 0, .85),
+        0 0 30px rgba(0, 0, 0, .45);
+
+}
+
+.DracoSidheProductosDobles-highlight {
+
+    color: #1ecc0a;
+
+}
+
+/* =====================================================
+   CONTENIDO
+===================================================== */
+
+.ContenidoDracoSidheProductosDobles {
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contenedorContenidoContenidoDracoSidheProductosDobles {
+
+    width: min(1400px, 100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: clamp(2rem, 5vw, 6rem);
+
+    flex-wrap: wrap;
+
+}
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.CardProductoDracoSidhe {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1rem;
+
+}
+
+.CardProductoDracoSidhe-image {
+
+    width: clamp(260px, 28vw, 430px);
+
+    height: auto;
+
+    display: block;
+
+    transition:
+        transform .35s ease,
+        filter .35s ease;
+
+    filter:
+        drop-shadow(0 15px 30px rgba(0,0,0,.45));
+
+}
+
+.CardProductoDracoSidhe:hover
+.CardProductoDracoSidhe-image {
+
+    transform: translateY(-8px) scale(1.03);
+
+    filter:
+        drop-shadow(0 25px 40px rgba(0,0,0,.6));
+
+}
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.CardProductoDracoSidhe-button {
+
+    width: clamp(220px, 20vw, 280px);
+
+    padding: .95rem 1rem;
+
+    border: none;
+
+    border-radius: 999px;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    font-size: clamp(.95rem, 1vw, 1.05rem);
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        filter .25s ease;
+
+}
+
+.CardProductoDracoSidhe-button:hover {
+
+    transform: translateY(-4px);
+
+}
+
+/* ---------- EXPLORAR ---------- */
+
+.CardProductoDracoSidhe-button--explorar {
+
+    background: #ffd815;
+
+    color: #000000;
+
+    box-shadow:
+        0 0 18px rgba(255,216,21,.35);
+
+}
+
+.CardProductoDracoSidhe-button--explorar:hover {
+
+    box-shadow:
+        0 0 28px rgba(255,216,21,.8);
+
+}
+
+/* ---------- COMPRAR ---------- */
+
+.CardProductoDracoSidhe-button--comprar {
+
+    background: #1ecc0a;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 0 18px rgba(30,204,10,.35);
+
+}
+
+.CardProductoDracoSidhe-button--comprar:hover {
+
+    box-shadow:
+        0 0 28px rgba(30,204,10,.8);
+
+}
+
+/* =====================================================
+   TABLETS
+===================================================== */
+
+@media (max-width: 1024px) {
+
+    .HeaderDracoSidheProductosDobles-title {
+
+        max-width: 90%;
+
+    }
+
+    .contenedorContenidoContenidoDracoSidheProductosDobles {
+
+        gap: 3rem;
+
+    }
+
+    .CardProductoDracoSidhe-image {
+
+        width: clamp(260px, 38vw, 360px);
+
+    }
+
+}
+
+/* =====================================================
+   MÓVILES
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .DracoSidheProductosDobles {
+
+        padding: 4rem 1.5rem;
+
+    }
+
+    .HeaderDracoSidheProductosDobles {
+
+        margin-bottom: 3rem;
+
+    }
+
+    .HeaderDracoSidheProductosDobles-title {
+
+        font-size: clamp(1.8rem, 8vw, 2.8rem);
+
+        line-height: 1.25;
+
+    }
+
+    .contenedorContenidoContenidoDracoSidheProductosDobles {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 4rem;
+
+    }
+
+    .CardProductoDracoSidhe {
+
+        width: 100%;
+        max-width: 380px;
+
+    }
+
+    .CardProductoDracoSidhe-image {
+
+        width: 100%;
+        max-width: 340px;
+
+    }
+
+    .CardProductoDracoSidhe-button {
+
+        width: 100%;
+
+    }
+
+}
+
+/* =====================================================
+   MÓVILES PEQUEÑOS
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .DracoSidheProductosDobles {
+
+        padding: 3rem 1rem;
+
+    }
+
+    .HeaderDracoSidheProductosDobles-title {
+
+        font-size: 1.6rem;
+
+    }
+
+    .CardProductoDracoSidhe-image {
+
+        max-width: 280px;
+
+    }
+
+    .CardProductoDracoSidhe-button {
+
+        font-size: .9rem;
+
+        padding: .85rem 1rem;
+
+    }
+
+}
