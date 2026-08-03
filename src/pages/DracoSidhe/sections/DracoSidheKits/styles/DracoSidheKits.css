@@ -13,6 +13,61 @@
 }
 
 /* ==========================================
+   CARRUSEL SUPERIOR (3 cartas)
+   La clase se usaba en el JSX pero nunca tuvo estilos, así que la imagen
+   quedaba pegada a la izquierda de la carta en su tamaño natural (268px).
+   No usamos width:100% porque la carta (~390-450px) es más ancha que la
+   imagen original: estirarla a 100% la agranda ~1.5x más allá de su
+   resolución real. Se deja en su tamaño natural (tope responsive con
+   max-width) y centrada dentro de la carta.
+========================================== */
+
+.DracoSidheKits-CardImage {
+
+    display: block;
+
+    width: auto;
+    max-width: 100%;
+    height: auto;
+
+    margin: 0 auto;
+
+    border-radius: 12px;
+
+    transition: transform 0.3s ease;
+
+}
+
+/*
+  El carrusel es fluido (100% del contenedor de la sección), pero las
+  imágenes son chicas (268px de ancho natural): en pantallas anchas cada
+  slide (33.3333%) queda mucho más ancho que la imagen centrada adentro,
+  y eso se ve como un hueco grande entre cartas. Se limita el ancho del
+  carrusel (no el de cada carta ni el de cada slide) para que las 3 cartas
+  queden juntas. Es un override scopeado a esta página: en mobile/tablet,
+  donde el espacio disponible ya es menor a este tope, no cambia nada.
+*/
+.DracoSidheKits .CarrouselResponsiveDeTres {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+}
+
+/* ==========================================
+   CARRUSEL INFERIOR (4 cartas)
+   Override scopeado del ElasticTrack compartido: más separación
+   horizontal solo dentro de esta sección, sin tocar el componente.
+========================================== */
+
+.DracoSidheKits .ElasticTrack {
+
+    gap: 2.5rem;
+
+}
+
+/* ==========================================
    TABLETS
 ========================================== */
 

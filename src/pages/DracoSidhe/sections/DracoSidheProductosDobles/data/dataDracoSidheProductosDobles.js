@@ -24,12 +24,12 @@ const dataDracoSidheProductosDobles = {
 
       explorar: {
         texto: "EXPLORAR",
-        href: "#",
+        href: "#KitDraco",
       },
 
       comprar: {
         texto: "COMPRAR",
-        href: "#",
+        href: "https://www.mylargentina.com/productos/kit-batalla-draco-leyendas-primer-bloque-4-0/",
       },
     },
 
@@ -40,12 +40,12 @@ const dataDracoSidheProductosDobles = {
 
       explorar: {
         texto: "EXPLORAR",
-        href: "#",
+        href: "#KitSidhe",
       },
 
       comprar: {
         texto: "COMPRAR",
-        href: "#",
+        href: "https://www.mylargentina.com/productos/kit-batalla-sidhe-leyendas-primer-bloque-4-0/",
       },
     },
   ],

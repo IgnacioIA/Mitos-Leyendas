@@ -9,11 +9,8 @@ import CarrouselElastico from "../../../../components/carrouselElastico/Carrouse
 import dataDracoSidheKits from "./data/dataDracoSidheKits";
 
 export default function DracoSidheKits() {
-
   const renderBloque = (bloque) => {
-
     switch (bloque.tipo) {
-
       case "responsiveTres":
         return (
           <CarrouselResponsiveDeTres
@@ -38,7 +35,6 @@ export default function DracoSidheKits() {
       default:
         return null;
     }
-
   };
 
   return (
@@ -50,26 +46,22 @@ export default function DracoSidheKits() {
           overlay={kit.background.overlay}
           position={kit.background.position}
         >
-          <section className="DracoSidheKits">
-
+          <section
+            className="DracoSidheKits"
+            id={kit.sectionId}
+          >
             <TituloDescripcionDosCarrousel
               titulo={kit.titulo}
               descripcion={kit.descripcion}
               tituloPrimerBloque={kit.primerBloque.titulo}
               tituloSegundoBloque={kit.segundoBloque.titulo}
             >
-
               {renderBloque(kit.primerBloque)}
-
               {renderBloque(kit.segundoBloque)}
-
             </TituloDescripcionDosCarrousel>
-
           </section>
-
         </ParallaxBackgroundCinematografico>
       ))}
     </>
   );
-
 }

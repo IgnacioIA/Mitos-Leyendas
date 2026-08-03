@@ -1,6 +1,6 @@
 import "./styles/DracoSidheProductosDobles.css";
 
-import ParallaxBackgroundCinematografico from "../../../../components/parallaxBackgrounCinematografico/ParallaxBackgroundCinematografico";
+import BackgroundCinematografico from "../../../../components/backgroundCinematografico/BackgroundCinematografico";
 
 import dataDracoSidheProductosDobles from "./data/dataDracoSidheProductosDobles";
 export default function DracoSidheProductosDobles() {
@@ -11,7 +11,7 @@ export default function DracoSidheProductosDobles() {
   } = dataDracoSidheProductosDobles;
 
   return (
-    <ParallaxBackgroundCinematografico
+    <BackgroundCinematografico
       image={background.image}
       overlay={background.overlay}
       position={background.position}
@@ -45,21 +45,21 @@ export default function DracoSidheProductosDobles() {
                 className="CardProductoDracoSidhe"
               >
 
-                <img
-                  src={producto.imagen}
-                  alt={producto.alt}
-                  className="CardProductoDracoSidhe-image"
-                />
-
                 <a
                   href={producto.explorar.href}
-                  className="CardProductoDracoSidhe-button CardProductoDracoSidhe-button--explorar"
+                  className="CardProductoDracoSidhe-imageLink"
                 >
-                  {producto.explorar.texto}
+                  <img
+                    src={producto.imagen}
+                    alt={producto.alt}
+                    className="CardProductoDracoSidhe-image"
+                  />
                 </a>
 
                 <a
                   href={producto.comprar.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="CardProductoDracoSidhe-button CardProductoDracoSidhe-button--comprar"
                 >
                   {producto.comprar.texto}
@@ -73,6 +73,6 @@ export default function DracoSidheProductosDobles() {
         </div>
 
       </section>
-    </ParallaxBackgroundCinematografico>
+    </BackgroundCinematografico>
   );
 }

@@ -33,24 +33,43 @@
 
   min-width: 0;
 
-  padding: 0; /* clave */
+  /*
+    Separación entre cartas por padding fijo (no por un "width" porcentual
+    de la carta). Un padding de 0.4rem a cada lado es un valor literal
+    idéntico en ambos lados -> cero riesgo de asimetría por redondeo de
+    píxeles, a diferencia de repartir un % de slack con "margin: auto"
+    sobre un flex-basis con decimales periódicos (33.3333%).
+  */
+  padding: 0 0.6rem;
+
+  /*
+    Centrado estructural de la carta dentro de su slide (flexbox). Con la
+    carta al 100% este justify-content no hace nada en desktop, pero sigue
+    centrando correctamente los anchos reducidos (70%/82%) de los
+    breakpoints de mobile/tablet más abajo.
+  */
+  display: flex;
+  justify-content: center;
 }
 
 .CarrouselResponsiveDeTres-Card {
-  width: 85%;
-
-  margin: 0 auto;
+  width: 100%;
 
   transition:
     transform 0.35s ease,
-    box-shadow 0.35s ease;
+    filter 0.35s ease;
 }
 
 .CarrouselResponsiveDeTres-Card:hover {
   transform: translateY(-8px);
 
-  box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.35);
+  /*
+    filter: drop-shadow (no box-shadow) para que la sombra siga el canal
+    alfa de la imagen renderizada en vez de la caja rectangular del wrapper.
+    Con box-shadow, cualquier margen transparente de la carta se veía como
+    un bloque oscuro rectangular detrás del arte.
+  */
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.35));
 }
 
 .CarrouselResponsiveDeTres-Button {
@@ -59,6 +78,10 @@
   top: 50%;
 
   transform: translateY(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   width: 56px;
   height: 56px;
@@ -93,11 +116,11 @@
 }
 
 .CarrouselResponsiveDeTres-ButtonPrev {
-  left: -28px;
+  left: -40px;
 }
 
 .CarrouselResponsiveDeTres-ButtonNext {
-  right: -28px;
+  right: -40px;
 }
 
 /* Tablet: 2 imágenes visibles */

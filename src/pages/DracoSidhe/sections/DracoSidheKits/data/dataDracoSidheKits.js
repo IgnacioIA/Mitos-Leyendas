@@ -37,6 +37,7 @@ import promoSidhe4 from "../../../../../assets/DracoSidhe/DracoSidheKits/Sidhe/p
 const dataDracoSidheKits = [
   {
     id: "draco",
+    sectionId: "KitDraco",
 
     background: {
       image: backgroundDraco,
@@ -76,6 +77,7 @@ const dataDracoSidheKits = [
 
   {
     id: "sidhe",
+    sectionId: "KitSidhe",
 
     background: {
       image: backgroundSidhe,

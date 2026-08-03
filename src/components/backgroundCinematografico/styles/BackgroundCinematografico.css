@@ -1,0 +1,42 @@
+.BackgroundCinematografico {
+  position: relative;
+  z-index: 1;
+}
+
+/* Fondo cinematográfico estático (sin scrub de parallax) */
+.BackgroundCinematografico-Layer {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+
+  z-index: 0;
+}
+
+.BackgroundCinematografico-Image {
+  position: absolute;
+
+  inset: 0;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  z-index: 0;
+}
+
+.BackgroundCinematografico-Overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+.BackgroundCinematografico-Content {
+  position: relative;
+
+  z-index: 2;
+}

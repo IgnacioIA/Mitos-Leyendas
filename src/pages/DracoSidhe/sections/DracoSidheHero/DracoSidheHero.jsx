@@ -1,7 +1,7 @@
 import "./styles/DracoSidheHero.css";
 
-import ParallaxBackgroundCinematografico 
-from "../../../../components/parallaxBackgrounCinematografico/ParallaxBackgroundCinematografico";
+import BackgroundCinematografico
+from "../../../../components/backgroundCinematografico/BackgroundCinematografico";
 
 import DracoSidheHeroButton from "./sections/DracoSidheHeroButton";
 
@@ -32,7 +32,7 @@ export default function DracoSidheHero() {
 
 
   return (
-    <ParallaxBackgroundCinematografico
+    <BackgroundCinematografico
       image={background.image}
       overlay={background.overlay}
       position={background.position}
@@ -64,6 +64,6 @@ export default function DracoSidheHero() {
 
       </div>
 
-    </ParallaxBackgroundCinematografico>
+    </BackgroundCinematografico>
   );
 }
