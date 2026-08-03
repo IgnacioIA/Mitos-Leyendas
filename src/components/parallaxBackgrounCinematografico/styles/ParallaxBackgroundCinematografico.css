@@ -46,6 +46,36 @@
   z-index: 2;
 }
 
+/*
+  Variante visual opcional (showDivider): línea luminosa en el borde
+  inferior, marcando la transición hacia la siguiente sección. Absoluta
+  y sin alto propio -> no modifica el layout ni el alto del componente.
+  z-index por encima del Content (2) y del nivel base de la sección
+  siguiente (1), para no quedar tapada por su fondo sticky.
+*/
+.ParallaxBackgroundCinematografico-Divider {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 2px;
+
+  z-index: 3;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.9),
+    transparent
+  );
+
+  box-shadow: 0 0 16px 2px rgba(255, 255, 255, 0.6);
+}
+
 /* =========================================================
    MOBILE — degradación del efecto
    El truco de position:sticky + margin-bottom:-100vh es

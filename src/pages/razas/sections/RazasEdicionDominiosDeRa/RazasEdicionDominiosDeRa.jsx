@@ -19,7 +19,7 @@ export default function RazasEdicionDominiosDeRa() {
       position="center top"
       overlay={0.45}
     >
-      <section className="RazasEdicionDominiosDeRa">
+      <section className="RazasEdicionDominiosDeRa" id="dominiosDeRaSection">
 
         <div className="container RazasEdicionDominiosDeRa-Container">
 

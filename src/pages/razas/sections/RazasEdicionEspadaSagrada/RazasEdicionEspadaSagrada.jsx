@@ -19,8 +19,9 @@ export default function RazasEdicionEspadaSagrada() {
             image={background}
             position= "Center top"
             overlay={0.45}
+            showDivider
         >
-            <section className="RazasEdicionEspadaSagrada">
+            <section className="RazasEdicionEspadaSagrada" id="espadaSagradaSection">
 
                 <div className="container RazasEdicionEspadaSagrada-Container">
 

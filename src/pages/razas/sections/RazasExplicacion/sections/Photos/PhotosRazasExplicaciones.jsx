@@ -13,6 +13,8 @@ export default function PhotosRazasExplicaciones({
           image={photo.imagen}
           titulo={photo.titulo}
           destacado={photo.destacado}
+          color={photo.color}
+          scrollTo={photo.scrollTo}
         />
       ))}
     </div>

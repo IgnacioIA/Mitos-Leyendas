@@ -6,6 +6,7 @@ export default function ParallaxBackgroundCinematografico({
   image,
   overlay = 0.2,
   position = "center center",
+  showDivider = false,
   children,
 }) {
   const { imageStyle, overlayStyle } = useCinematicBackgroundStyles({
@@ -34,6 +35,10 @@ export default function ParallaxBackgroundCinematografico({
       <div className="ParallaxBackgroundCinematografico-Content">
         {children}
       </div>
+
+      {showDivider && (
+        <div className="ParallaxBackgroundCinematografico-Divider" />
+      )}
 
     </section>
   );

@@ -14,7 +14,7 @@ export default function RazasExplicacion() {
   } = dataRazasExplicacion;
 
   return (
-    <section className="RazasExplicacion">
+    <section className="RazasExplicacion" id="RazasExplicacion-section">
       <div className="container RazasExplicacion-Container">
 
         <RazasExplicacionHeader

@@ -18,8 +18,9 @@ export default function RazasEdicionHijoDeDaana() {
       image={background}
       position="center top"
       overlay={0.45}
+      showDivider
     >
-      <section className="RazasEdicionHijoDeDaana">
+      <section className="RazasEdicionHijoDeDaana" id="hijoDeDaanaSection">
 
         <div className="container RazasEdicionHijoDeDaana-Container">
 

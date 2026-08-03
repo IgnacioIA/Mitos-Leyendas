@@ -1,3 +1,12 @@
+.PhotoCardRazasExplicaciones-Link {
+  display: block;
+
+  width: 100%;
+
+  text-decoration: none;
+  color: inherit;
+}
+
 .PhotoCardRazasExplicaciones {
   width: 100%;
 
@@ -9,16 +18,6 @@
   gap: 1rem;
 
   cursor: pointer;
-
-  transition:
-    filter .35s ease,
-    box-shadow .35s ease;
-}
-
-.PhotoCardRazasExplicaciones:hover {
-  filter: brightness(1.08);
-
-  box-shadow: 0 16px 40px rgba(0, 0, 0, .28);
 }
 
 .PhotoCardRazasExplicaciones-ImageWrapper {
@@ -33,6 +32,21 @@
   width: 100%;
 
   display: block;
+
+  transition: filter .35s ease;
+}
+
+/*
+  Iluminación por edición: mismo mecanismo que .tienda-card-image (drop-shadow
+  triple apilado leyendo --glow-color, seteada inline por carta desde la data,
+  igual que TiendaCard). drop-shadow sigue el alfa de la imagen en vez de la
+  caja rectangular del wrapper.
+*/
+.PhotoCardRazasExplicaciones:hover .PhotoCardRazasExplicaciones-Image {
+  filter:
+    drop-shadow(0 0 8px var(--glow-color))
+    drop-shadow(0 0 16px var(--glow-color))
+    drop-shadow(0 0 32px var(--glow-color));
 }
 
 .PhotoCardRazasExplicaciones-Title {
@@ -50,5 +64,9 @@
 }
 
 .PhotoCardRazasExplicaciones-Title span {
+  display: block;
+
+  margin-top: 0.2rem;
+
   color: #ffd815;
 }
