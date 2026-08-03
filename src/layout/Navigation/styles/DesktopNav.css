@@ -73,8 +73,8 @@
   width: 22px;
   height: 9px;
   clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
-  background: linear-gradient(180deg, #ff8c1a 0%, rgba(255, 140, 26, 0.5) 100%);
-  filter: drop-shadow(0 0 6px rgba(255, 140, 26, 0.75));
+  background: linear-gradient(180deg, #ffd815 0%, rgba(255, 216, 21) 100%);
+  filter: drop-shadow(0 0 6px rgba(255, 216, 21));
 
   opacity: 0;
   transform: translateX(-50%) scaleY(0);
@@ -90,7 +90,7 @@
    panel sigue montado, no el brillo del link. */
 .DesktopNav__link:hover,
 .DesktopNav__item:hover .DesktopNav__link {
-  color: #ff8c1a;
+  color: #ffd815;
   text-shadow:
     0 0 8px rgba(255, 140, 26, 0.55),
     0 0 18px rgba(255, 122, 0, 0.25);

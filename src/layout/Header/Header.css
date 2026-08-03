@@ -13,8 +13,8 @@
   -webkit-backdrop-filter: blur(16px);
 
   /* Línea naranja continua que recorre el header de punta a punta */
-  border-bottom: 1px solid rgba(255, 140, 26, 0.4);
-  box-shadow: 0 1px 12px rgba(255, 122, 0, 0.15);
+  border-bottom: 1px solid rgba(255, 216, 21 , 0.1);
+  box-shadow: 0 1px 12px rgba(255, 216, 21, 0.1);
 
   transition:
     background 0.3s ease,
@@ -25,7 +25,7 @@
 /* Estado post-scroll: más denso y compacto */
 .site-header--scrolled {
   background: rgba(6, 8, 14, 0.97);
-  border-bottom-color: rgba(255, 140, 26, 0.3);
+  border-bottom-color: rgba(255, 216, 21 ,);
 }
 
 /* =========================================================

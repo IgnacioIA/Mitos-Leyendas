@@ -1,4 +1,4 @@
-import carta from "../../../../../assets/DesafioAmatista/cartasSecretas/CartaSecreta.png";
+import carta from "../../../../../assets/DesafioAmatista/cartasSecretas/CartaSecreta.gif";
 import fondo from "../../../../../assets/DesafioAmatista/cartasSecretas/FondoSecretas.jpg";
 
 const dataCartasSecretasSection = {

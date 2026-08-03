@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import Navigation from "../Navigation/Navigation";
-import logo from "../../assets/Header/LOGO MYL ARGENTINA.png";
+import logo from "../../assets/Header/LOGO MYL ARGENTINA.webp";
 import "./Header.css";
 
 export default function Header() {

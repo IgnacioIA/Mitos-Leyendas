@@ -52,26 +52,30 @@ import REWORKDesafio2 from "../../../../../assets/DesafioAmatista/cartasDesafioA
 // Agregar una sección nueva = agregar un objeto acá, no tocar el componente.
 export const TIPOS_SECCION = {
   CARROUSEL: "carrousel",
+  CARROUSEL_DE_TRES: "carrousel-de-tres",
   DOS_IMAGENES: "dos-imagenes",
 };
 
 const dataCartasDesafioAmatista = {
-  encabezado: {
-    subtitulo: "EXPANDE TU MAZO",
-
-    titulo: {
-      linea: "Domina el Campo de Batalla",
-      destacado: "Con Magia Amatista",
-    },
-
-    descripcion:
-      "Descubre nuevas cartas, ilustraciones alternativas y rediseños únicos preparados para transformar tu estrategia.",
-  },
-
   bloques: [
     {
       id: "magia-amatista",
       fondo,
+
+      encabezado: {
+        subtitulo: "EXPANDE TU MAZO",
+
+        titulo: {
+          linea: "Domina el Campo de Batalla",
+          destacado: "Con Magia Amatista",
+        },
+
+        descripcion:
+          "Descubre nuevas cartas, ilustraciones alternativas y rediseños únicos preparados para transformar tu estrategia.",
+
+        colorDestacado: "#d8b4fe",
+        sombraDestacado: "0 0 25px rgba(192, 132, 252, 0.45)",
+      },
 
       secciones: [
         {
@@ -107,7 +111,7 @@ const dataCartasDesafioAmatista = {
         },
         {
           id: "6-CARTAS-NUEVAS",
-          tipo: TIPOS_SECCION.CARROUSEL,
+          tipo: TIPOS_SECCION.CARROUSEL_DE_TRES,
           tituloPrimeraPalabra: "6 CARTAS NUEVAS PARA PRIMER BLOQUE EXTENDIDO",
           descripcion: [
             "Finalmente, y la principal novedad de estas nuevas Toolkit PB 2026, es la incorporación de nuevas cartas para Primer Bloque Extendido, las que añaden nuevas alternativas para todo tipo de estrategias para las ediciones de Espada Sagrada, Helénica, Hijos de Daana y Dominios de Ra.",
@@ -139,6 +143,21 @@ const dataCartasDesafioAmatista = {
     {
       id: "desafio",
       fondo: fondo2,
+
+      encabezado: {
+        subtitulo: "EDICIÓN DESAFÍO",
+
+        titulo: {
+          linea: "Domina el Campo de Batalla",
+          destacado: "Con El poder del desafio",
+        },
+
+        descripcion:
+          "Descubre las cartas exclusivas, ilustraciones alternativas y rediseños preparados para la edición Desafío.",
+
+        colorDestacado: "#a7bef8",
+        sombraDestacado: "0 0 25px rgba(41, 12, 207, 0.45)",
+      },
 
       secciones: [
         {
@@ -174,7 +193,7 @@ const dataCartasDesafioAmatista = {
         },
         {
           id: "6-CARTAS-NUEVAS",
-          tipo: TIPOS_SECCION.CARROUSEL,
+          tipo: TIPOS_SECCION.CARROUSEL_DE_TRES,
           tituloPrimeraPalabra: "6 CARTAS NUEVAS PARA PRIMER BLOQUE EXTENDIDO",
           descripcion: [
             "Finalmente, y la principal novedad de estas nuevas Toolkit PB 2026, es la incorporación de nuevas cartas para Primer Bloque Extendido, las que añaden nuevas alternativas para todo tipo de estrategias para las ediciones de Espada Sagrada, Helénica, Hijos de Daana y Dominios de Ra.",

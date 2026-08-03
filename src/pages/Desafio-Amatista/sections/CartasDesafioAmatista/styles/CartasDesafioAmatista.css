@@ -91,10 +91,13 @@
 
   margin-top: 12px;
 
-  color: #d8b4fe;
+  /* Color e identidad visual: definidos por bloque.encabezado en el data,
+     inyectados como custom properties desde el JSX. El fallback reproduce
+     el valor original para cualquier bloque que no los defina. */
+  color: var(--titleAccent-color, #d8b4fe);
 
   text-shadow:
-    0 0 25px rgba(192, 132, 252, 0.45);
+    var(--titleAccent-shadow, 0 0 25px rgba(192, 132, 252, 0.45));
 }
 
 /* DESCRIPCIÓN */
@@ -162,6 +165,23 @@
   object-fit: contain;
   user-select: none;
   -webkit-user-drag: none;
+}
+
+/* CARROUSEL DE TRES (scoped a esta página) */
+/*
+  Mismo problema y misma solución que en DracoSidheKits.css: el carrusel es
+  fluido al 100% de su contenedor. Acá el contenedor (.CartasDesafioAmatista-
+  content) llega a 1600px, así que cada uno de los 3 slides queda muy ancho
+  y, como la carta se estira a width:100% del slide, termina mucho más
+  grande que las cartas del carrusel de 4. Se limita el ancho del propio
+  carrusel (no el de cada carta) para que el tamaño quede consistente con
+  el resto de la sección, sin tocar CarrouselResponsiveDeTres.css ni afectar
+  a otras páginas que lo usan.
+*/
+.CartasDesafioAmatista .CarrouselResponsiveDeTres {
+  max-width: 900px;
+
+  margin: 0 auto;
 }
 
 @media (max-width: 640px) {

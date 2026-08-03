@@ -2,6 +2,7 @@ import "./styles/CartasDesafioAmatista.css";
 
 import TextoArribaContenidoAbajo from "../../../../components/textoArribaContenidoAbajo/TextoArribaContenidoAbajo";
 import CarrouselResponsive from "../../../../components/CarrouselResponsive/CarrouselResponsive";
+import CarrouselResponsiveDeTres from "../../../../components/CarrouselResponsiveDeTres/CarrouselResponsiveDeTres";
 import FrameFX from "../../../../components/ui/cartaMovible/FrameFX";
 import Paralax from "../../../../components/parallaxBackgrounCinematografico/ParallaxBackgroundCinematografico";
 
@@ -9,18 +10,27 @@ import dataCartasDesafioAmatista, {
   TIPOS_SECCION,
 } from "./data/dataCartasDesafioAmatista";
 
+// Ambos componentes de carrusel comparten la misma interfaz (items, renderItem),
+// así que un mismo factory arma el renderer para cualquiera de ellos: el tipo
+// de sección en el data es lo único que decide cuál se usa.
+const crearRendererCarrousel = (ComponenteCarrousel) => (seccion) => (
+  <ComponenteCarrousel
+    items={seccion.imagenes}
+    renderItem={({ src, alt }) => (
+      <img
+        className="CartasDesafioAmatista-Carta"
+        src={src}
+        alt={alt}
+      />
+    )}
+  />
+);
+
 const RENDERERS = {
-  [TIPOS_SECCION.CARROUSEL]: (seccion) => (
-    <CarrouselResponsive
-      items={seccion.imagenes}
-      renderItem={({ src, alt }) => (
-        <img
-          className="CartasDesafioAmatista-Carta"
-          src={src}
-          alt={alt}
-        />
-      )}
-    />
+  [TIPOS_SECCION.CARROUSEL]: crearRendererCarrousel(CarrouselResponsive),
+
+  [TIPOS_SECCION.CARROUSEL_DE_TRES]: crearRendererCarrousel(
+    CarrouselResponsiveDeTres
   ),
 
   [TIPOS_SECCION.DOS_IMAGENES]: (seccion) => (
@@ -39,12 +49,12 @@ function renderContenido(seccion) {
 }
 
 export default function CartasDesafioAmatista() {
-  const { encabezado, bloques } = dataCartasDesafioAmatista;
+  const { bloques } = dataCartasDesafioAmatista;
 
   return (
     <section className="CartasDesafioAmatista">
 
-      {bloques.map((bloque, index) => (
+      {bloques.map((bloque) => (
 
         <Paralax
           key={bloque.id}
@@ -55,33 +65,35 @@ export default function CartasDesafioAmatista() {
 
           <div className="CartasDesafioAmatista-content">
 
-            {index === 0 && (
+            <header className="CartasDesafioAmatista-header">
 
-              <header className="CartasDesafioAmatista-header">
+              <span className="CartasDesafioAmatista-subtitle">
+                {bloque.encabezado.subtitulo}
+              </span>
 
-                <span className="CartasDesafioAmatista-subtitle">
-                  {encabezado.subtitulo}
+              <h2 className="CartasDesafioAmatista-title">
+
+                <span className="CartasDesafioAmatista-titleLine">
+                  {bloque.encabezado.titulo.linea}
                 </span>
 
-                <h2 className="CartasDesafioAmatista-title">
+                <span
+                  className="CartasDesafioAmatista-titleAccent"
+                  style={{
+                    "--titleAccent-color": bloque.encabezado.colorDestacado,
+                    "--titleAccent-shadow": bloque.encabezado.sombraDestacado,
+                  }}
+                >
+                  {bloque.encabezado.titulo.destacado}
+                </span>
 
-                  <span className="CartasDesafioAmatista-titleLine">
-                    {encabezado.titulo.linea}
-                  </span>
+              </h2>
 
-                  <span className="CartasDesafioAmatista-titleAccent">
-                    {encabezado.titulo.destacado}
-                  </span>
+              <p className="CartasDesafioAmatista-description">
+                {bloque.encabezado.descripcion}
+              </p>
 
-                </h2>
-
-                <p className="CartasDesafioAmatista-description">
-                  {encabezado.descripcion}
-                </p>
-
-              </header>
-
-            )}
+            </header>
 
             {bloque.secciones.map((seccion) => (
 
