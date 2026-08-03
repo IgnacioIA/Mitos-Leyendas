@@ -17,13 +17,23 @@
   max-width: 1600px;
   margin: auto;
 
-  padding: 140px 40px;
+  padding: 100px 40px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  gap: 90px;
+  gap: 40px;
+}
+
+/* OVERRIDE ESPACIADO DE TextoArribaContenidoAbajo (scoped a esta página) */
+/* Componente compartido: no se toca su CSS. Se sobrescribe el padding
+   vertical solo cuando se renderiza dentro de CartasDesafioAmatista,
+   para no afectar a otros consumidores (ej. LootboxLegendariaEdicionPBX). */
+
+.CartasDesafioAmatista-content .TextoArribaContenidoAbajo {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 /* HEADER */
@@ -170,10 +180,22 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .CartasDesafioAmatista-content .TextoArribaContenidoAbajo {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .CartasDesafioAmatista-content {
     padding: 100px 20px;
-    gap: 70px;
+    gap: 30px;
+  }
+
+  .CartasDesafioAmatista-content .TextoArribaContenidoAbajo {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .CartasDesafioAmatista-description {
@@ -182,5 +204,12 @@
 
   .CartasDesafioAmatista-wrapper {
     gap: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .CartasDesafioAmatista-content .TextoArribaContenidoAbajo {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 }
