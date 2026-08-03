@@ -26,7 +26,7 @@ function NovedadesBCard({ title, image, targetId }) {
           <h3>{title}</h3>
 
           <button onClick={ir}>
-            Ver más
+            EXPLORAR
           </button>
 
         </div>

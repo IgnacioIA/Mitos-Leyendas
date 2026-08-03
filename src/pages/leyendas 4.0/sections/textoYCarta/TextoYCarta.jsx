@@ -157,7 +157,7 @@ export default function CartaTexto() {
         <section id="cartas-exclusivas-section"></section>
         <ShowcaseSection
           image={carta5}
-          title="Cartas Exclusivas"
+          title="Cartas Secretas"
           reverse
         >
 

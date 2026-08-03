@@ -31,7 +31,7 @@ export const novedadesData = [
   },
   {
     id: "cartas-exclusivas",
-    title: "CARTAS EXCLUSIVAS",
+    title: "CARTAS SECRETAS",
     image: img5,
     targetId: "cartas-exclusivas-section"
   },
