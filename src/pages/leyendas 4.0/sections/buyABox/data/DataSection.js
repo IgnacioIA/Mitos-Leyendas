@@ -14,53 +14,67 @@ import img10 from "../../../../../assets/mitos4.0/buyABox/4A.png";
 import img11 from "../../../../../assets/mitos4.0/buyABox/4B.png";
 import img12 from "../../../../../assets/mitos4.0/buyABox/4C.png";
 
-const dataSection = [
+const buyABoxData = {
 
+  title: "cartas buy a box de la colección",
+
+  description:
+    "Cada Buy a Box de Leyendas Primer Bloque 4.0 incluye cartas " +
+    "exclusivas de regalo, una por cada una de las ediciones del " +
+    "formato: Espada Sagrada, Helénica, Hijos de Daana y Dominios de Ra.",
+
+  editions: [
     {
-    id: 1,
+      id: 1,
+      cartas: img1,
+    },
+    {
+      id: 2,
+      cartas: img2,
+    },
+    {
+      id: 3,
+      cartas: img3,
+    },
+    {
+      id: 4,
+      cartas: img4,
+    },
+    {
+      id: 5,
+      cartas: img5,
+    },
+    {
+      id: 6,
+      cartas: img6,
+    },
+    {
+      id: 7,
+      cartas: img7,
+    },
+    {
+      id: 8,
+      cartas: img8,
+    },
+    {
+      id: 9,
+      cartas: img9,
+    },
+    {
+      id: 10,
+      cartas: img10,
+    },
+    {
+      id: 11,
+      cartas: img11,
+    },
+    {
+      id: 12,
+      cartas: img12,
+    },
 
-    title: "CORRESPONDEN A LA EDICIÓN ESPADA SAGRADA",
+  ],
 
-    cards: [
-      img1,
-      img2,
-      img3,
-    ],
-  },
+};
 
-  {
-    id: 2,
-
-    title: "CORRESPONDEN A LA EDICIÓN HELÉNICA",
-
-    cards: [
-      img4,
-      img5,
-      img6,
-    ],
-  },
-  {
-    id: 3,
-
-    title: "CORRESPONDEN A LA EDICIÓN HIJOS DE DAANA",
-
-    cards: [
-      img7,
-      img8,
-      img9,
-    ],
-  },
-  {
-    id: 4,
-
-    title: "CORRESPONDEN A LA EDICIÓN DOMINIOS DE RA",
-
-    cards: [
-      img10,
-      img11,
-      img12,
-    ],
-  },
-];
-
-export default dataSection;
+export default buyABoxData;

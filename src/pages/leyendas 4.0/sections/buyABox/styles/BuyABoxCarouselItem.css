@@ -1,0 +1,25 @@
+/* =========================================================
+   BUYABOX CAROUSEL ITEM
+   Mismo criterio que DracoSidheKits-CardImage: la carta no debe estirarse
+   a 100% del slide de CarrouselResponsiveDeTres (la agranda más allá de su
+   resolución real). Ahí funciona con solo max-width:100% porque la imagen
+   fuente ya es chica (~268px nativos). Las cartas de BuyABox son mucho más
+   grandes en origen (~709px), así que acá hace falta además un tope
+   explícito para igualar la misma escala visual del carrusel.
+========================================================= */
+
+.BuyABoxCarouselItem-image {
+
+  display: block;
+
+  width: 100%;
+  max-width: 270px;
+  height: auto;
+
+  margin: 0 auto;
+
+  border-radius: 16px;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+
+}

@@ -1,10 +1,11 @@
 import "./styles/BuyABox.css";
 
-import carouselData from "./data/DataSection.js";
+import buyABoxData from "./data/DataSection.js";
 
-import BackgroundFX from "./components/BackgroundFX";
-import SectionHeader from "./components/SectionHeader";
-import BuyABoxCarousel from "../../../../components/buyabox-carousel/BuyABoxCarousel.jsx";
+import BackgroundFX from "./sections/BackgroundFX";
+import SectionHeader from "./sections/SectionHeader";
+import BuyABoxCarouselItem from "./sections/BuyABoxCarouselItem.jsx";
+import CarrouselResponsiveDeTres from "../../../../components/CarrouselResponsiveDeTres/CarrouselResponsiveDeTres.jsx";
 
 export default function BuyABox() {
   return (
@@ -14,9 +15,17 @@ export default function BuyABox() {
 
       <div className="feature-carousel-container">
 
-        <SectionHeader title="cartas buy a box de la colección" />
+        <SectionHeader
+          title={buyABoxData.title}
+          description={buyABoxData.description}
+        />
 
-        <BuyABoxCarousel groups={carouselData} />
+        <CarrouselResponsiveDeTres
+          items={buyABoxData.editions}
+          renderItem={(edition) => (
+            <BuyABoxCarouselItem imagen={edition.cartas} />
+          )}
+        />
 
       </div>
 

@@ -9,9 +9,11 @@ export default function CartaDeTres({
   return (
     <div className="CartaDeTres">
 
-      <h3 className="CartaDeTres-title">
-        {titulo}
-      </h3>
+      {titulo && (
+        <h3 className="CartaDeTres-title">
+          {titulo}
+        </h3>
+      )}
 
       <CardCarousel
         cards={cartas}

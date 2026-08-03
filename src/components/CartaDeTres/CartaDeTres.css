@@ -1,23 +1,22 @@
 .CartaDeTres {
   position: relative;
 
-  width: 480px;
-  min-height: 520px;
-
-  padding-inline: 120px;
+  /* Ancho explícito (no 100%): dentro de .magic-right-alt (flex item sin
+     ancho propio) un 100% no tiene base de la cual partir y el bloque
+     colapsa a su min-content, aplastando el stack de cartas. */
+  width: clamp(260px, 30vw, 480px);
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
 
-  gap: 28px;
+  gap: clamp(14px, 2.4vw, 28px);
 
-  overflow: hidden;
+  /* Sin overflow:hidden: las cartas laterales del stack se apoyan en
+     translateX más allá del ancho del wrapper y necesitan poder asomar. */
 
-  transition:
-    transform .4s ease,
-    filter .4s ease;
+  transition: transform .4s ease;
 }
 
 .CartaDeTres:hover {

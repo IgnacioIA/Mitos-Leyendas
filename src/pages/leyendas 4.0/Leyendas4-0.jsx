@@ -12,8 +12,8 @@ export default function Leyendas() {
       <HeroSection />
       <Lore />
       <NovedadesB />
-      <CartaTexto />
       <BuyABox />
+      <CartaTexto />
       <Productos />
 
     </div>

@@ -50,3 +50,19 @@
   }
 }
 
+/* =========================================================
+   CARROUSEL DE TRES — override scopeado
+   El fix de tamaño (imagen sin estirar a 100% del slide) vive en
+   BuyABoxCarouselItem.css, igual que en DracoSidheKits. Acá solo se limita
+   el ancho máximo del carrusel para que las cartas, ya en su tamaño
+   natural, no queden con huecos enormes entre sí en pantallas anchas.
+========================================================= */
+
+.feature-carousel-container .CarrouselResponsiveDeTres {
+
+  max-width: 900px;
+
+  margin: 0 auto;
+
+}
+
