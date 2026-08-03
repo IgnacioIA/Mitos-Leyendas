@@ -8,7 +8,8 @@ export default function Hero({
   backgroundMobile,
   buttonText = "Ver Contenido",
   onButtonClick,
-  scrollToId,   
+  scrollToId,
+  compactTitle = false,
 }) {
       const smoothScrollTo = (targetY, duration = 800) => {
 
@@ -83,7 +84,13 @@ export default function Hero({
 
       <div className="Hero-Content">
 
-        <h1 className="Hero-Title">
+        <h1
+          className={
+            compactTitle
+              ? "Hero-Title Hero-Title--compact"
+              : "Hero-Title"
+          }
+        >
           {title}
         </h1>
 

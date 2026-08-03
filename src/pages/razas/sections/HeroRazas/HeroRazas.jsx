@@ -12,6 +12,7 @@ export default function HeroRazas() {
       backgroundMobile={dataHeroRazas.backgroundMobile}
       buttonText="VER RAZAS"
       scrollToId="RazasExplicacion-section"
+      compactTitle
     />
   );
 }

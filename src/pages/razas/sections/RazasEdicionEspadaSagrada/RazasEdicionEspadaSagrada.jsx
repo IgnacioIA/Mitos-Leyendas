@@ -38,6 +38,7 @@ export default function RazasEdicionEspadaSagrada() {
                         >
                             <CarrouselResponsiveDeCinco
                                 items={bloque.cartas}
+                                showButtons={false}
                                 renderItem={(item) => (
                                     <img
                                         src={item.imagen}

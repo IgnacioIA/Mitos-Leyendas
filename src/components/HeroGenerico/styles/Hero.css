@@ -67,6 +67,16 @@
 
 }
 
+/*
+  Variante opcional (prop compactTitle): título más chico que el default,
+  pero claramente por encima del subtítulo (clamp(2rem, 3vw, 4rem)) y
+  pensado para entrar en una sola línea en desktop. No afecta a ningún
+  consumidor existente porque solo aplica con la clase modificadora.
+*/
+.Hero-Title--compact {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+}
+
 .Hero-Subtitle {
 
   color: #ffd700;

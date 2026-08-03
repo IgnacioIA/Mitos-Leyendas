@@ -37,6 +37,7 @@ export default function RazasEdicionHelenica() {
             >
               <CarrouselResponsiveDeCinco
                 items={bloque.cartas}
+                showButtons={false}
                 renderItem={(item) => (
                   <img
                     src={item.imagen}

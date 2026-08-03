@@ -36,6 +36,7 @@ export default function RazasEdicionDominiosDeRa() {
             >
               <CarrouselResponsiveDeCinco
                 items={bloque.cartas}
+                showButtons={false}
                 renderItem={(item) => (
                   <img
                     src={item.imagen}
