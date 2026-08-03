@@ -1,61 +1,106 @@
 import "./styles/CartasDesafioAmatista.css";
 
-import CartaDeTres from "../../../../components/CartaDeTres/CartaDeTres";
+import TextoArribaContenidoAbajo from "../../../../components/textoArribaContenidoAbajo/TextoArribaContenidoAbajo";
+import CarrouselResponsive from "../../../../components/CarrouselResponsive/CarrouselResponsive";
+import FrameFX from "../../../../components/ui/cartaMovible/FrameFX";
+import Paralax from "../../../../components/parallaxBackgrounCinematografico/ParallaxBackgroundCinematografico";
 
-import dataCartasDesafioAmatista from "./data/dataCartasDesafioAmatista";
+import dataCartasDesafioAmatista, {
+  TIPOS_SECCION,
+} from "./data/dataCartasDesafioAmatista";
+
+const RENDERERS = {
+  [TIPOS_SECCION.CARROUSEL]: (seccion) => (
+    <CarrouselResponsive
+      items={seccion.imagenes}
+      renderItem={({ src, alt }) => (
+        <img
+          className="CartasDesafioAmatista-Carta"
+          src={src}
+          alt={alt}
+        />
+      )}
+    />
+  ),
+
+  [TIPOS_SECCION.DOS_IMAGENES]: (seccion) => (
+    <div className="CartasDesafioAmatista-DosImagenes">
+      {seccion.imagenes.map(({ src, alt }, index) => (
+        <FrameFX key={index}>
+          <img src={src} alt={alt} />
+        </FrameFX>
+      ))}
+    </div>
+  ),
+};
+
+function renderContenido(seccion) {
+  return RENDERERS[seccion.tipo]?.(seccion) ?? null;
+}
 
 export default function CartasDesafioAmatista() {
-  const {
-    fondo,
-    encabezado,
-    bloques,
-  } = dataCartasDesafioAmatista;
-
-  const {
-    subtitulo,
-    titulo,
-    descripcion,
-  } = encabezado;
+  const { encabezado, bloques } = dataCartasDesafioAmatista;
 
   return (
-    <section
-      className="CartasDesafioAmatista"
-      style={{
-        backgroundImage: `url(${fondo})`,
-      }}
-    >
-      <div className="CartasDesafioAmatista-overlay" />
+    <section className="CartasDesafioAmatista">
 
-      <div className="CartasDesafioAmatista-content">
+      {bloques.map((bloque, index) => (
 
-        <header className="CartasDesafioAmatista-header">
+        <Paralax
+          key={bloque.id}
+          image={bloque.fondo}
+          overlay={0}
+          position="center center"
+        >
 
-          <span className="CartasDesafioAmatista-subtitle">
-            {subtitulo}
-          </span>
+          <div className="CartasDesafioAmatista-content">
 
-          <h2 className="CartasDesafioAmatista-title">
+            {index === 0 && (
 
-            <span className="CartasDesafioAmatista-titleLine">
-              {titulo.linea}
-            </span>
+              <header className="CartasDesafioAmatista-header">
 
-            <span className="CartasDesafioAmatista-titleAccent">
-              {titulo.destacado}
-            </span>
+                <span className="CartasDesafioAmatista-subtitle">
+                  {encabezado.subtitulo}
+                </span>
 
-          </h2>
+                <h2 className="CartasDesafioAmatista-title">
 
-          <p className="CartasDesafioAmatista-description">
-            {descripcion}
-          </p>
+                  <span className="CartasDesafioAmatista-titleLine">
+                    {encabezado.titulo.linea}
+                  </span>
 
-        </header>
+                  <span className="CartasDesafioAmatista-titleAccent">
+                    {encabezado.titulo.destacado}
+                  </span>
 
-    
-    
+                </h2>
 
-      </div>
+                <p className="CartasDesafioAmatista-description">
+                  {encabezado.descripcion}
+                </p>
+
+              </header>
+
+            )}
+
+            {bloque.secciones.map((seccion) => (
+
+              <TextoArribaContenidoAbajo
+                key={seccion.id}
+                tituloPrimeraPalabra={seccion.tituloPrimeraPalabra}
+                tituloSegundaPalabra={seccion.tituloSegundaPalabra}
+                descripcion={seccion.descripcion}
+              >
+                {renderContenido(seccion)}
+              </TextoArribaContenidoAbajo>
+
+            ))}
+
+          </div>
+
+        </Paralax>
+
+      ))}
 
     </section>
   );

@@ -4,24 +4,8 @@
   width: 100%;
   min-height: 1100px;
 
-  padding: 140px 40px;
-
   overflow: visible;
   isolation: isolate;
-
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-}
-
-/* OVERLAY */
-
-.CartasDesafioAmatista-overlay {
-  position: absolute;
-  inset: 0;
-
-  z-index: 1;
 }
 
 /* CONTENIDO */
@@ -33,11 +17,23 @@
   max-width: 1600px;
   margin: auto;
 
+  padding: 100px 40px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  gap: 90px;
+  gap: 40px;
+}
+
+/* OVERRIDE ESPACIADO DE TextoArribaContenidoAbajo (scoped a esta página) */
+/* Componente compartido: no se toca su CSS. Se sobrescribe el padding
+   vertical solo cuando se renderiza dentro de CartasDesafioAmatista,
+   para no afectar a otros consumidores (ej. LootboxLegendariaEdicionPBX). */
+
+.CartasDesafioAmatista-content .TextoArribaContenidoAbajo {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 /* HEADER */
@@ -126,6 +122,56 @@
   gap: 90px;
 }
 
+/* CARTA (carrousel) */
+
+.CartasDesafioAmatista-Carta {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  user-select: none;
+  -webkit-user-drag: none;
+
+  transition:
+    transform .35s ease,
+    filter .35s ease;
+}
+
+.CartasDesafioAmatista-Carta:hover {
+  transform: scale(1.02);
+
+  filter: brightness(1.05);
+}
+
+/* DOS IMÁGENES */
+
+.CartasDesafioAmatista-DosImagenes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10rem;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.CartasDesafioAmatista-DosImagenes img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+@media (max-width: 640px) {
+  .CartasDesafioAmatista-DosImagenes {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    gap: 1rem;
+  }
+}
+
 /* RESPONSIVE */
 
 @media (max-width: 1200px) {
@@ -134,13 +180,22 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .CartasDesafioAmatista-content .TextoArribaContenidoAbajo {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
 @media (max-width: 768px) {
-  .CartasDesafioAmatista {
+  .CartasDesafioAmatista-content {
     padding: 100px 20px;
+    gap: 30px;
   }
 
-  .CartasDesafioAmatista-content {
-    gap: 70px;
+  .CartasDesafioAmatista-content .TextoArribaContenidoAbajo {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .CartasDesafioAmatista-description {
@@ -149,5 +204,12 @@
 
   .CartasDesafioAmatista-wrapper {
     gap: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .CartasDesafioAmatista-content .TextoArribaContenidoAbajo {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 }
