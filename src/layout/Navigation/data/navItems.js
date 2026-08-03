@@ -20,6 +20,7 @@ const navItems = [
       {
         title: "PRODUCTOS RECIENTES",
         items: [
+          { title: "KITS DE BATALLA: DRACO/SIDHE", path: "/DracoSidhe" },
           { title: "LEYENDAS 4.0", path: "/mitos4.0" },
           { title: "SHOGUN 5", path: "/Shogun" },
         ],
@@ -34,15 +35,12 @@ const navItems = [
       {
         title: "FORMATO PRINCIPAL",
         items: [
+          { title: "KITS DE BATALLA: DRACO/SIDHE", path: "/DracoSidhe" },
+          { title: "TOOLKIT PBX: DESAFÍO/AMATISTA", path: "/DesafioAmatista" },
+          { title: "LOOTBOX PBX 2025", path: "/EdicionPBX" },
           { title: "LEYENDAS 4.0", path: "/mitos4.0" },
           { title: "SHOGUN 5", path: "/Shogun" },
           { title: "MAZOS INICIALES", path: "/mazoInicialPB" },
-          { title: "LOOTBOX", path: "/EdicionPBX" },
-          { title: "TOOLKIT PBX", path: "#" }, // TODO: crear página/ruta de Toolkit PBX
-          { title: "DRACO Y SIDHE", path: "/DracoSidhe" },
-          { title: "RAZAS", path: "/RazasPage" },
-          { title: "DESAFÍO AMATISTA", path: "/DesafioAmatista" },
-          { title: "PREMIER BS AS 2026", path: "/PremierBsAs2026" },
         ],
       },
       { title: "FORMATOS ALTERNATIVOS", items: [] },
@@ -54,13 +52,24 @@ const navItems = [
     type: "mega",
     columns: [
       {
-        title: null,
+        title: "FORMATOS",
         items: [
-          { title: "LORE", path: "/LorePage" },
-          { title: "APRENDER A JUGAR", path: "/Apj" },
-          { title: "FORMATOS", path: "/Formatos" },
+          { title: "CASUAL", path: "/Formatos" },
+          { title: "COMPETITIVO", path: "/Formatos" },
+        ],
+      },
+      {
+        title: "PRIMER BLOQUE EXTENDIDO",
+        items: [
+          { title: "RAZAS", path: "/RazasPage" },
           { title: "BANLIST PBX", path: "/BanList" },
-          { title: "RAZAS PBX", path: "#" }, // TODO: crear página/ruta de Razas PBX
+          { title: "LORE", path: "/LorePage" },
+        ],
+      },
+      {
+        title: "ACERCA DEL JUEGO",
+        items: [
+          { title: "Aprende a jugar", path: "/Apj" },
           { title: "LINEA DEL TIEMPO", path: "/HistoriaMYL" },
         ],
       },
@@ -79,7 +88,13 @@ const navItems = [
     columns: [
       {
         title: null,
-        items: [{ title: "TEAMS", path: "/TeamsOficiales" }],
+        items: [
+          { title: "CRONOGRAMA DE LIGA", path: "/TeamsOficiales" },
+          { title: "SALÓN DE CAMPEONES", path: "/TeamsOficiales" },
+          { title: "JUNTADAS MITERAS", path: "/TeamsOficiales" },
+          { title: "TEAMS", path: "/TeamsOficiales" },
+          { title: "TIENDAS", path: "/TiendasAmigas" },
+        ],
       },
     ],
   },
@@ -90,8 +105,7 @@ const navItems = [
     columns: [
       {
         title: null,
-        // TODO: crear página del torneo
-        items: [{ title: "TORNEO PREMIER PBX 2026", path: "#" }],
+        items: [{ title: "TORNEO PREMIER PBX 2026", path: "/PremierBsAs2026" }],
       },
     ],
   },

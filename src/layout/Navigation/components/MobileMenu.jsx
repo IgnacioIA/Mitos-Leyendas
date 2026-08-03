@@ -52,7 +52,7 @@ function MobileMenuItem({ item, onClose }) {
 
               <ul className="MobileMenu__subList">
                 {column.items.map((child) => (
-                  <li key={child.path}>
+                  <li key={`${child.title}-${child.path}`}>
                     <NavLink
                       to={child.path}
                       className={({ isActive }) =>

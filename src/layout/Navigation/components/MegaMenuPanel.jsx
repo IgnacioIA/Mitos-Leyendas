@@ -26,7 +26,7 @@ export default function MegaMenuPanel({ columns, open }) {
                 {column.items.length > 0 ? (
                   <ul className="MegaMenuPanel__list">
                     {column.items.map((item) => (
-                      <li key={item.path}>
+                      <li key={`${item.title}-${item.path}`}>
                         <NavLink
                           to={item.path}
                           role="menuitem"

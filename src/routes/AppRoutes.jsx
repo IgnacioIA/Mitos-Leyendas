@@ -16,7 +16,7 @@ import EdicionPBX from "../pages/edicionPBX/EdicionPBX.jsx";
 import TiendasAmigas from "../pages/tiendaAmigas/TiendaAmigas.jsx";
 import TeamsOficiales from "../pages/teamsOficiales/TeamsOficiales.jsx";
 import HistoriaMYL from "../pages/historiaMYL/HistoriaMYL.jsx";
-import BannerPremier from "../pages/premierBsAs2026/Premier.jsx";
+import PremierBsAs from "../pages/premierBsAs2026/Premier.jsx";
 import DesafioAmatista from "../pages/Desafio-Amatista/Desafio-Amatista.jsx";
 import RazasPage from "../pages/razas/Razas.jsx";
 import DracoSidhe from "../pages/DracoSidhe/DracoSidhe.jsx";
@@ -109,7 +109,7 @@ function AppRoutes() {
             {/* Premier Bs As */}
             <Route
               path="/PremierBsAs2026"
-              element={<BannerPremier />}
+              element={<PremierBsAs />}
             />
 
             {/* DesafioAmatista */}
