@@ -1,8 +1,8 @@
 import HeroImage1
-from "../../../../../assets/home/hero/banners-01.jpg";
+from "../../../../../assets/home/hero/1 LEYENDAS.webp";
 
 import HeroImage2
-from "../../../../../assets/home/hero/banners-02.jpg";
+from "../../../../../assets/home/hero/2 SHOGUN.webp";
 
 export const HERO_SLIDES = [
 

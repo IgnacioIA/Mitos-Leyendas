@@ -1,8 +1,23 @@
-import carta1 from "../../../../../assets/mitos4.0/cartaYTexto/CARTAS NUEVAS.png";
-import carta2 from "../../../../../assets/mitos4.0/cartaYTexto/CARTAS PREMIUM.png";
-import carta3 from "../../../../../assets/mitos4.0/cartaYTexto/CARTAS REWORK.png";
-import carta4 from "../../../../../assets/mitos4.0/cartaYTexto/CARTAS FOIL ESPECIAL.png";
-import carta5 from "../../../../../assets/mitos4.0/cartaYTexto/CARTAS EXCLUSIVAS.png";
+import carta1 from "../../../../../assets/mitos4.0/cartaYTexto/cartasNuevas/1.webp";
+import carta2 from "../../../../../assets/mitos4.0/cartaYTexto/cartasNuevas/2.webp";
+import carta3 from "../../../../../assets/mitos4.0/cartaYTexto/cartasNuevas/3.webp";
+
+import carta4 from "../../../../../assets/mitos4.0/cartaYTexto/cartasPremium/1.webp";
+import carta5 from "../../../../../assets/mitos4.0/cartaYTexto/cartasPremium/2.webp";
+import carta6 from "../../../../../assets/mitos4.0/cartaYTexto/cartasPremium/3.webp";
+
+import carta7 from "../../../../../assets/mitos4.0/cartaYTexto/cartasRework/1.webp";
+import carta8 from "../../../../../assets/mitos4.0/cartaYTexto/cartasRework/2.webp";
+import carta9 from "../../../../../assets/mitos4.0/cartaYTexto/cartasRework/3.webp";
+
+import carta10 from "../../../../../assets/mitos4.0/cartaYTexto/cartasFoilEspecial/1.webp";
+import carta11 from "../../../../../assets/mitos4.0/cartaYTexto/cartasFoilEspecial/2.webp";
+import carta12 from "../../../../../assets/mitos4.0/cartaYTexto/cartasFoilEspecial/3.webp";
+
+import carta13 from "../../../../../assets/mitos4.0/cartaYTexto/cartasSecretas/1.webp";
+import carta14 from "../../../../../assets/mitos4.0/cartaYTexto/cartasSecretas/2.webp";
+import carta15 from "../../../../../assets/mitos4.0/cartaYTexto/cartasSecretas/3.webp";
+
 
 // Las 3 cartas de cada bloque repiten temporalmente la misma imagen: son un
 // placeholder a propósito hasta contar con arte individual por carta.
@@ -12,7 +27,7 @@ const textoYCartaData = [
     anchorId: "cartas-nuevas-section",
     title: "Cartas Nuevas",
     reverse: true,
-    cartas: [carta1, carta1, carta1],
+    cartas: [carta1, carta2, carta3],
     paragraphs: [
       `Una de las principales novedades de esta nueva versión
       de Leyendas PB 4.0, son las cartas completamente nuevas
@@ -29,7 +44,7 @@ const textoYCartaData = [
     anchorId: "cartas-premium-section",
     title: "Cartas Premium",
     reverse: false,
-    cartas: [carta2, carta2, carta2],
+    cartas: [carta4, carta5, carta6],
     paragraphs: [
       `Otra de las novedades de estos nuevos sobres con
       las nuevas cartas Ultra Raras o “Premium”, las que
@@ -48,7 +63,7 @@ const textoYCartaData = [
     anchorId: "cartas-rework-section",
     title: "Cartas Rework",
     reverse: true,
-    cartas: [carta3, carta3, carta3],
+    cartas: [carta7, carta8, carta9],
     paragraphs: [
       `Siguiendo con las novedades, los nuevos sobres
       de Leyendas Primer Bloque 4.0 agregan nuevas cartas
@@ -66,7 +81,7 @@ const textoYCartaData = [
     anchorId: "cartas-foil-especial-section",
     title: "Cartas Foil Especial",
     reverse: false,
-    cartas: [carta4, carta4, carta4],
+    cartas: [carta10, carta11, carta12],
     paragraphs: [
       `En esta nueva versión de Leyendas Primer Bloque 4.0
       agregaremos nuevas cartas de frecuencia Legendaria,
@@ -83,7 +98,7 @@ const textoYCartaData = [
     anchorId: "cartas-exclusivas-section",
     title: "Cartas Secretas",
     reverse: true,
-    cartas: [carta5, carta5, carta5],
+    cartas: [carta13, carta14, carta15],
     paragraphs: [
       `Finalmente, queremos mostrarles la última novedad
       de esta edición con las nuevas cartas Secretas.`,

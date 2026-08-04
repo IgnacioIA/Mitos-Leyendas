@@ -27,7 +27,7 @@ const dataBandoDesafioAmatista = {
         "Expansión completa con cartas exclusivas, nuevas mecánicas y arte alternativo.",
       boton: {
         texto: "COMPRAR",
-        link: "https://www.mylargentina.com/formato-oficial-pbx/preventas/toolkit-primer-bloque-2026-desafio",
+        link: "https://www.mylargentina.com/productos/toolkit-primer-bloque-2026-desafio-entregas-a-partir-del-12-06/",
       },
     },
   ],

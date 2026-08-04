@@ -32,6 +32,8 @@ export default function BandoDesafioAmatista() {
             <a
               href={producto.boton.link}
               className="BandoDesafioAmatista-btn"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <span className="BandoDesafioAmatista-btn-bg"></span>
 

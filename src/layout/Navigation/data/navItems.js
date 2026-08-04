@@ -1,5 +1,5 @@
 // TODO: reemplazar por la URL real de la tienda oficial
-export const SHOP_URL = "#";
+export const SHOP_URL = "https://www.mylargentina.com/";
 
 /* =========================================================
    NAV ITEMS
