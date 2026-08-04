@@ -1,18 +1,18 @@
-import img1 from "../../../../../assets/mitos4.0/buyABox/1A.png";
-import img2 from "../../../../../assets/mitos4.0/buyABox/1B.png";
-import img3 from "../../../../../assets/mitos4.0/buyABox/1C.png";
+import img1 from "../../../../../assets/mitos4.0/buyABox/1A.webp";
+import img2 from "../../../../../assets/mitos4.0/buyABox/1B.webp";
+import img3 from "../../../../../assets/mitos4.0/buyABox/1C.webp";
 
-import img4 from "../../../../../assets/mitos4.0/buyABox/2A.png";
-import img5 from "../../../../../assets/mitos4.0/buyABox/2B.png";
-import img6 from "../../../../../assets/mitos4.0/buyABox/2C.png";
+import img4 from "../../../../../assets/mitos4.0/buyABox/2A.webp";
+import img5 from "../../../../../assets/mitos4.0/buyABox/2B.webp";
+import img6 from "../../../../../assets/mitos4.0/buyABox/2C.webp";
 
-import img7 from "../../../../../assets/mitos4.0/buyABox/3A.png";
-import img8 from "../../../../../assets/mitos4.0/buyABox/3B.png";
-import img9 from "../../../../../assets/mitos4.0/buyABox/3C.png";
+import img7 from "../../../../../assets/mitos4.0/buyABox/3A.webp";
+import img8 from "../../../../../assets/mitos4.0/buyABox/3B.webp";
+import img9 from "../../../../../assets/mitos4.0/buyABox/3C.webp";
 
-import img10 from "../../../../../assets/mitos4.0/buyABox/4A.png";
-import img11 from "../../../../../assets/mitos4.0/buyABox/4B.png";
-import img12 from "../../../../../assets/mitos4.0/buyABox/4C.png";
+import img10 from "../../../../../assets/mitos4.0/buyABox/4A.webp";
+import img11 from "../../../../../assets/mitos4.0/buyABox/4B.webp";
+import img12 from "../../../../../assets/mitos4.0/buyABox/4C.webp";
 
 const buyABoxData = {
 

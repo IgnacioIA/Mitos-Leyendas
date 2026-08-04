@@ -1,11 +1,11 @@
 import "./styles/Carta-texto.css";
 
-import fondo from "../../../../assets/mitos4.0/cartaYTexto/fondo.webp";
-
-import textoYCartaData from "./data/textoYCartaData.js";
+import dataTextoYCartaSection from "./data/dataTextoYCartaSection.js";
 import TextoYCartaBlock from "./sections/TextoYCartaBlock.jsx";
 
-export default function CartaTexto() {
+export default function TextoYCartaSection() {
+
+  const { background, bloques } = dataTextoYCartaSection;
 
   return (
 
@@ -18,19 +18,16 @@ export default function CartaTexto() {
       <div
         className="carta-texto-background"
         style={{
-          backgroundImage: `
-            linear-gradient(
-              rgba(0,0,0,0.10),
-              rgba(0,0,100,0.10)
-            ),
-            url(${fondo})
-          `
+          "--carta-texto-bg-desktop": `url(${background.desktop})`,
+          "--carta-texto-bg-mobile": `url(${background.mobile})`,
+          "--carta-texto-bg-overlay-from": background.overlay.from,
+          "--carta-texto-bg-overlay-to": background.overlay.to,
         }}
       />
 
       <div className="carta-texto-content">
 
-        {textoYCartaData.map((bloque) => (
+        {bloques.map((bloque) => (
           <TextoYCartaBlock
             key={bloque.id}
             {...bloque}

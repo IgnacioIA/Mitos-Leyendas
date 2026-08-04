@@ -1,3 +1,5 @@
+import fondoDesktop from "../../../../../assets/mitos4.0/cartaYTexto/FONDO SECCION CARTAS.webp";
+import fondoMobile from "../../../../../assets/mitos4.0/cartaYTexto/FONDO SECCION CARTAS MOBILE.webp";
 import carta1 from "../../../../../assets/mitos4.0/cartaYTexto/cartasNuevas/1.webp";
 import carta2 from "../../../../../assets/mitos4.0/cartaYTexto/cartasNuevas/2.webp";
 import carta3 from "../../../../../assets/mitos4.0/cartaYTexto/cartasNuevas/3.webp";
@@ -19,9 +21,22 @@ import carta14 from "../../../../../assets/mitos4.0/cartaYTexto/cartasSecretas/2
 import carta15 from "../../../../../assets/mitos4.0/cartaYTexto/cartasSecretas/3.webp";
 
 
-// Las 3 cartas de cada bloque repiten temporalmente la misma imagen: son un
-// placeholder a propósito hasta contar con arte individual por carta.
-const textoYCartaData = [
+const dataTextoYCartaSection = {
+
+  background: {
+    // No existe todavía un asset de fondo específico para mobile:
+    // "mobile" apunta temporalmente a la misma imagen que "desktop"
+    // como placeholder, listo para reemplazarse por un asset real
+    // sin tocar código.
+    desktop: fondoDesktop,
+    mobile: fondoMobile,
+    overlay: {
+      from: "rgba(0,0,0,0.10)",
+      to: "rgba(0,0,100,0.10)",
+    },
+  },
+
+  bloques: [
   {
     id: "cartas-nuevas",
     anchorId: "cartas-nuevas-section",
@@ -109,6 +124,8 @@ const textoYCartaData = [
       raras de todo Mitos y Leyendas.`,
     ],
   },
-];
+  ],
 
-export default textoYCartaData;
+};
+
+export default dataTextoYCartaSection;

@@ -22,6 +22,13 @@
 
   pointer-events: none;
 
+  background-image:
+    linear-gradient(
+      var(--carta-texto-bg-overlay-from),
+      var(--carta-texto-bg-overlay-to)
+    ),
+    var(--carta-texto-bg-desktop);
+
   background-size: 100% auto;
 
   background-position: center top;
@@ -41,19 +48,25 @@
 @media (max-width: 768px) {
 
   /* El sticky-scrub (background sticky + content con margin-top
-     negativo) usa unidades desincronizadas: el fondo mide su
-     altura en 100dvh (se recalcula al ocultarse/aparecer la
-     barra de direcciones durante el scroll en mobile) mientras
-     el contenido se corre hacia arriba con -100vh (fijo, no
-     recalcula). El desfase entre ambos hace que el contenido
-     invada la sección anterior y salte durante el scroll. Se
-     desactiva el truco en mobile igual que en
-     ParallaxBackgroundCinematografico, sin tocar Desktop. */
+     negativo) se mantiene en mobile igual que en desktop (el fondo
+     queda pegado arriba durante todo el scroll de la sección = el
+     efecto parallax). El bug original no era el sticky en sí, sino
+     que el alto del fondo (100dvh, se recalcula al ocultarse/aparecer
+     la barra de direcciones del navegador) y el corrimiento del
+     contenido (-100vh, unidad estática, no recalcula) usaban unidades
+     distintas: cuando el navegador recalculaba dvh, el margen fijo en
+     vh quedaba desfasado y el contenido invadía/saltaba. Se iguala
+     todo a dvh para que ambos valores se recalculen juntos y no se
+     desincronicen. Solo se cambia la imagen y el encuadre, que ya son
+     mobile-específicos. */
 
   .carta-texto-background {
-    position: absolute;
-    inset: 0;
-    height: auto;
+    background-image:
+      linear-gradient(
+        var(--carta-texto-bg-overlay-from),
+        var(--carta-texto-bg-overlay-to)
+      ),
+      var(--carta-texto-bg-mobile);
 
     background-size: cover;
 
@@ -61,6 +74,6 @@
   }
 
   .carta-texto-content {
-    margin-top: 0;
+    margin-top: -100dvh;
   }
 }

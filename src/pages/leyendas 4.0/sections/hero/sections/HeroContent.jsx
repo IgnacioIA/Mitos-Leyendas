@@ -1,22 +1,20 @@
 import "../styles/hero-content.css";
 
-function HeroContent() {
+function HeroContent({ title, subtitle, description }) {
 
   return (
     <div className="hero-content">
 
       <h1 className="hero-title">
-        LEYENDAS 4.0
+        {title}
       </h1>
 
       <span className="hero-subtitle">
-        PRIMER BLOQUE EXTENDIDO
+        {subtitle}
       </span>
 
       <p className="hero-description">
-        NUEVOS DIOSES Y CRIATURAS MITOLÓGICAS
-        LLEGAN A MITOS Y LEYENDAS
-        PARA REVOLUCIONAR EL JUEGO
+        {description}
       </p>
 
     </div>

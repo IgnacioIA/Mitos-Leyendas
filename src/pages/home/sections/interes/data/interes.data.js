@@ -25,7 +25,7 @@ export const INTERES_ITEMS = [
     id: 3,
     image: Imagen3,
     alt: "Imagen 3",
-    url: "https://mylargentina.com/productos/torneo-premier-primer-bloque-extendido-incluye-6-cartas-exclusivas/",
+    url: "/PremierBsAs2026",
   },
 
   {
