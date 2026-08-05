@@ -1,4 +1,4 @@
-import heroDesktop from "../../../../../assets/mitos4.0/hero/FONDO HERO.webp";
+import heroDesktop from "../../../../../assets/mitos4.0/hero/FONDO HERO 2.webp";
 import heroMobile from "../../../../../assets/mitos4.0/hero/FONDO HERO MOBILE.webp";
 
 // No existe todavía un asset de fondo específico para mobile: "mobile"

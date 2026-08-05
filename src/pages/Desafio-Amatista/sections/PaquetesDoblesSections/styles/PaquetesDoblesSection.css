@@ -16,6 +16,7 @@ position: relative;
 .PaquetesDoblesSection-left {
     flex: 1.2;
     z-index: 20;
+    transform: translateX(100px);
 }
 
 .PaquetesDoblesSection-title {
