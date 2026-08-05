@@ -61,6 +61,7 @@ export default function CartasDesafioAmatista() {
           image={bloque.fondo}
           overlay={0}
           position="center center"
+          showDivider
         >
 
           <div className="CartasDesafioAmatista-content">

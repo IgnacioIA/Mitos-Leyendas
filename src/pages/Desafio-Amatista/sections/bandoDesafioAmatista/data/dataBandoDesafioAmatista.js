@@ -2,7 +2,7 @@ import cardAmatista from "../../../../../assets/DesafioAmatista/elegiBando/cajit
 import cardDesafio from "../../../../../assets/DesafioAmatista/elegiBando/cajitas-15.png";
 
 const dataBandoDesafioAmatista = {
-  titulo: "ELIGE TU BANDO",
+  titulo: "PRODUCTOS IDEALES PARA INICIAR EN FORMATO CASUAL",
   subtitulo: "DOS PRODUCTOS · UN UNIVERSO",
 
   productos: [

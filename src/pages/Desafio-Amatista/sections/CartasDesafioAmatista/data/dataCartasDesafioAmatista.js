@@ -84,7 +84,7 @@ const dataCartasDesafioAmatista = {
           tituloPrimeraPalabra: "CARTAS BUY A BOX DEL PRODUCTO",
           descripcion: [
             "Al igual que en productos anteriores, todas las unidades de Toolkit PB 2026 tendrán dos cartas exclusivas como Buy a Box con Artes Alternativos.",
-            "En las Toolkit Desafío tendremos las cartas Vínculo del Aullido e Soteira. Cada una de ellas tendrá un diseño sin bordes, con un nuevo Arte y con aplicaciones de barnices especiales.",
+            "En las Toolkit Amatista tendremos las cartas Vínculo del Aullido y Soteira. Cada una de ellas tendrá un diseño sin bordes, con un nuevo Arte y con aplicaciones de barnices especiales.",
           ],
           imagenes: [
             { src: Lobo, alt: "Lobo" },
@@ -130,7 +130,7 @@ const dataCartasDesafioAmatista = {
           tipo: TIPOS_SECCION.DOS_IMAGENES,
           tituloPrimeraPalabra: "2 CARTAS REWORK PARA PRIMER BLOQUE EXTENDIDO",
           descripcion: [
-            "Cada Toolkit tendrá dos nuevas cartas Rework 1 para cada edición), donde tendremos versiones para las cartas Tótem del Errante, Atenas, Crear Talismán y Carro Real, siendo estas las versiones oficiales para el formato de Primer Bloque Extendido.",
+            "Cada Toolkit tendrá dos nuevas cartas Rework para cada edición, donde tendremos versiones para las cartas Tótem del Errante, Atenas, Crear Talismán y Carro Real, siendo estas las versiones oficiales para el formato de Primer Bloque Extendido.",
           ],
           imagenes: [
             { src: REWORK1, alt: "Lobo" },
@@ -153,7 +153,7 @@ const dataCartasDesafioAmatista = {
         },
 
         descripcion:
-          "Descubre las cartas exclusivas, ilustraciones alternativas y rediseños preparados para la edición Desafío.",
+          "Descubre nuevas cartas, ilustraciones alternativas y rediseños únicos preparados para transformar tu estrategia.",
 
         colorDestacado: "#a7bef8",
         sombraDestacado: "0 0 25px rgba(41, 12, 207, 0.45)",
@@ -166,7 +166,7 @@ const dataCartasDesafioAmatista = {
           tituloPrimeraPalabra: "CARTAS BUY A BOX DEL PRODUCTO",
           descripcion: [
             "Al igual que en productos anteriores, todas las unidades de Toolkit PB 2026 tendrán dos cartas exclusivas como Buy a Box con Artes Alternativos.",
-            "En las Toolkit Desafío tendremos las cartas Vínculo del Aullido e Soteira. Cada una de ellas tendrá un diseño sin bordes, con un nuevo Arte y con aplicaciones de barnices especiales.",
+            "En las Toolkit Desafío tendremos las cartas Ceangal An Fhanaigh e Ib-Mut. Cada una de ellas tendrá un diseño sin bordes, con un nuevo Arte y con aplicaciones de barnices especiales.",
           ],
           imagenes: [
             { src: Corazon, alt: "Corazon" },
@@ -212,7 +212,7 @@ const dataCartasDesafioAmatista = {
           tipo: TIPOS_SECCION.DOS_IMAGENES,
           tituloPrimeraPalabra: "2 CARTAS REWORK PARA PRIMER BLOQUE EXTENDIDO",
           descripcion: [
-            "Cada Toolkit tendrá dos nuevas cartas Rework 1 para cada edición), donde tendremos versiones para las cartas Tótem del Errante, Atenas, Crear Talismán y Carro Real, siendo estas las versiones oficiales para el formato de Primer Bloque Extendido.",
+            "Cada Toolkit tendrá dos nuevas cartas Rework para cada edición, donde tendremos versiones para las cartas Tótem del Errante, Atenas, Crear Talismán y Carro Real, siendo estas las versiones oficiales para el formato de Primer Bloque Extendido.",
           ],
           imagenes: [
             { src: REWORKDesafio1, alt: "Muerte" },

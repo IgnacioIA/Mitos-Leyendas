@@ -1,8 +1,11 @@
 import "./styles/BandoDesafioAmatista.css";
 import dataBandoDesafioAmatista from "./data/dataBandoDesafioAmatista";
+import ComponenteFondoParticulasMyL from "../../../../components/ComponenteFondoParticulasMyL/ComponenteFondoParticulasMyL";
+
 
 export default function BandoDesafioAmatista() {
   return (
+    <ComponenteFondoParticulasMyL>
     <section className="BandoDesafioAmatista-section">
 
       <h2 className="BandoDesafioAmatista-title">
@@ -50,5 +53,6 @@ export default function BandoDesafioAmatista() {
       </div>
 
     </section>
+    </ComponenteFondoParticulasMyL>
   );
 }

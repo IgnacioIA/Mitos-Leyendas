@@ -46,13 +46,6 @@
 
   inset: 0;
 
-  background:
-    linear-gradient(
-      to top,
-      rgba(0,0,0,0.85),
-      rgba(0,0,0,0.15)
-    );
-
   display: flex;
 
   align-items: flex-end;

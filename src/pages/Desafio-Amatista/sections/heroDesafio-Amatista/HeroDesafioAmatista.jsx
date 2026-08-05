@@ -98,9 +98,7 @@ export default function HeroDesafioAmatista() {
         <div className="DesafioAmatista-divider" />
 
         <div className="DesafioAmatista-center">
-          <button>
-            {dataDesAmatis.boton.texto}
-          </button>
+   
         </div>
       </div>
     </section>
