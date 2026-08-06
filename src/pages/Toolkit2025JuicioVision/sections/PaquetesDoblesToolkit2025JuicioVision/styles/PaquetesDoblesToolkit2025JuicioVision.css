@@ -1,0 +1,116 @@
+.PaquetesDoblesToolkit2025JuicioVision {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+position: relative;
+    z-index: 1;
+    background: #4a000f;
+    gap: 60px;
+    padding: 120px 80px;
+}
+
+/* ===========================
+   COLUMNA IZQUIERDA
+=========================== */
+
+.PaquetesDoblesToolkit2025JuicioVision-left {
+    flex: 1.2;
+    z-index: 20;
+    transform: translateX(100px);
+}
+
+.PaquetesDoblesToolkit2025JuicioVision-title {
+    margin-bottom: 20px;
+
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 40px;
+    white-space: pre-line;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    
+}
+
+.PaquetesDoblesToolkit2025JuicioVision-textReveal {
+    overflow: hidden;
+}
+
+.PaquetesDoblesToolkit2025JuicioVision-text {
+    max-width: 600px;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* ===========================
+   COLUMNA DERECHA
+=========================== */
+
+.PaquetesDoblesToolkit2025JuicioVision-right {
+    display: flex;
+    justify-content: center;
+
+    flex: 1;
+}
+
+.PaquetesDoblesToolkit2025JuicioVision-ilustracion {
+    position: relative;
+    width: 320px;
+
+    overflow: hidden;
+    border-radius: 16px;
+
+    background: transparent;
+
+    transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.PaquetesDoblesToolkit2025JuicioVision-ilustracion img {
+    display: block;
+    width: 100%;
+}
+
+.PaquetesDoblesToolkit2025JuicioVision-ilustracion:hover {
+    transform: scale(1.04);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 992px) {
+    .PaquetesDoblesToolkit2025JuicioVision {
+        flex-direction: column;
+
+        padding: 80px 40px;
+
+        text-align: center;
+    }
+
+    .PaquetesDoblesToolkit2025JuicioVision-text {
+        max-width: none;
+    }
+
+    .PaquetesDoblesToolkit2025JuicioVision-ilustracion {
+        width: min(320px, 100%);
+    }
+}
+
+@media (max-width: 576px) {
+    .PaquetesDoblesToolkit2025JuicioVision {
+        gap: 40px;
+        padding: 60px 20px;
+    }
+
+    .PaquetesDoblesToolkit2025JuicioVision-title {
+        font-size: 32px;
+    }
+
+    .PaquetesDoblesToolkit2025JuicioVision-text {
+        font-size: 15px;
+    }
+}

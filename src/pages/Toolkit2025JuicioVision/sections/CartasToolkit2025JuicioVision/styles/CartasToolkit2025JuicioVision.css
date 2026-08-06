@@ -1,0 +1,235 @@
+.CartasToolkit2025JuicioVision {
+  position: relative;
+
+  width: 100%;
+  min-height: 1100px;
+
+  overflow: visible;
+  isolation: isolate;
+}
+
+/* CONTENIDO */
+
+.CartasToolkit2025JuicioVision-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1600px;
+  margin: auto;
+
+  padding: 100px 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 40px;
+}
+
+/* OVERRIDE ESPACIADO DE TextoArribaContenidoAbajo (scoped a esta página) */
+/* Componente compartido: no se toca su CSS. Se sobrescribe el padding
+   vertical solo cuando se renderiza dentro de CartasToolkit2025JuicioVision,
+   para no afectar a otros consumidores (ej. LootboxLegendariaEdicionPBX). */
+
+.CartasToolkit2025JuicioVision-content .TextoArribaContenidoAbajo {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* HEADER */
+
+.CartasToolkit2025JuicioVision-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 24px;
+
+  max-width: 1000px;
+
+  text-align: center;
+}
+
+/* SUBTÍTULO */
+
+.CartasToolkit2025JuicioVision-subtitle {
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* TÍTULO */
+
+.CartasToolkit2025JuicioVision-title {
+  margin: 0;
+
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 900;
+  line-height: 1;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: white;
+
+  text-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+.CartasToolkit2025JuicioVision-titleLine {
+  display: block;
+
+  white-space: nowrap;
+}
+
+.CartasToolkit2025JuicioVision-titleAccent {
+  display: block;
+
+  margin-top: 12px;
+
+  /* Color e identidad visual: definidos por bloque.encabezado en el data,
+     inyectados como custom properties desde el JSX. El fallback reproduce
+     el valor original para cualquier bloque que no los defina. */
+  color: var(--titleAccent-color, #d8b4fe);
+
+  text-shadow:
+    var(--titleAccent-shadow, 0 0 25px rgba(192, 132, 252, 0.45));
+}
+
+/* DESCRIPCIÓN */
+
+.CartasToolkit2025JuicioVision-description {
+  max-width: 700px;
+
+  font-size: 18px;
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* WRAPPER */
+
+.CartasToolkit2025JuicioVision-wrapper {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  flex-wrap: wrap;
+
+  gap: 90px;
+}
+
+/* CARTA (carrousel) */
+
+.CartasToolkit2025JuicioVision-Carta {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  user-select: none;
+  -webkit-user-drag: none;
+
+  transition:
+    transform .35s ease,
+    filter .35s ease;
+}
+
+.CartasToolkit2025JuicioVision-Carta:hover {
+  transform: scale(1.02);
+
+  filter: brightness(1.05);
+}
+
+/* DOS IMÁGENES */
+
+.CartasToolkit2025JuicioVision-DosImagenes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10rem;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.CartasToolkit2025JuicioVision-DosImagenes img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* CARROUSEL DE TRES (scoped a esta página) */
+/*
+  Mismo problema y misma solución que en DracoSidheKits.css: el carrusel es
+  fluido al 100% de su contenedor. Acá el contenedor (.CartasToolkit2025JuicioVision-
+  content) llega a 1600px, así que cada uno de los 3 slides queda muy ancho
+  y, como la carta se estira a width:100% del slide, termina mucho más
+  grande que las cartas del carrusel de 4. Se limita el ancho del propio
+  carrusel (no el de cada carta) para que el tamaño quede consistente con
+  el resto de la sección, sin tocar CarrouselResponsiveDeTres.css ni afectar
+  a otras páginas que lo usan.
+*/
+.CartasToolkit2025JuicioVision .CarrouselResponsiveDeTres {
+  max-width: 900px;
+
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .CartasToolkit2025JuicioVision-DosImagenes {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    gap: 1rem;
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+  .CartasToolkit2025JuicioVision-wrapper {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .CartasToolkit2025JuicioVision-content .TextoArribaContenidoAbajo {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .CartasToolkit2025JuicioVision-content {
+    padding: 100px 20px;
+    gap: 30px;
+  }
+
+  .CartasToolkit2025JuicioVision-content .TextoArribaContenidoAbajo {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .CartasToolkit2025JuicioVision-description {
+    font-size: 16px;
+  }
+
+  .CartasToolkit2025JuicioVision-wrapper {
+    gap: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .CartasToolkit2025JuicioVision-content .TextoArribaContenidoAbajo {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}

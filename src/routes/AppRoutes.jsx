@@ -18,6 +18,7 @@ import TeamsOficiales from "../pages/teamsOficiales/TeamsOficiales.jsx";
 import HistoriaMYL from "../pages/historiaMYL/HistoriaMYL.jsx";
 import PremierBsAs from "../pages/premierBsAs2026/Premier.jsx";
 import DesafioAmatista from "../pages/Desafio-Amatista/Desafio-Amatista.jsx";
+import Toolkit2025JuicioVision from "../pages/Toolkit2025JuicioVision/Toolkit2025JuicioVision.jsx";
 import RazasPage from "../pages/razas/Razas.jsx";
 import DracoSidhe from "../pages/DracoSidhe/DracoSidhe.jsx";
 
@@ -116,6 +117,12 @@ function AppRoutes() {
             <Route
               path="/DesafioAmatista"
               element={<DesafioAmatista />}
+            />
+
+            {/* Toolkit2025JuicioVision */}
+            <Route
+              path="/Toolkit2025JuicioVision"
+              element={<Toolkit2025JuicioVision />}
             />
 
             {/* Razas */}

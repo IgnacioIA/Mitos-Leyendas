@@ -36,7 +36,8 @@ const navItems = [
         title: "FORMATO PRINCIPAL",
         items: [
           { title: "KITS DE BATALLA: DRACO/SIDHE", path: "/DracoSidhe" },
-          { title: "TOOLKIT PBX: DESAFÍO/AMATISTA", path: "/DesafioAmatista" },
+          { title: "TOOLKIT PBX 2026: DESAFÍO - AMATISTA", path: "/DesafioAmatista" },
+          { title: "TOOLKIT PBX 2025: JUICIO Y VISIÓN - NOBLEZA Y PODER", path: "/Toolkit2025JuicioVision" },
           { title: "LOOTBOX PBX 2025", path: "/EdicionPBX" },
           { title: "LEYENDAS 4.0", path: "/mitos4.0" },
           { title: "SHOGUN 5", path: "/Shogun" },

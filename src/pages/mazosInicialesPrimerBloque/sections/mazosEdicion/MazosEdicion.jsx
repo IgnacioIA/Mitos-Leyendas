@@ -18,6 +18,7 @@ export default function MazosEdicion() {
           image={mazo.background}
           position={mazo.position}
           overlay={0.15}
+          showDivider
         >
 
           <article

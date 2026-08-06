@@ -1,0 +1,175 @@
+.Toolkit2025JuicioVision-hero {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.Toolkit2025JuicioVision-split {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  cursor: ew-resize;
+}
+
+/* IMÁGENES */
+.Toolkit2025JuicioVision-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+/* MASK */
+.Toolkit2025JuicioVision-left-img {
+  clip-path: polygon(
+    0 0,
+    var(--pos) 0,
+    var(--pos) 100%,
+    0 100%
+  );
+}
+
+.Toolkit2025JuicioVision-right-img {
+  clip-path: polygon(
+    var(--pos) 0,
+    100% 0,
+    100% 100%,
+    var(--pos) 100%
+  );
+}
+
+/* TITULO BASE */
+.Toolkit2025JuicioVision-title-wrap {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+.Toolkit2025JuicioVision-title {
+  position: absolute;
+  font-size: clamp(3rem, 7vw, 8rem);
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  filter: blur(calc(abs(var(--pos) - 50) * 0.05px));
+  opacity: calc(1 - abs(var(--pos) - 50) / 50);
+
+  transition: opacity 0.1s linear;
+  will-change: clip-path;
+
+  background: linear-gradient(180deg, #fff, #aaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Toolkit2025JuicioVision-left {
+  clip-path: polygon(
+    0 0,
+    var(--pos) 0,
+    var(--pos) 100%,
+    0 100%
+  );
+
+  opacity: calc((50 - var(--pos)) / 50);
+}
+
+.Toolkit2025JuicioVision-right {
+  clip-path: polygon(
+    var(--pos) 0,
+    100% 0,
+    100% 100%,
+    var(--pos) 100%
+  );
+
+  opacity: calc((var(--pos) - 50) / 50);
+}
+
+.Toolkit2025JuicioVision-hidden {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.Toolkit2025JuicioVision-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* COLORES */
+.Toolkit2025JuicioVision-left-title {
+  filter: drop-shadow(0 0 10px #c084fc);
+}
+
+.Toolkit2025JuicioVision-right-title {
+  filter: drop-shadow(0 0 10px #facc15);
+}
+
+/* LÍNEA */
+.Toolkit2025JuicioVision-divider {
+  position: absolute;
+  top: 0;
+  left: var(--pos);
+
+  width: 3px;
+  height: 100%;
+
+  transform: translateX(-50%);
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #fff,
+    transparent
+  );
+
+  box-shadow:
+    0 0 20px white,
+    0 0 40px rgba(124, 58, 237, 0.6);
+}
+
+/* LUZ */
+.Toolkit2025JuicioVision-split::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background: radial-gradient(
+    circle at var(--mx) var(--my),
+    rgba(255, 255, 255, 0.18),
+    transparent 45%
+  );
+
+  mix-blend-mode: overlay;
+  transition: opacity 0.2s ease;
+}
+
+/* CONTENIDO */
+.Toolkit2025JuicioVision-center {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+.Toolkit2025JuicioVision-center button {
+  padding: 12px 28px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: linear-gradient(135deg, #7c3aed, #c084fc);
+
+  color: white;
+  cursor: pointer;
+}
