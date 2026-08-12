@@ -1,14 +1,14 @@
 import fondo from "../../../../../assets/Toolkit2025JuicioVision/lore/FONDO LORE.webp";
 
 const dataLoreToolkit2025JuicioVision = {
-  titulo: "El Origen del Poder",
+  titulo: "EL PESO DE LAS DECISIONES",
 
   imagenFondo: fondo,
 
   parrafos: [
-    "En los rincones olvidados del tiempo, donde la magia y la realidad se entrelazan, nacieron las cartas de poder. Cada una contiene fragmentos de historias antiguas, reliquias de civilizaciones perdidas y fuerzas que aún susurran en la oscuridad.",
+    "Todo reino se construye sobre dos pilares: la autoridad para gobernar y la sabiduría para elegir el camino correcto. Entre ambos nace el verdadero poder, aquel que trasciende las batallas y permanece en la memoria de los pueblos.",
 
-    "Aquellos que logran dominarlas no solo controlan el juego, sino también el destino que estas cartas fueron destinadas a revelar.",
+    "Las cartas son el reflejo de esas decisiones. El resto de la historia depende de quien las juegue.",
   ],
 };
 

@@ -65,8 +65,8 @@ const dataCartasToolkit2025JuicioVision = {
         subtitulo: "EXPANDE TU MAZO",
 
         titulo: {
-          linea: "Domina el Campo de Batalla",
-          destacado: "Con Magia Amatista",
+          linea: "Domina tu estrategia",
+          destacado: "Con JUICIO Y VISION",
         },
 
         descripcion:
@@ -82,8 +82,8 @@ const dataCartasToolkit2025JuicioVision = {
           tipo: TIPOS_SECCION.DOS_IMAGENES,
           tituloPrimeraPalabra: "CARTAS BUY A BOX DEL PRODUCTO",
           descripcion: [
-            "Al igual que en productos anteriores, todas las unidades de Toolkit PB 2026 tendrán dos cartas exclusivas como Buy a Box con Artes Alternativos.",
-            "En las Toolkit Amatista tendremos las cartas Vínculo del Aullido y Soteira. Cada una de ellas tendrá un diseño sin bordes, con un nuevo Arte y con aplicaciones de barnices especiales.",
+            "Al igual que en productos anteriores, todas las unidades de Toolkit PB 2025 tendrán dos cartas exclusivas como Buy a Box con Artes Alternativos.",
+            "En las Toolkit juicio y vision tendremos las cartas Salmón del saber y Toros apis. Cada una de ellas tendrá un diseño sin bordes, con un nuevo Arte y con aplicaciones de barnices especiales.",
           ],
           imagenes: [
             { src: Lobo, alt: "Lobo" },
@@ -109,11 +109,11 @@ const dataCartasToolkit2025JuicioVision = {
           ],
         },
         {
-          id: "6-CARTAS-NUEVAS",
+          id: "5-CARTAS-NUEVAS",
           tipo: TIPOS_SECCION.CARROUSEL_DE_TRES,
-          tituloPrimeraPalabra: "6 CARTAS NUEVAS PARA PRIMER BLOQUE EXTENDIDO",
+          tituloPrimeraPalabra: "5 CARTAS NUEVAS PARA PRIMER BLOQUE EXTENDIDO",
           descripcion: [
-            "Finalmente, y la principal novedad de estas nuevas Toolkit PB 2026, es la incorporación de nuevas cartas para Primer Bloque Extendido, las que añaden nuevas alternativas para todo tipo de estrategias para las ediciones de Espada Sagrada, Helénica, Hijos de Daana y Dominios de Ra.",
+            "Finalmente, y la principal novedad de estas nuevas Toolkit PB 2025, es la incorporación de nuevas cartas para Primer Bloque Extendido, las que añaden nuevas alternativas para todo tipo de estrategias para las ediciones de Espada Sagrada, Helénica, Hijos de Daana y Dominios de Ra.",
           ],
           imagenes: [
             { src: NUEVA1, alt: "Rework de Anillos de Badbury" },
@@ -128,7 +128,7 @@ const dataCartasToolkit2025JuicioVision = {
           tipo: TIPOS_SECCION.DOS_IMAGENES,
           tituloPrimeraPalabra: "2 CARTAS REWORK PARA PRIMER BLOQUE EXTENDIDO",
           descripcion: [
-            "Cada Toolkit tendrá dos nuevas cartas Rework para cada edición, donde tendremos versiones para las cartas Tótem del Errante, Atenas, Crear Talismán y Carro Real, siendo estas las versiones oficiales para el formato de Primer Bloque Extendido.",
+            "Cada Toolkit tendrá dos nuevas cartas Rework para cada edición, donde tendremos versiones para las cartas Las Tres Plagas, La Visión, Fantasmas del Desierto y Ataque Fulminante, siendo estas las versiones oficiales para el formato de Primer Bloque Extendido.",
           ],
           imagenes: [
             { src: REWORK1, alt: "Lobo" },
@@ -146,8 +146,8 @@ const dataCartasToolkit2025JuicioVision = {
         subtitulo: "EDICIÓN DESAFÍO",
 
         titulo: {
-          linea: "Domina el Campo de Batalla",
-          destacado: "Con El poder del desafio",
+          linea: "Domina tu estrategia",
+          destacado: "Con nobleza y poder",
         },
 
         descripcion:
@@ -163,8 +163,8 @@ const dataCartasToolkit2025JuicioVision = {
           tipo: TIPOS_SECCION.DOS_IMAGENES,
           tituloPrimeraPalabra: "CARTAS BUY A BOX DEL PRODUCTO",
           descripcion: [
-            "Al igual que en productos anteriores, todas las unidades de Toolkit PB 2026 tendrán dos cartas exclusivas como Buy a Box con Artes Alternativos.",
-            "En las Toolkit Desafío tendremos las cartas Ceangal An Fhanaigh e Ib-Mut. Cada una de ellas tendrá un diseño sin bordes, con un nuevo Arte y con aplicaciones de barnices especiales.",
+            "Al igual que en productos anteriores, todas las unidades de Toolkit PB 2025 tendrán dos cartas exclusivas como Buy a Box con Artes Alternativos.",
+            "En las Toolkit nobleza y poder tendremos las cartas tesoro de mowa y luz de prometeo. Cada una de ellas tendrá un diseño sin bordes, con un nuevo Arte y con aplicaciones de barnices especiales.",
           ],
           imagenes: [
             { src: Corazon, alt: "Corazon" },
@@ -192,9 +192,9 @@ const dataCartasToolkit2025JuicioVision = {
         {
           id: "6-CARTAS-NUEVAS",
           tipo: TIPOS_SECCION.CARROUSEL_DE_TRES,
-          tituloPrimeraPalabra: "6 CARTAS NUEVAS PARA PRIMER BLOQUE EXTENDIDO",
+          tituloPrimeraPalabra: "5 CARTAS NUEVAS PARA PRIMER BLOQUE EXTENDIDO",
           descripcion: [
-            "Finalmente, y la principal novedad de estas nuevas Toolkit PB 2026, es la incorporación de nuevas cartas para Primer Bloque Extendido, las que añaden nuevas alternativas para todo tipo de estrategias para las ediciones de Espada Sagrada, Helénica, Hijos de Daana y Dominios de Ra.",
+            "Finalmente, y la principal novedad de estas nuevas Toolkit PB 2025, es la incorporación de nuevas cartas para Primer Bloque Extendido, las que añaden nuevas alternativas para todo tipo de estrategias para las ediciones de Espada Sagrada, Helénica, Hijos de Daana y Dominios de Ra.",
           ],
           imagenes: [
             { src: NUEVADesafio1, alt: "Rework de Anillos de Badbury" },
@@ -209,7 +209,7 @@ const dataCartasToolkit2025JuicioVision = {
           tipo: TIPOS_SECCION.DOS_IMAGENES,
           tituloPrimeraPalabra: "2 CARTAS REWORK PARA PRIMER BLOQUE EXTENDIDO",
           descripcion: [
-            "Cada Toolkit tendrá dos nuevas cartas Rework para cada edición, donde tendremos versiones para las cartas Tótem del Errante, Atenas, Crear Talismán y Carro Real, siendo estas las versiones oficiales para el formato de Primer Bloque Extendido.",
+            "Cada Toolkit tendrá dos nuevas cartas Rework para cada edición, donde tendremos versiones para las cartas Las Tres Plagas, La Visión, Fantasmas del Desierto y Ataque Fulminante, siendo estas las versiones oficiales para el formato de Primer Bloque Extendido.",
           ],
           imagenes: [
             { src: REWORKDesafio1, alt: "Muerte" },
