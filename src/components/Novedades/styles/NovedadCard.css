@@ -1,0 +1,167 @@
+.Novedades-Card {
+  position: relative;
+
+  flex: 1;
+
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+
+  transition:
+    flex 0.5s ease,
+    transform 0.5s ease;
+}
+
+.Novedades-Card__content {
+  position: absolute;
+
+  inset: 0;
+}
+
+.Novedades-Card__product {
+  position: absolute;
+
+  top: 100px;
+  left: 50%;
+
+  width: 100%;
+  max-height: 55%;
+
+  object-fit: contain;
+
+  transform: translateX(-50%);
+
+  transition:
+    transform 0.5s ease;
+
+  filter:
+    drop-shadow(
+      0 12px 24px rgba(0, 0, 0, 0.4)
+    );
+}
+
+.Novedades-Card__title-container {
+  position: absolute;
+
+  bottom: 80px;
+  left: 0;
+
+  width: 100%;
+
+  padding: 24px;
+
+  text-align: center;
+
+  transition: transform 0.5s ease;
+}
+
+.Novedades-Card__title {
+  margin: 0;
+
+  color: white;
+
+  font-size: 1.4rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+}
+
+.Novedades-Card__subtitle {
+  margin: 8px 0 0;
+
+  color: #ffd815;
+
+  font-size: 0.95rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+.Novedades-Card__button {
+  display: inline-block;
+
+  margin-top: 20px;
+
+  padding: 12px 24px;
+
+  border: 2px solid #ffd815;
+  border-radius: 6px;
+
+  color: #ffd815;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  opacity: 0;
+
+  transform: translateY(15px);
+
+  transition:
+    opacity 0.4s ease 0.15s,
+    transform 0.4s ease 0.15s,
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.Novedades-Card:hover
+.Novedades-Card__product {
+  transform:
+    translateX(-50%)
+    translateY(-10px)
+    scale(1.05);
+}
+.Novedades-Card:hover
+.Novedades-Card__button {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+.Novedades-Card__button:hover {
+  background-color: #ffd815;
+
+  color: #000;
+}
+.Novedades-Card:hover
+.Novedades-Card__title-container {
+  transform: translateY(-35px);
+}
+
+/*
+  Mobile: sin hover real en touch, el botón quedaba invisible
+  (opacity:0 permanente). Se fuerza visible en el breakpoint donde
+  la gallery pasa a scroll-snap. Cada card ocupa el ancho completo
+  del viewport (una por vez).
+*/
+@media (max-width: 768px) {
+
+  .Novedades-Card {
+    flex: 0 0 100%;
+
+    scroll-snap-align: start;
+  }
+
+  .Novedades-Card__button {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+  /*
+    La card mobile es más baja (clamp 420-620px vs 700px en desktop)
+    pero "top" del producto y "bottom" del título son offsets fijos
+    en px, así que un 55% de una card más baja puede pisar el título.
+    Se acota más en mobile para dejar aire entre ambos.
+  */
+  .Novedades-Card__product {
+    max-height: 42%;
+  }
+}

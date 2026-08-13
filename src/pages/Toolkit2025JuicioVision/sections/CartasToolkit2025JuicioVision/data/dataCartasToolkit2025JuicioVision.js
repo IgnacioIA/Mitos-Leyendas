@@ -72,8 +72,8 @@ const dataCartasToolkit2025JuicioVision = {
         descripcion:
           "Descubre nuevas cartas, ilustraciones alternativas y rediseños únicos preparados para transformar tu estrategia.",
 
-        colorDestacado: "#d8b4fe",
-        sombraDestacado: "0 0 25px rgba(192, 132, 252, 0.45)",
+        colorDestacado: "#18f118",
+        sombraDestacado: "0 0 25px rgba(132, 252, 142, 0.26)",
       },
 
       secciones: [

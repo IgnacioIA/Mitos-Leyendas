@@ -1,0 +1,13 @@
+.Novedades-Header {
+  text-align: center;
+
+  margin-bottom: 80px;
+}
+
+.Novedades-HeaderTitle {
+  margin: 0;
+
+  font-size: clamp(2.5rem, 5vw, 5rem);
+
+  color: white;
+}

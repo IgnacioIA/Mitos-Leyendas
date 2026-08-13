@@ -2,7 +2,8 @@ import Hero from "./sections/hero/HeroHome";
 import Baner from "./sections/baner/InstagramBanner";
 import Interes from "./sections/interes/Interes";
 import AprenderAJugar from "./sections/aprendeAJugar/AprenderAJugar";
-import ProductosRecientes from "./sections/novedades/ProductosRecientes";
+import Novedades from "../../components/Novedades/Novedades";
+import { dataNovedadesHome } from "./sections/novedades/data/novedades.data";
 import AcercaDe from "./sections/acercaDe/AcercaDe";
 
 import "./style/HomeStyle.css";
@@ -16,7 +17,7 @@ export default function Home() {
     < Hero />
     < Baner />
     < Interes />
-    < ProductosRecientes />
+    < Novedades data={dataNovedadesHome} />
     < AcercaDe />
 
 

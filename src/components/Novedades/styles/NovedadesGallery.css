@@ -1,0 +1,29 @@
+.Novedades-Gallery {
+  width: 100%;
+
+  height: 700px;
+
+  display: flex;
+
+  overflow: hidden;
+}
+
+/*
+  Mobile: la sección no tenía ningún tratamiento responsive (ver
+  diagnóstico del refactor). En vez de comprimir las 4 cards flex:1
+  hasta hacerlas ilegibles, se convierten en un carrusel de scroll
+  horizontal con snap — una card visible a la vez, preservando la
+  identidad "full-bleed" que tienen en desktop.
+*/
+@media (max-width: 768px) {
+
+  .Novedades-Gallery {
+    height: clamp(420px, 70vh, 620px);
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+}

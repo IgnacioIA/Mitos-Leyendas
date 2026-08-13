@@ -21,6 +21,7 @@ import DesafioAmatista from "../pages/Desafio-Amatista/Desafio-Amatista.jsx";
 import Toolkit2025JuicioVision from "../pages/Toolkit2025JuicioVision/Toolkit2025JuicioVision.jsx";
 import RazasPage from "../pages/razas/Razas.jsx";
 import DracoSidhe from "../pages/DracoSidhe/DracoSidhe.jsx";
+import HijosDeDaanaPage from "../pages/HijosDeDaanaPage/HijosDeDaanaPage.jsx";
 
 
 function AppRoutes() {
@@ -137,7 +138,14 @@ function AppRoutes() {
               element={<DracoSidhe />}
             />
 
+            
+            {/* HijosDeDaana */}
+            <Route
+              path="/HijosDeDaanaPage"
+              element={<HijosDeDaanaPage />}
+            />
 
+            
           </Route>
         </Routes>
     </BrowserRouter>

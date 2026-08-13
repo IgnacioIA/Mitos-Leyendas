@@ -1,0 +1,189 @@
+.HijosDeDaanaPagePaquetitosPrincipal {
+
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+
+    background: #4a000f;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: clamp(1rem, 3vw, 2rem);
+
+    padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 4vw, 2rem);
+
+}
+
+/* =====================================================
+   IZQUIERDA
+===================================================== */
+
+.HijosDeDaanaPagePaquetitosIzquierda {
+
+    flex: 1 1 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.HijosDeDaanaPagePaquetitosContenedorIzquierda {
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.HijosDeDaanaPagePaquetitosContenedorIzquierda-image {
+
+    width: clamp(260px, 32vw, 480px);
+
+    height: auto;
+
+    display: block;
+
+    filter:
+        drop-shadow(0 20px 40px rgba(0, 0, 0, .45));
+
+    transition: transform .35s ease;
+
+}
+
+.HijosDeDaanaPagePaquetitosContenedorIzquierda-image:hover {
+
+    transform: translateY(-8px) scale(1.03);
+
+}
+
+/* =====================================================
+   DERECHA
+===================================================== */
+
+.HijosDeDaanaPagePaquetitosDerecha {
+
+    flex: 1 1 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+    transform: translateX(-60px);
+    gap: clamp(1rem, 2.5vw, 1.5rem);
+
+}
+
+.HijosDeDaanaPagePaquetitosDerecha-titulo {
+
+    margin: 0;
+
+    width: 100%;
+
+    font-family: var(--font-anton);
+
+    color: #ffffff;
+
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    font-weight: 400;
+
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+
+    text-transform: uppercase;
+
+    text-shadow: 0 8px 24px rgba(0, 0, 0, .4);
+
+}
+
+.HijosDeDaanaPagePaquetitosDerecha-descripcion {
+
+    margin: 0;
+
+    width: 100%;
+    max-width: 480px;
+
+    font-family: var(--font-main);
+
+    color: #ffffff;
+
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    font-weight: 400;
+
+    line-height: 1.7;
+
+}
+
+/* =====================================================
+   TABLETS
+===================================================== */
+
+@media (max-width: 1024px) {
+
+    .HijosDeDaanaPagePaquetitosPrincipal {
+
+        gap: 1.5rem;
+
+    }
+
+    .HijosDeDaanaPagePaquetitosContenedorIzquierda-image {
+
+        width: clamp(220px, 38vw, 360px);
+
+    }
+
+}
+
+/* =====================================================
+   MÓVILES
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .HijosDeDaanaPagePaquetitosPrincipal {
+
+        flex-direction: column;
+
+        padding: 3rem 1.5rem;
+
+    }
+
+    .HijosDeDaanaPagePaquetitosDerecha {
+
+        max-width: 480px;
+
+    }
+
+}
+
+/* =====================================================
+   MÓVILES PEQUEÑOS
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .HijosDeDaanaPagePaquetitosPrincipal {
+
+        padding: 2.5rem 1rem;
+
+    }
+
+    .HijosDeDaanaPagePaquetitosContenedorIzquierda-image {
+
+        width: 80%;
+
+    }
+
+    .HijosDeDaanaPagePaquetitosDerecha-titulo {
+
+        font-size: clamp(1.7rem, 8vw, 2.4rem);
+
+    }
+
+}
