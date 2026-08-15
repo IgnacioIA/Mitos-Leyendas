@@ -60,7 +60,7 @@ export default function HijosDeDaanaPageCartas() {
           key={bloque.id}
           image={bloque.fondo}
           overlay={0}
-          position="center center"
+          position="center bot"
           showDivider
         >
 

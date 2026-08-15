@@ -92,8 +92,8 @@ const dataHijosDeDaanaPageCartas = {
         descripcion:
           "Relatos Hijos de Daana: La muerte de Cuchulain, nos trasladan a un plano terrenal en donde Cuchulain vive sus últimos años, en una historia de batalla, muerte y traición, que nos presentará a sus aliados y a sus enemigos",
 
-        colorDestacado: "#8ef7b0",
-        sombraDestacado: "0 0 25px rgba(60, 200, 120, 0.45)",
+        colorDestacado: "#f10e0e",
+        sombraDestacado: "0 0 25px rgba(228, 20, 13, 0.45)",
       },
 
       secciones: [
@@ -167,8 +167,8 @@ const dataHijosDeDaanaPageCartas = {
         descripcion:
           "Relatos Hijos de Daana: Luz Esmeralda, nos relata la historia de Morrigu como la comandante de las fuerzas de los Tuatha de Danaan contra la oscuridad de las bestias provenientes de los más oscuros lugares de la Tierra Esmeralda.",
 
-        colorDestacado: "#f7a08e",
-        sombraDestacado: "0 0 25px rgba(220, 90, 60, 0.45)",
+        colorDestacado: "#482ce9",
+        sombraDestacado: "0 0 25px rgba(56, 41, 187, 0.45)",
       },
 
       secciones: [

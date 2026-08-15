@@ -1,0 +1,68 @@
+/* Overrides scopeados del componente compartido Novedades (src/components/Novedades).
+   No se toca su CSS: los cambios de acá solo aplican quedand dentro de
+   HijosDeDaanaPagePresentacion, sin afectar a otros consumidores (Home, etc.). */
+
+/* FONDO REAL DEL HUECO GRIS */
+/* La causa no era el padding en sí: .Novedades no tiene background propio,
+   así que cualquier zona sin cards visibles queda pintada por lo que haya
+   detrás en el árbol. Detrás NO está el body (--bg: #06070a) sino
+   .main-layout (src/layout/MainLayout/MainLayout.css), el wrapper de
+   Header/Outlet/Footer que envuelve TODAS las páginas, con su propio
+   background:#0d0d0d -un gris ligeramente distinto y más neutro que el
+   --bg real. Confirmado sampleando el pixel de esa zona: rgb(13,13,13),
+   que es exactamente #0d0d0d, no el color del body. Contra el resto de la
+   página (imágenes y --bg) ese gris se nota como un corte. Se iguala acá,
+   scopeado a esta sección, en vez de tocar MainLayout.css (global, usado
+   por todas las páginas). */
+.HijosDeDaanaPagePresentacion {
+  background-color: var(--bg);
+}
+
+/* ESPACIADO */
+/* Pedido explícito: apenas termina HijosDeDaanaPageLore tiene que arrancar
+   la galería, sin aire de por medio. Novedades.css trae padding:120px 0 y
+   NovedadesHeader.css un margin-bottom:80px pensados para una sección
+   independiente de ancho completo; acá se llevan a 0 directamente. Como el
+   título todavía no tiene texto definitivo (dataHijosDeDaanaPagePresentacion
+   lo deja en "", ver TODO en ese archivo) no hay nada que mostrar antes de
+   las cards. El :has() deja este comportamiento atado a que el título esté
+   vacío: en cuanto cargue el texto real, vuelve a reservarse aire arriba
+   para que no quede pegado al borde de la sección. */
+.HijosDeDaanaPagePresentacion .Novedades {
+  padding: 0;
+}
+
+.HijosDeDaanaPagePresentacion .Novedades-Header:has(.Novedades-HeaderTitle:empty) {
+  margin-bottom: 0;
+}
+
+/* Un <h2> vacío igual reserva la altura de su line-height por el font-size
+   clamp(2.5rem, 5vw, 5rem). Se colapsa mientras no tenga texto. */
+.HijosDeDaanaPagePresentacion .Novedades-HeaderTitle:empty {
+  line-height: 0;
+}
+
+/* COMPOSICIÓN DE LA IMAGEN */
+/* NovedadCard.css usa background-position:center. Las cards son más
+   anchas que altas (flex:1 sobre una galería de 700px) mientras que los
+   artes de fondo son retratos verticales: con cover + center, el recorte
+   se reparte mitad arriba/mitad abajo y se come la cabeza del personaje,
+   que en estos artes está cerca del borde superior. Ancla el recorte
+   arriba para conservar la cabeza completa y sacrificar sobrante por
+   abajo, sin cambiar background-size (cover sigue siendo correcto acá:
+   el problema era la posición, no el modo de ajuste). */
+.HijosDeDaanaPagePresentacion .Novedades-Card {
+  background-position: center top;
+}
+
+/* SEPARACIÓN DEL HOVER */
+/* Al hacer hover, .Novedades-Card__title-container sube 35px (ver
+   NovedadCard.css). Con la altura real de estas cards esa distancia es
+   mayor a la que queda libre entre el producto y el título, así que el
+   título termina superpuesto sobre la imagen del producto. Se reduce el
+   desplazamiento para conservar el efecto de "elevación" sin invadir la
+   imagen. */
+.HijosDeDaanaPagePresentacion .Novedades-Card:hover .Novedades-Card__title-container {
+  transform: translateY(-14px);
+}
+

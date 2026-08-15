@@ -1,5 +1,16 @@
 .HijosDeDaanaPage-lore {
-  padding: 120px 20px;
+  /* El padding inferior queda pintado con el propio arte de fondo (ver
+     backgroundImage inline en el JSX), y este arte -como el resto de los
+     fondos "Lore" del sitio (ver Toolkit2025JuicioVision-lore)- se apaga a
+     negro sobre el último tramo de su composición. Con background-size:cover
+     y el padding simétrico original (120px arriba y abajo), la sección
+     quedaba lo bastante alta como para mostrar el alto completo del arte sin
+     recortar nada, revelando ese apagado a negro entero justo antes de
+     HijosDeDaanaPagePresentacion. Se acorta el padding inferior para que la
+     sección recorte parte de ese tramo oscuro en vez de mostrarlo entero; el
+     superior no se toca porque la transición con el Hero no fue reportada
+     como un problema. */
+  padding: 120px 20px 56px;
 
   display: flex;
   justify-content: center;
@@ -13,8 +24,14 @@
   );
 
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .HijosDeDaanaPage-lore {
+    padding: 90px 20px 28px;
+  }
 }
 
 /* CONTENEDOR */

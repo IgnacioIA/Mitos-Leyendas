@@ -26,6 +26,22 @@
   gap: 40px;
 }
 
+/* OVERRIDE ESPACIADO DE TextoArribaContenidoAbajo (scoped a esta página) */
+/* Componente compartido: no se toca su CSS. Su padding vertical (8rem) y
+   gap interno (5rem) están pensados para secciones independientes de
+   ancho completo; acá se repiten 3 veces por bloque (Nuevas/Alter/Rework)
+   dentro de un mismo Paralax, y sumados generan demasiado espacio muerto
+   entre bloques de cartas. Se sobrescribe solo dentro de esta sección,
+   igual que en CartasToolkit2025JuicioVision.css, para no afectar a otros
+   consumidores del componente (ej. LootboxLegendariaEdicionPBX). */
+
+.HijosDeDaanaPageCartas-content .TextoArribaContenidoAbajo {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  gap: 2.5rem;
+}
+
 /* HEADER */
 
 .HijosDeDaanaPageCartas-header {
@@ -165,13 +181,32 @@
 
 /* RESPONSIVE */
 
+@media (max-width: 1024px) {
+  .HijosDeDaanaPageCartas-content .TextoArribaContenidoAbajo {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .HijosDeDaanaPageCartas-content {
     padding: 100px 20px;
     gap: 30px;
   }
 
+  .HijosDeDaanaPageCartas-content .TextoArribaContenidoAbajo {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
   .HijosDeDaanaPageCartas-description {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .HijosDeDaanaPageCartas-content .TextoArribaContenidoAbajo {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 }

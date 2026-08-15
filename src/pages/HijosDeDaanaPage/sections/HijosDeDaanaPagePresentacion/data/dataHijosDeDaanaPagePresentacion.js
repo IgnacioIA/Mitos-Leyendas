@@ -11,7 +11,7 @@ import producto3 from "../../../../../assets/HijosDeDaanaPage/HijosDeDaanaPagePr
 // falta reemplazarlos por el contenido definitivo.
 const dataHijosDeDaanaPagePresentacion = {
 
-  title: "[Título de la sección pendiente]",
+  title: "",
 
   items: [
     {
