@@ -42,6 +42,7 @@ const navItems = [
           { title: "LEYENDAS 4.0", path: "/mitos4.0" },
           { title: "SHOGUN 5", path: "/Shogun" },
           { title: "MAZOS INICIALES", path: "/mazoInicialPB" },
+          { title: "HIJOS DE DAANA", path: "/HijosDeDaanaPage" },
         ],
       },
       { title: "FORMATOS ALTERNATIVOS", items: [] },
