@@ -3,9 +3,11 @@ import "./styles/ParallaxBackgroundCinematografico.css";
 import useCinematicBackgroundStyles from "../backgroundCinematografico/useCinematicBackgroundStyles";
 
 export default function ParallaxBackgroundCinematografico({
+  id,
   image,
   overlay = 0.2,
   position = "center center",
+  size = "cover",
   showDivider = false,
   children,
 }) {
@@ -13,10 +15,14 @@ export default function ParallaxBackgroundCinematografico({
     image,
     overlay,
     position,
+    size,
   });
 
   return (
-    <section className="ParallaxBackgroundCinematografico">
+    <section
+      id={id}
+      className="ParallaxBackgroundCinematografico"
+    >
 
       <div className="ParallaxBackgroundCinematografico-Sticky">
 

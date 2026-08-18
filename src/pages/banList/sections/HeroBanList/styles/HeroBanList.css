@@ -1,0 +1,44 @@
+.HeroBanList {
+
+  min-height: 100vh;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+  color:white;
+
+  padding:2rem;
+
+}
+
+
+.HeroBanList h1 {
+
+  font-size:clamp(2rem,5vw,6rem);
+
+  margin:0;
+
+}
+
+
+.HeroBanList h2 {
+
+  color:#ffd815;
+
+
+  font-size:clamp(2rem,3vw,6rem);
+
+}
+
+
+.HeroBanList p {
+
+  max-width:800px;
+
+  font-size:1.2rem;
+
+}

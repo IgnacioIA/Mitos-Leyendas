@@ -1,0 +1,118 @@
+/* Botón: el poster completo (imagen + título) es un único elemento
+   interactivo -> un solo foco, un solo destino, mejor accesibilidad que
+   tener imagen y texto como enlaces separados. */
+.PosterBotonBanList {
+  display: block;
+
+  width: 100%;
+
+  text-decoration: none;
+  color: inherit;
+
+  cursor: pointer;
+
+  border-radius: 14px;
+}
+
+.PosterBotonBanList:focus-visible {
+  outline: 2px solid #ffd815;
+  outline-offset: 8px;
+
+  border-radius: 16px;
+}
+
+/* Envoltorio que flota: separado del marco (que maneja el hover) para que
+   la animación continua de flote no compita con la transición de hover
+   sobre el mismo transform (si estuvieran en el mismo elemento, la
+   animation pisaría siempre a la transition y el hover no se vería). */
+.PosterBotonBanList-float {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+
+  animation: PosterBotonBanListFloat 8s ease-in-out infinite;
+}
+
+/* Marco del poster: las imágenes tienen canal alfa y su propia silueta
+   (no son un rectángulo), así que el contenedor NO debe recortar
+   (overflow/border-radius) ni pintar una caja detrás (box-shadow):
+   eso es justamente lo que generaba el marco cuadrado. La sombra y el
+   hover se aplican con drop-shadow, que sigue el contorno real (alpha)
+   de la imagen en vez de su caja rectangular. */
+.PosterBotonBanList-marco {
+  position: relative;
+
+  width: 100%;
+  max-width: clamp(150px, 18vw, 260px);
+
+  filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.5));
+
+  transition:
+    transform 0.45s ease,
+    filter 0.45s ease;
+}
+
+.PosterBotonBanList:hover .PosterBotonBanList-marco,
+.PosterBotonBanList:focus-visible .PosterBotonBanList-marco {
+  transform: translateY(-10px) scale(1.02);
+
+  filter:
+    drop-shadow(0 26px 40px rgba(0, 0, 0, 0.6))
+    brightness(1.06);
+}
+
+/* Imagen: sin cover ni recorte, respeta su proporción real. */
+.PosterBotonBanList-imagen {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Título: fuera del marco visual del poster, debajo, como parte del bloque. */
+.PosterBotonBanList-titulo {
+  font-family: var(--font-anton);
+
+  color: white;
+
+  font-size: clamp(1.4rem, 2.8vw, 1.9rem);
+  font-weight: 400;
+
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.65);
+}
+
+/* Flote extremadamente sutil: mismo espíritu que DracoSidheHeroButton-arrow,
+   pero mucho más discreto y con un leve giro para que se sienta orgánico. */
+@keyframes PosterBotonBanListFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(-0.6deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .PosterBotonBanList-float {
+    animation: none;
+  }
+
+  .PosterBotonBanList-marco {
+    transition: none;
+  }
+}

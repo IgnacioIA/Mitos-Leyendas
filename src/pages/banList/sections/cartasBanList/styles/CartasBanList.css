@@ -1,0 +1,123 @@
+.CartasBanList {
+  position: relative;
+
+  width: 100%;
+
+  /* El parallax de ParallaxBackgroundCinematografico depende de
+     position:sticky en su hijo directo. overflow:hidden acá convertiría
+     a esta sección en el contenedor de scroll y rompería el sticky
+     (deja de "pegarse" al hacer scroll). Se usa overflow:visible +
+     isolation:isolate para lograr el mismo aislamiento de z-index sin
+     interferir con el sticky (mismo patrón que CartasToolkit2025JuicioVision). */
+  overflow: visible;
+  isolation: isolate;
+}
+
+/* CONTENIDO */
+
+.CartasBanList-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1600px;
+  margin: auto;
+
+  /* El sticky de ParallaxBackgroundCinematografico mide 100vh. Si el
+     contenido real de un bloque (título + secciones) es más bajo que
+     eso, el propio contenedor sticky (100vh) queda más alto que su caja
+     y, como overflow tiene que quedar en visible para que el sticky
+     funcione (ver CartasBanList arriba), ese sobrante se ve por encima
+     de la sección siguiente al hacer scroll. min-height:100vh asegura
+     que el contenedor de cada bloque nunca sea más bajo que su propio
+     fondo sticky, así el fondo nunca "sobra" hacia afuera. */
+  min-height: 100vh;
+
+  padding: 100px 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 40px;
+}
+
+/* OVERRIDE ESPACIADO DE TextoArribaContenidoAbajo (scoped a esta sección) */
+/* Componente compartido: no se toca su CSS. Se sobrescribe el padding
+   vertical solo cuando se renderiza dentro de CartasBanList, para no
+   afectar a otros consumidores del componente. */
+
+.CartasBanList-content .TextoArribaContenidoAbajo {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* IMAGEN DE TÍTULO */
+
+.CartasBanList-tituloImagen {
+  display: block;
+
+  width: 100%;
+  /* Un poco más discreta que antes (era fija en 420px): se nota que es
+     el título del bloque, pero sin protagonizar sobre las cartas. */
+  max-width: clamp(220px, 20vw, 300px);
+  height: auto;
+
+  margin: 0 auto;
+
+  object-fit: contain;
+
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* CARTA (carrousel) */
+
+.CartasBanList-Carta {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  user-select: none;
+  -webkit-user-drag: none;
+
+  transition:
+    transform .35s ease,
+    filter .35s ease;
+}
+
+.CartasBanList-Carta:hover {
+  transform: scale(1.02);
+
+  filter: brightness(1.05);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+  .CartasBanList-content .TextoArribaContenidoAbajo {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .CartasBanList-content {
+    padding: 100px 20px;
+    gap: 30px;
+  }
+
+  .CartasBanList-content .TextoArribaContenidoAbajo {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .CartasBanList-content .TextoArribaContenidoAbajo {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}

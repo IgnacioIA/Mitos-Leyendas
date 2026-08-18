@@ -60,7 +60,7 @@ export default function CartasToolkit2025JuicioVision() {
           key={bloque.id}
           image={bloque.fondo}
           overlay={0}
-          position="center center"
+          position="center bottom"
           showDivider
         >
 

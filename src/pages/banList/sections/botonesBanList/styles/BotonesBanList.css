@@ -1,0 +1,77 @@
+/* SECCIÓN: color sólido (sin imagen de fondo). position+z-index propios
+   para que esta sección pinte siempre por encima de cualquier resto visual
+   de la sección anterior (ver nota de overflow en CartasBanList.css). */
+.BotonesBanList {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+
+  background-color: #4a000f;
+}
+
+/* CONTENIDO */
+
+.BotonesBanList-content {
+  width: 100%;
+  max-width: 1600px;
+  margin: auto;
+
+  padding: clamp(4rem, 9vw, 7rem) clamp(1.25rem, 4vw, 3rem);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: clamp(2.5rem, 6vw, 4rem);
+}
+
+/* HEADER */
+
+.BotonesBanList-header {
+  width: 100%;
+
+  text-align: center;
+}
+
+.BotonesBanList-titulo {
+  margin: 0;
+
+  font-family: var(--font-anton);
+
+  color: white;
+
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  font-weight: 400;
+  line-height: 1.15;
+
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  text-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* GRID DE POSTERS */
+
+.BotonesBanList-grid {
+  width: 100%;
+  max-width: 1000px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  align-items: start;
+  justify-items: center;
+
+  gap: clamp(2rem, 6vw, 5rem);
+}
+
+@media (max-width: 640px) {
+  .BotonesBanList-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 340px;
+
+    gap: clamp(3rem, 12vw, 3.5rem);
+  }
+}
