@@ -22,6 +22,7 @@ import Toolkit2025JuicioVision from "../pages/Toolkit2025JuicioVision/Toolkit202
 import RazasPage from "../pages/razas/Razas.jsx";
 import DracoSidhe from "../pages/DracoSidhe/DracoSidhe.jsx";
 import HijosDeDaanaPage from "../pages/HijosDeDaanaPage/HijosDeDaanaPage.jsx";
+import SalonDeCampeones from "../pages/SalonDeCampeones/SalonDeCampeones.jsx";
 
 
 function AppRoutes() {
@@ -145,7 +146,13 @@ function AppRoutes() {
               element={<HijosDeDaanaPage />}
             />
 
-            
+            {/* Salon de Campeones */}
+            <Route
+              path="/SalonDeCampeones"
+              element={<SalonDeCampeones />}
+            />
+
+
           </Route>
         </Routes>
     </BrowserRouter>

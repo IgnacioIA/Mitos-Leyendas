@@ -1,0 +1,104 @@
+/* Cuadro: ancho base para que 3 entren por fila en desktop (ver
+   SalonDeCampeonesCuadros.css) y 2 en mobile (media query abajo). */
+.salonDeCampeonesCuadro {
+  flex: 0 1 300px;
+  max-width: 340px;
+
+  display: flex;
+  flex-direction: column;
+
+  /* El glow del hover sale de la imagen (drop-shadow) y puede crecer un
+     poco más allá de su propia caja al escalar: overflow visible acá y
+     en divSup para que no se recorte. */
+  overflow: visible;
+}
+
+@media (max-width: 700px) {
+  .salonDeCampeonesCuadro {
+    /* Porcentual (no un px fijo) para que 2 por fila siga funcionando
+       sea cual sea el ancho real de pantalla. */
+    flex-basis: calc(50% - 0.75rem);
+    max-width: 220px;
+  }
+}
+
+/* divSup: contiene la imagen. */
+.salonDeCampeonesCuadro-divSup {
+  width: 100%;
+
+  overflow: visible;
+}
+
+.salonDeCampeonesCuadro-imagen {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: 10px;
+
+  user-select: none;
+  -webkit-user-drag: none;
+
+  /* drop-shadow (no box-shadow) para que la iluminación siga el borde
+     real de la imagen, no la caja del cuadro completo (que incluye el
+     título/descripción de abajo). */
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.45));
+
+  transition:
+    transform 0.45s ease,
+    filter 0.45s ease;
+}
+
+.salonDeCampeonesCuadro:hover .salonDeCampeonesCuadro-imagen {
+  transform: scale(1.06);
+
+  filter:
+    drop-shadow(0 0 16px rgba(255, 255, 255, 0.55))
+    drop-shadow(0 0 34px rgba(255, 255, 255, 0.3))
+    drop-shadow(0 14px 26px rgba(0, 0, 0, 0.5));
+}
+
+/* divInf: título + descripción, mismo ancho que la imagen (hijo directo
+   del mismo contenedor de 100%, sin agregar padding lateral propio). */
+.salonDeCampeonesCuadro-divInf {
+  width: 100%;
+
+  margin-top: 0.85rem;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.35rem;
+
+  text-align: center;
+}
+
+.salonDeCampeonesCuadro-titulo {
+  margin: 0;
+
+  font-family: var(--font-anton);
+
+  color: white;
+
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  font-weight: 400;
+
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.salonDeCampeonesCuadro-descripcion {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+  line-height: 1.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .salonDeCampeonesCuadro-imagen {
+    transition: none;
+  }
+}
