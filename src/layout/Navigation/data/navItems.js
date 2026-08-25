@@ -91,11 +91,11 @@ const navItems = [
       {
         title: null,
         items: [
-          { title: "CRONOGRAMA DE LIGA", path: "/TeamsOficiales" },
+          { title: "CRONOGRAMA DE LIGA", path: "/CronologiaLiga" },
           { title: "SALÓN DE CAMPEONES", path: "/SalonDeCampeones" },
           { title: "JUNTADAS MITERAS", path: "/TeamsOficiales" },
           { title: "TEAMS", path: "/TeamsOficiales" },
-          { title: "TIENDAS", path: "/TiendasAmigas" },
+          { title: "TIENDAS AMIGAS", path: "/TiendasAmigas" },
         ],
       },
     ],

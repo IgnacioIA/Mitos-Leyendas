@@ -1,0 +1,52 @@
+/* Mismo lenguaje de hover que TiendasAmigasTarjeta (borde dorado + glow +
+   leve elevación), pero sin el "marco" de fondo propio: acá la tarjeta ES
+   la imagen (todas comparten la misma proporción real, 514x642), así que
+   el borde/glow quedan pegados directo al borde de la imagen en vez de
+   rodear un bloque de texto/logo aparte. */
+.cronologiaLigaTarjeta {
+  position: relative;
+
+  flex: 1 1 220px;
+  max-width: 260px;
+
+  /* Todas las imágenes de fechas comparten esta proporción real
+     (514x642): con aspect-ratio, todas las tarjetas quedan con
+     exactamente las mismas proporciones sin importar el ancho que les
+     toque en cada fila. */
+  aspect-ratio: 514 / 642;
+
+  border-radius: 16px;
+  overflow: hidden;
+
+  border: 2px solid rgba(255, 216, 21, 0.25);
+
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.35s ease;
+}
+
+.cronologiaLigaTarjeta:hover,
+.cronologiaLigaTarjeta:focus-within {
+  border-color: #ffd815;
+
+  box-shadow:
+    0 0 14px rgba(255, 216, 21, 0.25),
+    0 10px 22px rgba(0, 0, 0, 0.4);
+
+  transform: translateY(-2px);
+}
+
+.cronologiaLigaTarjeta-imagen {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  user-select: none;
+  -webkit-user-drag: none;
+}

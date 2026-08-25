@@ -1,0 +1,47 @@
+.tiendasAmigasBoton {
+  --tiendasAmigasBoton-color: #ffffff;
+
+  flex: 0 0 auto;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background-color: var(--tiendasAmigasBoton-color);
+  color: white;
+
+  font-size: 1.15rem;
+  text-decoration: none;
+
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+
+  transition:
+    filter 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Hover/focus independiente del hover de la tarjeta: solo intensifica
+   SU propio color (brightness/saturate sobre el mismo --color), nunca lo
+   cambia por el de otro tipo de botón.
+   Sin scale() a propósito: combinado con el ícono SVG centrado por flex
+   dentro de un círculo, el scale hacía que el ícono "saltara" de lugar
+   al terminar la transición y volver al tamaño normal. translateY solo
+   ya se nota como hover sin ese efecto. */
+.tiendasAmigasBoton:hover,
+.tiendasAmigasBoton:focus-visible {
+  filter: brightness(1.2) saturate(1.15);
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.tiendasAmigasBoton:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 3px;
+}

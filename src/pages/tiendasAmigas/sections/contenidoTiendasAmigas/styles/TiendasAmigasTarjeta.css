@@ -1,0 +1,143 @@
+.tiendasAmigasTarjeta {
+  position: relative;
+
+  flex: 1 1 260px;
+  max-width: 300px;
+
+  /* Alto base fijo: todas las tarjetas parten de la misma proporción sin
+     importar cuánto texto/botones tenga cada una. Si una en particular
+     necesita más espacio (dirección larga, etc.) puede crecer más allá
+     de este mínimo, pero nunca queda más chica. */
+  min-height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1rem;
+
+  padding: 1.75rem 1.5rem;
+
+  border-radius: 16px;
+  border: 2px solid rgba(255, 216, 21, 0.25);
+
+  background-image: url("../../../../../assets/tiendasAmigas/contenido/fondosFicha/FONDO FICHAS.webp");
+  background-size: cover;
+  background-position: center;
+
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.35s ease;
+}
+
+/* :focus-within cubre el caso "mouse sobre un botón interno": el botón
+   recibe :hover propio (ver TiendasAmigasBoton.css) sin que este borde se
+   apague, ya que :hover de la tarjeta ya incluye a sus descendientes por
+   definición del propio CSS (no hace falta JS/estado para esto). */
+.tiendasAmigasTarjeta:hover,
+.tiendasAmigasTarjeta:focus-within {
+  border-color: #ffd815;
+
+  box-shadow:
+    0 0 14px rgba(255, 216, 21, 0.25),
+    0 10px 22px rgba(0, 0, 0, 0.4);
+
+  transform: translateY(-2px);
+}
+
+/* LOGO */
+
+.tiendasAmigasTarjeta-logo {
+  display: block;
+
+  /* Alto fijo (no ancho): logos con proporciones distintas ocupan
+     siempre el mismo espacio, así el bloque de texto de abajo arranca
+     en la misma altura en todas las tarjetas. */
+  width: auto;
+  height: 90px;
+  max-width: 100%;
+
+  object-fit: contain;
+
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* TEXTO */
+
+.tiendasAmigasTarjeta-texto {
+  width: 100%;
+
+  /* Reserva el mismo alto sea cual sea la extensión real del título o la
+     dirección, para que el bloque de botones no arranque en una altura
+     distinta de una tarjeta a otra. */
+  min-height: 6rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 0.35rem;
+
+  text-align: center;
+
+  padding-top: 0.85rem;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.tiendasAmigasTarjeta-titulo {
+  margin: 0;
+
+  font-family: var(--font-anton);
+
+  color: #ffd815;
+
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  font-weight: 400;
+
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.tiendasAmigasTarjeta-descripcion {
+  margin: 0;
+
+  color: white;
+
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  line-height: 1.5;
+}
+
+.tiendasAmigasTarjeta-localidad {
+  color: #33d17a;
+  font-weight: 600;
+}
+
+/* BOTONES */
+/* max-width fijo de ~2 botones + gap: con flex-wrap + justify-content
+   centrado, esto solo alcanza a resolver TODOS los layouts pedidos
+   (1 centrado, 2 en fila, 3 -> 2+1 centrado, 4 -> 2+2) sin ninguna
+   condición en el JSX ni CSS específico por cantidad. */
+.tiendasAmigasTarjeta-botones {
+  width: 100%;
+  max-width: 100px;
+  /* top:auto empuja este bloque hasta el borde inferior de la tarjeta
+     (que ya tiene min-height/stretch parejo entre todas), sin importar
+     cuánto haya ocupado el logo o el texto arriba: los botones quedan
+     siempre alineados a la misma altura en toda la fila. */
+  margin: auto auto 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 0.75rem;
+
+  padding-top: 0.85rem;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}

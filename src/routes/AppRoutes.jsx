@@ -13,7 +13,7 @@ import BanList from "../pages/banList/BanList.jsx";
 import LorePage from "../pages/lorePage/LorePage.jsx";
 import Formatos from "../pages/formatos/Formatos.jsx";
 import EdicionPBX from "../pages/edicionPBX/EdicionPBX.jsx";
-import TiendasAmigas from "../pages/tiendaAmigas/TiendaAmigas.jsx";
+import TiendasAmigas from "../pages/tiendasAmigas/TiendasAmigas.jsx";
 import TeamsOficiales from "../pages/teamsOficiales/TeamsOficiales.jsx";
 import HistoriaMYL from "../pages/historiaMYL/HistoriaMYL.jsx";
 import PremierBsAs from "../pages/premierBsAs2026/Premier.jsx";
@@ -23,6 +23,7 @@ import RazasPage from "../pages/razas/Razas.jsx";
 import DracoSidhe from "../pages/DracoSidhe/DracoSidhe.jsx";
 import HijosDeDaanaPage from "../pages/HijosDeDaanaPage/HijosDeDaanaPage.jsx";
 import SalonDeCampeones from "../pages/SalonDeCampeones/SalonDeCampeones.jsx";
+import CronologiaLiga from "../pages/CronologiaLiga/CronologiaLiga.jsx";
 
 
 function AppRoutes() {
@@ -150,6 +151,12 @@ function AppRoutes() {
             <Route
               path="/SalonDeCampeones"
               element={<SalonDeCampeones />}
+            />
+
+            {/* Cronologia Liga */}
+            <Route
+              path="/CronologiaLiga"
+              element={<CronologiaLiga />}
             />
 
 
