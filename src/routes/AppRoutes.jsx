@@ -24,6 +24,7 @@ import DracoSidhe from "../pages/DracoSidhe/DracoSidhe.jsx";
 import HijosDeDaanaPage from "../pages/HijosDeDaanaPage/HijosDeDaanaPage.jsx";
 import SalonDeCampeones from "../pages/SalonDeCampeones/SalonDeCampeones.jsx";
 import CronologiaLiga from "../pages/CronologiaLiga/CronologiaLiga.jsx";
+import LoreIndex from "../pages/LoreIndex/LoreIndex.jsx";
 
 
 function AppRoutes() {
@@ -157,6 +158,12 @@ function AppRoutes() {
             <Route
               path="/CronologiaLiga"
               element={<CronologiaLiga />}
+            />
+
+            {/* Lore Index */}
+            <Route
+              path="/LoreIndex"
+              element={<LoreIndex />}
             />
 
 

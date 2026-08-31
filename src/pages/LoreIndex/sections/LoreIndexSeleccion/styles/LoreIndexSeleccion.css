@@ -1,0 +1,166 @@
+/* CONTENIDO (dentro de BackgroundCinematografico -> ya trae imagen +
+   overlay encapsulados; acá solo se define la composición interna). */
+.loreIndexSeleccion-content {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+
+  padding: clamp(3rem, 7vw, 5rem) clamp(1.25rem, 4vw, 3rem);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: clamp(2.5rem, 6vw, 4rem);
+}
+
+/* HEADER */
+
+.loreIndexSeleccion-header {
+  width: 100%;
+  max-width: 900px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1.25rem;
+
+  text-align: center;
+}
+
+.loreIndexSeleccion-titulo {
+  margin: 0;
+
+  font-family: var(--font-anton);
+
+  color: white;
+
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  font-weight: 400;
+  line-height: 1.15;
+
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  text-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+.loreIndexSeleccion-parrafo {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.7;
+}
+
+/* GRID DE DESTINOS: 4 columnas fijas en desktop (una al lado de la otra)
+   y 2 columnas en mobile (2 arriba + 2 abajo) — con exactamente 4 items
+   no queda ninguna fila incompleta, así que un grid de columnas es más
+   predecible acá que flex-wrap (que dependía de que el ancho de cada
+   item + gap entrara justo en el ancho del contenedor). */
+.loreIndexSeleccion-grid {
+  width: 100%;
+  max-width: 1000px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+@media (max-width: 700px) {
+  .loreIndexSeleccion-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ITEM: la imagen entera funciona como botón/enlace (Link o <a>, ver
+   LoreIndexSeleccion.jsx) — título y descripción quedan alineados debajo,
+   fuera del marco visual de la imagen pero dentro del mismo bloque. */
+.loreIndexSeleccion-item {
+  width: 100%;
+  max-width: 220px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 0.65rem;
+
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+
+  cursor: pointer;
+}
+
+.loreIndexSeleccion-item:focus-visible {
+  outline: 2px solid #ffd815;
+  outline-offset: 6px;
+
+  border-radius: 16px;
+}
+
+.loreIndexSeleccion-itemMarco {
+  display: block;
+
+  width: 100%;
+
+  border-radius: 14px;
+  overflow: hidden;
+
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4);
+}
+
+.loreIndexSeleccion-itemImagen {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  user-select: none;
+  -webkit-user-drag: none;
+
+  /* Solo la imagen crece en hover (no todo el item) y queda recortada
+     dentro de su propio marco -> sin saltos de layout ni desborde. */
+  transition: transform 0.4s ease;
+}
+
+.loreIndexSeleccion-item:hover .loreIndexSeleccion-itemImagen,
+.loreIndexSeleccion-item:focus-visible .loreIndexSeleccion-itemImagen {
+  transform: scale(1.06);
+}
+
+.loreIndexSeleccion-itemTitulo {
+  font-family: var(--font-anton);
+
+  color: #ffd815;
+
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  font-weight: 400;
+
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.loreIndexSeleccion-itemDescripcion {
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .loreIndexSeleccion-item {
+    max-width: 180px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loreIndexSeleccion-itemImagen {
+    transition: none;
+  }
+}
