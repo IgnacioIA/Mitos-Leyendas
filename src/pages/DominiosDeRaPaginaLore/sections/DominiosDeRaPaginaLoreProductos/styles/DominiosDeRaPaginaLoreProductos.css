@@ -1,0 +1,35 @@
+/* Overrides scopeados del componente compartido Novedades (src/components/Novedades).
+   No se toca su CSS: los cambios de acá solo aplican quedando dentro de
+   DominiosDeRaPaginaLoreProductos, sin afectar a otros consumidores (Home,
+   HijosDeDaanaPage, etc.). Mismo criterio que
+   HijosDeDaanaPagePresentacion.css. */
+
+.DominiosDeRaPaginaLoreProductos {
+  background-color: var(--bg);
+}
+
+/* ESPACIADO */
+/* Igual que en HijosDeDaanaPagePresentacion: mientras el título (data.title)
+   no tenga texto definitivo, no se reserva aire extra antes de las cards. En
+   cuanto cargue el texto real, el :has() vuelve a reservar el espacio. */
+.DominiosDeRaPaginaLoreProductos .Novedades {
+  padding: 0;
+}
+
+.DominiosDeRaPaginaLoreProductos .Novedades-Header:has(.Novedades-HeaderTitle:empty) {
+  margin-bottom: 0;
+}
+
+.DominiosDeRaPaginaLoreProductos .Novedades-HeaderTitle:empty {
+  line-height: 0;
+}
+
+/* COMPOSICIÓN DE LA IMAGEN */
+.DominiosDeRaPaginaLoreProductos .Novedades-Card {
+  background-position: center top;
+}
+
+/* SEPARACIÓN DEL HOVER */
+.DominiosDeRaPaginaLoreProductos .Novedades-Card:hover .Novedades-Card__title-container {
+  transform: translateY(-14px);
+}

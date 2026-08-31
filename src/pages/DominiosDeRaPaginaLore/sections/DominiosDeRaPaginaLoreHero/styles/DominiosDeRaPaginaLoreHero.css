@@ -1,0 +1,18 @@
+.DominiosDeRaPaginaLoreHero-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 0.9;
+}
+
+.DominiosDeRaPaginaLoreHero-title-top {
+  font-size: 0.30em;
+  line-height: 1;
+  margin-bottom: 0.15em;
+}
+
+.DominiosDeRaPaginaLoreHero-title-main {
+  font-size: 0.8em;
+  line-height: 0.9;
+}

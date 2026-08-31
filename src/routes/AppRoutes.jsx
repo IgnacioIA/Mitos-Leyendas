@@ -26,6 +26,7 @@ import SalonDeCampeones from "../pages/SalonDeCampeones/SalonDeCampeones.jsx";
 import CronologiaLiga from "../pages/CronologiaLiga/CronologiaLiga.jsx";
 import LoreIndex from "../pages/LoreIndex/LoreIndex.jsx";
 import LaOdiseaLore from "../pages/LaOdiseaLore/LaOdiseaLore.jsx";
+import DominiosDeRaPaginaLore from "../pages/DominiosDeRaPaginaLore/DominiosDeRaPaginaLore.jsx";
 
 
 function AppRoutes() {
@@ -171,6 +172,12 @@ function AppRoutes() {
             <Route
               path="/LaOdiseaLore"
               element={<LaOdiseaLore />}
+            />
+
+            {/* Dominios de Ra - Pagina Lore */}
+            <Route
+              path="/DominiosDeRaPaginaLore"
+              element={<DominiosDeRaPaginaLore />}
             />
 
 

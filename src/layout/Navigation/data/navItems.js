@@ -65,7 +65,7 @@ const navItems = [
         items: [
           { title: "RAZAS", path: "/RazasPage" },
           { title: "BANLIST PBX", path: "/BanList" },
-          { title: "LORE", path: "/LorePage" },
+          { title: "LORE", path: "/LoreIndex" },
         ],
       },
       {

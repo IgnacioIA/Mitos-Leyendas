@@ -1,0 +1,35 @@
+.DominiosDeRaPaginaCRework {
+  position: relative;
+
+  width: 100%;
+}
+
+/* ADAPTACIÓN A 5 CARTAS (scoped, no se toca CarrouselElastico) */
+/* La referencia (HijosDeDaanaPageCartasAzar) usa CarrouselElastico con 4
+   cartas de 240px fijos + gap de 1.5rem: 4 * 240 + 3 * 24 = 1032px, un
+   ancho que hoy entra cómodo en el contenedor (ElasticTrackWrapper tiene
+   justify-content:center + overflow:hidden). Con 5 cartas ese mismo ancho
+   fijo sube a 5 * 240 + 4 * 24 = 1296px, que en pantallas de laptop
+   (~1280-1366px, con el padding propio del wrapper y de
+   TextoArribaContenidoAbajo restando aire de por medio) ya no entra: al
+   estar centrado y recortado por overflow:hidden, el sobrante se reparte
+   mitad a cada lado y las cartas de las puntas quedan cortadas apenas
+   carga la sección, antes de arrastrar.
+
+   La solución no es tocar CarrouselElastico (usado también por
+   HijosDeDaanaPageCartasAzar) sino angostar el ancho de carta -con clamp()
+   en vez de un valor fijo- solo dentro de esta sección: el límite inferior
+   evita cartas demasiado chicas y el superior conserva un tamaño cercano al
+   original (240px) en pantallas grandes. Con este rango las 5 cartas entran
+   sin recorte en los anchos de viewport donde este carrousel desktop se
+   muestra (>768px, ya que por debajo CarrouselElastico cambia a
+   MobileCarousel con scroll-snap y no tiene este problema). El
+   comportamiento de arrastre (drag/spring) de ElasticTrack se mantiene
+   intacto como red de seguridad para el caso límite de ventanas angostas. */
+.DominiosDeRaPaginaCRework .ElasticCard img {
+  width: clamp(120px, 16vw, 220px);
+}
+
+.DominiosDeRaPaginaCRework .ElasticTrack {
+  gap: 1rem;
+}

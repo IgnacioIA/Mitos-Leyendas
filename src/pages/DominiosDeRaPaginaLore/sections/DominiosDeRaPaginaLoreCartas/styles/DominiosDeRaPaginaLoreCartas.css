@@ -1,0 +1,200 @@
+.DominiosDeRaPaginaLoreCartas {
+  position: relative;
+
+  width: 100%;
+  min-height: 1100px;
+
+  overflow: visible;
+  isolation: isolate;
+}
+
+/* CONTENIDO */
+
+.DominiosDeRaPaginaLoreCartas-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1600px;
+  margin: auto;
+
+  padding: 100px 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 40px;
+}
+
+/* OVERRIDE ESPACIADO DE TextoArribaContenidoAbajo (scoped a esta página) */
+/* Componente compartido: no se toca su CSS. Su padding vertical (8rem) y
+   gap interno (5rem) están pensados para secciones independientes de
+   ancho completo; acá se repiten 2 veces por bloque (Nuevas/Buy a Box)
+   dentro de un mismo Paralax, y sumados generan demasiado espacio muerto
+   entre bloques de cartas. Se sobrescribe solo dentro de esta sección,
+   igual que en HijosDeDaanaPageCartas.css, para no afectar a otros
+   consumidores del componente. */
+
+.DominiosDeRaPaginaLoreCartas-content .TextoArribaContenidoAbajo {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  gap: 2.5rem;
+}
+
+/* HEADER */
+
+.DominiosDeRaPaginaLoreCartas-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 24px;
+
+  max-width: 1000px;
+
+  text-align: center;
+}
+
+/* SUBTÍTULO */
+
+.DominiosDeRaPaginaLoreCartas-subtitle {
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* TÍTULO */
+
+.DominiosDeRaPaginaLoreCartas-title {
+  margin: 0;
+
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 900;
+  line-height: 1;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: white;
+
+  text-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+.DominiosDeRaPaginaLoreCartas-titleLine {
+  display: block;
+
+  white-space: nowrap;
+}
+
+.DominiosDeRaPaginaLoreCartas-titleAccent {
+  display: block;
+
+  margin-top: 12px;
+
+  /* Color e identidad visual: definidos por bloque.encabezado en el data,
+     inyectados como custom properties desde el JSX. El fallback reproduce
+     un acento por defecto para cualquier bloque que no lo defina. */
+  color: var(--titleAccent-color, #8ef7b0);
+
+  text-shadow:
+    var(--titleAccent-shadow, 0 0 25px rgba(60, 200, 120, 0.45));
+}
+
+/* DESCRIPCIÓN */
+
+.DominiosDeRaPaginaLoreCartas-description {
+  max-width: 700px;
+
+  font-size: 18px;
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* CARTA (carrousel) */
+
+.DominiosDeRaPaginaLoreCartas-Carta {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  user-select: none;
+  -webkit-user-drag: none;
+
+  transition:
+    transform .35s ease,
+    filter .35s ease;
+}
+
+.DominiosDeRaPaginaLoreCartas-Carta:hover {
+  transform: scale(1.02);
+
+  filter: brightness(1.05);
+}
+
+/* DOS IMÁGENES */
+
+.DominiosDeRaPaginaLoreCartas-DosImagenes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10rem;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.DominiosDeRaPaginaLoreCartas-DosImagenes img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+@media (max-width: 640px) {
+  .DominiosDeRaPaginaLoreCartas-DosImagenes {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    gap: 1rem;
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+  .DominiosDeRaPaginaLoreCartas-content .TextoArribaContenidoAbajo {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .DominiosDeRaPaginaLoreCartas-content {
+    padding: 100px 20px;
+    gap: 30px;
+  }
+
+  .DominiosDeRaPaginaLoreCartas-content .TextoArribaContenidoAbajo {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .DominiosDeRaPaginaLoreCartas-description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .DominiosDeRaPaginaLoreCartas-content .TextoArribaContenidoAbajo {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}

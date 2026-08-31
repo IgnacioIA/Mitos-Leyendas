@@ -1,0 +1,124 @@
+.DominiosDeRaPaginaPaquetitos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    background: #4a000f;
+    gap: 60px;
+    padding: 120px 80px;
+}
+
+/* ===========================
+   COLUMNA IZQUIERDA
+=========================== */
+
+.DominiosDeRaPaginaPaquetitos-left {
+    flex: 1.2;
+    z-index: 20;
+    transform: translateX(100px);
+}
+
+.DominiosDeRaPaginaPaquetitos-title {
+    margin-bottom: 20px;
+
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 40px;
+    white-space: pre-line;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.DominiosDeRaPaginaPaquetitos-textReveal {
+    overflow: hidden;
+}
+
+.DominiosDeRaPaginaPaquetitos-text {
+    max-width: 600px;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* ===========================
+   COLUMNA DERECHA
+=========================== */
+
+.DominiosDeRaPaginaPaquetitos-right {
+    display: flex;
+    justify-content: center;
+
+    flex: 1;
+}
+
+.DominiosDeRaPaginaPaquetitos-ilustracion {
+    position: relative;
+    width: 320px;
+
+    overflow: hidden;
+    border-radius: 16px;
+
+    background: transparent;
+
+    transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.DominiosDeRaPaginaPaquetitos-ilustracion img {
+    display: block;
+    width: 100%;
+}
+
+.DominiosDeRaPaginaPaquetitos-ilustracion:hover {
+    transform: scale(1.04);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 992px) {
+    .DominiosDeRaPaginaPaquetitos {
+        flex-direction: column;
+
+        padding: 80px 40px;
+
+        text-align: center;
+    }
+
+    /* La referencia (PaquetesDoblesSection) no resetea este transform en su
+       propio breakpoint de 992px, pero ahí queda enmascarado por su layout
+       particular. Acá, con flex-direction:column, ese translateX(100px)
+       desplaza la columna de texto fuera del viewport y genera overflow
+       horizontal -algo que el punto 10 de la guía pide evitar en toda la
+       página-, así que se resetea solo en esta adaptación. */
+    .DominiosDeRaPaginaPaquetitos-left {
+        transform: none;
+    }
+
+    .DominiosDeRaPaginaPaquetitos-text {
+        max-width: none;
+    }
+
+    .DominiosDeRaPaginaPaquetitos-ilustracion {
+        width: min(320px, 100%);
+    }
+}
+
+@media (max-width: 576px) {
+    .DominiosDeRaPaginaPaquetitos {
+        gap: 40px;
+        padding: 60px 20px;
+    }
+
+    .DominiosDeRaPaginaPaquetitos-title {
+        font-size: 32px;
+    }
+
+    .DominiosDeRaPaginaPaquetitos-text {
+        font-size: 15px;
+    }
+}

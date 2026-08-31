@@ -1,0 +1,62 @@
+.DominiosDeRaPaginaLoreExplicacion {
+  padding: 120px 20px 56px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 0, 0, 0.6),
+    transparent
+  );
+
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .DominiosDeRaPaginaLoreExplicacion {
+    padding: 90px 20px 28px;
+  }
+}
+
+/* CONTENEDOR */
+
+.DominiosDeRaPaginaLoreExplicacion-container {
+  max-width: 800px;
+  text-align: center;
+}
+
+/* TÍTULO */
+
+.DominiosDeRaPaginaLoreExplicacion-title {
+  margin-bottom: 30px;
+
+  font-size: clamp(2rem, 5vw, 3.5rem);
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  background: linear-gradient(180deg, #fff, #aaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    0 0 20px rgba(255, 255, 255, 0.2),
+    0 0 40px rgba(124, 58, 237, 0.4);
+}
+
+/* TEXTO */
+
+.DominiosDeRaPaginaLoreExplicacion-text {
+  margin-bottom: 20px;
+
+  font-size: 1.1rem;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.85);
+}
