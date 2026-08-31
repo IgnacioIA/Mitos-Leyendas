@@ -1,0 +1,115 @@
+.DosCartas {
+  position: relative;
+
+  width: clamp(220px, 26vw, 320px);
+
+  /* Espacio extra alrededor: las cartas se corren en diagonal más allá de
+     su propia caja (mismo criterio que CartaDeTres.css: sin overflow
+     hidden, necesitan poder "asomar" sin recortarse). */
+  padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1.25rem, 3vw, 2rem);
+
+  margin: 0 auto;
+}
+
+.DosCartas-drag {
+  position: relative;
+
+  width: 100%;
+
+  /* Alto real (no 100%): el contenedor .DosCartas no tiene una altura
+     propia de la que heredar (solo padding), así que un height:100% acá
+     colapsaba a 0 y con eso las cartas (position:absolute; inset:0)
+     desaparecían. aspect-ratio le da al drag un alto concreto, con la
+     misma proporción real de las cartas (401x575). */
+  aspect-ratio: 401 / 575;
+
+  cursor: grab;
+}
+
+.DosCartas-drag:active {
+  cursor: grabbing;
+}
+
+.DosCartas-carta {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+
+  width: 100%;
+
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.4s ease,
+    filter 0.4s ease;
+
+  will-change: transform, opacity, filter;
+}
+
+.DosCartas-carta img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+
+  border-radius: 14px;
+
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.4),
+    0 30px 55px rgba(0, 0, 0, 0.35);
+}
+
+/* Posiciones base fijas: enfrentadas en diagonal, cada una inclinada
+   hacia un lado distinto (independiente de cuál esté "al frente"). */
+.DosCartas-carta--a {
+  transform: translate(-14%, -6%) rotate(-8deg);
+}
+
+.DosCartas-carta--b {
+  transform: translate(14%, 6%) rotate(8deg);
+}
+
+/* Al frente: un poco más grande, nítida, por encima. */
+.DosCartas-carta--frente {
+  z-index: 2;
+
+  opacity: 1;
+
+  filter: brightness(1);
+}
+
+.DosCartas-carta--a.DosCartas-carta--frente {
+  transform: translate(-14%, -6%) rotate(-8deg) scale(1.05);
+}
+
+.DosCartas-carta--b.DosCartas-carta--frente {
+  transform: translate(14%, 6%) rotate(8deg) scale(1.05);
+}
+
+/* Atrás: ligeramente más chica y oscurecida, pero siempre visible. */
+.DosCartas-carta--atras {
+  z-index: 1;
+
+  opacity: 0.75;
+
+  filter: brightness(0.75);
+}
+
+.DosCartas-carta--a.DosCartas-carta--atras {
+  transform: translate(-14%, -6%) rotate(-8deg) scale(0.9);
+}
+
+.DosCartas-carta--b.DosCartas-carta--atras {
+  transform: translate(14%, 6%) rotate(8deg) scale(0.9);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .DosCartas-carta {
+    transition: none;
+  }
+}

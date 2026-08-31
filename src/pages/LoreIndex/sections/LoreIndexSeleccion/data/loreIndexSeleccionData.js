@@ -24,7 +24,7 @@ const itemImagen = Object.values(itemImagenModules)[0];
 // Agregar/quitar un destino es agregar/quitar un objeto acá, no hay que
 // tocar el componente.
 const ITEMS_BASE = [
-  { id: "destino-1", titulo: "LA ODISEA", descripcion: "CONTADA EN 13 CARTAS", alt: "", path: "" },
+  { id: "destino-1", titulo: "LA ODISEA", descripcion: "CONTADA EN 13 CARTAS", alt: "", path: "/LaOdiseaLore" },
   { id: "destino-2", titulo: "LA GUERRA DE TROYA", descripcion: "CONTADA EN 10 CARTAS", alt: "", path: "" },
   { id: "destino-3", titulo: "REY ARTURO Y SUS CABALLEROS", descripcion: "CAMPEÓN LIGA ARGENTINA DE MITOS Y LEYENDAS", alt: "", path: "" },
   { id: "destino-4", titulo: "PRÓXIMAMENTE", descripcion: "", alt: "", path: "" },

@@ -1,0 +1,96 @@
+/* CONTENIDO (dentro de ParallaxBackgroundCinematografico -> imagen +
+   overlay + scroll con sticky ya encapsulados ahí; acá solo se define la
+   composición interna). */
+.laOdiseaContenido-content {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+
+  /* El fondo sticky del parallax mide 100vh. Si este contenido llegara a
+     ser más bajo que eso (hoy no pasa: header + 13 bloques superan de
+     sobra un viewport), el fondo sobraría hacia la sección de abajo —
+     mismo caso que solucionamos en CartasBanList. min-height:100vh lo
+     evita de raíz, sea cual sea la cantidad real de bloques. */
+  min-height: 100vh;
+
+  padding: clamp(3rem, 7vw, 5rem) clamp(1.25rem, 4vw, 3rem);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: clamp(2.5rem, 6vw, 4rem);
+}
+
+/* HEADER */
+
+.laOdiseaContenido-header {
+  width: 100%;
+  max-width: 800px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 0.75rem;
+
+  text-align: center;
+}
+
+.laOdiseaContenido-subtitulo {
+  font-family: var(--font-anton);
+
+  /* Verde definido acá (CSS de la página), no vía estilo inline. */
+  color: #1ecc0a ;
+
+  font-size: clamp(0.95rem, 1.5vw, 4rem);
+  font-weight: 400;
+
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.laOdiseaContenido-titulo {
+  margin: 0;
+
+  font-family: var(--font-anton);
+
+  color: white;
+
+  font-size: clamp(6rem, 10vw, 15rem);
+  font-weight: 500;
+  line-height: 1.15;
+
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  text-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+.laOdiseaContenido-descripcion {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: clamp(1rem, 2vw, 3rem);
+  line-height: 1.7;
+}
+
+/* Fragmento con color propio: el valor real viene del data como variable
+   CSS (--fragmentoColor, ver LaOdiseaContenido.jsx), nunca como estilo de
+   color fijo acá — así admite cualquier color sin tocar este archivo. */
+.laOdiseaContenido-fragmento {
+  color: var(--fragmentoColor, inherit);
+}
+
+/* BLOQUES */
+
+.laOdiseaContenido-bloques {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: clamp(3rem, 8vw, 6rem);
+}

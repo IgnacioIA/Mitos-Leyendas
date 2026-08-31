@@ -1,0 +1,88 @@
+.laOdiseaContenidoBloque {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: clamp(2.5rem, 6vw, 5rem);
+}
+
+/* Alternancia imagen/texto: mismo mecanismo que CartaMvConTexto.css
+   (row-reverse por clase modificadora), la posición dentro del array de
+   bloques decide si se aplica o no — ver index % 2 en LaOdiseaContenido.jsx. */
+.laOdiseaContenidoBloque--invertido {
+  flex-direction: row-reverse;
+}
+
+.laOdiseaContenidoBloque-visual {
+  flex: 0 0 auto;
+}
+
+.laOdiseaContenidoBloque-texto {
+  flex: 1 1 480px;
+  max-width: 560px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.laOdiseaContenidoBloque-titulo {
+  margin: 0;
+
+  font-family: var(--font-anton);
+
+  color: white;
+
+  font-size: clamp(2rem, 4vw, 6rem);
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.laOdiseaContenidoBloque-subtitulo {
+  margin: 0;
+
+  color: #ffd815;
+
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  font-weight: 600;
+}
+
+.laOdiseaContenidoBloque-descripcion {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: clamp(0.95rem, 1.3vw, 1.05rem);
+  line-height: 1.7;
+}
+
+/* Caso "1 imagen": FrameFX no fuerza tamaño (lo define el hijo), así que
+   el ancho de la carta única se define acá. */
+.laOdiseaContenidoBloque-imagenUnica {
+  display: block;
+
+  width: clamp(220px, 24vw, 300px);
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .laOdiseaContenidoBloque,
+  .laOdiseaContenidoBloque--invertido {
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 2rem;
+  }
+
+  .laOdiseaContenidoBloque-texto {
+    align-items: center;
+    max-width: 100%;
+  }
+}

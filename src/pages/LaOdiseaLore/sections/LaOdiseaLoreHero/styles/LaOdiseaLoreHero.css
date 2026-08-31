@@ -1,0 +1,83 @@
+/* Idéntico a LoreIndexHero.css a propósito (mismo tamaño, color,
+   tipografía y responsive) — clases propias para no colisionar con esa
+   página, pero mismo sistema visual. */
+.laOdiseaLoreHero {
+    width:100%;
+    height:clamp(220px,28vw,320px);
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+}
+
+@media (max-width: 768px) {
+
+    .laOdiseaLoreHero {
+        height: 120px;
+        background-position: center;
+    }
+
+}
+
+/* Contenido opcional (título/subtítulo/descripción): solo se renderiza si
+   el data lo define, ver LaOdiseaLoreHero.jsx. */
+.laOdiseaLoreHero-content {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 0.5rem;
+
+    text-align: center;
+    padding: 0 1.5rem;
+}
+
+.laOdiseaLoreHero-titulo {
+    margin: 0;
+
+    font-family: var(--font-anton);
+
+    color: white;
+
+    font-size: clamp(2rem, 6vw, 8rem);
+    font-weight: 400;
+
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+
+    text-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+.laOdiseaLoreHero-subtitulo {
+    margin: 0;
+
+    color: #ffd815;
+
+    font-size: clamp(1rem, 2vw, 5rem);
+
+    text-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+}
+
+.laOdiseaLoreHero-descripcion {
+    margin: 0;
+
+    max-width: 700px;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.6;
+
+    text-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+}
