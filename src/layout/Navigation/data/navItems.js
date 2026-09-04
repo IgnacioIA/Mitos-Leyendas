@@ -16,12 +16,17 @@ const navItems = [
     title: "NOVEDADES",
     type: "mega",
     columns: [
-      { title: "PRÓXIMAMENTE", items: [] },
+      {
+        title: "PRÓXIMAMENTE",
+        items: [
+          { title: "RELATOS DE HIJOS DE RA", path: "/DominiosDeRaPaginaLore" },
+        ],
+      },
       {
         title: "PRODUCTOS RECIENTES",
         items: [
-          { title: "KITS DE BATALLA: DRACO/SIDHE", path: "/DracoSidhe" },
           { title: "LEYENDAS 4.0", path: "/mitos4.0" },
+          { title: "KITS DE BATALLA: DRACO/SIDHE", path: "/DracoSidhe" },
           { title: "SHOGUN 5", path: "/Shogun" },
         ],
       },
@@ -35,14 +40,14 @@ const navItems = [
       {
         title: "FORMATO PRINCIPAL",
         items: [
-          { title: "KITS DE BATALLA: DRACO/SIDHE", path: "/DracoSidhe" },
-          { title: "TOOLKIT PBX 2026: DESAFÍO - AMATISTA", path: "/DesafioAmatista" },
-          { title: "TOOLKIT PBX 2025: JUICIO Y VISIÓN - NOBLEZA Y PODER", path: "/Toolkit2025JuicioVision" },
-          { title: "LOOTBOX PBX 2025", path: "/EdicionPBX" },
           { title: "LEYENDAS 4.0", path: "/mitos4.0" },
+          { title: "KITS DE BATALLA: DRACO/SIDHE", path: "/DracoSidhe" },
           { title: "SHOGUN 5", path: "/Shogun" },
+          { title: "LOOTBOX PBX 2025", path: "/EdicionPBX" },
           { title: "MAZOS INICIALES", path: "/mazoInicialPB" },
           { title: "RELATOS DE HIJOS DE DAANA", path: "/HijosDeDaanaPage" },
+          { title: "TOOLKIT PBX 2026: DESAFÍO - AMATISTA", path: "/DesafioAmatista" },
+          { title: "TOOLKIT PBX 2025: JUICIO Y VISIÓN - NOBLEZA Y PODER", path: "/Toolkit2025JuicioVision" },
         ],
       },
       { title: "FORMATOS ALTERNATIVOS", items: [] },
@@ -71,7 +76,7 @@ const navItems = [
       {
         title: "ACERCA DEL JUEGO",
         items: [
-          { title: "Aprende a jugar", path: "/Apj" },
+          { title: "APRENDER A JUGAR", path: "/Apj" },
           { title: "LINEA DEL TIEMPO", path: "/HistoriaMYL" },
         ],
       },
@@ -93,9 +98,8 @@ const navItems = [
         items: [
           { title: "CRONOGRAMA DE LIGA", path: "/CronologiaLiga" },
           { title: "SALÓN DE CAMPEONES", path: "/SalonDeCampeones" },
-          { title: "JUNTADAS MITERAS", path: "/TeamsOficiales" },
-          { title: "TEAMS", path: "/TeamsOficiales" },
           { title: "TIENDAS AMIGAS", path: "/TiendasAmigas" },
+          { title: "TEAMS", path: "/TeamsOficiales" },
         ],
       },
     ],

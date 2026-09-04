@@ -1,15 +1,14 @@
 import { Link } from "react-router-dom";
 import { FaInstagram, FaFacebook, FaYoutube, FaDiscord } from "react-icons/fa";
 
-import logo from "../../assets/Header/LOGO MYL ARGENTINA.png";
+import logo from "../../assets/Header/LOGO MYL ARGENTINA.webp";
 import "./Footer.css";
 
 // TODO: reemplazar por las URLs reales de cada red social
 const SOCIAL_LINKS = [
-  { id: "instagram", label: "Instagram", href: "#", Icon: FaInstagram },
-  { id: "facebook", label: "Facebook", href: "#", Icon: FaFacebook },
-  { id: "youtube", label: "YouTube", href: "#", Icon: FaYoutube },
-  { id: "discord", label: "Discord", href: "#", Icon: FaDiscord },
+  { id: "instagram", label: "Instagram", href: "https://www.instagram.com/myl_oficial_argentina/", Icon: FaInstagram },
+  { id: "facebook", label: "Facebook", href: "https://www.facebook.com/profile.php?id=61564778518712", Icon: FaFacebook },
+  { id: "youtube", label: "YouTube", href: "https://www.youtube.com/@MitosyLeyendasArgentinaOficial", Icon: FaYoutube },
 ];
 
 export default function Footer() {
