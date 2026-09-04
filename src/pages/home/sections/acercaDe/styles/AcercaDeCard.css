@@ -47,19 +47,22 @@
 
 .acerca-de-card__title {
   position: absolute;
-
+  
+  /* 1. Ocupa todo el tamaño de la tarjeta para poder centrar dentro */
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
 
+  /* 2. Activa Flexbox para centrar el contenido */
+  display: flex;
+  justify-content: center; /* Centrado horizontal */
+  align-items: center;     /* Centrado vertical */
+
   padding: 24px;
-
   font-size: 2.5rem;
-
   font-weight: 700;
-
   text-align: center;
-
   color: white;
 
   background:

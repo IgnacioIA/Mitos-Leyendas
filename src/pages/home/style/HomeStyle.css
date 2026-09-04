@@ -1,3 +1,18 @@
 .Home-container {
   background-color: #260009;
 }
+
+/* Override scopeado del componente compartido Novedades/NovedadCard
+   (src/components/Novedades): no se toca su CSS para no afectar a otros
+   consumidores (HijosDeDaanaPagePresentacion, DominiosDeRaPaginaLoreProductos,
+   etc.). El primer producto de dataNovedadesHome (CAJAS.webp) tiene las 3
+   cajas ocupando casi todo el borde de su imagen, a diferencia del resto
+   (Display, Shogun 5, Lootbox), que traen bastante aire propio alrededor
+   del producto dentro del archivo. Con el mismo ancho de tarjeta
+   (Novedades-Card__product, width:100% + object-fit:contain), esa
+   diferencia de margen interno hace que esta primera imagen se vea mucho
+   más grande que las demás. Se acota solo esta tarjeta con un max-width
+   (queda centrada igual, por el translateX(-50%) del CSS compartido). */
+.Home-container .Novedades-Card:first-child .Novedades-Card__product {
+  max-width: 75%;
+}

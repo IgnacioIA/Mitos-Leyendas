@@ -26,10 +26,10 @@ const TIENDAS_CABA = [
     titulo: "EL ABISMO DE HELM",
     descripcion: { texto: "Av. Corrientes 5239, Local 38", localidad: "- CABA" },
     botones: [
-      { tipo: "instagram", url: "#" },
-      { tipo: "whatsapp", url: "#" },
-      { tipo: "web", url: "#" },
-      { tipo: "maps", url: "#" },
+      { tipo: "instagram", url: "https://www.instagram.com/elabismodehelmwargames" },
+      { tipo: "whatsapp", url: "https://api.whatsapp.com/send/?phone=541140387407&text&type=phone_number&app_absent=0" },
+      { tipo: "web", url: "https://www.elabismodehelmwargames.ar/" },
+      { tipo: "maps", url: "https://www.google.com/maps?q=Av.+Corrientes+5239,+Villa+Crespo,+Buenos+Aires" },
     ],
   },
   {
@@ -37,21 +37,21 @@ const TIENDAS_CABA = [
     titulo: "5 A LA CARA",
     descripcion: { texto: "SALTA 121", localidad: "- CABA" },
     botones: [
-      { tipo: "instagram", url: "#" },
-      { tipo: "maps", url: "#" },
-      { tipo: "web", url: "#" },
+      { tipo: "instagram", url: "https://www.instagram.com/5alacara_store" },
+      { tipo: "maps", url: "https://www.google.com/maps?q=Salta+121,+Buenos+Aires" },
+      { tipo: "web", url: "https://5alacara.com.ar/" },
       
     ],
   },
   {
     id: "tienda-3",
-    titulo: "DIGA GAME",
+    titulo: "DIMA GAME",
     descripcion: { texto: "Av. Avellaneda 907 - CABALLITO", localidad: "- CABA" },
     botones: [
-      { tipo: "instagram", url: "#" },
-      { tipo: "whatsapp", url: "#" },
-      { tipo: "web", url: "#" },
-      { tipo: "maps", url: "#" },
+      { tipo: "instagram", url: "https://www.instagram.com/dimagames" },
+      { tipo: "whatsapp", url: "https://api.whatsapp.com/send/?phone=541125512349&text&type=phone_number&app_absent=0" },
+      { tipo: "web", url: "https://dimagame.com/" },
+      { tipo: "maps", url: "https://www.google.com/maps?q=Av.+Avellaneda+907,+Caballito,+Buenos+Aires" },
     ],
   },
   {
@@ -59,9 +59,9 @@ const TIENDAS_CABA = [
     titulo: "RANCHO STORE",
     descripcion: { texto: "CERVANTES 1099", localidad: "- CABA" },
     botones: [
-      { tipo: "instagram", url: "#" },
-      { tipo: "maps", url: "#" },
-      { tipo: "web", url: "#" },
+      { tipo: "instagram", url: "https://www.instagram.com/ranchodelprofesor" },
+      { tipo: "maps", url: "https://www.google.com/maps?q=Cervantes+1099,+Floresta,+Buenos+Aires" },
+      { tipo: "web", url: "https://ranchostoretcg.com.ar/" },
     ],
   },
   {
@@ -69,9 +69,9 @@ const TIENDAS_CABA = [
     titulo: "PHOENIX REBORN",
     descripcion: { texto: "Cnel. Ramón Lista 5126 (sede Devoto)", localidad: "- CABA" },
     botones: [
-      { tipo: "instagram", url: "#" },
-      { tipo: "maps", url: "#" },
-      { tipo: "web", url: "#" },
+      { tipo: "instagram", url: "https://www.instagram.com/phoenixrebornstore" },
+      { tipo: "maps", url: "https://www.google.com/maps?q=Ramón+Lista+5126,+Villa+Devoto,+Buenos+Aires" },
+      { tipo: "web", url: "https://phoenixreborn.com.ar/" },
     ],
   },
 ];
@@ -82,9 +82,9 @@ const TIENDAS_BsAs = [
     titulo: "DOJO MANGA STORE",
     descripcion: { texto: "Basavilbaso 630", localidad: "- Cañuelas" },
     botones: [
-      { tipo: "instagram", url: "#" },
-      { tipo: "maps", url: "#" },
-      { tipo: "web", url: "#" },
+      { tipo: "instagram", url: "https://www.instagram.com/dojomangastore/?hl=es" },
+      { tipo: "maps", url: "https://maps.app.goo.gl/hxruS677WrnJdhxT6" },
+      { tipo: "web", url: "https://www.dojomangastore.com.ar/?srsltid=AfmBOooYuM10tTTXs8twYFMSPCi4yyoPJluH_RO8a3NHQVn8V3CazY6W" },
       
     ],
   },
@@ -93,8 +93,8 @@ const TIENDAS_BsAs = [
     titulo: "LA CARTA NOSTRA",
     descripcion: { texto: "Hipólito Yrigoyen 1400", localidad: "- Quilmes" },
     botones: [
-      { tipo: "instagram", url: "#" },
-      { tipo: "maps", url: "#" },
+      { tipo: "instagram", url: "https://www.instagram.com/la_carta_nostra/" },
+      { tipo: "maps", url: "https://maps.app.goo.gl/pj5Bb8EKWj3RTXW1A" },
     ],
   },
   {
@@ -102,10 +102,10 @@ const TIENDAS_BsAs = [
     titulo: "KRAKEN STORE",
     descripcion: { texto: "Av. Conquista del Desierto 164", localidad: "- Ezeiza" },
     botones: [
-      { tipo: "instagram", url: "#" },
-      { tipo: "whatsapp", url: "#" },
-      { tipo: "web", url: "#" },
-      { tipo: "maps", url: "#" },
+      { tipo: "instagram", url: "https://www.instagram.com/krakennstore" },
+      { tipo: "whatsapp", url: "https://api.whatsapp.com/send/?phone=541131870661&text&type=phone_number&app_absent=0" },
+      { tipo: "web", url: "https://kraken.empretienda.com.ar/" },
+      { tipo: "maps", url: "https://www.google.com/maps?q=Av.+Conquista+del+Desierto+164,+Ezeiza" },
     ],
   },
   {
@@ -113,9 +113,9 @@ const TIENDAS_BsAs = [
     titulo: "MY LITTLE KIOTO",
     descripcion: { texto: "Leandro Niceforo Alem 6824", localidad: "- Martn Coronado" },
     botones: [
-      { tipo: "instagram", url: "#" },
-      { tipo: "web", url: "#" },
-      { tipo: "maps", url: "#" },
+      { tipo: "instagram", url: "https://www.instagram.com/mylittlekioto" },
+      { tipo: "web", url: "https://mylittlekioto.com/" },
+      { tipo: "maps", url: "https://www.google.com/maps?q=Leandro+N.+Alem+6824,+Martín+Coronado" },
     ],
   },
 ];
@@ -123,12 +123,12 @@ const TIENDAS_BsAs = [
 const TIENDAS_Rosario = [
   {
     id: "tienda-10",
-    titulo: "LA CARTA NOSTRA",
+    titulo: "CIRCUNLOQUIO",
     descripcion: { texto: "Zeballos 1107", localidad: "- ROSARIO" },
     botones: [
-      { tipo: "instagram", url: "#" },
-      { tipo: "whatsapp", url: "#" },
-      { tipo: "maps", url: "#" },
+      { tipo: "instagram", url: "https://www.instagram.com/circunloquiojuegos" },
+      { tipo: "whatsapp", url: "https://api.whatsapp.com/send/?phone=5493413487351&text&type=phone_number&app_absent=0" },
+      { tipo: "maps", url: "https://www.google.com/maps?q=Zeballos+1107,+Rosario" },
     ],
   },
  
@@ -140,9 +140,9 @@ const TIENDAS_MDQ = [
     titulo: "EL ÁTICO DE HISUI",
     descripcion: { texto: "Catamarca 1657, 1° Piso (dentro de Game Over Esports)", localidad: "- Mar del Plata" },
     botones: [
-      { tipo: "instagram", url: "#" },
-      { tipo: "web", url: "#" },
-      { tipo: "maps", url: "#" },
+      { tipo: "instagram", url: "https://www.instagram.com/el.atico.de.hisui" },
+      { tipo: "web", url: "https://aticodehisui.com/" },
+      { tipo: "maps", url: "https://www.google.com/maps?q=Catamarca+1657,+Mar+del+Plata" },
     ],
   },
 ];
@@ -153,13 +153,26 @@ const TIENDAS_SanLuis = [
     titulo: "EL ÁTICO CLUB",
     descripcion: { texto: "BOLIVAR 881", localidad: "- SAN LUIS" },
     botones: [
-      { tipo: "instagram", url: "#" },
-      { tipo: "whatsapp", url: "#" },
-      { tipo: "maps", url: "#" },
+      { tipo: "instagram", url: "https://www.instagram.com/el.atico.club" },
+      { tipo: "whatsapp", url: "https://api.whatsapp.com/send/?phone=5492664487329&text&type=phone_number&app_absent=0" },
+      { tipo: "maps", url: "https://www.google.com/maps?q=Bolívar+881,+San+Luis" },
     ],
   },
 ];
 
+const TIENDAS_PuntaAlta = [
+ {
+    id: "tienda-13",
+    titulo: "DE ONE MANA",
+    descripcion: { texto: "Av. Colón y Rivadavia", localidad: "- PUNTA ALTA" },
+    botones: [
+      { tipo: "instagram", url: "https://www.instagram.com/the.one.mana.puntaalta" },
+      { tipo: "whatsapp", url: "https://api.whatsapp.com/send/?phone=5492932476101&text&type=phone_number&app_absent=0" },
+      { tipo: "web", url: "https://theonemana.mitiendanube.com/" },
+      { tipo: "maps", url: "https://www.google.com/maps?q=Av.+Colón+y+Rivadavia,+Punta+Alta" },
+    ],
+  },
+];
 
 
 const tarjetasCABA = TIENDAS_CABA.map((tarjeta, index) => ({
@@ -202,6 +215,18 @@ const tarjetasSanLuis = TIENDAS_SanLuis.map((tarjeta, index) => ({
   ],
 }));
 
+const tarjetasPuntaAlta = TIENDAS_PuntaAlta.map((tarjeta, index) => ({
+  ...tarjeta,
+  logo: logos[
+    TIENDAS_CABA.length +
+    TIENDAS_BsAs.length +
+    TIENDAS_Rosario.length +
+    TIENDAS_MDQ.length +
+    TIENDAS_SanLuis.length +
+    index
+  ],
+}));
+
 export const dataContenidoTiendasAmigas = {
   secciones: [
     {
@@ -215,18 +240,23 @@ export const dataContenidoTiendasAmigas = {
       tarjetas: tarjetasBsAs,
     },
     {
+      id: "tiendas-PuntaAlta",
+      titulo: "TIENDAS EN PUNTA ALTA:",
+      tarjetas: tarjetasPuntaAlta,
+    },
+    {
       id: "tiendas-Rosario",
       titulo: "TIENDAS EN ROSARIO:",
       tarjetas: tarjetasRosario,
     },
     {
       id: "tiendas-MDQ",
-      titulo: "TIENDAS EN MAR DEL PLATA::",
+      titulo: "TIENDAS EN MAR DEL PLATA:",
       tarjetas: tarjetasMDQ,
     },
     {
       id: "tiendas-SanLuis",
-      titulo: "TIENDAS EN SAN LUIS::",
+      titulo: "TIENDAS EN SAN LUIS:",
       tarjetas: tarjetasSanLuis,
     },
 

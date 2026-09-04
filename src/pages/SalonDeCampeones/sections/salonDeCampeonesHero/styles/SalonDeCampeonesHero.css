@@ -61,9 +61,11 @@
 .salonDeCampeonesHero-subtitulo {
     margin: 0;
 
-    color: #ffd815 ;
+    color: #ffd815;
 
-    font-size: clamp(1rem, 2vw, 5rem);
+    font-weight: 900;
+
+    font-size: clamp(1rem, 2vw, 6rem);
 
     text-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
 }

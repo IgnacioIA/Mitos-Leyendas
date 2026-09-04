@@ -1,6 +1,5 @@
-import cajas from "../../../../../assets/DominiosDeRaPaginaLore/Paquetitos/CAJAS.webp";
+import cajas from "../../../../../assets/DominiosDeRaPaginaLore/Paquetitos/BOOSTERS.webp";
 
-// TODO: completar título y descripción definitivos de esta sección.
 const dataDominiosDeRaPaginaPaquetitos = {
     titulo: "AÑADÍ CARTAS A TUS MAZOS",
 

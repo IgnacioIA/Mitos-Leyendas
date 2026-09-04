@@ -11,42 +11,42 @@ export const INTERES_ITEMS = [
     id: 1,
     image: Imagen1,
     alt: "Imagen 1",
-    url: "/mitos4.0",
+    url: "/DominiosDeRaPaginaLore",
   },
 
   {
     id: 2,
     image: Imagen2,
     alt: "Imagen 2",
-    url: "/Shogun",
+    url: "/https://www.mylargentina.com/productos/entrada-premier-argentina-club-coronel-mom-10-de-octubre-1pxwh/",
   },
 
   {
     id: 3,
     image: Imagen3,
     alt: "Imagen 3",
-    url: "/PremierBsAs2026",
+    url: "/BanList",
   },
 
   {
     id: 4,
     image: Imagen4,
     alt: "Imagen 4",
-    url: "/BanList",
+    url: "/mitos4.0",
   },
 
   {
     id: 5,
     image: Imagen5,
     alt: "Imagen 5",
-    url: "https://www.instagram.com/p/DYnwaTCjbSy/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    url: "/Shogun",
   },
 
   {
     id: 6,
     image: Imagen6,
     alt: "Imagen 6",
-    url: "/mazoInicialPB",
+    url: "https://www.instagram.com/p/DYnwaTCjbSy/?img_index=1",
   }
 
 ];

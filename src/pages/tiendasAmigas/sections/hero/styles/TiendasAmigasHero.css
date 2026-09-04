@@ -36,10 +36,10 @@
     flex-direction: column;
     align-items: center;
 
-    gap: 0.5rem;
+    gap: 0.01rem;
 
     text-align: center;
-    padding: 0 1.5rem;
+    padding: 0 1.0rem;
 }
 
 .tiendasAmigasHero-titulo {
@@ -50,7 +50,7 @@
     color: white;
 
     font-size: clamp(3rem, 6vw, 6rem);
-    font-weight: 400;
+    font-weight: 500;
 
     text-transform: uppercase;
     letter-spacing: 0.03em;
@@ -64,6 +64,7 @@
     color: #ffd815 ;
 
     font-size: clamp(1rem, 2vw, 6rem);
+    font-weight: 900;
 
     text-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
 }

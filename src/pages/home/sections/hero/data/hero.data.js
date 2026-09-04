@@ -1,8 +1,14 @@
 import HeroImage1
-from "../../../../../assets/home/hero/1 LEYENDAS.webp";
+from "../../../../../assets/home/hero/1 HERO DOMINIOS DE RA.webp";
 
 import HeroImage2
-from "../../../../../assets/home/hero/2 SHOGUN.webp";
+from "../../../../../assets/home/hero/2 HERO PREMIER 2026.webp";
+
+import HeroImage3
+from "../../../../../assets/home/hero/3 LEYENDAS.webp";
+
+import HeroImage4
+from "../../../../../assets/home/hero/4 SHOGUN.webp";
 
 export const HERO_SLIDES = [
 
@@ -10,6 +16,54 @@ export const HERO_SLIDES = [
     id: 1,
 
     image: HeroImage1,
+
+    subtitle: "DE DOMINIOS DE RA",
+
+    title: "RELATOS",
+
+    description:
+      "nuevos DIOSES y criaturas mitológicas llegan a mitos y leyendas para revolucionar el juego.",
+
+    buttons: [
+      {
+        text: "Comprar",
+        url: "/TiendasAmigas"
+      },
+      {
+        text: "Ver info",
+        url: "/DominiosDeRaPaginaLore"
+      }
+    ]
+  },
+
+  {
+    id: 2,
+
+    image: HeroImage2,
+
+    subtitle: "PRIMER BLOQUE EXTENDIDO",
+
+    title: "TORNEO PREMIER",
+
+    description:
+      "CON GRANDES PREMIOS EN LA MIRA Y MUCHOS COMBATES, ESTE TORNEO PROMETE SER UN VERDADERO DESAFÍO PARA TODOS LOS JUGADORES.",
+
+    buttons: [
+      {
+        text: "Comprar",
+        url: "https://www.mylargentina.com/productos/entrada-premier-argentina-club-coronel-mom-10-de-octubre-1pxwh/"
+      },
+      {
+        text: "Más información",
+        url: "https://www.instagram.com/p/Dcwd9ltj8Ul/?img_index=1"
+      }
+    ]
+  },
+
+  {
+    id: 3,
+
+    image: HeroImage3,
 
     subtitle: "primer bloque extendido",
 
@@ -31,9 +85,9 @@ export const HERO_SLIDES = [
   },
 
   {
-    id: 2,
+    id: 4,
 
-    image: HeroImage2,
+    image: HeroImage4,
 
     subtitle: "VOL.1 - VOL.2",
 

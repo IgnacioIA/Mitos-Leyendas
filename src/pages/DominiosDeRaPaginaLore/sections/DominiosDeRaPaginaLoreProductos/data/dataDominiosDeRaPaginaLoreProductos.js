@@ -20,7 +20,7 @@ const dataDominiosDeRaPaginaLoreProductos = {
       subtitle: "KIT FARAÓN",
       background: fondo1,
       product: producto1,
-      url: "#",
+      url: "https://www.mylargentina.com/productos/preventa-relatos-de-dominios-de-ra-invasores-1l75v/",
     },
     {
       id: 2,
@@ -28,7 +28,7 @@ const dataDominiosDeRaPaginaLoreProductos = {
       subtitle: "KIT SACERDOTA",
       background: fondo2,
       product: producto2,
-      url: "#",
+      url: "https://www.mylargentina.com/productos/preventa-relatos-de-dominios-de-ra-sabiduria-yt9va/",
     },
     {
       id: 3,
@@ -36,7 +36,7 @@ const dataDominiosDeRaPaginaLoreProductos = {
       subtitle: "KIT ETERNO",
       background: fondo3,
       product: producto3,
-      url: "#",
+      url: "https://www.mylargentina.com/productos/preventa-relatos-de-dominios-de-ra-amanecer-1x2pi/",
     },
   ],
 

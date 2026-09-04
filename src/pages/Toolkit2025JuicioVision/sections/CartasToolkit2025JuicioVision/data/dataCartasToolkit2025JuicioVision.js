@@ -1,4 +1,4 @@
-//AMATISTA
+//JUICIO Y VISION
 import fondo from "../../../../../assets/Toolkit2025JuicioVision/cartasToolkit2025JuicioVision/FONDO.webp";
 
 import card1 from "../../../../../assets/Toolkit2025JuicioVision/cartasToolkit2025JuicioVision/alt1.webp";
@@ -23,7 +23,7 @@ import medalla from "../../../../../assets/Toolkit2025JuicioVision/cartasToolkit
 import REWORK1 from "../../../../../assets/Toolkit2025JuicioVision/cartasToolkit2025JuicioVision/REWORK 1.webp";
 import REWORK2 from "../../../../../assets/Toolkit2025JuicioVision/cartasToolkit2025JuicioVision/REWORK 2.webp";
 
-//DESAFIO
+//Nobleza y Poder
 import fondo2 from "../../../../../assets/Toolkit2025JuicioVision/cartasToolkit2025JuicioVision/Variante2/FONDO.webp";
 
 import cardDesafio1 from "../../../../../assets/Toolkit2025JuicioVision/cartasToolkit2025JuicioVision/Variante2/alt1.webp";
@@ -58,7 +58,7 @@ export const TIPOS_SECCION = {
 const dataCartasToolkit2025JuicioVision = {
   bloques: [
     {
-      id: "magia-amatista",
+      id: "Juicio-Vision",
       fondo,
 
       encabezado: {

@@ -27,6 +27,7 @@ export default function ContenidoCronologiaLiga() {
               <CronologiaLigaTarjeta
                 key={tarjeta.id}
                 imagen={tarjeta.imagen}
+                whatsapp={tarjeta.whatsapp}
               />
             ))}
 

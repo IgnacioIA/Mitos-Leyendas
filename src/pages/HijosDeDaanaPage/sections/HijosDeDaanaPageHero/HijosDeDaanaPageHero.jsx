@@ -18,7 +18,7 @@ export default function HijosDeDaanaPageHero() {
       }
       subtitle={DataHijosDeDaanaPage.subtitulo}
       backgroundDesktop={DataHijosDeDaanaPage.backgroundDesktop}
-      scrollToId="HijosDeDaanaPageLore-section"
+      scrollToId="HijosDeDaanaLore"
     />
   );
 }

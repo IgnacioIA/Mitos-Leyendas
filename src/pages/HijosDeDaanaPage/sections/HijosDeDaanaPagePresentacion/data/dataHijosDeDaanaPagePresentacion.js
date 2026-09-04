@@ -20,7 +20,7 @@ const dataHijosDeDaanaPagePresentacion = {
       subtitle: "KIT DEFENSOR",
       background: fondo1,
       product: producto1,
-      url: "#",
+      url: "https://www.mylargentina.com/productos/relatos-de-hijos-de-daana-muerte-de-cuchulain/",
     },
     {
       id: 2,
@@ -28,7 +28,7 @@ const dataHijosDeDaanaPagePresentacion = {
       subtitle: "KIT DESAFIANTE",
       background: fondo2,
       product: producto2,
-      url: "#",
+      url: "https://www.mylargentina.com/productos/relatos-de-hijos-de-daana-luz-esmeralda/",
     },
     {
       id: 3,
@@ -36,7 +36,7 @@ const dataHijosDeDaanaPagePresentacion = {
       subtitle: "KIT SOMBRA",
       background: fondo3,
       product: producto3,
-      url: "#",
+      url: "https://www.mylargentina.com/productos/relatos-de-hijos-de-daana-necromancia/",
     },
   ],
 

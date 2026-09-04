@@ -9,6 +9,9 @@
   flex: 1 1 220px;
   max-width: 260px;
 
+  /* Ahora es clickeable (link a WhatsApp o aviso de "no tiene grupo"). */
+  cursor: pointer;
+
   /* Todas las imágenes de fechas comparten esta proporción real
      (514x642): con aspect-ratio, todas las tarjetas quedan con
      exactamente las mismas proporciones sin importar el ancho que les
@@ -49,4 +52,30 @@
 
   user-select: none;
   -webkit-user-drag: none;
+}
+
+/* AVISO "NO TIENE GRUPO" */
+/* Overlay temporal (2s, ver CronologiaLigaTarjeta.jsx) sobre el borde
+   inferior de la tarjeta, en vez de un toast global: no requiere ningún
+   contenedor/portal a nivel de página, cada tarjeta resuelve su propio
+   aviso. */
+.cronologiaLigaTarjeta-aviso {
+  position: absolute;
+  inset: auto 0.6rem 0.6rem 0.6rem;
+
+  z-index: 2;
+
+  padding: 0.6rem 0.75rem;
+
+  border-radius: 10px;
+
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(255, 216, 21, 0.35);
+
+  color: white;
+  font-size: 0.8rem;
+  line-height: 1.3;
+  text-align: center;
+
+  pointer-events: none;
 }

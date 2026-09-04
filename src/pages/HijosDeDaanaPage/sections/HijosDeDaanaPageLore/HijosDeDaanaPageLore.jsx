@@ -6,6 +6,7 @@ import dataHijosDeDaanaPageLore from "./data/dataHijosDeDaanaPageLore";
 export default function HijosDeDaanaPageLore() {
   return (
     <section
+      id = "HijosDeDaanaLore"
       className="HijosDeDaanaPage-lore"
       style={{
         backgroundImage: `url(${dataHijosDeDaanaPageLore.imagenFondo})`,

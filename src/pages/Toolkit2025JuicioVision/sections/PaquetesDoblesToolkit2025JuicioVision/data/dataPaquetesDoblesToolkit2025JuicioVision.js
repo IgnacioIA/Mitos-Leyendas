@@ -4,7 +4,7 @@ const dataPaquetesDoblesToolkit2025JuicioVision = {
     titulo: "Añadí cartas\na tus mazos",
 
     descripcion:
-        "Cada una de las Toolkits 2025 vendrán con 4 boosters de la edición Hijos de Daana Aniversario y 4 boosters de la edición Leyendas 3.0, los cuales incluyen 10 cartas en cada paquete para poder potenciar tus mazos.",
+        "Cada una de las Toolkits 2025 vendrán con 5 boosters de la edición Hijos de Daana Aniversario y 3 boosters de la edición Leyendas 3.0, los cuales incluyen 10 cartas en cada paquete para poder potenciar tus mazos.",
 
     imagen: {
         src: sobres,

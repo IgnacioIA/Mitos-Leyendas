@@ -9,7 +9,7 @@ const dataHijosDeDaanaPagePaquetitos = {
 
   titulo: "AÑADÍ CARTAS A TUS MAZOS", // TODO
 
-  descripcion: "Cada uno de los Kits de Batalla, vendrán con 8 boosters de la edición Leyendas 4.0, los cuales incluyen 10 cartas cada paquete para poder potenciar tus mazos.", // TODO
+  descripcion: "Cada uno de los Kits de Batalla, vendrán con 8 boosters de la edición Hijos de Daana Aniversario, los cuales incluyen 10 cartas cada paquete para poder potenciar tus mazos.", // TODO
 };
 
 export default dataHijosDeDaanaPagePaquetitos;

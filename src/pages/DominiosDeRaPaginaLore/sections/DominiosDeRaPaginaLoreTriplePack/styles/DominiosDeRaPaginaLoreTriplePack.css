@@ -1,0 +1,101 @@
+.DominiosDeRaPaginaLoreTriplePack {
+  position: relative;
+  z-index: 1;
+
+  /* A diferencia de la referencia (LootboxLegendariaEdicionPBX, que envuelve
+     el contenido en ParallaxBackgroundCinematografico con una imagen de
+     fondo), acá no hay imagen: se usa el mismo color sólido que
+     DominiosDeRaPaginaPaquetitos para que esta sección se lea como una
+     continuación directa de la anterior. */
+  background: #4a000f;
+}
+
+.DominiosDeRaPaginaLoreTriplePack-Carta {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  user-select: none;
+  -webkit-user-drag: none;
+
+  transition:
+    transform .35s ease,
+    filter .35s ease;
+}
+
+.DominiosDeRaPaginaLoreTriplePack-Carta:hover {
+  transform: scale(1.02);
+
+  filter: brightness(1.05);
+}
+
+.DominiosDeRaPaginaLoreTriplePack-DosImagenes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10rem;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.DominiosDeRaPaginaLoreTriplePack-DosImagenes img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+@media (max-width: 640px) {
+  .DominiosDeRaPaginaLoreTriplePack-DosImagenes {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    gap: 1rem;
+  }
+}
+
+/* Override scopeado del componente compartido BannerTextoImagenBoton
+   (src/components/bannerTextoImagenBoton): no se toca su CSS para no
+   afectar a otros consumidores (LootboxLegendariaEdicionPBX), donde la
+   imagen de banner es una foto panorámica pensada para llenar toda la
+   columna con object-fit:cover. CAJAS.webp es una foto de producto (una
+   caja centrada con espacio alrededor), así que con ese mismo cover
+   recortado a 100% de alto quedaba agigantada/recortada. Acá se cambia a
+   contain con padding para que se vea completa y a un tamaño proporcional
+   al bloque de texto de al lado, en vez de forzarla a llenar la columna. */
+.DominiosDeRaPaginaLoreTriplePack .BannerTextoImagenBoton-contenidoImagen {
+  padding: 2rem;
+}
+
+.DominiosDeRaPaginaLoreTriplePack .BannerTextoImagenBoton-imagen {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+
+  object-fit: contain;
+}
+
+/* ACERCAR IMAGEN Y TEXTO */
+/* Cada columna (imagen/texto) centra su contenido dentro de su propia
+   mitad (flex:1 + justify-content:center en el CSS compartido), lo que
+   empuja imagen y texto hacia los tercios exteriores en vez de acercarlos
+   al centro. Se sobrescribe solo el justify-content de cada columna para
+   que el contenido se acerque al borde compartido (la imagen hacia la
+   derecha, el texto hacia la izquierda) sin tocar el ancho/proporción de
+   cada mitad. Solo desktop (>768px): en mobile el layout pasa a columna
+   (ver breakpoint del componente compartido) y ahí center sigue siendo lo
+   correcto. */
+@media (min-width: 769px) {
+  .DominiosDeRaPaginaLoreTriplePack .BannerTextoImagenBoton-contenidoImagen {
+    justify-content: flex-end;
+    padding-right: 2rem;
+  }
+
+  .DominiosDeRaPaginaLoreTriplePack .BannerTextoImagenBoton-contenidoTexto {
+    justify-content: flex-start;
+    padding-left: 2rem;
+  }
+}

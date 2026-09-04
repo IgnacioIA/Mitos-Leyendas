@@ -7,12 +7,46 @@
 // sola carpeta "logos" y necesitaba repartirlos por índice), acá cada
 // sección ya tiene su propia carpeta en assets, así que cada una se
 // resuelve directo sin ese cálculo de offsets.
-const cargarImagenes = (modules) =>
-  Object.entries(modules)
-    .sort(([rutaA], [rutaB]) =>
-      rutaA.localeCompare(rutaB, undefined, { numeric: true })
-    )
-    .map(([, imagen]) => imagen);
+const cargarEntradas = (modules) =>
+  Object.entries(modules).sort(([rutaA], [rutaB]) =>
+    rutaA.localeCompare(rutaB, undefined, { numeric: true })
+  );
+
+// Link del grupo de WhatsApp de cada tienda, si tiene. La clave es la ruta
+// del archivo tal cual la devuelve import.meta.glob (la misma que se ve en
+// cargarEntradas), así que agregar/reordenar imágenes en una carpeta no
+// desincroniza los links -quedan atados al archivo, no a la posición-.
+// Las tarjetas cuya imagen no aparece acá muestran el aviso de "no tiene
+// grupo de WhatsApp" al clickear.
+//
+// TODO: completar con los links reales. Ejemplo:
+// "../../../../../assets/cronogramaLiga/seccion/fechasCABA/1.webp":
+//   "https://chat.whatsapp.com/XXXXXXXXXXXXXXXXXXXXXX",
+const WHATSAPP_LINKS = {
+  //CABA
+  "../../../../../assets/cronogramaLiga/seccion/fechasCABA/1.webp":"https://chat.whatsapp.com/CaWE22D5ieSDklpTo8vGS4?s=cl&p=a&mlu=4",
+  "../../../../../assets/cronogramaLiga/seccion/fechasCABA/2.webp":"https://chat.whatsapp.com/DtQpNV7bd8N90gmPNRUgcR",
+  "../../../../../assets/cronogramaLiga/seccion/fechasCABA/3.webp":"https://chat.whatsapp.com/LfeiE3n54v6I3n3viBcYMl",
+  "../../../../../assets/cronogramaLiga/seccion/fechasCABA/4.webp":"https://chat.whatsapp.com/DKocGIQDEyA6961n2DtAmV",
+  "../../../../../assets/cronogramaLiga/seccion/fechasCABA/5.webp":"https://chat.whatsapp.com/Id0gOojn4gXEpSAcBXfF3C",
+  //BsAs
+  "../../../../../assets/cronogramaLiga/seccion/fechasBsAs/1.webp":"https://chat.whatsapp.com/LyOnEzywbcXEaIRkQA1iQT",
+  //MDQ
+  "../../../../../assets/cronogramaLiga/seccion/fechasMDQ/1.webp":"https://chat.whatsapp.com/LKlnT4wuqNMAsMDLY9XcRF",
+  //San Luis
+  "../../../../../assets/cronogramaLiga/seccion/fechasSanLuis/1.webp":"https://chat.whatsapp.com/Dr62WfX9AhxCgGC7okc3Bj",
+
+
+};
+
+// Cada tarjeta acá solo necesita id + imagen + whatsapp (a diferencia de
+// TiendasAmigasTarjeta, no hay título/descripción/localidad/botones).
+const crearTarjetas = (seccionId, modules) =>
+  cargarEntradas(modules).map(([ruta, imagen], index) => ({
+    id: `${seccionId}-${index + 1}`,
+    imagen,
+    whatsapp: WHATSAPP_LINKS[ruta] ?? null,
+  }));
 
 const fechasCABAModules = import.meta.glob(
   "../../../../../assets/cronogramaLiga/seccion/fechasCABA/*.webp",
@@ -38,14 +72,6 @@ const fechasPuntaAltaModules = import.meta.glob(
   "../../../../../assets/cronogramaLiga/seccion/fechasPuntaAlta/*.webp",
   { eager: true, import: "default" }
 );
-
-// Cada tarjeta acá solo necesita id + imagen (a diferencia de
-// TiendasAmigasTarjeta, no hay título/descripción/localidad/botones).
-const crearTarjetas = (seccionId, modules) =>
-  cargarImagenes(modules).map((imagen, index) => ({
-    id: `${seccionId}-${index + 1}`,
-    imagen,
-  }));
 
 export const dataContenidoCronologiaLiga = {
   secciones: [

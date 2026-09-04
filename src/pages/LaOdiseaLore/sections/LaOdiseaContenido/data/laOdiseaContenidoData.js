@@ -117,10 +117,44 @@ const BLOQUES_TEXTO = {
   },
 };
 
+// Orden de aparición pedido para los bloques (nombre real de carpeta, tal
+// cual la clave usada en BLOQUES_TEXTO), en vez del alfabético que arma
+// agruparPorCarpeta. Una carpeta nueva que todavía no esté acá no rompe
+// nada: sencillamente aparece al final, en el orden en que llegó desde
+// agruparPorCarpeta (ver ordenarPorBloques más abajo).
+const ORDEN_BLOQUES = [
+  "Odiseo",
+  "Guerra de Troya",
+  "Atenea",
+  "Polifemo",
+  "Eolo",
+  "Circe",
+  "Tiresias",
+  "Sirenas",
+  "Escila y caribdis",
+  "Calipso",
+  "Nausicaa",
+  "Telemaco",
+  "Penelope",
+];
+
+function ordenarPorBloques(grupos) {
+  return [...grupos].sort((a, b) => {
+    const indexA = ORDEN_BLOQUES.indexOf(a.carpeta);
+    const indexB = ORDEN_BLOQUES.indexOf(b.carpeta);
+
+    if (indexA === -1 && indexB === -1) return 0;
+    if (indexA === -1) return 1;
+    if (indexB === -1) return -1;
+
+    return indexA - indexB;
+  });
+}
+
 // El título toma el nombre real de la carpeta (Atenea, Calipso, Circe,
 // etc.); subtítulo y descripción salen de BLOQUES_TEXTO de acá arriba,
 // así cada bloque tiene su propio contenido en vez de repetir el mismo.
-const bloques = agruparPorCarpeta(personajesModules).map(
+const bloques = ordenarPorBloques(agruparPorCarpeta(personajesModules)).map(
   ({ carpeta, imagenes }, index) => ({
     id: `bloque-${index + 1}`,
     titulo: carpeta.toUpperCase(),

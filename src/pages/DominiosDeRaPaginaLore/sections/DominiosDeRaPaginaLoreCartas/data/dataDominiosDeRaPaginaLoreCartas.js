@@ -66,13 +66,12 @@ const dataDominiosDeRaPaginaLoreCartas = {
 
         // TODO: confirmar texto definitivo de la bajada.
         descripcion: [
-          "En Relatos Dominios de Ra: Invasores (centrado en la raza Faraón), revisaremos las invasiones de los persas en el territorio egipcio, comandados personalmente por el conocido “Rey de Reyes” Xerxes I, quien heredó un enorme imperio luego de su padre Dario I.",
-          "Dentro de este relato veremos como Xerxes aplastó brutalmente la rebelión de los egipcios, castigando a la región, conscando sus bienes y destruyendo sus templos, eliminando su estatus como nación central hasta ser simplemente una provincia común dentro del Imperio Persa.",
+          "Relatos Dominios de Ra: Invasores aborda la invasión persa de Egipto bajo el mando de Jerjes I, quien, tras suceder a Darío I, reprimió duramente la rebelión egipcia. Como consecuencia, Egipto sufrió confiscaciones, destrucción de templos y perdió su condición de nación central, convirtiéndose en una provincia más del Imperio Persa.",
 
         ],
 
-        colorDestacado: "#e4140d",
-        sombraDestacado: "0 0 25px rgba(228, 20, 13, 0.45)",
+        colorDestacado: "#9b76b5",
+        sombraDestacado: "0 0 25px #3b2c44",
       },
 
       secciones: [
@@ -124,13 +123,12 @@ const dataDominiosDeRaPaginaLoreCartas = {
 
         // TODO: confirmar texto definitivo de la bajada.
         descripcion: [
-          "En Relatos Dominios de Ra: Sabiduría (centrado en la raza Sacerdote), nos centraremos en las historias alrededor de la mítica Biblioteca de Alejandría, uno de los centros de conocimiento y sabiduría más importantes del mundo antiguo. Dentro de este lugar se reunieron cientos de miles de obras del pensamiento humano, albergando conocimientos tanto de ciencia, de losofía, literatura como también de medicina, las que lamentablemente fueron perdidas con el tiempo y las revueltas que giraban en torno a este lugar.",
-          "En este producto podremos ver algunos de los sabios de la era ptolemaica que fueron parte de este mítico lugar como Licofrón, Zenédoto, Hipatia o Apolonio.",
+          "Relatos Dominios de Ra: Sabiduría explora la mítica Biblioteca de Alejandría, uno de los grandes centros de conocimiento del mundo antiguo. El relato aborda su enorme legado en ciencia, filosofía, literatura y medicina, además de presentar a destacados sabios de la época ptolemaica como Licofrón, Zenódoto, Hipatia y Apolonio.",
         ],
         
 
-        colorDestacado: "#8ef7b0",
-        sombraDestacado: "0 0 25px rgba(60, 200, 120, 0.45)",
+        colorDestacado: "#C67171",
+        sombraDestacado: "0 0 25px #873A3A",
       },
 
       secciones: [
@@ -183,8 +181,7 @@ const dataDominiosDeRaPaginaLoreCartas = {
         // TODO: confirmar texto definitivo de la bajada.
         descripcion:
         [
-          "En Relatos Dominios de Ra: Amanecer (centrado en la raza Eterno), veremos un poco de la conocida “Casa de Horus”, cuyo signicado literal es Hat-Hor o Hathor, quien es una de las diosas más importantes del antiguo Egipto y que representa el cielo, el amor y la fertilidad. Dentro de la mitología egipcia este concepto se asocia principalmente con el Sol, donde Hathor es vista como el cielo y Horus es asociado al Sol naciente o el poder real que se refugia y renace cada día. Esta conexión celestial hace que se asocien ambos dioses en una relación de renovación cósmica, donde la luz solar siempre regresa a su hogar.",
-          "Dentro de este producto exploraremos un poco más sobre Horus y Hathor, además de presentar algunos otros personajes como Nun del Abismo, los Wadjet, Hauron y los Jueces del Maat.",
+          "Relatos Dominios de Ra: Amanecer explora la relación entre Horus y Hathor, vinculada al Sol, el cielo y el ciclo de renovación cósmica en la mitología egipcia. El relato también presenta figuras como Nun del Abismo, los Wadjet, Hauron y los Jueces del Maat.",
         ],
 
         colorDestacado: "#ffb347",
