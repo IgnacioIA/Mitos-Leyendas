@@ -158,6 +158,15 @@
 
         max-width: 480px;
 
+        /*
+          El translateX(-60px) de arriba corre el bloque de texto hacia la
+          izquierda como ajuste compositivo de Desktop (layout en fila). En
+          column layout el bloque pasa a ocupar todo el ancho centrado, y
+          ese mismo corrimiento lo saca 60px por fuera del viewport
+          (franja vacía al hacer zoom). Se resetea acá sin tocar Desktop.
+        */
+        transform: none;
+
     }
 
 }

@@ -5,7 +5,10 @@ import DOMINOSDERAbg from "../../../../../assets/home/novedades/DOMINIOS DE RA.w
 
 import display from "../../../../../assets/home/novedades/Display-Leyendas-Primer-Bloque-2025.webp";
 import shogun from "../../../../../assets/home/novedades/SHOGUN 5.webp";
-import lootbox from "../../../../../assets/home/novedades/Lootbox 2025 Render.png";
+// Mismo archivo que usa CajaEdicionLootboxPBX2025Data.js (verificado por
+// checksum: eran copias idénticas del mismo render). Se apunta a una sola
+// para no duplicar la descarga entre Home y EdicionPBX.
+import lootbox from "../../../../../assets/EdicionPBX2025/cajaEdicionLootboxPBX2025/Lootbox 2025 Render.png";
 import DOMINOSDERA from "../../../../../assets/home/novedades/CAJAS.webp";
 
 export const dataNovedadesHome = {

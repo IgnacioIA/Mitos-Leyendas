@@ -10,12 +10,25 @@ from "../../../../../assets/home/hero/3 LEYENDAS.webp";
 import HeroImage4
 from "../../../../../assets/home/hero/4 SHOGUN.webp";
 
+import HeroImage1Mobile
+from "../../../../../assets/home/hero/HOME 1-Mobile.webp";
+
+import HeroImage2Mobile
+from "../../../../../assets/home/hero/HOME 2-Mobile.webp";
+
+import HeroImage3Mobile
+from "../../../../../assets/home/hero/HOME 3-Mobile.webp";
+
+import HeroImage4Mobile
+from "../../../../../assets/home/hero/HOME 4-Mobile.webp";
+
 export const HERO_SLIDES = [
 
   {
     id: 1,
 
     image: HeroImage1,
+    imageMobile: HeroImage1Mobile,
 
     subtitle: "DE DOMINIOS DE RA",
 
@@ -40,6 +53,7 @@ export const HERO_SLIDES = [
     id: 2,
 
     image: HeroImage2,
+    imageMobile: HeroImage2Mobile,
 
     subtitle: "PRIMER BLOQUE EXTENDIDO",
 
@@ -64,6 +78,7 @@ export const HERO_SLIDES = [
     id: 3,
 
     image: HeroImage3,
+    imageMobile: HeroImage3Mobile,
 
     subtitle: "primer bloque extendido",
 
@@ -88,6 +103,7 @@ export const HERO_SLIDES = [
     id: 4,
 
     image: HeroImage4,
+    imageMobile: HeroImage4Mobile,
 
     subtitle: "VOL.1 - VOL.2",
 

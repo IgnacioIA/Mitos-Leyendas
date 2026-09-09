@@ -19,10 +19,28 @@
 
   inset: 0;
 
+  /* Imagen Desktop siempre; el override a --cinematic-bg-mobile vive en
+     el media query de Mobile más abajo. Ver useCinematicBackgroundStyles.js
+     (mismo hook que usa ParallaxBackgroundCinematografico). */
+  background-image: var(--cinematic-bg-desktop);
+
   background-size: cover;
   background-repeat: no-repeat;
 
   z-index: 0;
+}
+
+@media (max-width: 768px) {
+
+  /*
+    Si el consumidor pasó imageMobile, --cinematic-bg-mobile existe y gana.
+    Si no la pasó, el fallback de var() cae en --cinematic-bg-desktop ->
+    mismo comportamiento que hoy para los usos que todavía no tienen un
+    recorte Mobile.
+  */
+  .BackgroundCinematografico-Image {
+    background-image: var(--cinematic-bg-mobile, var(--cinematic-bg-desktop));
+  }
 }
 
 .BackgroundCinematografico-Overlay {

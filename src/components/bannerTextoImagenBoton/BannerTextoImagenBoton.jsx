@@ -2,6 +2,7 @@ import "./BannerTextoImagenBoton.css";
 
 export default function BannerTextoImagenBoton({
   imagen,
+  imagenMobile,
   imagenAlt = "",
   tituloLinea1 = "¿ESTÁS LISTO PARA",
   tituloLinea2 = "SUMARTE, GLADIADOR?",
@@ -23,11 +24,27 @@ export default function BannerTextoImagenBoton({
           }`}
         >
           <div className="BannerTextoImagenBoton-contenidoImagen">
-            <img
-              className="BannerTextoImagenBoton-imagen"
-              src={imagen}
-              alt={imagenAlt}
-            />
+            {/*
+              imagenMobile es opcional: si no se provee (caso de todos los
+              consumidores actuales), <picture> renderiza igual que el
+              <img> de siempre. Mismo patrón que HeroGenerico/Hero.jsx —
+              queda disponible para cuando exista un recorte pensado para
+              el aspect ratio de Mobile (ver BannerTextoImagenBoton.css).
+            */}
+            <picture>
+              {imagenMobile && (
+                <source
+                  media="(max-width: 768px)"
+                  srcSet={imagenMobile}
+                />
+              )}
+
+              <img
+                className="BannerTextoImagenBoton-imagen"
+                src={imagen}
+                alt={imagenAlt}
+              />
+            </picture>
           </div>
 
           <div className="BannerTextoImagenBoton-contenidoTexto">

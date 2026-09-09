@@ -20,6 +20,7 @@ export default function DracoSidheKits() {
                 src={imagen}
                 alt=""
                 className="DracoSidheKits-CardImage"
+                loading="lazy"
               />
             )}
           />

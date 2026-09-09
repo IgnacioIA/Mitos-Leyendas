@@ -202,6 +202,14 @@
   .HijosDeDaanaPageCartas-description {
     font-size: 16px;
   }
+
+  /* Ver CartasDesafioAmatista.css (mismo componente duplicado): permite
+     wrap del título solo en Mobile para no desbordar el viewport, sin
+     tocar el clamp() ni el diseño de Desktop. */
+  .HijosDeDaanaPageCartas-titleLine {
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
 }
 
 @media (max-width: 480px) {

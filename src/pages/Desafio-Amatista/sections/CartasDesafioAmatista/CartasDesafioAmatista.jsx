@@ -21,6 +21,7 @@ const crearRendererCarrousel = (ComponenteCarrousel) => (seccion) => (
         className="CartasDesafioAmatista-Carta"
         src={src}
         alt={alt}
+        loading="lazy"
       />
     )}
   />
@@ -37,7 +38,7 @@ const RENDERERS = {
     <div className="CartasDesafioAmatista-DosImagenes">
       {seccion.imagenes.map(({ src, alt }, index) => (
         <FrameFX key={index}>
-          <img src={src} alt={alt} />
+          <img src={src} alt={alt} loading="lazy" />
         </FrameFX>
       ))}
     </div>

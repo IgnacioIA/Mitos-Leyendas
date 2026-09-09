@@ -1,4 +1,5 @@
 import fondo from "../../../../../assets/razas/HeroRazas/FONDO HERO.webp";
+import fondoMobile from "../../../../../assets/razas/HeroRazas/RAZAS-Mobile.webp";
 
 const dataHeroRazas = {
 
@@ -8,7 +9,7 @@ const dataHeroRazas = {
 
 
   backgroundDesktop: fondo,
-  backgroundMobile: fondo,
+  backgroundMobile: fondoMobile,
 
 };
 

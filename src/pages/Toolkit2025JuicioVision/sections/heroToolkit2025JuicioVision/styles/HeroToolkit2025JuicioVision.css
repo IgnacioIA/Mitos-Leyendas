@@ -9,6 +9,13 @@
   width: 100%;
   height: 100vh;
   cursor: ew-resize;
+
+  /* Ver HeroDesafioAmatista.css (mismo componente, ahora vía
+     useSplitHeroPointer): pan-y en vez de none para no bloquear el scroll
+     vertical nativo en un hero de 100vh. */
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 /* IMÁGENES */
@@ -19,6 +26,11 @@
   height: 100%;
   object-fit: cover;
   transition: filter 0.3s ease;
+
+  /* Evita el menú contextual/drag nativo de imagen durante el gesto. */
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }
 
 /* MASK */

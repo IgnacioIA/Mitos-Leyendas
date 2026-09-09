@@ -10,6 +10,7 @@ export default function BuyABoxCarouselItem({ imagen }) {
       src={imagen}
       alt=""
       draggable="false"
+      loading="lazy"
     />
   );
 }

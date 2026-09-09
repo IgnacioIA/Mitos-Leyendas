@@ -144,7 +144,7 @@ const dataCartasBanList = {
         },
         {
           prohibidas: { tipo: TIPOS_SECCION.CARROUSEL },
-          copias1: { tipo: TIPOS_SECCION.CARROUSEL_ELASTICO },
+          copias1: { tipo: TIPOS_SECCION.CARROUSEL },
           copias2: { tipo: TIPOS_SECCION.CARROUSEL },
         }
       ),

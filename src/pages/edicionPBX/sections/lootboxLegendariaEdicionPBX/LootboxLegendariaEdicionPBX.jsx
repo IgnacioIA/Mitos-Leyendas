@@ -9,7 +9,10 @@ import {
 } from "./data/LootboxLegendariaEdicionPBXData";
 
 import BannerTextoImagenBoton from "../../../../components/bannerTextoImagenBoton";
-import imagenBanner from "../../../../assets/EdicionPBX2025/lootboxLegendariaEdicionPBX2025/LootboxUltraSecreta/Lootbox 2025 Render.png";
+// Mismo archivo que usa CajaEdicionLootboxPBX2025Data.js (verificado por
+// checksum: eran dos copias idénticas del mismo render). Se apunta a una
+// sola para no duplicar la descarga entre ambas secciones.
+import imagenBanner from "../../../../assets/EdicionPBX2025/cajaEdicionLootboxPBX2025/Lootbox 2025 Render.png";
 
 import FrameFX from "../../../../components/ui/cartaMovible/FrameFX";
 
@@ -24,6 +27,7 @@ const RENDERERS = {
           className="LootboxLegendariaEdicionPBX-Carta"
           src={carta.imagen}
           alt={carta.nombre}
+          loading="lazy"
         />
       )}
     />
@@ -32,7 +36,7 @@ const RENDERERS = {
     <div className="LootboxLegendariaEdicionPBX-DosImagenes">
       {seccion.imagenes.map(({ src, alt }, index) => (
       <FrameFX>
-        <img key={index} src={src} alt={alt} />
+        <img key={index} src={src} alt={alt} loading="lazy" />
       </FrameFX>
       ))}
     </div>

@@ -225,6 +225,20 @@
   .CartasDesafioAmatista-wrapper {
     gap: 80px;
   }
+
+  /*
+    .titleLine usa white-space:nowrap para que el título quede en una sola
+    línea en Desktop (parte del diseño). A este tamaño de pantalla, con
+    títulos largos, esa misma regla lo desborda por fuera del viewport
+    (contribuye a la franja vacía al hacer zoom). La sección necesita
+    overflow:visible para el fondo sticky (ver arriba), así que nada más
+    lo frena. Se permite wrap solo en Mobile, sin tocar el font-size
+    (clamp) ni el diseño de Desktop.
+  */
+  .CartasDesafioAmatista-titleLine {
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
 }
 
 @media (max-width: 480px) {

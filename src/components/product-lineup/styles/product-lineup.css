@@ -4,7 +4,15 @@
 
   width: 100%;
 
-  min-height: 100vh;
+  /*
+    dvh en vez de vh: esta sección convive, en la misma página (Leyendas
+    4.0), con el hero y con Carta-texto.css, que ya migraron a dvh para
+    evitar el salto que produce el recálculo de 100vh cuando el navegador
+    mobile oculta/muestra la barra de URL durante el scroll (ver
+    Carta-texto.css para el detalle documentado del bug original). En
+    Desktop dvh y vh son equivalentes -> mismo resultado visual.
+  */
+  min-height: 100dvh;
 
   padding:
     clamp(80px, 10vw, 120px)

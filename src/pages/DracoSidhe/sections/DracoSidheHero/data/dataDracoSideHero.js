@@ -1,8 +1,10 @@
 import background from "../../../../../assets/DracoSidhe/DracoSidheHero/HERO.webp";
+import backgroundMobile from "../../../../../assets/DracoSidhe/DracoSidheHero/HEROMobileDracoSidhe.webp";
 
 const dataDracoSidheHero = {
   background: {
     image: background,
+    imageMobile: backgroundMobile,
     overlay: 0.35,
     position: "center top",
   },

@@ -1,20 +1,36 @@
 import "./CarrouselResponsive.css";
 
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+
+import useResponsiveSlidesToScroll from "../../hooks/useResponsiveSlidesToScroll";
+
+// Mismo ancho que CarrouselResponsive.css: 4 cartas visibles en Desktop,
+// 1 sola a partir de ≤768px (único breakpoint que define este componente).
+const BREAKPOINTS = [{ maxWidth: 768, slides: 1 }];
 
 export default function CarrouselResponsive({
   items = [],
   renderItem,
   showButtons = true,
 }) {
+  const slidesToScroll = useResponsiveSlidesToScroll(BREAKPOINTS, 4);
+
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "start",
     dragFree: false,
     containScroll: "trimSnaps",
-    slidesToScroll: 4,
+    slidesToScroll,
   });
+
+  // Ver CarrouselResponsiveDeCinco.jsx: Embla necesita un reInit explícito
+  // para tomar el nuevo slidesToScroll cuando cambia el breakpoint.
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    emblaApi.reInit({ slidesToScroll });
+  }, [emblaApi, slidesToScroll]);
 
   const scrollPrev = useCallback(() => {
     if (!emblaApi) return;

@@ -13,7 +13,10 @@
 
   gap: clamp(16px, 3vw, 32px);
   width: 100%;
-  min-height: 100vh;
+
+  /* dvh en vez de vh: ver product-lineup.css para el porqué (misma
+     inconsistencia de unidades de viewport dentro de la misma página). */
+  min-height: 100dvh;
 
   padding:
     clamp(80px, 10vw, 140px)

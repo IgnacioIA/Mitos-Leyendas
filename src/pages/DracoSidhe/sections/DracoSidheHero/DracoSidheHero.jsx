@@ -34,6 +34,7 @@ export default function DracoSidheHero() {
   return (
     <BackgroundCinematografico
       image={background.image}
+      imageMobile={background.imageMobile}
       overlay={background.overlay}
       position={background.position}
     >

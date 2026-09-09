@@ -21,6 +21,7 @@ const RENDERERS = {
           className="CartasBanList-Carta"
           src={src}
           alt={alt}
+          loading="lazy"
         />
       )}
     />

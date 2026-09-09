@@ -1,6 +1,11 @@
 import LoreShowcase from "../../../../components/lore-showcase/LoreShowcase.jsx";
 
-import productImage from "../../../../assets/mitos4.0/lore/Display-Leyendas-Primer-Bloque-2025.png";
+// Mismo archivo que ya usa Productos.jsx (FeaturesData.js) más abajo en
+// esta misma página, y que también reutilizan Shogun y Draco/Sidhe
+// (verificado por checksum: era una segunda copia idéntica con otro
+// nombre). Se apunta al mismo asset para no descargarlo dos veces en la
+// misma carga de página.
+import productImage from "../../../../assets/mitos4.0/productos/Display-1.png";
 
 export default function ProductShowcaseSection() {
   return (

@@ -1,4 +1,5 @@
 import backgroundDesktop from "../../../../../assets/DominiosDeRaPaginaLore/Hero/FONDO HERO.webp";
+import backgroundMobile from "../../../../../assets/DominiosDeRaPaginaLore/Hero/RelatosDominiosDeRaaMobile.webp";
 
 // TODO: confirmar textos definitivos (título superior, título principal y
 // subtítulo) cuando estén disponibles. El nombre de la edición (tituloMain)
@@ -12,6 +13,7 @@ const dataDominiosDeRaPaginaLoreHero = {
   subtitulo: "PODER, MAGIA Y CONOCIMIENTO",
 
   backgroundDesktop,
+  backgroundMobile,
 };
 
 export default dataDominiosDeRaPaginaLoreHero;

@@ -91,6 +91,17 @@ position: relative;
         text-align: center;
     }
 
+    /*
+      Ver PaquetesDoblesSection.css (Desafío Amatista, mismo componente
+      duplicado): el translateX(100px) es un ajuste de Desktop en fila que
+      en column layout solo genera overflow horizontal. Se resetea acá en
+      vez de convertirlo a margin para no alterar el ancho disponible de
+      la columna derecha en Desktop.
+    */
+    .PaquetesDoblesToolkit2025JuicioVision-left {
+        transform: none;
+    }
+
     .PaquetesDoblesToolkit2025JuicioVision-text {
         max-width: none;
     }

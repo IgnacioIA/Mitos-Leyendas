@@ -18,6 +18,7 @@ export default function DominiosDeRaPaginaLoreHero() {
       }
       subtitle={dataDominiosDeRaPaginaLoreHero.subtitulo}
       backgroundDesktop={dataDominiosDeRaPaginaLoreHero.backgroundDesktop}
+      backgroundMobile={dataDominiosDeRaPaginaLoreHero.backgroundMobile}
       scrollToId="DominiosDeRaPaginaLoreExplicacion-section"
     />
   );

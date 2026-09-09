@@ -9,6 +9,7 @@ export default function MobileCard({
       <img
         src={imagen}
         alt=""
+        loading="lazy"
       />
 
     </div>

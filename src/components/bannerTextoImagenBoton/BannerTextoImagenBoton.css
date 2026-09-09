@@ -37,6 +37,12 @@
   overflow: hidden;
 }
 
+.BannerTextoImagenBoton-contenidoImagen picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .BannerTextoImagenBoton-imagen {
   width: 100%;
   height: 100%;
@@ -123,6 +129,20 @@
 
   .BannerTextoImagenBoton-contenidoImagen {
     height: 220px;
+  }
+
+  /*
+    object-fit:cover dentro de una caja fija de 220px recorta el sujeto
+    cuando la imagen no fue compuesta para ese aspect ratio (caso Lootbox
+    PBX: el render no tiene una versión pensada para Mobile). "contain"
+    muestra la imagen completa sin recortarla -- es la corrección segura
+    sin asset nuevo. El fix real para este caso puntual es proveer
+    imagenMobile con un recorte pensado para 220px de alto (ver prop en
+    BannerTextoImagenBoton.jsx); mientras no exista, "contain" evita el
+    recorte incorrecto para cualquier consumidor de este componente.
+  */
+  .BannerTextoImagenBoton-imagen {
+    object-fit: contain;
   }
 
   .BannerTextoImagenBoton-tituloLinea {

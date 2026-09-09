@@ -158,6 +158,14 @@
 
         max-width: 480px;
 
+        /*
+          Ver DracoSidhePaquetitos.css (mismo componente duplicado): el
+          translateX(-60px) es un ajuste de Desktop en fila que en column
+          layout saca el bloque de texto por fuera del viewport. Se
+          resetea acá sin tocar Desktop.
+        */
+        transform: none;
+
     }
 
 }

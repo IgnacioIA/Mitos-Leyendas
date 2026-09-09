@@ -17,6 +17,7 @@ export default function ElasticCard({
       <img
         src={imagen}
         alt=""
+        loading="lazy"
       />
     </motion.div>
   );

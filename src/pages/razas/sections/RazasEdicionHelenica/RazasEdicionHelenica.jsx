@@ -43,6 +43,7 @@ export default function RazasEdicionHelenica() {
                     src={item.imagen}
                     alt=""
                     className="RazasEdicionHelenica-CardImage"
+                    loading="lazy"
                   />
                 )}
               />

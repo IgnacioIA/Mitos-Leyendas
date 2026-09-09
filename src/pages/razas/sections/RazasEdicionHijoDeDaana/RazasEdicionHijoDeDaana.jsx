@@ -43,6 +43,7 @@ export default function RazasEdicionHijoDeDaana() {
                     src={item.imagen}
                     alt=""
                     className="RazasEdicionHijoDeDaana-CardImage"
+                    loading="lazy"
                   />
                 )}
               />

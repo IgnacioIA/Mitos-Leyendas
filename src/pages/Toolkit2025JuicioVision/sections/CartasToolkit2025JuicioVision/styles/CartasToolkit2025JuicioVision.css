@@ -225,6 +225,14 @@
   .CartasToolkit2025JuicioVision-wrapper {
     gap: 80px;
   }
+
+  /* Ver CartasDesafioAmatista.css (mismo componente duplicado): permite
+     wrap del título solo en Mobile para no desbordar el viewport, sin
+     tocar el clamp() ni el diseño de Desktop. */
+  .CartasToolkit2025JuicioVision-titleLine {
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
 }
 
 @media (max-width: 480px) {

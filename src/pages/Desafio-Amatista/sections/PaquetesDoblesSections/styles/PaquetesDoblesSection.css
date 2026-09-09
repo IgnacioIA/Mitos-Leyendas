@@ -91,6 +91,20 @@ position: relative;
         text-align: center;
     }
 
+    /*
+      El translateX(100px) de arriba es un ajuste puramente compositivo de
+      Desktop (layout en fila, columna derecha con la ilustración). En
+      column layout ya no tiene sentido: sigue corriendo el bloque de
+      texto 100px fuera de su caja, generando overflow horizontal en
+      Mobile (franja vacía al hacer zoom). Se resetea acá en vez de
+      convertirlo a margin para no alterar el resultado visual en
+      Desktop (un margin sí afectaría el ancho disponible de la columna
+      derecha dentro del flex row).
+    */
+    .PaquetesDoblesSection-left {
+        transform: none;
+    }
+
     .PaquetesDoblesSection-text {
         max-width: none;
     }

@@ -42,6 +42,7 @@ export default function RazasEdicionDominiosDeRa() {
                     src={item.imagen}
                     alt=""
                     className="RazasEdicionDominiosDeRa-CardImage"
+                    loading="lazy"
                   />
                 )}
               />

@@ -10,11 +10,16 @@
   flex-direction: column;
   justify-content: center;
 
-  padding-left: 8%;
+  /* Lo más pegado posible al borde izquierdo (antes se lograba con
+     transform:translateX(-150px), que no achicaba el layout y por eso
+     .hero-Home -overflow:hidden- terminaba recortando contenido; ver
+     historial). 0 es el límite real: no hay forma de ir más a la
+     izquierda sin empezar a cortar. Mobile no se ve afectado: su propio
+     media query más abajo pisa este padding-left con un valor fijo. */
+  padding-left: 0;
   padding-right: 8%;
 
   max-width: 1100px;
-  transform: translateX(-150px);
   color: white;
   
 }

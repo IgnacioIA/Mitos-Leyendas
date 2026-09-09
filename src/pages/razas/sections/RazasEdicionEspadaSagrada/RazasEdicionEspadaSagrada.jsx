@@ -44,6 +44,7 @@ export default function RazasEdicionEspadaSagrada() {
                                         src={item.imagen}
                                         alt={item.nombre}
                                         className="RazasEdicionEspadaSagrada-CardImage"
+                                        loading="lazy"
                                     />
                                 )}
                             />

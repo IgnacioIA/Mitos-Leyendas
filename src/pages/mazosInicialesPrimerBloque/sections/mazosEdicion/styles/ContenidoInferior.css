@@ -29,6 +29,19 @@
 
 .ContenidoInferior-Btn {
 
+  /*
+    Es un <a>, que por default del navegador es display:inline: sin esto,
+    el texto queda alineado como texto corrido en vez de centrado dentro
+    del botón (más notorio en Mobile, donde además se le da width:100%),
+    y min-width/width no se aplican de forma confiable sobre un elemento
+    inline. inline-flex conserva el mismo tamaño/padding/min-width ya
+    definidos, solo corrige cómo se centra el contenido adentro.
+  */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
   min-width: 260px;
 
   padding: 1rem 2.5rem;
