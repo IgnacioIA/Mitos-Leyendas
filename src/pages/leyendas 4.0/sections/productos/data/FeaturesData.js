@@ -2,10 +2,13 @@ import img1 from "../../../../../assets/mitos4.0/productos/Display-1.png";
 import img2 from "../../../../../assets/mitos4.0/productos/KITS DE BATALLA.webp";
 import img3 from "../../../../../assets/mitos4.0/productos/SHOGUN 5.webp";
 
+// "link" define a donde navega el boton de cada card.
+// - Ruta interna del proyecto (ej: "/DracoSidhe") -> navega dentro de la SPA, misma pestaña.
+// - URL externa (empieza con "http://" o "https://") -> se abre en una pestaña nueva.
 export const cards = [
 
   {
-    title: "cada display contienen:",
+    title: "cada display contiene:",
 
      items: [
       "24 boosters leyendas 4.0",
@@ -17,10 +20,11 @@ export const cards = [
       img1,
 
     button: "Explorar",
+    link: "https://www.mylargentina.com/productos/display-leyendas-primer-bloque-4-0-1-buy-a-box/",
   },
 
   {
-    title: "cada kit de batalla contien:",
+    title: "cada kit de batalla contiene:",
 
      items: [
       "6 cartas nuevas exclusivas",
@@ -32,10 +36,11 @@ export const cards = [
       img2,
 
     button: "Explorar",
+    link: "https://www.mylargentina.com/productos/kit-batalla-sidhe-leyendas-primer-bloque-4-0/",
   },
 
   {
-    title: "cada kit de batalla contien:",
+    title: "cada kit shogun contiene:",
 
      items: [
       "25 cartas con arte alternativo",
@@ -47,5 +52,6 @@ export const cards = [
       img3,
 
     button: "Explorar",
+    link: "https://www.mylargentina.com/productos/shogun-5-onna-musha-volumen-1-primer-bloque-1-buy-a-box/",
   },
 ];

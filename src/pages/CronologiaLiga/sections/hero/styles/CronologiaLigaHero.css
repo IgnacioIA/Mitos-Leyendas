@@ -21,8 +21,32 @@
 @media (max-width: 768px) {
 
     .cronologiaLigaHero {
-        height: 120px;
+        /*
+          min-height en vez de height: el título+subtítulo de esta página
+          (más largos que en el resto de los banners que comparten este
+          mismo patrón) no entraban en los 120px fijos a la tipografía de
+          abajo, y overflow:hidden los recortaba -- se veían tapados.
+          min-height dejafuera un piso de 120px (banner sigue viéndose
+          compacto) pero permite crecer si el contenido lo necesita, así
+          el texto nunca vuelve a quedar cortado sea cual sea su largo.
+        */
+        min-height: 120px;
+        height: auto;
+
         background-position: center;
+
+        padding: 0.75rem 0;
+    }
+
+    .cronologiaLigaHero-titulo {
+        /* Piso bajado de 3rem: a este ancho 6vw ya da un tamaño legible
+           y compacto sin forzar el mínimo de Desktop en una caja mucho
+           más chica. */
+        font-size: clamp(1.4rem, 6vw, 2.2rem);
+    }
+
+    .cronologiaLigaHero-subtitulo {
+        font-size: clamp(0.7rem, 2vw, 1rem);
     }
 
 }

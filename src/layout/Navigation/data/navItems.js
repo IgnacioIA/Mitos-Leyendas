@@ -19,12 +19,12 @@ const navItems = [
       {
         title: "PRÓXIMAMENTE",
         items: [
-          { title: "RELATOS DE HIJOS DE RA", path: "/DominiosDeRaPaginaLore" },
         ],
       },
       {
         title: "PRODUCTOS RECIENTES",
         items: [
+          { title: "RELATOS DE DOMINIOS DE RA", path: "/DominiosDeRaPaginaLore" },
           { title: "LEYENDAS 4.0", path: "/mitos4.0" },
           { title: "KITS DE BATALLA: DRACO/SIDHE", path: "/DracoSidhe" },
           { title: "SHOGUN 5", path: "/Shogun" },
@@ -40,6 +40,7 @@ const navItems = [
       {
         title: "FORMATO PRINCIPAL",
         items: [
+          { title: "RELATOS DE DOMINIOS DE RA", path: "/DominiosDeRaPaginaLore" },
           { title: "LEYENDAS 4.0", path: "/mitos4.0" },
           { title: "KITS DE BATALLA: DRACO/SIDHE", path: "/DracoSidhe" },
           { title: "SHOGUN 5", path: "/Shogun" },

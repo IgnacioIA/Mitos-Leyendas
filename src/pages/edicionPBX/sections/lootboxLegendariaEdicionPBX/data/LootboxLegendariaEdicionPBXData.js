@@ -1,8 +1,10 @@
 import FondoDesktop from "../../../../../assets/EdicionPBX2025/buyABoxEdicionLootBoxPBX2025/FONDO PARALAX.webp";
+import FondoMobile from "../../../../../assets/EdicionPBX2025/buyABoxEdicionLootBoxPBX2025/FondoMobile.webp";
 import Carta1 from "../../../../../assets/EdicionPBX2025/lootboxLegendariaEdicionPBX2025/LootboxUltraSecreta/CARTA 1.png";
 import Carta2 from "../../../../../assets/EdicionPBX2025/lootboxLegendariaEdicionPBX2025/LootboxUltraSecreta/CARTA 2.png";
 
 export const fondoDesktop = FondoDesktop;
+export const fondoMobile = FondoMobile;
 
 export const TIPOS_SECCION = {
   CARROUSEL: "carrousel",

@@ -1,5 +1,6 @@
 //JUICIO Y VISION
 import fondo from "../../../../../assets/Toolkit2025JuicioVision/cartasToolkit2025JuicioVision/FONDO.webp";
+import fondoMobile from "../../../../../assets/Toolkit2025JuicioVision/cartasToolkit2025JuicioVision/FondoJyvMobile.WEBP";
 
 import card1 from "../../../../../assets/Toolkit2025JuicioVision/cartasToolkit2025JuicioVision/alt1.webp";
 import card2 from "../../../../../assets/Toolkit2025JuicioVision/cartasToolkit2025JuicioVision/alt2.webp";
@@ -25,6 +26,7 @@ import REWORK2 from "../../../../../assets/Toolkit2025JuicioVision/cartasToolkit
 
 //Nobleza y Poder
 import fondo2 from "../../../../../assets/Toolkit2025JuicioVision/cartasToolkit2025JuicioVision/Variante2/FONDO.webp";
+import fondo2Mobile from "../../../../../assets/Toolkit2025JuicioVision/cartasToolkit2025JuicioVision/Variante2/FondoNyPMobile.WEBP";
 
 import cardDesafio1 from "../../../../../assets/Toolkit2025JuicioVision/cartasToolkit2025JuicioVision/Variante2/alt1.webp";
 import cardDesafio2 from "../../../../../assets/Toolkit2025JuicioVision/cartasToolkit2025JuicioVision/Variante2/alt2.webp";
@@ -60,6 +62,7 @@ const dataCartasToolkit2025JuicioVision = {
     {
       id: "Juicio-Vision",
       fondo,
+      fondoMobile,
 
       encabezado: {
         subtitulo: "EXPANDE TU MAZO",
@@ -141,6 +144,7 @@ const dataCartasToolkit2025JuicioVision = {
     {
       id: "desafio",
       fondo: fondo2,
+      fondoMobile: fondo2Mobile,
 
       encabezado: {
         subtitulo: "EDICIÓN DESAFÍO",

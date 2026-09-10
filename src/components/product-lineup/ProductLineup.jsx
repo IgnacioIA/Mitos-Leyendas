@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 
 import FeatureCard from "./components/FeatureCard";
 
+// "linkUrl" es un fallback opcional: se usa solo si una card no define su propio "link".
+// Cada card puede tener su propio destino (ver ejemplo en data/FeaturesData.js).
 export default function ProductLineup({
   title,
   cards,

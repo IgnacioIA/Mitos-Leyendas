@@ -9,12 +9,23 @@
   top: 0;
 
   width: 100%;
-  height: 100vh;
+
+  /*
+    dvh en vez de vh (ver el media query de Mobile más abajo para el
+    porqué): con vh, el bug original en Mobile no era el sticky en sí,
+    sino que height y margin-bottom usaban una unidad estática que no se
+    recalculaba cuando el navegador ocultaba/mostraba la barra de
+    direcciones -> se desincronizaban y el contenido invadía/saltaba
+    (mismo diagnóstico que ya está documentado y resuelto con esta misma
+    técnica en Carta-texto.css, Leyendas 4.0). Con dvh ambos valores se
+    recalculan juntos en todo momento, en Desktop y en Mobile.
+  */
+  height: 100dvh;
 
   overflow: hidden;
 
   /* La clave */
-  margin-bottom: -100vh;
+  margin-bottom: -100dvh;
 
   z-index: 0;
 }
@@ -23,6 +34,24 @@
   position: absolute;
 
   inset: 0;
+
+  /*
+    height fijo en lvh (el viewport MÁS GRANDE posible, con la barra de
+    direcciones oculta) en vez de heredar el 100dvh de .Sticky por el
+    inset:0. Si esta caja midiera dvh, cada vez que el navegador
+    recalcula dvh (al ocultarse/mostrarse la barra durante el scroll) la
+    caja cambiaría de alto y background-size:cover volvería a calcular el
+    zoom/recorte en ese instante -> eso se ve como un salto de escalado
+    de la imagen. Con lvh la caja de la imagen no cambia nunca, así que
+    cover calcula el zoom una sola vez y no lo vuelve a tocar.
+
+    top:0 (de inset) + este height fijo dejan sin efecto el bottom:0 (de
+    inset) para esta caja -- el sobrante, cuando lvh > dvh, lo recorta el
+    overflow:hidden de .Sticky (que sí sigue en dvh, porque ese es el que
+    tiene que ir sincronizado con el scroll real). lvh ≥ dvh siempre, así
+    que nunca queda espacio sin imagen.
+  */
+  height: 100lvh;
 
   /* Imagen Desktop siempre; el override a --cinematic-bg-mobile vive en
      el media query de Mobile más abajo. Ver useCinematicBackgroundStyles.js. */
@@ -81,24 +110,17 @@
 }
 
 /* =========================================================
-   MOBILE — degradación del efecto
-   El truco de position:sticky + margin-bottom:-100vh es
-   inestable en mobile por los cambios dinámicos de altura de
-   viewport (barra de URL). Por debajo de 768px se desactiva el
-   scrub y el fondo pasa a cubrir la sección en flujo normal,
-   sin perder imagen, overlay ni contenido.
+   MOBILE
+   El sticky-scrub se mantiene activo en Mobile igual que en
+   Desktop (el fondo queda pegado arriba durante todo el scroll
+   de la sección = el efecto parallax). Antes se desactivaba acá
+   por los saltos que producía vh al recalcularse de forma
+   independiente entre el alto del fondo y el margen del
+   contenido; con dvh (arriba) ambos se recalculan juntos y el
+   sticky queda estable, así que ya no hace falta apagarlo.
 ========================================================= */
 
 @media (max-width: 768px) {
-
-  .ParallaxBackgroundCinematografico-Sticky {
-    position: absolute;
-
-    inset: 0;
-    height: auto;
-
-    margin-bottom: 0;
-  }
 
   /*
     Si el consumidor pasó imageMobile, --cinematic-bg-mobile existe y gana.

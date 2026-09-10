@@ -23,15 +23,15 @@ const posterImages = Object.entries(posterModules)
 const BOTONES_BASE = [
   {
     id: "racial-edicion",
-    titulo: "Racial Edición",
+    titulo: "Racial Libre",
     alt: "Ver banlist completa de Racial Edición",
-    url: "",
+    url: "https://drive.google.com/drive/folders/1tuMElfe77j0r-b7_mAWjYh5mX_zRkvhS?usp=drive_link",
   },
   {
     id: "racial-libre",
-    titulo: "Racial Libre",
+    titulo: "Full Libre",
     alt: "Ver banlist completa de Racial Libre",
-    url: "",
+    url: "https://drive.google.com/drive/folders/1tuMElfe77j0r-b7_mAWjYh5mX_zRkvhS?usp=drive_link",
   },
 ];
 

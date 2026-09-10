@@ -4,6 +4,7 @@ import TextoArribaContenidoAbajo from "../../../../components/textoArribaConteni
 import CarrouselResponsive from "../../../../components/CarrouselResponsive/CarrouselResponsive";
 import {
   fondoDesktop,
+  fondoMobile,
   secciones,
   TIPOS_SECCION,
 } from "./data/LootboxLegendariaEdicionPBXData";
@@ -50,7 +51,12 @@ function renderContenido(seccion) {
 
 export default function LootboxLegendariaEdicionPBX() {
   return (
-    <BackGround image={fondoDesktop} overlay={0.2} position="center center">
+    <BackGround
+      image={fondoDesktop}
+      imageMobile={fondoMobile}
+      overlay={0.2}
+      position="center center"
+    >
       {secciones.map((seccion) => (
         <TextoArribaContenidoAbajo
           key={seccion.id}

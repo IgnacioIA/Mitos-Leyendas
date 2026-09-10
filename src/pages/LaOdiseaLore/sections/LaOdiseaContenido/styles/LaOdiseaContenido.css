@@ -6,12 +6,14 @@
   max-width: 1300px;
   margin: 0 auto;
 
-  /* El fondo sticky del parallax mide 100vh. Si este contenido llegara a
+  /* El fondo sticky del parallax mide 100dvh (antes 100vh; se actualiza
+     acá para seguir siendo la misma unidad, ver
+     ParallaxBackgroundCinematografico.css). Si este contenido llegara a
      ser más bajo que eso (hoy no pasa: header + 13 bloques superan de
      sobra un viewport), el fondo sobraría hacia la sección de abajo —
-     mismo caso que solucionamos en CartasBanList. min-height:100vh lo
+     mismo caso que solucionamos en CartasBanList. min-height:100dvh lo
      evita de raíz, sea cual sea la cantidad real de bloques. */
-  min-height: 100vh;
+  min-height: 100dvh;
 
   padding: clamp(3rem, 7vw, 5rem) clamp(1.25rem, 4vw, 3rem);
 

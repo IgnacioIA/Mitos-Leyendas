@@ -1,6 +1,7 @@
 import "../styles/feature-card.css";
 
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 import {
   containerVariants,
@@ -8,6 +9,24 @@ import {
 } from "../animations/FeatureAnimations";
 
 export default function FeatureCard({ card, linkUrl, accentBase, accentHover }) {
+
+  const navigate = useNavigate();
+
+  const buttonLink = card.link || linkUrl;
+
+  const isExternal =
+    buttonLink?.startsWith("http://") ||
+    buttonLink?.startsWith("https://");
+
+  const handleClick = () => {
+    if (!buttonLink) return;
+
+    if (isExternal) {
+      window.open(buttonLink, "_blank", "noopener,noreferrer");
+    } else {
+      navigate(buttonLink);
+    }
+  };
 
   return (
     <motion.article
@@ -79,7 +98,7 @@ export default function FeatureCard({ card, linkUrl, accentBase, accentHover }) 
         <motion.button
           className="feature-button"
           variants={itemVariants}
-          onClick={() => window.open(linkUrl, "_blank")}
+          onClick={handleClick}
         >
           {card.button}
         </motion.button>

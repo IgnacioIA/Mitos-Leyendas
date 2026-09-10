@@ -15,15 +15,17 @@ export default function TextoYCartaSection() {
           BACKGROUND LAYER
       ===================================================== */}
 
-      <div
-        className="carta-texto-background"
-        style={{
-          "--carta-texto-bg-desktop": `url(${background.desktop})`,
-          "--carta-texto-bg-mobile": `url(${background.mobile})`,
-          "--carta-texto-bg-overlay-from": background.overlay.from,
-          "--carta-texto-bg-overlay-to": background.overlay.to,
-        }}
-      />
+      <div className="carta-texto-background">
+        <div
+          className="carta-texto-background-image"
+          style={{
+            "--carta-texto-bg-desktop": `url(${background.desktop})`,
+            "--carta-texto-bg-mobile": `url(${background.mobile})`,
+            "--carta-texto-bg-overlay-from": background.overlay.from,
+            "--carta-texto-bg-overlay-to": background.overlay.to,
+          }}
+        />
+      </div>
 
       <div className="carta-texto-content">
 

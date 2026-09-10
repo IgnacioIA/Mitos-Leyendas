@@ -4,14 +4,15 @@ import BuyABoxSection from "../buyABoxEdicionLootboxPBX2025/BuyABoxEdicionLootbo
 import CartasTextoSection from "../cartasYTextoEdicionPBX2025/CartasYTextoEdicionPBX2025";
 
 import  background  from "../../../../assets/EdicionPBX2025/buyABoxEdicionLootBoxPBX2025/FONDO PARALAX.webp";
+import backgroundMobile from "../../../../assets/EdicionPBX2025/buyABoxEdicionLootBoxPBX2025/FondoMobile.webp";
 
 export default function UnionBuyABoxYCartaTexto() {
-  console.log(background);
   return (
     <section className="ExperienciaEdicionPBX2025">
 
       <BackGround
         image={background}
+        imageMobile={backgroundMobile}
         overlay={0.2}
         position="center center"
       >

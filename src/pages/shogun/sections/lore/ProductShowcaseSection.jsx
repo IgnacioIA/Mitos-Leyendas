@@ -18,7 +18,7 @@ export default function ProductShowcaseSection() {
       imageAlt="Producto Shogun 5: Onna-musha"
       button={{
         label: "CONSEGUIR SHOGUN 5",
-        url: "https://www.mylargentina.com/formato-competitivo-pbx/ultimos-lanzamientos/leyendas-4-0/",
+        url: "https://www.mylargentina.com/productos/shogun-5-onna-musha-volumen-2-primer-bloque-1-buy-a-box/",
       }}
     />
   );

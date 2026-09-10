@@ -20,8 +20,29 @@
 @media (max-width: 768px) {
 
     .tiendasAmigasHero {
-        height: 120px;
+        /*
+          min-height en vez de height: el título+subtítulo (data real,
+          no vacíos: ver tiendasAmigasHeroData.js) no entraban en los
+          120px fijos con la tipografía de abajo, y overflow:hidden los
+          recortaba -- se veían tapados (mismo caso que
+          CronologiaLigaHero.css, copiado de este mismo patrón).
+          min-height deja un piso de 120px pero permite crecer si el
+          contenido lo necesita.
+        */
+        min-height: 120px;
+        height: auto;
+
         background-position: center;
+
+        padding: 0.75rem 0;
+    }
+
+    .tiendasAmigasHero-titulo {
+        font-size: clamp(1.4rem, 6vw, 2.2rem);
+    }
+
+    .tiendasAmigasHero-subtitulo {
+        font-size: clamp(0.7rem, 2vw, 1rem);
     }
 
 }

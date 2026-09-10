@@ -60,6 +60,7 @@ export default function CartasToolkit2025JuicioVision() {
         <Paralax
           key={bloque.id}
           image={bloque.fondo}
+          imageMobile={bloque.fondoMobile}
           overlay={0}
           position="center bottom"
           showDivider

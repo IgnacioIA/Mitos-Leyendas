@@ -60,6 +60,7 @@ export default function CartasDesafioAmatista() {
         <Paralax
           key={bloque.id}
           image={bloque.fondo}
+          imageMobile={bloque.fondoMobile}
           overlay={0}
           position="center center"
           showDivider

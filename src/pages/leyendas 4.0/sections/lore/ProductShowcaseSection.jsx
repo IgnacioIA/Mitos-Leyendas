@@ -21,7 +21,7 @@ export default function ProductShowcaseSection() {
       imageAlt="Display Leyendas Primer Bloque 4.0"
       button={{
         label: "CONSEGUIR DISPLAY",
-        url: "https://mylargentina.com/formato-competitivo-pbx/ultimos-lanzamientos/leyendas-4-0/",
+        url: "https://www.mylargentina.com/productos/display-leyendas-primer-bloque-4-0-1-buy-a-box/",
       }}
     />
   );

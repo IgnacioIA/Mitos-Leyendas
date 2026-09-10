@@ -1,5 +1,6 @@
 //AMATISTA
 import fondo from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/FONDO.webp";
+import fondoMobile from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/FondoAmatistaMobile.webp";
 
 import card1 from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/alt1.webp";
 import card2 from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/alt2.webp";
@@ -25,6 +26,7 @@ import REWORK2 from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista
 
 //DESAFIO
 import fondo2 from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/Desafio/FONDO.webp";
+import fondo2Mobile from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/Desafio/FondoDesafioMobile.webp";
 
 import cardDesafio1 from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/Desafio/alt1.webp";
 import cardDesafio2 from "../../../../../assets/DesafioAmatista/cartasDesafioAmatista/Desafio/alt2.webp";
@@ -61,6 +63,7 @@ const dataCartasDesafioAmatista = {
     {
       id: "magia-amatista",
       fondo,
+      fondoMobile,
 
       encabezado: {
         subtitulo: "EXPANDE TU MAZO",
@@ -143,6 +146,7 @@ const dataCartasDesafioAmatista = {
     {
       id: "desafio",
       fondo: fondo2,
+      fondoMobile: fondo2Mobile,
 
       encabezado: {
         subtitulo: "EDICIÓN DESAFÍO",

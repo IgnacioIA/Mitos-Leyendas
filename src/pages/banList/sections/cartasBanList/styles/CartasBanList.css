@@ -23,15 +23,17 @@
   max-width: 1600px;
   margin: auto;
 
-  /* El sticky de ParallaxBackgroundCinematografico mide 100vh. Si el
-     contenido real de un bloque (título + secciones) es más bajo que
-     eso, el propio contenedor sticky (100vh) queda más alto que su caja
-     y, como overflow tiene que quedar en visible para que el sticky
-     funcione (ver CartasBanList arriba), ese sobrante se ve por encima
-     de la sección siguiente al hacer scroll. min-height:100vh asegura
-     que el contenedor de cada bloque nunca sea más bajo que su propio
-     fondo sticky, así el fondo nunca "sobra" hacia afuera. */
-  min-height: 100vh;
+  /* El sticky de ParallaxBackgroundCinematografico mide 100dvh (antes
+     100vh; se actualiza acá para seguir siendo la misma unidad, ver
+     ParallaxBackgroundCinematografico.css). Si el contenido real de un
+     bloque (título + secciones) es más bajo que eso, el propio
+     contenedor sticky queda más alto que su caja y, como overflow tiene
+     que quedar en visible para que el sticky funcione (ver CartasBanList
+     arriba), ese sobrante se ve por encima de la sección siguiente al
+     hacer scroll. min-height:100dvh asegura que el contenedor de cada
+     bloque nunca sea más bajo que su propio fondo sticky, así el fondo
+     nunca "sobra" hacia afuera. */
+  min-height: 100dvh;
 
   padding: 100px 40px;
 

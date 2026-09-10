@@ -8,15 +8,15 @@ export const banner = {
   imagen: cajas,
   imagenAlt: "",
 
-  tituloLinea1: "RESERVA LOS KITS",
+  tituloLinea1: "CONSEGUÍ LOS KITS",
   tituloLinea2: "AHORA MISMO",
 
-  textoBoton: "VER TIENDAS AMIGAS",
+  textoBoton: "IR A LA TIENDA",
 
   // Link de destino del botón. Si en vez de un link se necesita disparar
   // una acción (abrir un modal, hacer scroll, etc.), reemplazar por
   // onBotonClick en el data y pasarlo tal cual en el JSX.
-  href: "/TiendasAmigas",
+  href: "https://www.mylargentina.com/search/?q=RELATOS+DE+DOMINIO+DE+RA",
 
   imagenPrimero: true,
 };

@@ -29,14 +29,14 @@ export const dataNovedadesHome = {
       title: "Leyendas 4.0",
       background: LEYENDAS,
       product: display,
-      url: "https://mylargentina.com/formato-competitivo-pbx/ultimos-lanzamientos/leyendas-4-0/",
+      url: "https://www.mylargentina.com/productos/display-leyendas-primer-bloque-4-0-1-buy-a-box/",
     },
     {
       id: 3,
       title: "Shogun 5",
       background: SHOGUN,
       product: shogun,
-      url: "https://mylargentina.com/formato-competitivo-pbx/ultimos-lanzamientos/leyendas-4-0/",
+      url: "https://www.mylargentina.com/productos/shogun-5-onna-musha-volumen-1-primer-bloque-1-buy-a-box/",
     },
     {
       id: 4,

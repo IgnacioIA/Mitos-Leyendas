@@ -18,9 +18,35 @@
   width: 100%;
   height: 100dvh;
 
+  /* Recorta a .carta-texto-background-image (ver esa clase): esta caja
+     sigue en dvh porque es la que tiene que ir sincronizada con el
+     scroll real (el "enganche" del sticky). */
+  overflow: hidden;
+
   z-index: -1;
 
   pointer-events: none;
+}
+
+.carta-texto-background-image {
+
+  position: absolute;
+
+  inset: 0;
+
+  /*
+    height fijo en lvh (el viewport MÁS GRANDE posible) en vez de heredar
+    el 100dvh de .carta-texto-background por el inset:0. En Mobile esta
+    caja pasa a usar background-size:cover (ver media query abajo): si
+    midiera dvh, cada recálculo de dvh (al ocultarse/mostrarse la barra
+    de direcciones durante el scroll) volvería a calcular el zoom de
+    cover en ese instante -> eso se ve como un salto de escalado de la
+    imagen. Con lvh la caja no cambia nunca, así que cover calcula el
+    zoom una sola vez. El sobrante (lvh ≥ dvh siempre) lo recorta el
+    overflow:hidden de .carta-texto-background. En Desktop no cambia
+    nada: background-size:100% auto no depende del alto de la caja.
+  */
+  height: 100lvh;
 
   background-image:
     linear-gradient(
@@ -60,7 +86,7 @@
      desincronicen. Solo se cambia la imagen y el encuadre, que ya son
      mobile-específicos. */
 
-  .carta-texto-background {
+  .carta-texto-background-image {
     background-image:
       linear-gradient(
         var(--carta-texto-bg-overlay-from),

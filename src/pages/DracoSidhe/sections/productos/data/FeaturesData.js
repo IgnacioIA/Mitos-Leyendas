@@ -2,6 +2,9 @@ import img1 from "../../../../../assets/mitos4.0/productos/Display-1.png";
 import img2 from "../../../../../assets/mitos4.0/productos/KITS DE BATALLA.webp";
 import img3 from "../../../../../assets/mitos4.0/productos/SHOGUN 5.webp";
 
+// "link" define a donde navega el boton de cada card.
+// - Ruta interna del proyecto (ej: "/DracoSidhe") -> navega dentro de la SPA, misma pestaña.
+// - URL externa (empieza con "http://" o "https://") -> se abre en una pestaña nueva.
 export const cards = [
 
   {
@@ -17,6 +20,7 @@ export const cards = [
       img1,
 
     button: "Explorar",
+    link: "https://www.mylargentina.com/formato-competitivo-pbx/ultimos-lanzamientos/leyendas-4-0/",
   },
 
   {
@@ -32,6 +36,7 @@ export const cards = [
       img2,
 
     button: "Explorar",
+    link: "https://www.mylargentina.com/formato-competitivo-pbx/ultimos-lanzamientos/leyendas-4-0/",
   },
 
   {
@@ -47,5 +52,6 @@ export const cards = [
       img3,
 
     button: "Explorar",
+    link: "https://www.mylargentina.com/formato-competitivo-pbx/ultimos-lanzamientos/leyendas-4-0/",
   },
 ];
