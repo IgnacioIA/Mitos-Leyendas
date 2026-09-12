@@ -22,7 +22,7 @@
 .shogun-hero-title {
   font-family: var(--font-anton);
 
-  font-size: clamp(3.5rem, 9vw, 7rem);
+  font-size: clamp(3rem, 9vw, 7rem);
 
   font-weight: 700;
 
@@ -92,7 +92,7 @@
   .shogun-hero-title {
   font-family: "Boucherie Block", serif;
 
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.85rem, 2.5vw, 3rem);
 
   font-weight: 600;
 

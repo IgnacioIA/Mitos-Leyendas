@@ -5,8 +5,23 @@
 
   overflow: hidden;
 
+  /*
+    Los backgrounds (DOMINIOS DE RA / LEYENDAS / SHOGUN / PRODUCTO 3, todos
+    480x969) son arte de personaje muy vertical, con la cabeza cerca del
+    borde superior. La card, en cambio, es mucho más ancha que alta
+    (sobre todo en el carrusel mobile: una card ocupa el 100% del viewport
+    con altura acotada por clamp/70vh). "cover" + "center" recorta parejo
+    arriba y abajo para tapar ese ancho, y ese recorte superior es
+    suficiente como para cortar la cabeza del personaje.
+    "contain" mostraría la imagen completa pero, con esta relación de
+    aspecto tan dispar, dejaría franjas vacías a los costados que rompen
+    el look "full-bleed" que tiene esta sección (producto + título
+    superpuestos a un fondo que llena toda la card). Se prioriza entonces
+    mantener "cover" (sin franjas) y mover el recorte hacia abajo con
+    background-position: top, para no comerse la cabeza.
+  */
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
 
   cursor: pointer;

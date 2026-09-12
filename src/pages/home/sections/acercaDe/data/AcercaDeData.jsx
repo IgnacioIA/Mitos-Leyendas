@@ -16,7 +16,7 @@ export const ACERCA_DE_ITEMS = [
     id: 2,
     title: "SALON DE CAMPEONES",
     image: img2,
-    url: "/Formatos",
+    url: "/SalonDeCampeones",
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ export const ACERCA_DE_ITEMS = [
     id: 5,
     title: "APRENDE A JUGAR",
     image: img5,
-    url: "/TeamsOficiales",
+    url: "/Apj",
   },
   {
     id: 6,

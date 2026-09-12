@@ -23,9 +23,9 @@ import libroProximamente from "../../../../../assets/LoreIndex/index/LoreSelecci
 // Agregar/quitar un destino es agregar/quitar un objeto acá, no hay que
 // tocar el componente.
 const ITEMS_BASE = [
-  { id: "destino-1", titulo: "LA ODISEA", descripcion: "CONTADA EN 13 CARTAS", alt: "Portada del libro La Odisea", path: "/LaOdiseaLore", imagen: libro1 },
-  { id: "destino-2", titulo: "LA GUERRA DE TROYA", descripcion: "CONTADA EN 10 CARTAS", alt: "Portada del libro La Guerra de Troya", path: "", imagen: libro2 },
-  { id: "destino-3", titulo: "REY ARTURO Y SUS CABALLEROS", descripcion: "CAMPEÓN LIGA ARGENTINA DE MITOS Y LEYENDAS", alt: "Portada del libro El Rey Arturo y sus Caballeros de la Mesa Redonda", path: "", imagen: libro3 },
+  { id: "destino-1", titulo: "LA ODISEA", descripcion: "CONTADO EN 13 CARTAS", alt: "Portada del libro La Odisea", path: "/LaOdiseaLore", imagen: libro1 },
+  { id: "destino-2", titulo: "LA GUERRA DE TROYA", descripcion: "CONTADO EN 10 CARTAS", alt: "Portada del libro La Guerra de Troya", path: "", imagen: libro2 },
+  { id: "destino-3", titulo: "REY ARTURO Y SUS CABALLEROS", descripcion: "CONTADO EN 13 CARTAS", alt: "Portada del libro El Rey Arturo y sus Caballeros de la Mesa Redonda", path: "", imagen: libro3 },
   { id: "destino-4", titulo: "PRÓXIMAMENTE", descripcion: "", alt: "Portada de libro aún sin título", path: "", imagen: libroProximamente },
 ];
 

@@ -1,5 +1,5 @@
-import backgroundDesktop from "../../../../../assets/EdicionPBX2025/heroEdicionPBX/HERO MOBILE.webp";
-import backgroundMobile from "../../../../../assets/EdicionPBX2025/heroEdicionPBX/HERO PC.webp";
+import backgroundMobile from "../../../../../assets/EdicionPBX2025/heroEdicionPBX/HERO MOBILE.webp";
+import backgroundDesktop from "../../../../../assets/EdicionPBX2025/heroEdicionPBX/HERO PC.webp";
 
 const heroEdicionPBXData = {
   titulo: "LOOTBOX",

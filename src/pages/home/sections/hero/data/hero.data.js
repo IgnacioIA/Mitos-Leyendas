@@ -40,7 +40,7 @@ export const HERO_SLIDES = [
     buttons: [
       {
         text: "Comprar",
-        url: "/TiendasAmigas"
+        url: "https://www.mylargentina.com/formato-competitivo-pbx/ultimos-lanzamientos/relatos-de-dominios-de-ra-preventa-ahora/"
       },
       {
         text: "Ver info",

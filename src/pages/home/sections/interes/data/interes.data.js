@@ -18,7 +18,7 @@ export const INTERES_ITEMS = [
     id: 2,
     image: Imagen2,
     alt: "Imagen 2",
-    url: "/https://www.mylargentina.com/productos/entrada-premier-argentina-club-coronel-mom-10-de-octubre-1pxwh/",
+    url: "https://www.mylargentina.com/productos/entrada-premier-argentina-club-coronel-mom-10-de-octubre-1pxwh/",
   },
 
   {

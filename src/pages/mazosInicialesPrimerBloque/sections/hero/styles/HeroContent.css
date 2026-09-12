@@ -121,20 +121,40 @@
 
   transform: translateY(-2px);
 }
+
 /* =========================================================
    RESPONSIVE
 ========================================================= */
-
 @media (max-width: 768px) {
 
   .hero-content-MazosInicialesPB {
-
     max-width: 100%;
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
   }
 
-  .hero-actions-MazosInicialesPB {
+  .hero-title-MazosInicialesPB {
+    font-size: 2.5rem;
+    white-space: nowrap;
+  }
 
-    flex-direction: column;
+  .hero-subtitle-MazosInicialesPB {
+    font-size: 1.4rem;
+    white-space: nowrap;
+  }
+
+  .hero-description-MazosInicialesPB {
+    font-size: 1rem;
+    max-width: 90%;
+    margin-top: 1.25rem;
+    font-weight: 900;
+  }
+
+  .hero-button-MazosInicialesPB {
+    padding: 1rem 2rem;
+    white-space: nowrap;
+    box-sizing: border-box;
   }
 
 }

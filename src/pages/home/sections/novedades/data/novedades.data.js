@@ -43,7 +43,7 @@ export const dataNovedadesHome = {
       title: "Lootbox PBX 2025",
       background: bg3,
       product: lootbox,
-      url: "https://mylargentina.com/formato-competitivo-pbx/lootbox-empeza-por-aca/",
+      url: "https://www.mylargentina.com/productos/lootbox-primer-bloque-2025-buy-a-box-al-azar/",
     },
   ],
 

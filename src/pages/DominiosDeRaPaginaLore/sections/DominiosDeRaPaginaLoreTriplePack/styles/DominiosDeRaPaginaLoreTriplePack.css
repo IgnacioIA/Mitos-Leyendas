@@ -64,18 +64,30 @@
    caja centrada con espacio alrededor), así que con ese mismo cover
    recortado a 100% de alto quedaba agigantada/recortada. Acá se cambia a
    contain con padding para que se vea completa y a un tamaño proporcional
-   al bloque de texto de al lado, en vez de forzarla a llenar la columna. */
+   al bloque de texto de al lado, en vez de forzarla a llenar la columna.
+
+   Solo desktop (>768px): el ancho/alto "auto" de abajo hace que la imagen
+   ya no ocupe el 100%/100% de <picture>, que es lo que el CSS compartido
+   usa para centrarla dentro de la caja fija de mobile (ver
+   BannerTextoImagenBoton.css). Sin este scope, en mobile <picture> queda
+   sin flex para centrar su contenido y la imagen (con "auto") se ubica
+   pegada arriba a la izquierda en vez de centrada, desalineada con el
+   texto de abajo. En mobile se deja el comportamiento del componente
+   compartido tal cual (width/height 100% + object-fit:contain ya centra
+   correctamente ahí). */
 .DominiosDeRaPaginaLoreTriplePack .BannerTextoImagenBoton-contenidoImagen {
   padding: 2rem;
 }
 
-.DominiosDeRaPaginaLoreTriplePack .BannerTextoImagenBoton-imagen {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
+@media (min-width: 769px) {
+  .DominiosDeRaPaginaLoreTriplePack .BannerTextoImagenBoton-imagen {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
 
-  object-fit: contain;
+    object-fit: contain;
+  }
 }
 
 /* ACERCAR IMAGEN Y TEXTO */

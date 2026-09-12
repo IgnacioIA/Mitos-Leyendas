@@ -26,10 +26,7 @@ export default function AprendeAJugar() {
           videoUrl={AprendeAJugarData.videoUrl}
         />
 
-        <AprendeAJugarButton
-          text={AprendeAJugarData.buttonText}
-          url={AprendeAJugarData.buttonUrl}
-        />
+        
 
       </div>
     </section>

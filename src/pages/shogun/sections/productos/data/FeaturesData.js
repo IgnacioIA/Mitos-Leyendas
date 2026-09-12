@@ -20,7 +20,7 @@ export const cards = [
       img1,
 
     button: "Explorar",
-    link: "https://www.mylargentina.com/formato-competitivo-pbx/ultimos-lanzamientos/leyendas-4-0/",
+    link: "https://www.mylargentina.com/productos/display-leyendas-primer-bloque-4-0-1-buy-a-box/",
   },
 
   {
@@ -36,7 +36,7 @@ export const cards = [
       img2,
 
     button: "Explorar",
-    link: "https://www.mylargentina.com/formato-competitivo-pbx/ultimos-lanzamientos/leyendas-4-0/",
+    link: "https://www.mylargentina.com/productos/kit-batalla-sidhe-leyendas-primer-bloque-4-0/",
   },
 
   {
@@ -52,6 +52,6 @@ export const cards = [
       img3,
 
     button: "Explorar",
-    link: "https://www.mylargentina.com/formato-competitivo-pbx/ultimos-lanzamientos/leyendas-4-0/",
+    link: "https://www.mylargentina.com/productos/shogun-5-onna-musha-volumen-1-primer-bloque-1-buy-a-box/",
   },
 ];

@@ -23,12 +23,23 @@
     0 20px 40px rgba(0, 0, 0, .25);
 }
 
-.interes-image {
+/*
+  Esta regla apuntaba a ".interes-image", pero InteresCard.jsx nunca usó ese
+  nombre (siempre fue "interes-card-image") -- quedó como código muerto y el
+  <img> se mostraba sin aspect-ratio ni object-fit propios. Se corrige el
+  nombre y se agrega object-position:top: las imágenes (TPI 1-6.webp, todas
+  576x650) ya calzan casi exacto con este aspect-ratio, así que hoy no
+  recortan nada; la propiedad queda como resguardo para que, si algún
+  cambio futuro de layout o de asset fuerza un recorte, se priorice la
+  parte superior (personaje) en vez de recortar por el centro.
+*/
+.interes-card-image {
   display: block;
 
   width: 100%;
 
-  aspect-ratio: 574 / 650;
+  aspect-ratio: 576 / 650;
 
   object-fit: cover;
+  object-position: top center;
 }
