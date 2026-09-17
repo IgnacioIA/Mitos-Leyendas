@@ -1,6 +1,7 @@
 import "./style/RazasStyle.css";
 import Hero from "./sections/HeroRazas/HeroRazas.jsx";
 import RazasExplicacion from "./sections/RazasExplicacion/RazasExplicacion.jsx";
+import RazasSelectorPersonaje from "./sections/RazasSelectorPersonaje/RazasSelectorPersonaje.jsx";
 import RazasEdicionEspadaSagrada from "./sections/RazasEdicionEspadaSagrada/RazasEdicionEspadaSagrada.jsx";
 import RazasEdicionHelenica from "./sections/RazasEdicionHelenica/RazasEdicionHelenica.jsx";
 import RazasEdicionHijoDeDaana from "./sections/RazasEdicionHijoDeDaana/RazasEdicionHijoDeDaana.jsx";
@@ -15,6 +16,7 @@ export default function Razas() {
 
         <Hero/>
         <RazasExplicacion/>
+        <RazasSelectorPersonaje />
         <RazasEdicionEspadaSagrada/>
         <RazasEdicionHelenica/>
         <RazasEdicionHijoDeDaana/>
