@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaInstagram, FaFacebook, FaYoutube, FaDiscord } from "react-icons/fa";
 
-import logo from "../../assets/Header/LOGO MYL ARGENTINA.webp";
+import logo from "../../assets/Header/LOGO MYL ARGENTINA.png";
 import "./Footer.css";
 
 // TODO: reemplazar por las URLs reales de cada red social

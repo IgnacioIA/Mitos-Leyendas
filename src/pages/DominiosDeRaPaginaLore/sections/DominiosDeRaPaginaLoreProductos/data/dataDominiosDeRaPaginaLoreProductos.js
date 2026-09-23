@@ -6,12 +6,18 @@ import producto1 from "../../../../../assets/DominiosDeRaPaginaLore/Productos/CA
 import producto2 from "../../../../../assets/DominiosDeRaPaginaLore/Productos/CAJA 2.webp";
 import producto3 from "../../../../../assets/DominiosDeRaPaginaLore/Productos/CAJA 3.webp";
 
-// TODO: completar títulos, subtítulos y links reales de cada producto. Los
+// TODO: completar títulos y subtítulos reales de cada producto. Los
 // valores de abajo son placeholders seguros (no rompen el render) para que
 // solo haga falta reemplazarlos por el contenido definitivo.
+//
+// "url" de cada item lleva a la sección correspondiente dentro de
+// DominiosDeRaPaginaLoreCartas (los ids "invasores"/"sabiduria"/"amanecer"
+// están definidos en ese componente's data, dataDominiosDeRaPaginaLoreCartas.js).
 const dataDominiosDeRaPaginaLoreProductos = {
 
   title: "",
+
+  buttonText: "EXPLORAR",
 
   items: [
     {
@@ -20,7 +26,7 @@ const dataDominiosDeRaPaginaLoreProductos = {
       subtitle: "KIT FARAÓN",
       background: fondo1,
       product: producto1,
-      url: "https://www.mylargentina.com/productos/preventa-relatos-de-dominios-de-ra-invasores-1l75v/",
+      url: "#invasores",
     },
     {
       id: 2,
@@ -28,7 +34,7 @@ const dataDominiosDeRaPaginaLoreProductos = {
       subtitle: "KIT SACERDOTA",
       background: fondo2,
       product: producto2,
-      url: "https://www.mylargentina.com/productos/preventa-relatos-de-dominios-de-ra-sabiduria-yt9va/",
+      url: "#sabiduria",
     },
     {
       id: 3,
@@ -36,7 +42,7 @@ const dataDominiosDeRaPaginaLoreProductos = {
       subtitle: "KIT ETERNO",
       background: fondo3,
       product: producto3,
-      url: "https://www.mylargentina.com/productos/preventa-relatos-de-dominios-de-ra-amanecer-1x2pi/",
+      url: "#amanecer",
     },
   ],
 

@@ -4,7 +4,7 @@ import DominiosDeRaPaginaLoreProductos from "./sections/DominiosDeRaPaginaLorePr
 import DominiosDeRaPaginaLoreCartas from "./sections/DominiosDeRaPaginaLoreCartas/DominiosDeRaPaginaLoreCartas.jsx";
 import DominiosDeRaPaginaCRework from "./sections/DominiosDeRaPaginaCRework/DominiosDeRaPaginaCRework.jsx";
 import DominiosDeRaPaginaPaquetitos from "./sections/DominiosDeRaPaginaPaquetitos/DominiosDeRaPaginaPaquetitos.jsx";
-import DominiosDeRaPaginaLoreTriplePack from "./sections/DominiosDeRaPaginaLoreTriplePack/DominiosDeRaPaginaLoreTriplePack.jsx";
+import DominiosDeRaPaginaLoreLineaProductos from "./sections/DominiosDeRaPaginaLoreLineaProductos/DominiosDeRaPaginaLoreLineaProductos.jsx";
 
 export default function DominiosDeRaPaginaLore() {
   return (
@@ -15,7 +15,7 @@ export default function DominiosDeRaPaginaLore() {
       <DominiosDeRaPaginaLoreCartas />
       <DominiosDeRaPaginaCRework />
       <DominiosDeRaPaginaPaquetitos />
-      <DominiosDeRaPaginaLoreTriplePack />
+      <DominiosDeRaPaginaLoreLineaProductos />
     </>
   );
 }

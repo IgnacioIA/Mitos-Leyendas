@@ -1,0 +1,499 @@
+.FichaRaza {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: min(24px, 1.8vw);
+
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  background: var(--bg);
+  border-left: 1px solid var(--border);
+  border-radius: 22px 0 0 22px;
+  box-shadow: -24px 0 50px rgba(0, 0, 0, .55);
+
+  transform: translate3d(104%, 0, 0);
+  opacity: .98;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: transform .72s cubic-bezier(.18, .82, .2, 1), opacity .45s ease, visibility 0s linear .72s;
+  will-change: transform;
+}
+
+.FichaRaza.is-open {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+
+  transition: transform .72s cubic-bezier(.18, .82, .2, 1), opacity .45s ease, visibility 0s linear 0s;
+}
+
+.FichaRaza-Hero {
+  position: relative;
+  min-height: 610px;
+  overflow: hidden;
+
+  border-bottom: 1px solid var(--border);
+
+  --dchar-x: 0;
+  --dchar-y: 0;
+  --dbg-x: 0;
+  --dbg-y: 0;
+}
+
+.FichaRaza-Hero::before {
+  content: "";
+  position: absolute;
+  inset: 2.2% 2.2%;
+  border: 1.5px solid var(--border);
+  pointer-events: none;
+}
+
+.FichaRaza-Top {
+  position: relative;
+  z-index: 8;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 34px 4.8% 0;
+}
+
+.FichaRaza-Volver {
+  width: 58px;
+  height: 58px;
+  border: 0;
+  border-radius: 50%;
+
+  background: var(--surface);
+  color: var(--primary-light);
+  font-size: 34px;
+  line-height: 1;
+  cursor: pointer;
+
+  box-shadow: 0 8px 18px rgba(0, 0, 0, .4);
+  display: grid;
+  place-items: center;
+
+  transition: .16s;
+}
+
+.FichaRaza-Volver:hover {
+  transform: translateX(-3px);
+}
+
+.FichaRaza-Titulo {
+  font-family: var(--font-anton);
+  font-size: clamp(24px, 2.2vw, 38px);
+  text-transform: uppercase;
+  letter-spacing: -.01em;
+}
+
+.FichaRaza-Simbolo {
+  position: absolute;
+  right: 3%;
+  top: -7%;
+
+  font-family: var(--font-anton);
+  font-size: clamp(220px, 34vw, 560px);
+  color: var(--accent);
+  opacity: .07;
+  line-height: .8;
+
+  transform: translate3d(calc(var(--dbg-x) * 1px), calc(var(--dbg-y) * 1px), 0);
+  will-change: transform;
+}
+
+.FichaRaza-Simbolo--imagen {
+  width: clamp(220px, 34vw, 560px);
+  height: clamp(220px, 34vw, 560px);
+  object-fit: contain;
+  object-position: top right;
+  opacity: .3;
+}
+
+.FichaRaza-Copy {
+  position: absolute;
+  left: 1.8%;
+  top: 142px;
+  width: min(760px, 47vw);
+  z-index: 6;
+
+  opacity: 0;
+  transform: translate3d(48px, 0, 0);
+  transition: opacity .42s ease .16s, transform .7s cubic-bezier(.18, .82, .2, 1) .12s;
+}
+
+.FichaRaza.is-open .FichaRaza-Copy {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.FichaRaza-Kicker,
+.FichaRaza-Nombre,
+.FichaRaza-DescBox {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.FichaRaza-Kicker {
+  transform: translate3d(-34px, 8px, 0) skewX(-5deg);
+}
+
+.FichaRaza-Nombre {
+  transform: translate3d(50px, 0, 0);
+}
+
+.FichaRaza-DescBox {
+  transform: translate3d(34px, 14px, 0);
+}
+
+.FichaRaza.is-open .FichaRaza-Kicker {
+  animation: FichaRazaChipIn .48s cubic-bezier(.2, .8, .2, 1) .2s forwards;
+}
+
+.FichaRaza.is-open .FichaRaza-Nombre {
+  animation: FichaRazaNombreIn .62s cubic-bezier(.18, .88, .22, 1) .28s forwards;
+}
+
+.FichaRaza.is-open .FichaRaza-DescBox {
+  animation: FichaRazaBoxIn .56s cubic-bezier(.2, .8, .2, 1) .38s forwards;
+}
+
+@keyframes FichaRazaChipIn {
+  to { opacity: 1; transform: translate3d(0, 0, 0) skewX(0); }
+}
+
+@keyframes FichaRazaNombreIn {
+  0% { opacity: 0; transform: translate3d(50px, 0, 0); clip-path: inset(0 100% 0 0); }
+  100% { opacity: 1; transform: translate3d(0, 0, 0); clip-path: inset(0 0 0 0); }
+}
+
+@keyframes FichaRazaBoxIn {
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+.FichaRaza-Kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  background: var(--accent2);
+  padding: 2px 10px 3px 4px;
+  font-size: clamp(18px, 1.75vw, 31px);
+  font-weight: 1000;
+  text-transform: uppercase;
+  line-height: 1;
+  color: #14151b;
+}
+
+.FichaRaza-KickerSig {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  background: var(--accent);
+  display: grid;
+  place-items: center;
+  color: #14151b;
+  font-size: 26px;
+}
+
+.FichaRaza-Nombre {
+  font-family: var(--font-anton);
+  font-size: clamp(72px, 8.2vw, 138px);
+  line-height: .77;
+  margin: 14px 0 26px;
+  text-transform: uppercase;
+  letter-spacing: -.03em;
+}
+
+.FichaRaza-DescBox {
+  background: var(--surface);
+  border: 2px dashed rgba(139, 92, 246, .35);
+  padding: 16px 18px;
+  max-width: 820px;
+
+  font-size: clamp(17px, 1.4vw, 25px);
+  line-height: 1.52;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, .35);
+}
+
+.FichaRaza-DescMeta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+
+  margin-top: 14px;
+}
+
+.FichaRaza-Pill {
+  background: var(--panel);
+  color: var(--text);
+  padding: 7px 9px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: 900;
+}
+
+.FichaRaza-Personaje {
+  position: absolute;
+  right: -4%;
+  bottom: -4%;
+  height: 110%;
+  width: min(58vw, 940px);
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  filter: drop-shadow(0 22px 18px rgba(0, 0, 0, .5));
+  opacity: 0;
+  transform: translate3d(calc(96px + (var(--dchar-x) * 1px)), calc(var(--dchar-y) * 1px), 0) scale(.99);
+  transition: opacity .42s ease .12s, transform .78s cubic-bezier(.18, .82, .2, 1) .08s;
+  will-change: transform;
+}
+
+.FichaRaza.is-open .FichaRaza-Personaje {
+  opacity: 1;
+  transform: translate3d(calc(var(--dchar-x) * 1px), calc(var(--dchar-y) * 1px), 0) scale(1);
+}
+
+.FichaRaza-Personaje svg,
+.FichaRaza-Personaje img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  overflow: visible;
+}
+
+.FichaRaza-CartasStrip {
+  padding: 28px 0 54px;
+  position: relative;
+
+  opacity: 0;
+  transform: translate3d(62px, 0, 0);
+  transition: opacity .42s ease .26s, transform .72s cubic-bezier(.18, .82, .2, 1) .22s;
+}
+
+.FichaRaza.is-open .FichaRaza-CartasStrip {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.FichaRaza-CartasHeader {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding: 0 4.8% 14px;
+}
+
+.FichaRaza-CartasHeader h2 {
+  margin: 0;
+
+  font-family: var(--font-anton);
+  text-transform: uppercase;
+  font-size: clamp(26px, 3vw, 48px);
+  letter-spacing: -.01em;
+}
+
+.FichaRaza-CartasHeader p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-weight: 900;
+}
+
+.FichaRaza-CartasScroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+
+  padding: 8px 4.8% 20px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+}
+
+.FichaRaza-Carta {
+  flex: 0 0 clamp(230px, 25vw, 390px);
+  aspect-ratio: 16 / 9;
+  border-radius: 24px;
+
+  background: var(--surface);
+  position: relative;
+  overflow: hidden;
+
+  border: 1px solid var(--border);
+  box-shadow: 0 13px 25px rgba(0, 0, 0, .4);
+  scroll-snap-align: start;
+
+  transition: .16s;
+}
+
+.FichaRaza-Carta:hover {
+  transform: translateY(-6px);
+}
+
+.FichaRaza-CartaArte {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at 65% 28%, var(--accent2), transparent 34%),
+    linear-gradient(150deg, var(--accent), #0d0e13 78%);
+}
+
+.FichaRaza-CartaArte::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, .12), transparent 45%),
+    repeating-linear-gradient(110deg, rgba(255, 255, 255, .04) 0 2px, transparent 2px 22px);
+}
+
+.FichaRaza-CartaImagen {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.FichaRaza-CartaRuna {
+  position: absolute;
+  right: 7%;
+  top: 8%;
+
+  font-family: var(--font-anton);
+  font-size: clamp(82px, 8vw, 140px);
+  color: rgba(255, 255, 255, .8);
+  text-shadow: 0 8px 12px rgba(0, 0, 0, .5);
+}
+
+.FichaRaza-CartaCaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 30px 18px 14px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, .9));
+  color: #fff;
+}
+
+.FichaRaza-CartaCaption b {
+  display: block;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.FichaRaza-CartaCaption span {
+  display: block;
+  font-size: 11px;
+  opacity: .8;
+  margin-top: 3px;
+}
+
+@media (max-width: 980px) {
+  .FichaRaza-Hero {
+    min-height: 900px;
+  }
+
+  .FichaRaza-Copy {
+    left: 4.8%;
+    top: 120px;
+    width: 88vw;
+  }
+
+  .FichaRaza-Personaje {
+    height: 66%;
+    width: 100%;
+    right: -24%;
+    bottom: -4%;
+  }
+
+  .FichaRaza-DescBox {
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 620px) {
+  .FichaRaza {
+    left: 0;
+    border-radius: 0;
+  }
+
+  .FichaRaza-Top {
+    padding: 24px 18px 0;
+  }
+
+  .FichaRaza-Volver {
+    width: 48px;
+    height: 48px;
+  }
+
+  .FichaRaza-Titulo {
+    font-size: 20px;
+  }
+
+  .FichaRaza-Hero {
+    min-height: 880px;
+  }
+
+  .FichaRaza-Copy {
+    left: 18px;
+    width: calc(100% - 36px);
+    top: 104px;
+  }
+
+  .FichaRaza-Nombre {
+    font-size: 66px;
+  }
+
+  .FichaRaza-DescBox {
+    font-size: 16px;
+  }
+
+  .FichaRaza-Personaje {
+    height: 52%;
+    width: 115%;
+    right: -36%;
+    bottom: -3%;
+    opacity: .84;
+  }
+
+  .FichaRaza.is-open .FichaRaza-Personaje {
+    opacity: .84;
+  }
+
+  .FichaRaza-CartasHeader {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .FichaRaza-CartasScroll {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .FichaRaza-Carta {
+    flex-basis: 82vw;
+  }
+}

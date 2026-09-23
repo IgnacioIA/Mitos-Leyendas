@@ -10,6 +10,7 @@ export default function Novedades({
   const {
     title,
     items = [],
+    buttonText,
   } = data ?? {};
 
   return (
@@ -21,7 +22,7 @@ export default function Novedades({
 
       </div>
 
-      <NovedadesGallery items={items} />
+      <NovedadesGallery items={items} buttonText={buttonText} />
 
     </section>
   );

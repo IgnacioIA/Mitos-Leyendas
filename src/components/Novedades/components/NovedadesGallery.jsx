@@ -3,7 +3,8 @@ import "../styles/NovedadesGallery.css";
 import NovedadCard from "./NovedadCard";
 
 export default function NovedadesGallery({
-  items
+  items,
+  buttonText,
 }) {
   return (
     <div className="Novedades-Gallery">
@@ -17,6 +18,7 @@ export default function NovedadesGallery({
           background={producto.background}
           product={producto.product}
           url={producto.url}
+          buttonText={producto.buttonText ?? buttonText}
         />
 
       ))}

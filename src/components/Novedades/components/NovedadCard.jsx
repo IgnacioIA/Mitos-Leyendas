@@ -8,11 +8,15 @@ export default function NovedadCard({
   background,
   product,
   url,
+  buttonText = "VER PRODUCTO",
 }) {
 
   const isExternal =
     url.startsWith("http://") ||
     url.startsWith("https://");
+
+  // Ancla a una sección de la misma página (ej: "#invasores").
+  const isAnchor = url.startsWith("#");
 
   return (
     <article
@@ -48,14 +52,21 @@ export default function NovedadCard({
               rel="noopener noreferrer"
               className="Novedades-Card__button"
             >
-              VER PRODUCTO
+              {buttonText}
+            </a>
+          ) : isAnchor ? (
+            <a
+              href={url}
+              className="Novedades-Card__button"
+            >
+              {buttonText}
             </a>
           ) : (
             <Link
               to={url}
               className="Novedades-Card__button"
             >
-              VER PRODUCTO
+              {buttonText}
             </Link>
           )}
 

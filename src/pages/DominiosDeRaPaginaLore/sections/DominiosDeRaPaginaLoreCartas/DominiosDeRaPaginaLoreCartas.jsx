@@ -53,6 +53,7 @@ export default function DominiosDeRaPaginaLoreCartas() {
 
         <Paralax
           key={bloque.id}
+          id={bloque.id}
           image={bloque.fondo}
           overlay={0}
           position="center bot"

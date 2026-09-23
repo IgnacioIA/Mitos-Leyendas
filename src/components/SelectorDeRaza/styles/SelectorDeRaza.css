@@ -1,0 +1,116 @@
+.SelectorDeRaza {
+  --paper: var(--surface);
+  --ink: var(--text);
+  --line: rgba(139, 92, 246, .28);
+  --panel: #15171f;
+
+  box-sizing: border-box;
+  position: relative;
+
+  background:
+    linear-gradient(90deg, transparent 0 2%, rgba(139, 92, 246, .18) 2% 2.1%, transparent 2.1% 97.9%, rgba(139, 92, 246, .18) 97.9% 98%, transparent 98%),
+    repeating-linear-gradient(0deg, rgba(139, 92, 246, .05) 0 1px, transparent 1px 86px),
+    radial-gradient(circle at 78% 24%, rgba(255, 255, 255, .04), transparent 33%),
+    var(--bg);
+
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+.SelectorDeRaza *,
+.SelectorDeRaza *::before,
+.SelectorDeRaza *::after {
+  box-sizing: border-box;
+}
+
+.SelectorDeRaza button {
+  font: inherit;
+}
+
+.SelectorDeRaza-Screen {
+  min-height: 100vh;
+
+  position: relative;
+}
+
+.SelectorDeRaza-Wrap {
+  display: grid;
+  grid-template-columns: minmax(440px, 46%) 1fr;
+
+  min-height: 100vh;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.SelectorDeRaza-Side {
+  padding: 42px 4vw 48px 4.8%;
+
+  position: relative;
+  z-index: 3;
+}
+
+.SelectorDeRaza-Kicker {
+  font-weight: 950;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: var(--muted);
+
+  margin-bottom: 8px;
+}
+
+.SelectorDeRaza-Side h1 {
+  font-family: var(--font-anton);
+  font-size: clamp(56px, 5.8vw, 96px);
+  line-height: .88;
+  margin: 0 0 28px;
+  text-transform: uppercase;
+  letter-spacing: -.02em;
+
+  max-width: 720px;
+}
+
+.SelectorDeRaza-Ayuda {
+  font-size: 11px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  font-weight: 850;
+  color: var(--muted);
+
+  margin: 14px 0 22px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .SelectorDeRaza *,
+  .SelectorDeRaza *::before,
+  .SelectorDeRaza *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+@media (max-width: 980px) {
+  .SelectorDeRaza-Wrap {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .SelectorDeRaza-Side {
+    padding-bottom: 28px;
+  }
+}
+
+@media (max-width: 620px) {
+  .SelectorDeRaza-Side {
+    padding: 28px 18px;
+  }
+
+  .SelectorDeRaza-Side h1 {
+    font-size: 52px;
+  }
+}
