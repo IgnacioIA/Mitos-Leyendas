@@ -1,0 +1,153 @@
+/* Capas (definidas en .SelectorDeRaza, ver SelectorDeRaza.css):
+   0 fondo · 1 logo/decoración · 2 personaje · 3 texto/UI (del consumidor).
+   El contenedor que usa el escenario aplica isolation:isolate, así ninguna
+   capa externa compite y el personaje siempre queda sobre el logo. */
+.EscenarioRaza {
+  display: contents;
+}
+
+/* ---------- Capa 0 · fondo ---------- */
+
+.EscenarioRaza-Fondo {
+  position: absolute;
+  inset: 0;
+  z-index: var(--capa-fondo);
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+/* Marco decorativo del panel (antes .PanelPreviewRaza-ParallaxLayer). */
+.EscenarioRaza--panel .EscenarioRaza-Fondo::after {
+  content: "";
+  position: absolute;
+  inset: 9% 8% 15% 12%;
+  border: 1px dashed rgba(139, 92, 246, .18);
+
+  transform: translate3d(calc(var(--esc-bx, 0) * .55px), calc(var(--esc-by, 0) * .55px), 0) rotate(-2deg);
+  will-change: transform;
+}
+
+/* ---------- Capa 1 · logo ---------- */
+
+.EscenarioRaza-Logo {
+  position: absolute;
+  right: 5%;
+  top: 4%;
+  z-index: var(--capa-decoracion);
+
+  font-family: var(--font-anton);
+  font-size: clamp(180px, 30vw, 480px);
+  color: var(--accent);
+  opacity: .1;
+  line-height: .78;
+
+  user-select: none;
+  pointer-events: none;
+  transform: translate3d(calc(var(--esc-bx, 0) * 1px), calc(var(--esc-by, 0) * 1px), 0);
+  transition: color .35s ease;
+  will-change: transform;
+}
+
+/* Logo de la edición: arriba a la derecha, casi al borde sin tocarlo, a
+   opacidad plena y con su proporción intacta (alto auto). */
+.EscenarioRaza-Logo--imagen {
+  width: min(62%, 560px);
+  height: auto;
+  opacity: 1;
+}
+
+.EscenarioRaza--ficha .EscenarioRaza-Logo--imagen {
+  /* El PNG trae margen transparente arriba: se compensa con top negativo
+     para que el trazo visible quede cerca del borde superior. */
+  top: -3%;
+  right: 3%;
+  width: min(46%, 640px);
+}
+
+/* ---------- Capa 2 · personaje ---------- */
+
+.EscenarioRaza-Personaje {
+  position: absolute;
+  z-index: var(--capa-personaje);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  /* El personaje se contiene en el alto disponible: siempre completo. */
+  pointer-events: none;
+  filter: drop-shadow(0 24px 22px rgba(0, 0, 0, .5));
+  transform: translate3d(calc(var(--esc-x, 0) * 1px), calc(var(--esc-y, 0) * 1px), 0);
+  will-change: transform;
+}
+
+.EscenarioRaza-Personaje svg,
+.EscenarioRaza-Personaje img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  overflow: visible;
+
+  transform-origin: 62% 85%;
+  animation: EscenarioRazaPersonajeEnter .58s cubic-bezier(.2, .8, .2, 1) both;
+}
+
+/* Centrado horizontal: el arte de personaje (1107×1350) es más angosto que
+   el panel, así que object-fit:contain deja una franja vacía a los costados.
+   Antes esa franja quedaba toda del lado izquierdo (object-position:right),
+   empujando al personaje contra el borde derecho y dejando el panel con
+   pinta de descentrado. Centrado reparte la franja en ambos lados. */
+
+.EscenarioRaza--ficha .EscenarioRaza-Personaje {
+  width: min(58vw, 940px);
+}
+
+@keyframes EscenarioRazaPersonajeEnter {
+  0% { opacity: 0; transform: translate3d(78px, 8px, 0) scale(.985); }
+  55% { opacity: 1; }
+  100% { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+}
+
+/* ---------- Ficha en pantallas angostas ----------
+   Conserva el layout previo: el personaje pasa al flujo (debajo del texto)
+   como ítem del Hero, que es flex-column. */
+
+@media (max-width: 980px) {
+  .EscenarioRaza--ficha .EscenarioRaza-Logo--imagen {
+    width: min(58%, 420px);
+  }
+
+  .EscenarioRaza--ficha .EscenarioRaza-Personaje {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    align-self: center;
+    height: clamp(360px, 70vw, 620px);
+    width: min(100%, 720px);
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 620px) {
+  /* Que el logo no pise el título "Selección de raza" (a la izquierda). */
+  .EscenarioRaza--ficha .EscenarioRaza-Logo--imagen {
+    top: -2%;
+    right: 3%;
+    width: 40%;
+  }
+
+  .EscenarioRaza--ficha .EscenarioRaza-Personaje {
+    height: clamp(320px, 95vw, 460px);
+    width: 100%;
+    opacity: .84;
+  }
+}

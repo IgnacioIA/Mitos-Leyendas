@@ -4,17 +4,30 @@
   --line: rgba(139, 92, 246, .28);
   --panel: #15171f;
 
+  /* Jerarquía de capas de la composición de cada raza (ver EscenarioRaza). */
+  --capa-fondo: 0;
+  --capa-decoracion: 1;
+  --capa-personaje: 2;
+  --capa-texto: 3;
+
   box-sizing: border-box;
   position: relative;
 
-  background:
-    linear-gradient(90deg, transparent 0 2%, rgba(139, 92, 246, .18) 2% 2.1%, transparent 2.1% 97.9%, rgba(139, 92, 246, .18) 97.9% 98%, transparent 98%),
-    repeating-linear-gradient(0deg, rgba(139, 92, 246, .05) 0 1px, transparent 1px 86px),
-    radial-gradient(circle at 78% 24%, rgba(255, 255, 255, .04), transparent 33%),
-    var(--bg);
+  /* Transparente: el fondo lo aporta el ParallaxBackground que envuelve al
+     selector (ver RazasSelectorPersonaje). */
+  background: transparent;
 
   color: var(--ink);
+
+  /* clip (no hidden): recorta igual pero no crea scroll container, así el
+     position:sticky del stage sigue anclado al scroll de la página. */
   overflow-x: hidden;
+  overflow-x: clip;
+}
+
+/* Contenedor de la ficha portada al body: solo aporta variables y color. */
+.SelectorDeRaza--overlay {
+  display: contents;
 }
 
 .SelectorDeRaza *,
@@ -41,14 +54,20 @@
 
   position: relative;
 
+  /* Ídem: clip mantiene el recorte sin romper el sticky del stage. */
   overflow: hidden;
+  overflow: clip;
 }
 
 .SelectorDeRaza-Side {
   padding: 42px 4vw 48px 4.8%;
 
+  /* Velo suave detrás de la columna de texto para asegurar legibilidad
+     sobre la textura del fondo. */
+  background: linear-gradient(90deg, rgba(6, 7, 10, .55), transparent);
+
   position: relative;
-  z-index: 3;
+  z-index: var(--capa-texto);
 }
 
 .SelectorDeRaza-Kicker {
@@ -64,8 +83,8 @@
 .SelectorDeRaza-Side h1 {
   font-family: var(--font-anton);
   font-size: clamp(56px, 5.8vw, 96px);
-  line-height: .88;
-  margin: 0 0 28px;
+  line-height: 1;
+  margin: 0 0 24px;
   text-transform: uppercase;
   letter-spacing: -.02em;
 
@@ -81,6 +100,19 @@
   color: var(--muted);
 
   margin: 14px 0 22px;
+}
+
+/* Desktop: el alto de la sección lo define el selector; el stage (panel) queda
+   sticky mientras el selector se desplaza con el scroll natural de la página. */
+@media (min-width: 981px) {
+  .SelectorDeRaza-Screen {
+    min-height: 0;
+  }
+
+  .SelectorDeRaza-Wrap {
+    min-height: calc(100vh - var(--header-h, 0px));
+    min-height: calc(100dvh - var(--header-h, 0px));
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

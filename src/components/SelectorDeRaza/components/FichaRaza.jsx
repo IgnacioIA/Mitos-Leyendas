@@ -3,36 +3,16 @@ import { useEffect, useMemo, useRef } from "react";
 import "../styles/FichaRaza.css";
 
 import useFiniteParallax from "../hooks/useFiniteParallax";
-import PersonajeRaza from "./PersonajeRaza";
+import CarrouselElastico from "../../carrouselElastico/CarrouselElastico";
+import EscenarioRaza from "./EscenarioRaza";
 
-const NOMBRES_CARTA_GENERICA = ["Aliado emblemático", "Carta de apoyo", "Talismán de raza", "Recurso especial"];
-
-function CartaFicha({ carta, nombreRaza }) {
-  return (
-    <article className="FichaRaza-Carta">
-      {carta.imagen ? (
-        <img className="FichaRaza-CartaImagen" src={carta.imagen} alt={carta.titulo || `${nombreRaza} · carta`} loading="lazy" />
-      ) : (
-        <>
-          <div className="FichaRaza-CartaArte" />
-          <div className="FichaRaza-CartaRuna">{carta.simbolo}</div>
-        </>
-      )}
-      <div className="FichaRaza-CartaCaption">
-        <b>{carta.titulo || `${nombreRaza} · Carta`}</b>
-        <span>{carta.subtitulo || "Arte conceptual de prueba para reemplazar luego por cartas reales."}</span>
-      </div>
-    </article>
-  );
-}
-
-export default function FichaRaza({ raza, onCerrar }) {
+export default function FichaRaza({ raza, fondo, onCerrar }) {
   const heroRef = useRef(null);
   const pantallaRef = useRef(null);
   const abierta = Boolean(raza);
 
   const variables = useMemo(
-    () => ({ x: "--dchar-x", y: "--dchar-y", bx: "--dbg-x", by: "--dbg-y" }),
+    () => ({ x: "--esc-x", y: "--esc-y", bx: "--esc-bx", by: "--esc-by" }),
     []
   );
 
@@ -58,9 +38,14 @@ export default function FichaRaza({ raza, onCerrar }) {
     };
   }, [abierta, onCerrar]);
 
-  const cartas = raza?.cartas?.length
-    ? raza.cartas
-    : NOMBRES_CARTA_GENERICA.map((nombre) => ({ titulo: raza ? `${raza.nombre} · ${nombre}` : nombre, simbolo: raza?.simbolo }));
+  // Mismo shape que espera CarrouselElastico ({ id, imagen, alt }).
+  const cartas = (raza?.cartas ?? [])
+    .filter((carta) => carta.imagen)
+    .map((carta, index) => ({
+      id: `${raza.id}-${index}`,
+      imagen: carta.imagen,
+      alt: carta.titulo || `${raza.nombre} · carta ${index + 1}`,
+    }));
 
   return (
     <section
@@ -75,17 +60,6 @@ export default function FichaRaza({ raza, onCerrar }) {
               <button type="button" className="FichaRaza-Volver" onClick={onCerrar} aria-label="Volver al selector">‹</button>
               <div className="FichaRaza-Titulo">Selección de raza</div>
             </div>
-
-            {raza.edicion.imagenSimbolo ? (
-              <img
-                className="FichaRaza-Simbolo FichaRaza-Simbolo--imagen"
-                src={raza.edicion.imagenSimbolo}
-                alt=""
-                aria-hidden="true"
-              />
-            ) : (
-              <div className="FichaRaza-Simbolo">{raza.simbolo}</div>
-            )}
 
             <div className="FichaRaza-Copy">
               <div className="FichaRaza-Kicker">
@@ -102,29 +76,18 @@ export default function FichaRaza({ raza, onCerrar }) {
               </div>
             </div>
 
-            <div className="FichaRaza-Personaje" key={`ficha-personaje-${raza.id}`}>
-              <PersonajeRaza
-                nombre={raza.nombre}
-                simbolo={raza.simbolo}
-                colorPrincipal={raza.edicion.color}
-                colorSecundario={raza.edicion.colorSecundario}
-                variacion={raza.variacion}
-                imagen={raza.imagenPersonaje}
-              />
-            </div>
+            <EscenarioRaza razaId={raza.id} raza={raza} variacion={raza.variacion} variante="ficha" fondo={fondo} />
           </div>
 
-          <div className="FichaRaza-CartasStrip">
-            <div className="FichaRaza-CartasHeader">
-              <h2>Cartas de la raza</h2>
-              <p>Galería · desplazamiento horizontal</p>
+          {cartas.length > 0 && (
+            <div className="FichaRaza-CartasStrip">
+              <div className="FichaRaza-CartasHeader">
+                <h2>Cartas de la raza</h2>
+                <p>Galería · arrastrá para explorar</p>
+              </div>
+              <CarrouselElastico elementos={cartas} />
             </div>
-            <div className="FichaRaza-CartasScroll">
-              {cartas.map((carta, index) => (
-                <CartaFicha key={`${raza.id}-${index}`} carta={carta} nombreRaza={raza.nombre} />
-              ))}
-            </div>
-          </div>
+          )}
         </>
       )}
     </section>

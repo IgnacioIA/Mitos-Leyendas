@@ -15,12 +15,8 @@ export default function Razas() {
     <div className="Razas-container">
 
         <Hero/>
-        <RazasExplicacion/>
         <RazasSelectorPersonaje />
-        <RazasEdicionEspadaSagrada/>
-        <RazasEdicionHelenica/>
-        <RazasEdicionHijoDeDaana/>
-        <RazasEdicionDominiosDeRa/>
+        <RazasExplicacion/>     
         <AprenderAJugar/>
 
     </div>

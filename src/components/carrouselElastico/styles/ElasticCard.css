@@ -14,7 +14,7 @@
 
 .ElasticCard img {
 
-  width: 240px;
+  width: var(--elastic-card-width, 240px);
 
   display: block;
 

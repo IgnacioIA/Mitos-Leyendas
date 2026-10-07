@@ -2,16 +2,24 @@
   overflow: hidden;
 
   display: flex;
-  justify-content: center;
 
-  padding: 2rem 0;
+  /* El respiro vertical aloja el hover (y -10 / scale) y la sombra de las
+     cartas, que si no quedarían recortadas por el overflow. */
+  padding: 2.5rem 0 3.5rem;
 }
 
 .ElasticTrack {
   display: flex;
-  gap: 1.5rem;
+  gap: var(--elastic-gap, 1.5rem);
 
   width: max-content;
+
+  /* Centra cuando el contenido entra; cuando desborda, los márgenes auto
+     valen 0 y el track parte desde el borde izquierdo (con
+     justify-content:center el desborde se repartía a ambos lados y
+     cortaba la primera carta). */
+  margin-inline: auto;
+  padding-inline: var(--elastic-gutter, 0px);
 
   cursor: grab;
 }

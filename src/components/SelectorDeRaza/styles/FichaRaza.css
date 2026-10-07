@@ -35,15 +35,17 @@
 
 .FichaRaza-Hero {
   position: relative;
+  display: flex;
+  flex-direction: column;
   min-height: 610px;
+  padding-bottom: 48px;
   overflow: hidden;
 
-  border-bottom: 1px solid var(--border);
+  /* Stacking context propio: capas del EscenarioRaza + texto (ver
+     EscenarioRaza.css). */
+  isolation: isolate;
 
-  --dchar-x: 0;
-  --dchar-y: 0;
-  --dbg-x: 0;
-  --dbg-y: 0;
+  border-bottom: 1px solid var(--border);
 }
 
 .FichaRaza-Hero::before {
@@ -52,11 +54,12 @@
   inset: 2.2% 2.2%;
   border: 1.5px solid var(--border);
   pointer-events: none;
+  z-index: var(--capa-decoracion);
 }
 
 .FichaRaza-Top {
   position: relative;
-  z-index: 8;
+  z-index: var(--capa-texto);
 
   display: flex;
   align-items: center;
@@ -95,35 +98,11 @@
   letter-spacing: -.01em;
 }
 
-.FichaRaza-Simbolo {
-  position: absolute;
-  right: 3%;
-  top: -7%;
-
-  font-family: var(--font-anton);
-  font-size: clamp(220px, 34vw, 560px);
-  color: var(--accent);
-  opacity: .07;
-  line-height: .8;
-
-  transform: translate3d(calc(var(--dbg-x) * 1px), calc(var(--dbg-y) * 1px), 0);
-  will-change: transform;
-}
-
-.FichaRaza-Simbolo--imagen {
-  width: clamp(220px, 34vw, 560px);
-  height: clamp(220px, 34vw, 560px);
-  object-fit: contain;
-  object-position: top right;
-  opacity: .3;
-}
-
 .FichaRaza-Copy {
-  position: absolute;
-  left: 1.8%;
-  top: 142px;
+  position: relative;
+  margin: 56px 0 0 1.8%;
   width: min(760px, 47vw);
-  z-index: 6;
+  z-index: var(--capa-texto);
 
   opacity: 0;
   transform: translate3d(48px, 0, 0);
@@ -171,8 +150,8 @@
 }
 
 @keyframes FichaRazaNombreIn {
-  0% { opacity: 0; transform: translate3d(50px, 0, 0); clip-path: inset(0 100% 0 0); }
-  100% { opacity: 1; transform: translate3d(0, 0, 0); clip-path: inset(0 0 0 0); }
+  0% { opacity: 0; transform: translate3d(50px, 0, 0); clip-path: inset(-.2em 100% -.2em -.1em); }
+  100% { opacity: 1; transform: translate3d(0, 0, 0); clip-path: inset(-.2em -.1em -.2em -.1em); }
 }
 
 @keyframes FichaRazaBoxIn {
@@ -181,6 +160,7 @@
 
 .FichaRaza-Kicker {
   display: inline-flex;
+  max-width: 100%;
   align-items: center;
   gap: 10px;
 
@@ -208,8 +188,8 @@
 .FichaRaza-Nombre {
   font-family: var(--font-anton);
   font-size: clamp(72px, 8.2vw, 138px);
-  line-height: .77;
-  margin: 14px 0 26px;
+  line-height: 1;
+  margin: 10px 0 22px;
   text-transform: uppercase;
   letter-spacing: -.03em;
 }
@@ -244,40 +224,8 @@
   font-weight: 900;
 }
 
-.FichaRaza-Personaje {
-  position: absolute;
-  right: -4%;
-  bottom: -4%;
-  height: 110%;
-  width: min(58vw, 940px);
-
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-
-  filter: drop-shadow(0 22px 18px rgba(0, 0, 0, .5));
-  opacity: 0;
-  transform: translate3d(calc(96px + (var(--dchar-x) * 1px)), calc(var(--dchar-y) * 1px), 0) scale(.99);
-  transition: opacity .42s ease .12s, transform .78s cubic-bezier(.18, .82, .2, 1) .08s;
-  will-change: transform;
-}
-
-.FichaRaza.is-open .FichaRaza-Personaje {
-  opacity: 1;
-  transform: translate3d(calc(var(--dchar-x) * 1px), calc(var(--dchar-y) * 1px), 0) scale(1);
-}
-
-.FichaRaza-Personaje svg,
-.FichaRaza-Personaje img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center bottom;
-  overflow: visible;
-}
-
 .FichaRaza-CartasStrip {
-  padding: 28px 0 54px;
+  padding: 28px 0 30px;
   position: relative;
 
   opacity: 0;
@@ -317,116 +265,22 @@
   font-weight: 900;
 }
 
-.FichaRaza-CartasScroll {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-
-  padding: 8px 4.8% 20px;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: thin;
-  scrollbar-color: var(--accent) transparent;
-}
-
-.FichaRaza-Carta {
-  flex: 0 0 clamp(230px, 25vw, 390px);
-  aspect-ratio: 16 / 9;
-  border-radius: 24px;
-
-  background: var(--surface);
-  position: relative;
-  overflow: hidden;
-
-  border: 1px solid var(--border);
-  box-shadow: 0 13px 25px rgba(0, 0, 0, .4);
-  scroll-snap-align: start;
-
-  transition: .16s;
-}
-
-.FichaRaza-Carta:hover {
-  transform: translateY(-6px);
-}
-
-.FichaRaza-CartaArte {
-  position: absolute;
-  inset: 0;
-
-  background:
-    radial-gradient(circle at 65% 28%, var(--accent2), transparent 34%),
-    linear-gradient(150deg, var(--accent), #0d0e13 78%);
-}
-
-.FichaRaza-CartaArte::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(90deg, rgba(255, 255, 255, .12), transparent 45%),
-    repeating-linear-gradient(110deg, rgba(255, 255, 255, .04) 0 2px, transparent 2px 22px);
-}
-
-.FichaRaza-CartaImagen {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.FichaRaza-CartaRuna {
-  position: absolute;
-  right: 7%;
-  top: 8%;
-
-  font-family: var(--font-anton);
-  font-size: clamp(82px, 8vw, 140px);
-  color: rgba(255, 255, 255, .8);
-  text-shadow: 0 8px 12px rgba(0, 0, 0, .5);
-}
-
-.FichaRaza-CartaCaption {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  padding: 30px 18px 14px;
-  background: linear-gradient(transparent, rgba(0, 0, 0, .9));
-  color: #fff;
-}
-
-.FichaRaza-CartaCaption b {
-  display: block;
-  text-transform: uppercase;
-  font-size: 18px;
-}
-
-.FichaRaza-CartaCaption span {
-  display: block;
-  font-size: 11px;
-  opacity: .8;
-  margin-top: 3px;
+/* Carrusel elástico compartido: se adapta a la ficha con sus variables. */
+.FichaRaza-CartasStrip {
+  --elastic-card-width: clamp(190px, 19vw, 300px);
+  --elastic-gap: clamp(14px, 1.6vw, 24px);
+  --elastic-gutter: 4.8vw;
 }
 
 @media (max-width: 980px) {
   .FichaRaza-Hero {
-    min-height: 900px;
+    min-height: 0;
+    padding-bottom: 0;
   }
 
   .FichaRaza-Copy {
-    left: 4.8%;
-    top: 120px;
-    width: 88vw;
-  }
-
-  .FichaRaza-Personaje {
-    height: 66%;
-    width: 100%;
-    right: -24%;
-    bottom: -4%;
+    margin: 40px 0 0 4.8%;
+    width: 90.4%;
   }
 
   .FichaRaza-DescBox {
@@ -453,47 +307,21 @@
     font-size: 20px;
   }
 
-  .FichaRaza-Hero {
-    min-height: 880px;
-  }
-
   .FichaRaza-Copy {
-    left: 18px;
+    margin: 32px 18px 0;
     width: calc(100% - 36px);
-    top: 104px;
   }
 
   .FichaRaza-Nombre {
-    font-size: 66px;
+    font-size: clamp(48px, 17vw, 66px);
   }
 
   .FichaRaza-DescBox {
     font-size: 16px;
   }
 
-  .FichaRaza-Personaje {
-    height: 52%;
-    width: 115%;
-    right: -36%;
-    bottom: -3%;
-    opacity: .84;
-  }
-
-  .FichaRaza.is-open .FichaRaza-Personaje {
-    opacity: .84;
-  }
-
   .FichaRaza-CartasHeader {
     padding-left: 18px;
     padding-right: 18px;
-  }
-
-  .FichaRaza-CartasScroll {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
-  .FichaRaza-Carta {
-    flex-basis: 82vw;
   }
 }

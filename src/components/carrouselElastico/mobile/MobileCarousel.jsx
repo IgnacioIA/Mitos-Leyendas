@@ -12,6 +12,7 @@ export default function MobileCarousel({
         <MobileCard
           key={elemento.id}
           imagen={elemento.imagen}
+          alt={elemento.alt}
         />
       ))}
 

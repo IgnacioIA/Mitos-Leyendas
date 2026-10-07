@@ -1,6 +1,18 @@
 .ParallaxBackgroundCinematografico {
   position: relative;
-  z-index: 1;
+
+  /* isolation (no un z-index numérico): crea su propio stacking context
+     para que el fondo (z:0), el overlay (z:1) y el contenido (z:2) sigan
+     ordenándose solo entre ellos, pero el componente en sí queda con
+     z-index:auto de cara a sus hermanos en la página. Con "z-index: 1"
+     cualquier sección siguiente que no tuviera z-index propio (el caso
+     normal) pintaba por DEBAJO de este fondo sin importar el orden en
+     el DOM -- el fondo sticky, que sigue renderizando a pantalla
+     completa hasta último momento, tapaba el principio de esa sección
+     (ej.: el título de RazasExplicacion quedaba invisible detrás del
+     fondo de RazasSelectorPersonaje al no tener ninguno z-index propio).
+  */
+  isolation: isolate;
 }
 /* Fondo cinematográfico */
 .ParallaxBackgroundCinematografico-Sticky {

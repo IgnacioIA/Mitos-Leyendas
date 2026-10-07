@@ -4,6 +4,7 @@ import "../styles/ElasticCard.css";
 
 export default function ElasticCard({
   imagen,
+  alt = "",
 }) {
   return (
     <motion.div
@@ -16,7 +17,7 @@ export default function ElasticCard({
     >
       <img
         src={imagen}
-        alt=""
+        alt={alt}
         loading="lazy"
       />
     </motion.div>
