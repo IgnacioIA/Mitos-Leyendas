@@ -3,6 +3,7 @@ import img2 from "../../../../../assets/salonDeCampeones/cuadros/2.webp";
 import img3 from "../../../../../assets/salonDeCampeones/cuadros/3.webp";
 import img4 from "../../../../../assets/salonDeCampeones/cuadros/4.webp";
 import img5 from "../../../../../assets/salonDeCampeones/cuadros/5.webp";
+import img6 from "../../../../../assets/salonDeCampeones/cuadros/6.webp";
 
 // TODO: completar título/descripción/alt reales de cada cuadro cuando se
 // defina el contenido (quiénes son, qué representan). Agregar un cuadro
@@ -52,6 +53,13 @@ export const salonDeCampeonesCuadrosData = {
       alt: "",
       titulo: "VICENTE ROJAS",
       descripcion: "CAMPEÓN 3° PREMIER PBX ARGENTINA 2026",
+    },
+    {
+      id: "cuadro-6",
+      imagen: img6,
+      alt: "",
+      titulo: "PABLO VIDAL",
+      descripcion: "CAMPEÓN 4° PREMIER PBX ARGENTINA 2026",
     },
   ],
 };

@@ -23,9 +23,30 @@ import HeroImage4Mobile
 from "../../../../../assets/home/hero/HOME 4-Mobile.webp";
 
 export const HERO_SLIDES = [
+   {
+    id: 1,
+
+    image: HeroImage2,
+    imageMobile: HeroImage2Mobile,
+
+    subtitle: "PRIMER BLOQUE EXTENDIDO",
+
+    title: "TORNEO PREMIER",
+
+    description:
+      "CON GRANDES PREMIOS EN LA MIRA Y MUCHOS COMBATES, ESTE TORNEO PROMETE SER UN VERDADERO DESAFÍO PARA TODOS LOS JUGADORES.",
+
+    buttons: [
+      {
+        text: "Comprar",
+        url: "https://www.mylargentina.com/productos/entrada-premier-argentina-mar-del-plata-sj1s6/"
+      },
+     
+    ]
+  },
 
   {
-    id: 1,
+    id: 2,
 
     image: HeroImage1,
     imageMobile: HeroImage1Mobile,
@@ -45,31 +66,6 @@ export const HERO_SLIDES = [
       {
         text: "Ver info",
         url: "/DominiosDeRaPaginaLore"
-      }
-    ]
-  },
-
-  {
-    id: 2,
-
-    image: HeroImage2,
-    imageMobile: HeroImage2Mobile,
-
-    subtitle: "PRIMER BLOQUE EXTENDIDO",
-
-    title: "TORNEO PREMIER",
-
-    description:
-      "CON GRANDES PREMIOS EN LA MIRA Y MUCHOS COMBATES, ESTE TORNEO PROMETE SER UN VERDADERO DESAFÍO PARA TODOS LOS JUGADORES.",
-
-    buttons: [
-      {
-        text: "Comprar",
-        url: "https://www.mylargentina.com/productos/entrada-premier-argentina-club-coronel-mom-10-de-octubre-1pxwh/"
-      },
-      {
-        text: "Más información",
-        url: "https://www.instagram.com/p/Dcwd9ltj8Ul/?img_index=1"
       }
     ]
   },

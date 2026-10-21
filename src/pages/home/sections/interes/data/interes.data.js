@@ -7,18 +7,17 @@ import Imagen6 from "../../../../../assets/home/interes/TPI 6.webp";
 
 export const INTERES_ITEMS = [
 
-  {
+    {
     id: 1,
+    image: Imagen2,
+    alt: "Imagen 2",
+    url: "https://www.mylargentina.com/productos/entrada-premier-argentina-mar-del-plata-sj1s6/",
+  },
+  {
+    id: 2,
     image: Imagen1,
     alt: "Imagen 1",
     url: "/DominiosDeRaPaginaLore",
-  },
-
-  {
-    id: 2,
-    image: Imagen2,
-    alt: "Imagen 2",
-    url: "https://www.mylargentina.com/productos/entrada-premier-argentina-club-coronel-mom-10-de-octubre-1pxwh/",
   },
 
   {

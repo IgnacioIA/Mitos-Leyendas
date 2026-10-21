@@ -3,9 +3,9 @@ import fondoMobile from "../../../../../assets/razas/HeroRazas/RAZAS-Mobile.webp
 
 const dataHeroRazas = {
 
-  titulo: "EL PODER DE LAS RAZAS",
+  titulo: "ELEGÍ TU RAZA FAVORITA",
 
-  subtitulo: "DE MITOS Y LEYENDAS",
+  subtitulo: "Y EMPEZA A JUGAR A MITOS Y LEYENDAS",
 
 
   backgroundDesktop: fondo,

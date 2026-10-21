@@ -5,6 +5,13 @@
 
   padding: 7rem 0;
 
+  /* Fondo propio y opaco: sin esto la sección es transparente y, como la
+     sección anterior (RazasSelectorPersonaje) usa un fondo parallax con
+     position:sticky que sigue pintándose fijo bastante más allá de su
+     propia caja, ese fondo quedaba viéndose "prestado" detrás de este
+     texto en vez de un fondo propio. */
+  background: var(--bg);
+
   overflow: hidden;
 }
 

@@ -71,7 +71,6 @@ export default function FichaRaza({ raza, fondo, onCerrar }) {
                 <div>{raza.descripcion}</div>
                 <div className="FichaRaza-DescMeta">
                   <span className="FichaRaza-Pill">{raza.edicion.nombre}</span>
-                  <span className="FichaRaza-Pill">{raza.estilo}</span>
                 </div>
               </div>
             </div>

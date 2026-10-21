@@ -11,7 +11,7 @@ export default function HeroRazas() {
       backgroundDesktop={dataHeroRazas.backgroundDesktop}
       backgroundMobile={dataHeroRazas.backgroundMobile}
       buttonText="VER RAZAS"
-      scrollToId="RazasExplicacion-section"
+      scrollToId="RazasSelectorPersonaje-section"
       compactTitle
     />
   );
