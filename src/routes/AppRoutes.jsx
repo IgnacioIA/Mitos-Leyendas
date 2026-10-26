@@ -27,6 +27,7 @@ import CronologiaLiga from "../pages/CronologiaLiga/CronologiaLiga.jsx";
 import LoreIndex from "../pages/LoreIndex/LoreIndex.jsx";
 import LaOdiseaLore from "../pages/LaOdiseaLore/LaOdiseaLore.jsx";
 import DominiosDeRaPaginaLore from "../pages/DominiosDeRaPaginaLore/DominiosDeRaPaginaLore.jsx";
+import LineaDelTiempo from "../pages/LineaDelTiempo/LineaDelTiempo.jsx";
 
 
 function AppRoutes() {
@@ -178,6 +179,12 @@ function AppRoutes() {
             <Route
               path="/DominiosDeRaPaginaLore"
               element={<DominiosDeRaPaginaLore />}
+            />
+
+            {/* Linea del Tiempo */}
+            <Route
+              path="/LineaDelTiempo"
+              element={<LineaDelTiempo />}
             />
 
 

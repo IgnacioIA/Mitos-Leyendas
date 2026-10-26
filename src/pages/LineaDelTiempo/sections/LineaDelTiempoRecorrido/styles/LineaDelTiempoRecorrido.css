@@ -1,0 +1,129 @@
+/* Contenedor del recorrido: intro, eje, cierre y el fondo difuminado que
+   los acompaña. --accent lo actualiza useRecorridoScroll en cada cuadro
+   (mezcla del color de la etapa actual con la siguiente). */
+.lineaDelTiempoRecorrido {
+  --accent: #ffd600;
+
+  position: relative;
+  isolation: isolate;
+
+  /* El fondo sticky (alto 100dvh, margin-bottom -100dvh) puede seguir
+     pegado hasta 100dvh por debajo del final de la sección y quedaría
+     encima del Footer del sitio. clip (no hidden) recorta sin crear un
+     contenedor de scroll, así los sticky siguen funcionando. */
+  overflow: clip;
+
+  color: #f9f7f2;
+  background: #080807;
+
+  font-family: var(--font-montserrat);
+}
+
+.lineaDelTiempoRecorrido-contenido {
+  position: relative;
+  z-index: 1;
+}
+
+/* Intro */
+.lineaDelTiempoRecorrido-intro {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 92px 22px 72px;
+
+  text-align: center;
+}
+
+.lineaDelTiempoRecorrido-eyebrow {
+  color: var(--accent);
+
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.lineaDelTiempoRecorrido-introTitulo,
+.lineaDelTiempoRecorrido-cierreTitulo {
+  font-family: var(--font-anton);
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+
+.lineaDelTiempoRecorrido-introTitulo {
+  margin: 16px 0 18px;
+
+  font-size: clamp(42px, 5.6vw, 82px);
+  line-height: .92;
+}
+
+.lineaDelTiempoRecorrido-introTexto {
+  max-width: 760px;
+  margin: 0 auto;
+
+  color: #d2d1cb;
+
+  font-size: clamp(16px, 1.45vw, 20px);
+  line-height: 1.6;
+}
+
+/* Eje temporal */
+.lineaDelTiempoRecorrido-shell {
+  position: relative;
+
+  width: min(1440px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* Cierre */
+.lineaDelTiempoRecorrido-cierre {
+  min-height: 56vh;
+  padding: 100px 24px 150px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  background: linear-gradient(transparent, #020202);
+}
+
+.lineaDelTiempoRecorrido-cierreTitulo {
+  margin: 0;
+
+  font-size: clamp(46px, 6.2vw, 96px);
+  line-height: .9;
+}
+
+.lineaDelTiempoRecorrido-cierreTitulo span {
+  color: var(--accent);
+}
+
+.lineaDelTiempoRecorrido-cierreTexto {
+  max-width: 680px;
+  margin: 18px auto 0;
+
+  color: #c9c6bf;
+
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+@media (max-width: 1000px) {
+  .lineaDelTiempoRecorrido-shell {
+    width: calc(100% - 24px);
+  }
+}
+
+@media (max-width: 620px) {
+  .lineaDelTiempoRecorrido-intro {
+    padding: 66px 16px 30px;
+  }
+
+  .lineaDelTiempoRecorrido-introTexto {
+    font-size: 15px;
+  }
+
+  .lineaDelTiempoRecorrido-shell {
+    width: calc(100% - 12px);
+  }
+}

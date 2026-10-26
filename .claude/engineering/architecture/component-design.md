@@ -73,3 +73,13 @@ Preferir `whileInView` con `viewport={{ once: true }}` para animaciones de entra
 - Los ancestros del sticky no pueden tener `overflow: hidden|auto`: se usa `overflow: clip`.
 - Mobile (≤768px, `isMobile`) y tablet (≤980px) conservan el layout apilado; el panel no es sticky.
 - Hover del roster: no aplicar `rotate`/`scale` al contenedor de la imagen; el zoom va en el `<img>`.
+
+### `LineaDelTiempo` — recorrido sincronizado con el scroll
+
+- Página `/LineaDelTiempo` con dos secciones: `LineaDelTiempoHero` y `LineaDelTiempoRecorrido`. Todo lo que depende del scroll (intro, eje, etapas, interludio, navegador, cierre y fondo) vive en el Recorrido porque comparte el fondo y `--accent`.
+- `hooks/useRecorridoScroll.js` es la única fuente de verdad. Usa un marcador al 53 % de la ventana para el progreso del eje, la etapa activa (con histéresis por dirección) y la mezcla de fondo/acento (smoothstep entre los centros de etapas consecutivas). El progreso es un `MotionValue` suavizado con `useSpring`; fondo y `--accent` se escriben en el DOM. El estado de React (`etapaActiva`, `navegadorVisible`) solo cambia al cambiar de etapa. Las posiciones se re-miden con `resize` + `ResizeObserver` sobre el eje.
+- Fondo difuminado: sticky (`100dvh` + `margin-bottom: -100dvh`) dentro de la sección, no `position: fixed`. **La sección necesita `overflow: clip`**: con ese patrón el sticky puede seguir pegado hasta 100dvh por debajo del final de su contenedor y taparía el Footer. `clip` no crea contenedor de scroll, así que los sticky siguen funcionando. Aplica a cualquier fondo sticky que no tenga contenido propio detrás.
+- Marcador de años sticky: `top: max(39vh, var(--header-h) + 12px)` (`useAlturaHeader`) para no quedar bajo el header.
+- Datos: `data/dataLineaDelTiempoRecorrido.js` resuelve imágenes con `import.meta.glob`, pero cada banner/carta se elige por **nombre de archivo explícito** (`etapaImagenes(carpeta, [[archivo, nombre]])`), nunca por el orden del glob.
+- Galería: Embla vía `useCarousel` (`loop:false`, `dragFree`, `containScroll:'trimSnaps'`, `slidesToScroll:2`); flechas deshabilitadas con `canScrollPrev/Next`; ←/→ con el foco en el viewport.
+- Aparición por opacidad con `whileInView` (`once`, `amount: .12`); con `prefers-reduced-motion` se renderiza visible (`initial={false}`) y el eje sigue el scroll sin resorte.

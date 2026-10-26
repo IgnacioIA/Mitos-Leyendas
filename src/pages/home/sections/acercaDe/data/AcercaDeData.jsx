@@ -40,6 +40,6 @@ export const ACERCA_DE_ITEMS = [
     id: 6,
     title: "LINEA DEL TIEMPO",
     image: img6,
-    url: "/HistoriaMYL",
+    url: "/LineaDelTiempo",
   },
 ];

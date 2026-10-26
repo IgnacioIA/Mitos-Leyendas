@@ -1,0 +1,231 @@
+/* Eje temporal — valores del modelo (.timeline, .rail, .rail-progress,
+   .date-sticky, .date-board, .end-point). */
+.recorridoEje {
+  position: relative;
+  padding-bottom: 155px;
+}
+
+.recorridoEje-rail {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 0;
+  bottom: 13px;
+  transform: translateX(-50%);
+
+  width: 105px;
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, .22);
+  background: linear-gradient(90deg, rgba(255, 255, 255, .04), rgba(255, 255, 255, .10) 50%, rgba(255, 255, 255, .04));
+  box-shadow: inset 0 0 16px rgba(0, 0, 0, .15);
+}
+
+.recorridoEje-rail::before,
+.recorridoEje-rail::after,
+.recorridoEje-progreso::before,
+.recorridoEje-progreso::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+}
+
+.recorridoEje-rail::before,
+.recorridoEje-rail::after {
+  background: rgba(255, 255, 255, .16);
+}
+
+.recorridoEje-rail::before,
+.recorridoEje-progreso::before {
+  left: 12px;
+}
+
+.recorridoEje-rail::after,
+.recorridoEje-progreso::after {
+  right: 12px;
+}
+
+/* scaleY lo escribe Framer Motion (progreso suavizado). */
+.recorridoEje-progreso {
+  position: absolute;
+  inset: 0 auto auto 0;
+
+  width: 100%;
+  height: 100%;
+
+  transform-origin: top center;
+  will-change: transform;
+
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 84%, white), var(--accent) 58%, color-mix(in srgb, var(--accent) 72%, black));
+  box-shadow: 0 0 28px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+.recorridoEje-progreso::before,
+.recorridoEje-progreso::after {
+  background: color-mix(in srgb, var(--accent) 88%, white);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--accent) 38%, transparent);
+}
+
+.recorridoEje-brillo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 90px;
+  background: linear-gradient(transparent, rgba(255, 255, 255, .25));
+}
+
+/* Marcador de años. top: el del modelo (39vh), pero nunca por encima del
+   header sticky del sitio (--header-h lo publica useAlturaHeader). */
+.recorridoEje-sticky {
+  position: sticky;
+  top: max(39vh, calc(var(--header-h, 0px) + 12px));
+  z-index: 9;
+
+  height: 142px;
+  margin-bottom: -142px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+.recorridoEje-fecha {
+  min-width: 98px;
+  max-width: 116px;
+  padding: 11px 3px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(8, 8, 8, .9);
+  border: 1px solid color-mix(in srgb, var(--accent) 42%, transparent);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, .28);
+
+  transition: border-color .25s, box-shadow .25s;
+}
+
+.recorridoEje-desde,
+.recorridoEje-hasta {
+  font-family: var(--font-anton);
+  font-size: clamp(27px, 2.35vw, 37px);
+  line-height: 1;
+  letter-spacing: .025em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.recorridoEje-desde {
+  color: #fff;
+}
+
+.recorridoEje-hasta {
+  color: var(--accent);
+}
+
+.recorridoEje-separador {
+  width: 40px;
+  height: 2px;
+  margin: 8px 0;
+  background: var(--accent);
+}
+
+.recorridoEje-fecha.is-single .recorridoEje-separador,
+.recorridoEje-fecha.is-single .recorridoEje-hasta {
+  display: none;
+}
+
+.recorridoEje-fecha.is-bump {
+  animation: recorridoEje-cambio .35s cubic-bezier(.2, .8, .2, 1);
+}
+
+@keyframes recorridoEje-cambio {
+  0% { opacity: .62; transform: translateY(12px) scale(.96); }
+  100% { opacity: 1; transform: none; }
+}
+
+.recorridoEje-fin {
+  position: absolute;
+  z-index: 12;
+  left: 50%;
+  bottom: 2px;
+  transform: translateX(-50%);
+
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+
+  background: var(--accent);
+  box-shadow: 0 0 0 7px #090909, 0 0 22px color-mix(in srgb, var(--accent) 50%, transparent);
+
+  transition: background .25s, box-shadow .25s;
+}
+
+@media (max-width: 1000px) {
+  .recorridoEje-rail {
+    left: 41px;
+    transform: none;
+    width: 75px;
+  }
+
+  .recorridoEje-sticky {
+    top: max(34vh, calc(var(--header-h, 0px) + 12px));
+    justify-content: flex-start;
+  }
+
+  .recorridoEje-fecha {
+    min-width: 82px;
+    max-width: 82px;
+  }
+
+  .recorridoEje-desde,
+  .recorridoEje-hasta {
+    font-size: 29px;
+  }
+
+  .recorridoEje-fin {
+    left: 41px;
+  }
+}
+
+@media (max-width: 620px) {
+  .recorridoEje-rail {
+    left: 23px;
+    width: 47px;
+  }
+
+  .recorridoEje-fecha {
+    min-width: 55px;
+    max-width: 55px;
+    padding: 10px 1px;
+  }
+
+  .recorridoEje-desde,
+  .recorridoEje-hasta {
+    font-size: 20px;
+  }
+
+  .recorridoEje-separador {
+    width: 28px;
+    margin: 6px 0;
+  }
+
+  .recorridoEje-fin {
+    left: 23px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .recorridoEje-fecha,
+  .recorridoEje-fin {
+    animation: none;
+    transition: none;
+  }
+}

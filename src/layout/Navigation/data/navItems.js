@@ -78,7 +78,7 @@ const navItems = [
         title: "ACERCA DEL JUEGO",
         items: [
           { title: "APRENDER A JUGAR", path: "/Apj" },
-          { title: "LINEA DEL TIEMPO", path: "/HistoriaMYL" },
+          { title: "LINEA DEL TIEMPO", path: "/LineaDelTiempo" },
         ],
       },
     ],

@@ -133,3 +133,47 @@ No hay assets ni copy reales de Shogun disponibles en el repo para reemplazar el
 ## Consecuencias
 
 La página de Shogun sigue mostrando contenido de Leyendas 4.0 en esas dos secciones hasta que se provean los assets y textos reales de Shogun (imágenes para `src/assets/shogun/Productos/`, copy de producto, y URL pública correspondiente). El componente ya está preparado para recibirlos vía props (`ProductLineup` y `LoreShowcase`) sin más trabajo de refactor.
+---
+
+## Fecha
+
+2026-10-26
+
+---
+
+## Decisión
+
+Página **Línea del Tiempo** (`/LineaDelTiempo`): el fondo difuminado del recorrido se implementa como sticky dentro de su sección (no `position: fixed` como el modelo de referencia), Montserrat se carga globalmente y los enlaces "LINEA DEL TIEMPO" pasan de `/HistoriaMYL` a `/LineaDelTiempo`.
+
+---
+
+## Contexto
+
+El modelo (`src/pages/LineaDelTiempo/modelo/mitos_y_leyendas_timeline_v10.html`) es un documento autónomo: su fondo es `fixed` para toda la página y usa Montserrat. En el sitio, la página vive dentro de `MainLayout` (header sticky y Footer), y Montserrat no se cargaba en ningún lado aunque `NewsArticle.css` ya la declaraba. El menú y la Home enlazaban "LINEA DEL TIEMPO" a `/HistoriaMYL`, que muestra `PaginaEnConstruccion`.
+
+---
+
+## Alternativas consideradas
+
+- Fondo `fixed` mostrado/ocultado por JS según la visibilidad de la sección.
+- Fondo sticky dentro de la sección (patrón de `ParallaxBackgroundCinematografico`).
+- Cargar Montserrat solo en la página con un `<link>` de React 19 (persistiría al navegar y el resultado dependería del orden de navegación).
+- Montar la nueva página en `/HistoriaMYL`.
+
+---
+
+## Decisión tomada
+
+Fondo sticky + `overflow: clip` en la sección. Montserrat agregada a la misma importación de Google Fonts de `src/index.css` (sin un `@import` nuevo) y expuesta como `--font-montserrat`. Ruta nueva `/LineaDelTiempo`; `/HistoriaMYL` queda intacta.
+
+---
+
+## Justificación
+
+El sticky queda limitado a la sección por CSS, sin lógica extra, y es un patrón ya usado en el proyecto. Cargar la fuente globalmente da un resultado determinista. Una ruta propia evita reutilizar un nombre que no describe la página.
+
+---
+
+## Consecuencias
+
+`NewsArticle` (Premier BS AS 2026) ahora se ve en Montserrat, la fuente que su CSS ya pedía (antes caía a `sans-serif`). `/HistoriaMYL` sigue existiendo sin enlaces desde el menú ni la Home; puede eliminarse en una tarea aparte.

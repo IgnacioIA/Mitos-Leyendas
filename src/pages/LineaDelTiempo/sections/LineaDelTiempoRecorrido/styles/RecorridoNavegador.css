@@ -1,0 +1,117 @@
+/* Navegador lateral — valores del modelo (.nav). Oculto también para el
+   teclado (visibility) mientras no está visible. */
+.recorridoNavegador {
+  position: fixed;
+  z-index: 30;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  padding: 10px 7px;
+
+  display: grid;
+  gap: 5px;
+
+  background: rgba(8, 8, 8, .72);
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .25s, visibility 0s linear .25s;
+}
+
+.recorridoNavegador.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity .25s, visibility 0s linear 0s;
+}
+
+.recorridoNavegador button {
+  position: relative;
+
+  width: 29px;
+  height: 29px;
+
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.recorridoNavegador button::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #777;
+
+  transition: .23s;
+}
+
+.recorridoNavegador button.is-active::after {
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+}
+
+.recorridoNavegador button:hover::after,
+.recorridoNavegador button:focus-visible::after {
+  width: 10px;
+  height: 10px;
+  background: white;
+}
+
+.recorridoNavegador button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-radius: 50%;
+}
+
+.recorridoNavegador button span {
+  position: absolute;
+  right: 37px;
+  top: 50%;
+  transform: translate(8px, -50%);
+
+  padding: 7px 11px;
+  border-radius: 3px;
+
+  background: #fbf8f0;
+  color: #090909;
+
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: .2s;
+}
+
+.recorridoNavegador button:hover span,
+.recorridoNavegador button:focus-visible span {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
+@media (max-width: 620px) {
+  .recorridoNavegador {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .recorridoNavegador,
+  .recorridoNavegador button::after,
+  .recorridoNavegador button span {
+    transition: none;
+  }
+}

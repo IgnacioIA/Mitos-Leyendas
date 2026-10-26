@@ -1,0 +1,49 @@
+/* Ambiente del modelo (.ambient). En el modelo es position:fixed para
+   todo el documento; acá es sticky dentro del recorrido (mismo patrón que
+   ParallaxBackgroundCinematografico) para que no aparezca detrás del
+   Hero ni del Footer del sitio. */
+.recorridoFondo {
+  position: sticky;
+  top: 0;
+  z-index: 0;
+
+  height: 100dvh;
+  margin-bottom: -100dvh;
+
+  overflow: hidden;
+  pointer-events: none;
+
+  background: #080807;
+}
+
+.recorridoFondo-capa {
+  position: absolute;
+  inset: -7%;
+
+  background-size: cover;
+  background-position: center;
+
+  filter: blur(20px) saturate(1.18) brightness(.9);
+  opacity: 0;
+  transform: scale(1.03);
+  will-change: opacity;
+}
+
+.recorridoFondo-vineta {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, .66) 0%, rgba(0, 0, 0, .52) 46%, rgba(0, 0, 0, .76) 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, .5), transparent 26%, rgba(0, 0, 0, .39) 100%);
+}
+
+.recorridoFondo-grano {
+  position: absolute;
+  inset: 0;
+
+  opacity: .15;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 110px, rgba(255, 255, 255, .035) 111px, transparent 113px),
+    repeating-linear-gradient(0deg, transparent 0 4px, rgba(255, 255, 255, .015) 5px, transparent 6px);
+}
